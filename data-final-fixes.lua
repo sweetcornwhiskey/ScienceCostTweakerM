@@ -64,7 +64,7 @@ for index,tech in pairs(data.raw.technology) do
 
 	multiplier = {};
 	multiplier.time = 1.0; -- How much the time of the research is multiplied by
-	multiplier.stepCount = 2.0; -- How much the count (number of research steps) of the research is multiplied by
+	multiplier.stepCount = 1.0; -- How much the count (number of research steps) of the research is multiplied by
 	multiplier.cost = {}; -- How much the number of science packs per research-step of the research is multiplied by
 	multiplier.cost.Red = 2.0; -- Multiplier to Red Science Packs
 	multiplier.cost.Green = 2.0; -- Multiplier to Green Science Packs

@@ -1,6 +1,6 @@
 {
   "name": "ScienceCostTweaker",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "title": "ScienceCostTweaker Mod",
   "author": "UberWaffe",
   "dependencies": ["base >= 0.12.0","? bobelecoveride >= 0.12.0","? UberTweaks >= 0.0.1"],
