@@ -218,7 +218,7 @@ data:extend({
 		name = "sct-t4-bioprocessor",
 		category = "crafting-with-fluid",
 		enabled = "true",
-		energy_required = 600,
+		energy_required = 90,
 		ingredients =
 		{
 			{type="item", name="alien-artifact", amount=1},
@@ -227,7 +227,7 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-t4-bioprocessor", amount=200},
+			{type="item", name="sct-t4-bioprocessor", amount=30},
 		},
 	},
 

@@ -25,11 +25,13 @@ if (sciencecosttweaker.options.useTieredLabs == true) then
 	require("tweaks.newlabs")
 end
 
-
--- Adjust evolution factor to compensate for the slower technology gain.
-data.raw["map-settings"]["map-settings"]["enemy_evolution"].time_factor = 0.0000008; -- 10 times slower. vanilla default: 0.000008
-data.raw["map-settings"]["map-settings"]["enemy_evolution"].pollution_factor = 0.00003; -- Unchanged. vanilla default: 0.00003
-data.raw["map-settings"]["map-settings"]["enemy_evolution"].destroy_factor = 0.005; -- Unchanged. vanilla default: 0.005
+-- If enabled, then adjust the evolution factors
+if (sciencecosttweaker.options.adjustEvolution.enabled == true) then
+	-- Adjust evolution factor to compensate for the slower technology gain.
+	data.raw["map-settings"]["map-settings"]["enemy_evolution"].time_factor = data.raw["map-settings"]["map-settings"]["enemy_evolution"].time_factor * sciencecosttweaker.options.adjustEvolution.timeMultiplier; -- vanilla default: 0.000008
+	data.raw["map-settings"]["map-settings"]["enemy_evolution"].pollution_factor = data.raw["map-settings"]["map-settings"]["enemy_evolution"].pollution_factor * sciencecosttweaker.options.adjustEvolution.pollutionMultiplier; -- vanilla default: 0.00003
+	data.raw["map-settings"]["map-settings"]["enemy_evolution"].destroy_factor = data.raw["map-settings"]["map-settings"]["enemy_evolution"].destroy_factor * sciencecosttweaker.options.adjustEvolution.killNestsMultiplier; -- vanilla default: 0.005
+end
 
 -- Iterate through all research, and update the costs as configured.
 for index,tech in pairs(data.raw.technology) do 
@@ -60,51 +62,85 @@ for index,tech in pairs(data.raw.technology) do
 		end
     end
 
-	timeMultiplier = 1.0; -- How much the time of the research is multiplied by
-	countMultiplier = 2.0; -- How much the count (number of research steps) of the research is multiplied by
-	costMultiplier = 1.0; -- How much the number of science packs per research-step of the research is multiplied by
+	multiplier = {};
+	multiplier.time = 1.0; -- How much the time of the research is multiplied by
+	multiplier.stepCount = 2.0; -- How much the count (number of research steps) of the research is multiplied by
+	multiplier.cost = {}; -- How much the number of science packs per research-step of the research is multiplied by
+	multiplier.cost.Red = 2.0; -- Multiplier to Red Science Packs
+	multiplier.cost.Green = 2.0; -- Multiplier to Green Science Packs
+	multiplier.cost.Blue = 2.0; -- Multiplier to Blue Science Packs
+	multiplier.cost.DarkBlue = 2.0; -- Multiplier to Dark Blue Science Packs (Bob's Tech Mod)
+	multiplier.cost.Gold = 2.0; -- Multiplier to Gold Science Packs (Bob's Tech Mod)
+	multiplier.cost.Alien = 1.0; -- Multiplier to Alien Science Packs
 	if (tier == 2) then
-		timeMultiplier = 1.0;
-		countMultiplier = 5.0;
-		costMultiplier = 1.0;
+		multiplier.time = 1.0;
+		multiplier.stepCount = 2.0;
+		multiplier.cost.Red = 2.0;
+		multiplier.cost.Green = 2.0;
+		multiplier.cost.Blue = 2.0;
+		multiplier.cost.DarkBlue = 2.0;
+		multiplier.cost.Gold = 2.0;
+		multiplier.cost.Alien = 1.0;
 	end
 	if (tier == 3) then
-		timeMultiplier = 1.0;
-		countMultiplier = 10.0;
-		costMultiplier = 1.0;
+		multiplier.time = 1.0;
+		multiplier.stepCount = 3.0;
+		multiplier.cost.Red = 2.0;
+		multiplier.cost.Green = 2.0;
+		multiplier.cost.Blue = 2.0;
+		multiplier.cost.DarkBlue = 2.0;
+		multiplier.cost.Gold = 2.0;
+		multiplier.cost.Alien = 1.0;;
 	end
 	if (tier == 4) then
-		timeMultiplier = 1.0;
-		countMultiplier = 10.0;
-		costMultiplier = 1.0;
+		multiplier.time = 1.0;
+		multiplier.stepCount = 3.0;
+		multiplier.cost.Red = 2.0;
+		multiplier.cost.Green = 2.0;
+		multiplier.cost.Blue = 2.0;
+		multiplier.cost.Alien = 1.0;
 	end
 	if (tier == 5) then
-		timeMultiplier = 1.0;
-		countMultiplier = 10.0;
-		costMultiplier = 1.0;
+		multiplier.time = 1.0;
+		multiplier.stepCount = 3.0;
+		multiplier.cost.Red = 2.0;
+		multiplier.cost.Green = 2.0;
+		multiplier.cost.Blue = 2.0;
+		multiplier.cost.DarkBlue = 2.0;
+		multiplier.cost.Gold = 2.0;
+		multiplier.cost.Alien = 1.0;
 	end
 	if (tier == 10) then
-		timeMultiplier = 1.0;
-		countMultiplier = 25.0;
-		costMultiplier = 1.0;
+		multiplier.time = 1.0;
+		multiplier.stepCount = 3.0;
+		multiplier.cost.Red = 3.0;
+		multiplier.cost.Green = 3.0;
+		multiplier.cost.Blue = 3.0;
+		multiplier.cost.DarkBlue = 3.0;
+		multiplier.cost.Gold = 3.0;
+		multiplier.cost.Alien = 1.0;
 	end
 
 	local unitCopy = table.deepcopy( tech.unit )
 
 	-- Now adjust by the modifiers for this tier
-	unitCopy.count = math.max(math.floor(unitCopy.count * countMultiplier), 1);
-	unitCopy.time = math.max(unitCopy.time * timeMultiplier, 1);
+	unitCopy.count = math.max(math.floor(unitCopy.count * multiplier.stepCount), 1);
+	unitCopy.time = math.max(unitCopy.time * multiplier.time, 1);
 	
 	for Index, Value in ipairs( unitCopy.ingredients ) do
-		-- We do not increase the number of alien science packs required
-		if Value[1] ~= "alien-science-pack" then
-			Value[2] = math.floor(Value[2] * costMultiplier);
-		end
-		-- Unless the option for it is set in the config
-		if (sciencecosttweaker.options.increaseAlienScienceCost == true) then
-			if Value[1] == "alien-science-pack" then
-				Value[2] = math.floor(Value[2] * costMultiplier);
-			end
+		-- For each type of science pack, multiply its count per research step by the given multiplier
+		if Value[1] == "science-pack-1"  then
+			Value[2] = math.floor(Value[2] * multiplier.cost.Red)
+		elseif Value[1] == "science-pack-2" then
+			Value[2] = math.floor(Value[2] * multiplier.cost.Green)
+		elseif Value[1] == "science-pack-3" then
+			Value[2] = math.floor(Value[2] * multiplier.cost.Blue)
+		elseif Value[1] == "science-pack-4" then
+			Value[2] = math.floor(Value[2] * multiplier.cost.DarkBlue)
+		elseif Value[1] == "science-pack-gold" then
+			Value[2] = math.floor(Value[2] * multiplier.cost.DarkBlue)
+		elseif Value[1] == "alien-science-pack" then
+			Value[2] = math.floor(Value[2] * multiplier.cost.Alien)
 		end
     end
 	
