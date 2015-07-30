@@ -3,7 +3,7 @@ require("tweaks.newintermediates")
 require("tweaks.tweakedsciencepacks")
 
 useOption = 1;
-if (sciencecosttweaker.options.useBobsMods == true) then
+if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
 	-- Check that both bobsmod tech and bobsmod plates is installed
 	if (data.raw["lab"]["lab-2"] and data.raw["assembling-machine"]["electrolyser-3"]) then
 		useOption = 2;
