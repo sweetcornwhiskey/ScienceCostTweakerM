@@ -184,7 +184,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t3-flash-fuel",
 		category = "chemistry",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
@@ -202,7 +202,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t3-laser-foci",
 		category = "crafting-with-fluid",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
@@ -221,7 +221,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t3-laser-emitter",
 		category = "crafting-with-fluid",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
@@ -241,7 +241,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t3-femto-lasers",
 		category = "crafting-with-fluid",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
@@ -260,7 +260,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t3-atomic-sensors",
 		category = "crafting-with-fluid",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
@@ -282,7 +282,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t4-bioprocessor",
 		category = "crafting-with-fluid",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 90,
 		ingredients =
 		{
@@ -301,7 +301,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t4-overclocker",
 		category = "crafting-with-fluid",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 12,
 		ingredients =
 		{

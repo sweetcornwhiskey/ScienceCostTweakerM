@@ -152,3 +152,15 @@ data:extend({
 	},
 
 })
+
+-- Make technology research enable the Tier 3 and Tier 4 intermediates
+-- ===================================================================
+-- Tier 3, enabled by Battery research
+table.insert(data.raw.technology["battery"].effects,{type = "unlock-recipe", recipe = "sct-t3-flash-fuel"})
+table.insert(data.raw.technology["battery"].effects,{type = "unlock-recipe", recipe = "sct-t3-laser-foci"})
+table.insert(data.raw.technology["battery"].effects,{type = "unlock-recipe", recipe = "sct-t3-laser-emitter"})
+table.insert(data.raw.technology["battery"].effects,{type = "unlock-recipe", recipe = "sct-t3-femto-lasers"})
+table.insert(data.raw.technology["battery"].effects,{type = "unlock-recipe", recipe = "sct-t3-atomic-sensors"})
+-- Tier 4, enabled by Alien Technology research
+table.insert(data.raw.technology["alien-technology"].effects,{type = "unlock-recipe", recipe = "sct-t4-bioprocessor"})
+table.insert(data.raw.technology["alien-technology"].effects,{type = "unlock-recipe", recipe = "sct-t4-overclocker"})

@@ -245,7 +245,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-3",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 5,
 		ingredients =
 		{
@@ -331,7 +331,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-4",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 5,
 		ingredients =
 		{
@@ -343,3 +343,10 @@ data:extend({
 	},
 	
 })
+
+-- Make technology research enable the Tier 3 and Tier 4 laboratories.
+-- ===================================================================
+-- Tier 3, enabled by Battery research
+table.insert(data.raw.technology["battery"].effects,{type = "unlock-recipe", recipe = "sct-lab-3"})
+-- Tier 4, enabled by Alien Technology research
+table.insert(data.raw.technology["alien-technology"].effects,{type = "unlock-recipe", recipe = "sct-lab-4"})
