@@ -70,7 +70,7 @@ data:extend({
 		energy_required = 1.24,
 		ingredients =
 		{
-			{"iron-plate", 1},
+			{"iron-plate", 2},
 		},
 		results = 
 		{

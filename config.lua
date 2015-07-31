@@ -1,3 +1,6 @@
+-- =================================================================================================================================================================== --
+-- Options and Config
+-- =================================================================================================================================================================== --
 if not sciencecosttweaker then sciencecosttweaker = {} end
 if not sciencecosttweaker.options then sciencecosttweaker.options = {} end
 
@@ -24,3 +27,7 @@ sciencecosttweaker.options.adjustEvolution.enabled = true
 sciencecosttweaker.options.adjustEvolution.timeMultiplier = 0.25 -- 4x slower evolution from time.
 sciencecosttweaker.options.adjustEvolution.pollutionMultiplier = 0.33 -- 3x slower evolution from created pollution.
 sciencecosttweaker.options.adjustEvolution.killNestsMultiplier = 1.0 -- No adjustment to evolution from killing nests.
+
+-- Difficulty to use.
+-- normal, no adjustment, lolwhat, 
+sciencecosttweaker.options.difficulty = "normal"

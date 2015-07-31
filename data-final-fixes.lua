@@ -1,4 +1,14 @@
 require("config")
+
+-- Select the cost file depending on which one is requested.
+if (sciencecosttweaker.options.difficulty == "no adjustment") then
+	require("costs.noadjustment")
+elseif (sciencecosttweaker.options.difficulty == "lolwhat") then
+	require("costs.lolwhat")
+else
+	require("costs.normal")
+end
+
 if (sciencecosttweaker.options.useNewIntermediates == true) then
 	require("tweaks.newintermediates")
 	require("tweaks.tweakedsciencepacks")
@@ -45,83 +55,30 @@ for index,tech in pairs(data.raw.technology) do
 	-- Tier 5 = Any research that contains (bobstech) gold science packs
 	-- Tier 10 = Any research that contains alien science packs
 
-	tier = 1;
+	tier = 1
+	multiplier = sciencecosttweaker.costs.tier1;
 	for Index, Value in pairs( tech.unit.ingredients ) do
 		if (tier < 2 and tech.unit.ingredients[Index][1] == "science-pack-2") then
-			tier = 2;
+			tier = 2
+			multiplier = sciencecosttweaker.costs.tier2;
 		end
 		if (tier < 3 and tech.unit.ingredients[Index][1] == "science-pack-3") then
-			tier = 3;
+			tier = 3
+			multiplier = sciencecosttweaker.costs.tier3;
 		end
 		if (tier < 4 and tech.unit.ingredients[Index][1] == "science-pack-4") then
-			tier = 4;
+			tier = 4
+			multiplier = sciencecosttweaker.costs.tier4;
 		end
 		if (tier < 5 and tech.unit.ingredients[Index][1] == "science-pack-gold") then
-			tier = 5;
+			tier = 5
+			multiplier = sciencecosttweaker.costs.tier5;
 		end
 		if (tier < 10 and tech.unit.ingredients[Index][1] == "alien-science-pack") then
-			tier = 10;
+			tier = 10
+			multiplier = sciencecosttweaker.costs.tier10;
 		end
     end
-
-	multiplier = {};
-	multiplier.time = 1.0; -- How much the time of the research is multiplied by
-	multiplier.stepCount = 1.0; -- How much the count (number of research steps) of the research is multiplied by
-	multiplier.cost = {}; -- How much the number of science packs per research-step of the research is multiplied by
-	multiplier.cost.Red = 2.0; -- Multiplier to Red Science Packs
-	multiplier.cost.Green = 2.0; -- Multiplier to Green Science Packs
-	multiplier.cost.Blue = 2.0; -- Multiplier to Blue Science Packs
-	multiplier.cost.DarkBlue = 2.0; -- Multiplier to Dark Blue Science Packs (Bob's Tech Mod)
-	multiplier.cost.Gold = 2.0; -- Multiplier to Gold Science Packs (Bob's Tech Mod)
-	multiplier.cost.Alien = 1.0; -- Multiplier to Alien Science Packs
-	if (tier == 2) then
-		multiplier.time = 1.0;
-		multiplier.stepCount = 2.0;
-		multiplier.cost.Red = 2.0;
-		multiplier.cost.Green = 2.0;
-		multiplier.cost.Blue = 2.0;
-		multiplier.cost.DarkBlue = 2.0;
-		multiplier.cost.Gold = 2.0;
-		multiplier.cost.Alien = 1.0;
-	end
-	if (tier == 3) then
-		multiplier.time = 1.0;
-		multiplier.stepCount = 3.0;
-		multiplier.cost.Red = 2.0;
-		multiplier.cost.Green = 2.0;
-		multiplier.cost.Blue = 2.0;
-		multiplier.cost.DarkBlue = 2.0;
-		multiplier.cost.Gold = 2.0;
-		multiplier.cost.Alien = 1.0;;
-	end
-	if (tier == 4) then
-		multiplier.time = 1.0;
-		multiplier.stepCount = 3.0;
-		multiplier.cost.Red = 2.0;
-		multiplier.cost.Green = 2.0;
-		multiplier.cost.Blue = 2.0;
-		multiplier.cost.Alien = 1.0;
-	end
-	if (tier == 5) then
-		multiplier.time = 1.0;
-		multiplier.stepCount = 3.0;
-		multiplier.cost.Red = 2.0;
-		multiplier.cost.Green = 2.0;
-		multiplier.cost.Blue = 2.0;
-		multiplier.cost.DarkBlue = 2.0;
-		multiplier.cost.Gold = 2.0;
-		multiplier.cost.Alien = 1.0;
-	end
-	if (tier == 10) then
-		multiplier.time = 1.0;
-		multiplier.stepCount = 3.0;
-		multiplier.cost.Red = 3.0;
-		multiplier.cost.Green = 3.0;
-		multiplier.cost.Blue = 3.0;
-		multiplier.cost.DarkBlue = 3.0;
-		multiplier.cost.Gold = 3.0;
-		multiplier.cost.Alien = 1.0;
-	end
 
 	local unitCopy = table.deepcopy( tech.unit )
 
@@ -131,19 +88,22 @@ for index,tech in pairs(data.raw.technology) do
 	
 	for Index, Value in ipairs( unitCopy.ingredients ) do
 		-- For each type of science pack, multiply its count per research step by the given multiplier
+		newCost = 0
 		if Value[1] == "science-pack-1"  then
-			Value[2] = math.floor(Value[2] * multiplier.cost.Red)
+			newCost = math.floor(Value[2] * multiplier.cost.red)
 		elseif Value[1] == "science-pack-2" then
-			Value[2] = math.floor(Value[2] * multiplier.cost.Green)
+			newCost = math.floor(Value[2] * multiplier.cost.green)
 		elseif Value[1] == "science-pack-3" then
-			Value[2] = math.floor(Value[2] * multiplier.cost.Blue)
+			newCost = math.floor(Value[2] * multiplier.cost.blue)
 		elseif Value[1] == "science-pack-4" then
-			Value[2] = math.floor(Value[2] * multiplier.cost.DarkBlue)
+			newCost = math.floor(Value[2] * multiplier.cost.darkBlue)
 		elseif Value[1] == "science-pack-gold" then
-			Value[2] = math.floor(Value[2] * multiplier.cost.DarkBlue)
+			newCost = math.floor(Value[2] * multiplier.cost.gold)
 		elseif Value[1] == "alien-science-pack" then
-			Value[2] = math.floor(Value[2] * multiplier.cost.Alien)
+			newCost = math.floor(Value[2] * multiplier.cost.alien)
 		end
+		newCost = math.max(newCost, 0);
+		Value[2] = newCost
     end
 	
 	tech.unit = unitCopy
