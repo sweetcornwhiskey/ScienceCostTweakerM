@@ -61,7 +61,7 @@ data:extend({
 		ingredients =
 		{
 			{"sct-t2-microcircuits", 10},
-			{"steel-plate", 1},
+			{"iron-plate", 2},
 		},
 		results = 
 		{
@@ -92,7 +92,7 @@ data:extend({
 		energy_required = 2.9,
 		ingredients =
 		{
-			{"steel-plate", 1},
+			{"iron-plate", 2},
 			{"sct-t2-wafer-stamp", 4}
 		},
 		results = 
@@ -128,7 +128,7 @@ data:extend({
 		{
 			{type="fluid", name="heavy-oil", amount=1},
 			{type="fluid", name="light-oil", amount=1},
-			{type="item", name="steel-plate", amount=1}
+			{type="item", name="iron-plate", amount=2}
 		},
 		results = 
 		{
@@ -163,7 +163,7 @@ data:extend({
 		ingredients =
 		{
 			{type="item", name="battery", amount=1},
-			{type="item", name="steel-plate", amount=1},
+			{type="item", name="iron-plate", amount=2},
 			{type="item", name="plastic-bar", amount=4},
 			{type="fluid", name="sulfuric-acid", amount=0.5}
 		},
