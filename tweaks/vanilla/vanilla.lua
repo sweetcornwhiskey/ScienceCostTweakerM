@@ -5,6 +5,9 @@ data:extend({
 
 	-- Tier 1 Intermediary products.
 	-- =============================
+	-- Vanilla Tier 1 Science Pack:
+	-- 5.5x time, 2x Iron plate, 1x Copper plate
+	-- <- 1x Iron gear (2x Iron plate) + 1x Copper plate
 	{
 		type = "recipe",
 		name = "sct-t1-ironcore",
@@ -37,6 +40,11 @@ data:extend({
 	
 	-- Tier 2 Intermediary products.
 	-- =============================
+	-- Vanilla Tier 2 Science Pack:
+	-- 8.8x time, 5.5x Iron plate, 1.5x Copper plate
+	-- <- 1x Transport Belt (0.5x Iron gear + 1x Iron plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate)
+	-- <- 1.5x Gear + 2.5x Iron plate + 3x Copper cable (1.5x copper plate)
+	-- <- 5.5x Iron plate + 1.5x Copper plate
 	{
 		type = "recipe",
 		name = "sct-t2-reaction-nodes",
@@ -118,6 +126,14 @@ data:extend({
 	
 	-- Tier 3 Intermediary products.
 	-- =============================
+	-- Vanilla Tier 3 Science Pack:
+	-- 57.8x time, 20x Iron plate, 16.5x Copper plate, 2x Sulfiric Acid, 1x Coal, 3x PetroGas
+	-- <- 1x Battery (1x Iron plate + 1x Copper plate + 2x Sulfiric Acid) + 1x Steel (5x Iron plate) + 1x Advanced Circuit (2x Electronic circuit + 2x Plastic + 4x Copper Cable) + 1x Smart Inserter (1x Fast Inserter + 4x Electronic circuit)
+	-- <- 6x Iron plate + 1x Copper plate + 2x Sulfiric Acid + 6x Electronic circuit (6x Iron Plate + 18x Copper Cable) + 2x Plastic (1x Coal + 3x PetroGas) + 4x Copper Cable (2x copper plate) + 1x Fast Inserter (1x Inserter + 2x Iron plate + 2x Electronic circuit)
+	-- <- 14x Iron plate + 3x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 18x Copper Cable (9x Copper plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate) + 2x Electronic circuit (2x Iron Plate + 6x Copper Cable)
+	-- <- 17x Iron plate + 12x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 1x Electronic circuit (1x Iron Plate + 3x Copper Cable) + 1x Iron gear (2x Iron plate) + 6x Copper Cable (3x copper plate)
+	-- <- 20x Iron plate + 15x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 3x Copper Cable (1.5x Copper Plate)
+	-- <- 20x Iron plate + 16.5x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid
 	{
 		type = "recipe",
 		name = "sct-t3-flash-fuel",
@@ -213,6 +229,8 @@ data:extend({
 	
 	-- Tier 4 Intermediary products.
 	-- =============================
+	-- Vanilla Tier 4 Science Pack:
+	-- 10x Alien Science Pack = 12x time, 1x Alien Artifact
 	{
 		type = "recipe",
 		name = "sct-t4-bioprocessor",
