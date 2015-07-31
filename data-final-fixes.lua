@@ -1,23 +1,25 @@
 require("config")
-require("tweaks.newintermediates")
-require("tweaks.tweakedsciencepacks")
+if (sciencecosttweaker.options.useNewIntermediates == true) then
+	require("tweaks.newintermediates")
+	require("tweaks.tweakedsciencepacks")
 
-useOption = 1;
-if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
-	-- Check that both bobsmod tech and bobsmod plates is installed
-	if (data.raw["lab"]["lab-2"] and data.raw["assembling-machine"]["electrolyser-3"]) then
-		useOption = 2;
+	useOption = 1;
+	if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
+		-- Check that both bobsmod tech and bobsmod plates is installed
+		if (data.raw["lab"]["lab-2"] and data.raw["assembling-machine"]["electrolyser-3"]) then
+			useOption = 2;
+		end
 	end
-end
 
--- Vanilla
-if useOption == 1 then
-	require("tweaks.vanilla.vanilla")
-end
+	-- Vanilla
+	if useOption == 1 then
+		require("tweaks.vanilla.vanilla")
+	end
 
--- Bob's Mods
-if useOption == 2 then
-	require("tweaks.bobsmods.bobsmods")
+	-- Bob's Mods
+	if useOption == 2 then
+		require("tweaks.bobsmods.bobsmods")
+	end
 end
 
 -- If enabled, then use the new labs
