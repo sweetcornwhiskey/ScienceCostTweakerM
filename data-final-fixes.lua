@@ -77,7 +77,7 @@ for index,tech in pairs(data.raw.technology) do
 			tier = 5
 			multiplier = sciencecosttweaker.costs.tier5;
 		end
-		if (tier < 6 and tech.unit.ingredients[Index][1] == "module-circuit-board") then
+		if (tier < 6 and( tech.unit.ingredients[Index][1] == "module-circuit-board" or tech.unit.ingredients[Index][1] == "speed-processor" or tech.unit.ingredients[Index][1] == "effectivity-processor" or tech.unit.ingredients[Index][1] == "productivity-processor" or tech.unit.ingredients[Index][1] == "pollution-clean-processor" or tech.unit.ingredients[Index][1] == "pollution-create-processor") )  then
 			tier = 6
 			multiplier = sciencecosttweaker.costs.bobmodules;
 		end
@@ -97,33 +97,85 @@ for index,tech in pairs(data.raw.technology) do
 		-- For each type of science pack, multiply its count per research step by the given multiplier
 		newCost = 0
 		if Value[1] == "science-pack-1"  then
-			newCost = math.floor(Value[2] * multiplier.cost.red)
+			mult = 1
+			if (multiplier.cost.red ~= nil) then
+				mult = multiplier.cost.red
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "science-pack-2" then
-			newCost = math.floor(Value[2] * multiplier.cost.green)
+			mult = 1
+			if (multiplier.cost.green ~= nil) then
+				mult = multiplier.cost.green
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "science-pack-3" then
-			newCost = math.floor(Value[2] * multiplier.cost.blue)
+			mult = 1
+			if (multiplier.cost.blue ~= nil) then
+				mult = multiplier.cost.blue
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "alien-science-pack" then
-			newCost = math.floor(Value[2] * multiplier.cost.alien)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.alien
+			end
+			newCost = math.floor(Value[2] * mult)
 		-- Bobingabout's Tech
 		elseif Value[1] == "science-pack-4" then
-			newCost = math.floor(Value[2] * multiplier.cost.darkBlue)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.darkBlue
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "science-pack-gold" then
-			newCost = math.floor(Value[2] * multiplier.cost.gold)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.gold
+			end
+			newCost = math.floor(Value[2] * mult)
 		-- Bobingabout's Modules
 		elseif Value[1] == "module-circuit-board" then
-			newCost = math.floor(Value[2] * multiplier.cost.circuit)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.circuit
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "module-case" then
-			newCost = math.floor(Value[2] * multiplier.cost.case)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.case
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "speed-processor" then
-			newCost = math.floor(Value[2] * multiplier.cost.speed)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.speed
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "effectivity-processor" then
-			newCost = math.floor(Value[2] * multiplier.cost.effectivity)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.effectivity
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "productivity-processor" then
-			newCost = math.floor(Value[2] * multiplier.cost.productivity)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.productivity
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "pollution-clean-processor" then
-			newCost = math.floor(Value[2] * multiplier.cost.pollutionClean)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.pollutionClean
+			end
+			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "pollution-create-processor" then
-			newCost = math.floor(Value[2] * multiplier.cost.pollutionCreate)
+			mult = 1
+			if (multiplier.cost.circuit ~= nil) then
+				mult = multiplier.cost.pollutionCreate
+			end
+			newCost = math.floor(Value[2] * mult)
 		end
 		newCost = math.max(newCost, 0);
 		Value[2] = newCost
