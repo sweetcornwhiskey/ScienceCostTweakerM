@@ -55,6 +55,7 @@ for index,tech in pairs(data.raw.technology) do
 	-- Tier 3 = Any research that contains blue science packs
 	-- Tier 4 = Any research that contains (bobstech) dark-blue science packs
 	-- Tier 5 = Any research that contains (bobstech) gold science packs
+	-- Tier 6 = Any research that contains (bobsmodules) module circuit boards
 	-- Tier 10 = Any research that contains alien science packs
 
 	tier = 1
@@ -75,6 +76,10 @@ for index,tech in pairs(data.raw.technology) do
 		if (tier < 5 and tech.unit.ingredients[Index][1] == "science-pack-gold") then
 			tier = 5
 			multiplier = sciencecosttweaker.costs.tier5;
+		end
+		if (tier < 6 and tech.unit.ingredients[Index][1] == "module-circuit-board") then
+			tier = 6
+			multiplier = sciencecosttweaker.costs.bobmodules;
 		end
 		if (tier < 10 and tech.unit.ingredients[Index][1] == "alien-science-pack") then
 			tier = 10
@@ -97,12 +102,28 @@ for index,tech in pairs(data.raw.technology) do
 			newCost = math.floor(Value[2] * multiplier.cost.green)
 		elseif Value[1] == "science-pack-3" then
 			newCost = math.floor(Value[2] * multiplier.cost.blue)
+		elseif Value[1] == "alien-science-pack" then
+			newCost = math.floor(Value[2] * multiplier.cost.alien)
+		-- Bobingabout's Tech
 		elseif Value[1] == "science-pack-4" then
 			newCost = math.floor(Value[2] * multiplier.cost.darkBlue)
 		elseif Value[1] == "science-pack-gold" then
 			newCost = math.floor(Value[2] * multiplier.cost.gold)
-		elseif Value[1] == "alien-science-pack" then
-			newCost = math.floor(Value[2] * multiplier.cost.alien)
+		-- Bobingabout's Modules
+		elseif Value[1] == "module-circuit-board" then
+			newCost = math.floor(Value[2] * multiplier.cost.circuit)
+		elseif Value[1] == "module-case" then
+			newCost = math.floor(Value[2] * multiplier.cost.case)
+		elseif Value[1] == "speed-processor" then
+			newCost = math.floor(Value[2] * multiplier.cost.speed)
+		elseif Value[1] == "effectivity-processor" then
+			newCost = math.floor(Value[2] * multiplier.cost.effectivity)
+		elseif Value[1] == "productivity-processor" then
+			newCost = math.floor(Value[2] * multiplier.cost.productivity)
+		elseif Value[1] == "pollution-clean-processor" then
+			newCost = math.floor(Value[2] * multiplier.cost.pollutionClean)
+		elseif Value[1] == "pollution-create-processor" then
+			newCost = math.floor(Value[2] * multiplier.cost.pollutionCreate)
 		end
 		newCost = math.max(newCost, 0);
 		Value[2] = newCost
