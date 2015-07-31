@@ -29,5 +29,5 @@ sciencecosttweaker.options.adjustEvolution.pollutionMultiplier = 0.33 -- 3x slow
 sciencecosttweaker.options.adjustEvolution.killNestsMultiplier = 1.0 -- No adjustment to evolution from killing nests.
 
 -- Difficulty to use.
--- normal, no adjustment, lolwhat, 
+-- normal, no adjustment, lolwhat, extended
 sciencecosttweaker.options.difficulty = "normal"

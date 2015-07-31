@@ -5,6 +5,8 @@ if (sciencecosttweaker.options.difficulty == "no adjustment") then
 	require("costs.noadjustment")
 elseif (sciencecosttweaker.options.difficulty == "lolwhat") then
 	require("costs.lolwhat")
+elseif (sciencecosttweaker.options.difficulty == "extended") then
+	require("costs.extended")
 else
 	require("costs.normal")
 end
