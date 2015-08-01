@@ -63,6 +63,9 @@ data:extend({
 
 	-- Tier 1 Intermediary products.
 	-- =============================
+	-- Pure Bobsmods Tier 1 Science Pack:
+	-- 5.5x time, 2x Iron plate, 1x Copper plate
+	-- <- 1x Iron gear (2x Iron plate) + 1x Copper plate
 	{
 		type = "recipe",
 		name = "sct-t1-ironcore",
@@ -96,6 +99,11 @@ data:extend({
 	
 	-- Tier 2 Intermediary products.
 	-- =============================
+	-- Pure Bobsmods Tier 2 Science Pack:
+	-- 9.4x time, 0.25x Raw Wood, 4.5x Iron plate, 1.5x Copper plate
+	-- <- 1x Transport Belt (0.5x Iron gear + 0.5x Iron plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate)
+	-- <- 1.5x Gear + 1.5x Iron plate + 3x Copper cable (1.5x copper plate) + 1x Wooden Board (0.5x Wood)
+	-- <- 5.5x Iron plate + 1.5x Copper plate + 0.5x Wood (0.25x Raw Wood)
 	{
 		type = "recipe",
 		name = "sct-t2-reaction-nodes",
@@ -179,6 +187,11 @@ data:extend({
 	
 	-- Tier 3 Intermediary products.
 	-- =============================
+	-- Pure Bobsmods Tier 3 Science Pack:
+	-- 66.7x time, 
+	-- <- 1x Battery (1x Iron plate + 1x Copper plate + 2x Sulfiric Acid) + 1x Steel (5x Iron plate) + 1x Advanced Circuit (1x Circuit Board + 4x Basic ElecComp + 4x ElecComp + 1x Solder) + 1x Smart Inserter (1x Fast Inserter + 4x Electronic circuit)
+	-- <- 6x Iron plate + 1x Copper plate + 2x Sulfiric Acid + 1x Fast Inserter (1x Inserter + 2x Iron plate + 2x Electronic circuit) + 4x Electronic circuit (12x Copper cable + 4x Wooden Board) + 1x Circuit Board (1x Phenolic Board + 1x Copper Plate + 1x Tin Plate + 0.5x Ferric Chlorine)+ 4x Basic ElecComp (0.8x Tinned Copper Wire + 0.8x Carbon) + 4x ElecComp (0.8x Plastic Bar + 0.8x Tinned Copper Wire + 1.6x Silicon Wafer) + 1x Solder (0.5x Solder Plate + 0.125x Resin)
+	-- <- 8x Iron plate + 2x Copper plate + 2x Sulfiric Acid + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate) + 2x Electronic circuit (6x Copper cable + 2x Wooden Board) + 12x Copper cable (6x Copper Plate) + 4x Wooden Board (2x Wood) + 1x Phenolic Board (0.5x Wood + 0.5x Resin) + 1x Tin Plate + 0.5x Ferric Chlorine  + 1.6x Tinned Copper Wire (1.6x Copper Cable + 0.5x Tin Plate) + 0.8x Carbon (0.4x Coal + 0.2x Water) + 0.8x Plastic Bar (0.4x Coal + 1.2x PetroGas)+ 1.6x Silicon Wafer (0.2x Silicon plate) + 0.5x Solder Plate (0.2x Tin + 0.3x Lead) + 0.125x Resin (0.125x Raw Wood)
 	{
 		type = "recipe",
 		name = "sct-t3-flash-fuel",
@@ -277,6 +290,8 @@ data:extend({
 	
 	-- Tier 4 Intermediary products.
 	-- =============================
+	-- Pure Bobsmods Tier 4 Science Pack:
+	-- 10x Alien Science Pack = 12x time, 1x Alien Artifact
 	{
 		type = "recipe",
 		name = "sct-t4-bioprocessor",

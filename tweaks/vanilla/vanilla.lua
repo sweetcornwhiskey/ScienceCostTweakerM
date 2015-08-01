@@ -42,7 +42,7 @@ data:extend({
 	-- =============================
 	-- Vanilla Tier 2 Science Pack:
 	-- 8.8x time, 5.5x Iron plate, 1.5x Copper plate
-	-- <- 1x Transport Belt (0.5x Iron gear + 1x Iron plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate)
+	-- <- 1x Transport Belt (0.5x Iron gear + 0.5x Iron plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate)
 	-- <- 1.5x Gear + 2.5x Iron plate + 3x Copper cable (1.5x copper plate)
 	-- <- 5.5x Iron plate + 1.5x Copper plate
 	{

@@ -1,51 +1,8 @@
 require("config")
 
 -- Select the cost file depending on which one is requested.
-if (sciencecosttweaker.options.difficulty == "no adjustment") then
-	require("costs.noadjustment")
-elseif (sciencecosttweaker.options.difficulty == "lolwhat") then
-	require("costs.lolwhat")
-elseif (sciencecosttweaker.options.difficulty == "extended") then
-	require("costs.extended")
-else
-	require("costs.normal")
-end
-
-if (sciencecosttweaker.options.useNewIntermediates == true) then
-	require("tweaks.newintermediates")
-	require("tweaks.tweakedsciencepacks")
-
-	useOption = 1;
-	if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
-		-- Check that both bobsmod tech and bobsmod plates is installed
-		if (data.raw["lab"]["lab-2"] and data.raw["assembling-machine"]["electrolyser-3"]) then
-			useOption = 2;
-		end
-	end
-
-	-- Vanilla
-	if useOption == 1 then
-		require("tweaks.vanilla.vanilla")
-	end
-
-	-- Bob's Mods
-	if useOption == 2 then
-		require("tweaks.bobsmods.bobsmods")
-	end
-end
-
--- If enabled, then use the new labs
-if (sciencecosttweaker.options.useTieredLabs == true) then
-	require("tweaks.newlabs")
-end
-
--- If enabled, then adjust the evolution factors
-if (sciencecosttweaker.options.adjustEvolution.enabled == true) then
-	-- Adjust evolution factor to compensate for the slower technology gain.
-	data.raw["map-settings"]["map-settings"]["enemy_evolution"].time_factor = data.raw["map-settings"]["map-settings"]["enemy_evolution"].time_factor * sciencecosttweaker.options.adjustEvolution.timeMultiplier; -- vanilla default: 0.000008
-	data.raw["map-settings"]["map-settings"]["enemy_evolution"].pollution_factor = data.raw["map-settings"]["map-settings"]["enemy_evolution"].pollution_factor * sciencecosttweaker.options.adjustEvolution.pollutionMultiplier; -- vanilla default: 0.00003
-	data.raw["map-settings"]["map-settings"]["enemy_evolution"].destroy_factor = data.raw["map-settings"]["map-settings"]["enemy_evolution"].destroy_factor * sciencecosttweaker.options.adjustEvolution.killNestsMultiplier; -- vanilla default: 0.005
-end
+costConfig = "configs.costs." + sciencecosttweaker.options.difficulty
+require(costConfig)
 
 -- Iterate through all research, and update the costs as configured.
 for index,tech in pairs(data.raw.technology) do 
@@ -77,7 +34,7 @@ for index,tech in pairs(data.raw.technology) do
 			tier = 5
 			multiplier = sciencecosttweaker.costs.tier5;
 		end
-		if (tier < 6 and( tech.unit.ingredients[Index][1] == "module-circuit-board" or tech.unit.ingredients[Index][1] == "speed-processor" or tech.unit.ingredients[Index][1] == "effectivity-processor" or tech.unit.ingredients[Index][1] == "productivity-processor" or tech.unit.ingredients[Index][1] == "pollution-clean-processor" or tech.unit.ingredients[Index][1] == "pollution-create-processor") )  then
+		if (tier < 6 and (tech.unit.ingredients[Index][1] == "module-circuit-board" or tech.unit.ingredients[Index][1] == "speed-processor" or tech.unit.ingredients[Index][1] == "effectivity-processor" or tech.unit.ingredients[Index][1] == "productivity-processor" or tech.unit.ingredients[Index][1] == "pollution-clean-processor" or tech.unit.ingredients[Index][1] == "pollution-create-processor") )  then
 			tier = 6
 			multiplier = sciencecosttweaker.costs.bobmodules;
 		end

@@ -1,6 +1,3 @@
--- Disable Normal labs.
-data.raw.recipe["lab"].enabled = "false"
-
 data:extend({
 	-- New Science Labs, from Tier 1 to Tier 4.
 	-- ===================================================================
@@ -343,6 +340,17 @@ data:extend({
 	},
 	
 })
+
+-- Disable the ability of normal labs to research. Keep them only for recipe purposes of other mods.
+data.raw.recipe["lab"].inputs = {}
+data.raw.recipe["lab"].enabled = "true"
+data.raw.recipe["lab"].module_specification =
+    {
+      module_slots = 0,
+      max_entity_info_module_icons_per_row = 3,
+      max_entity_info_module_icon_rows = 1,
+      module_info_icon_shift = {0, 0.9}
+    }
 
 -- Make technology research enable the Tier 3 and Tier 4 laboratories.
 -- ===================================================================

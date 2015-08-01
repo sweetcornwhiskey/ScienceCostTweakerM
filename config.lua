@@ -21,13 +21,10 @@ sciencecosttweaker.options.bobsmods.moreComplexBasicCircuits = false
 -- If false, normal lab is enabled.
 sciencecosttweaker.options.useTieredLabs = true
 
--- If set to true, the evolution factors will be adjusted by the factors defined here.
-sciencecosttweaker.options.adjustEvolution = {}
-sciencecosttweaker.options.adjustEvolution.enabled = true
-sciencecosttweaker.options.adjustEvolution.timeMultiplier = 0.25 -- 4x slower evolution from time.
-sciencecosttweaker.options.adjustEvolution.pollutionMultiplier = 0.33 -- 3x slower evolution from created pollution.
-sciencecosttweaker.options.adjustEvolution.killNestsMultiplier = 1.0 -- No adjustment to evolution from killing nests.
+-- Difficulty factor of research cost adjustments.
+-- lolwhat, noadjustment, normal, extended
+sciencecosttweaker.options.difficultyCost = "normal"
 
--- Difficulty to use.
--- normal, no adjustment, lolwhat, extended
-sciencecosttweaker.options.difficulty = "normal"
+-- Difficulty factor of alien evolution rate adjustments.
+-- biterinabarrel, allthetimeyouneed, normal, noadjustment, swarm
+sciencecosttweaker.options.difficultyCost = "normal"
