@@ -79,7 +79,7 @@ data:extend({
 		energy_required = 5,
 		ingredients =
 		{
-			{"sct-lab-1", 1},
+			{"lab", 1},
 			{"electronic-circuit", 20},
 			{"iron-gear-wheel", 10}
 		},
