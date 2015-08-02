@@ -1,7 +1,12 @@
 require("config")
 
+-- If enabled, then use the new labs
+if (sciencecosttweaker.options.useTieredLabs == true) then
+	require("tweaks.newlabs")
+end
+
 -- Select the cost file depending on which one is requested.
-costConfig = "configs.costs." + sciencecosttweaker.options.difficulty
+costConfig = "configs.costs." .. sciencecosttweaker.options.difficultyCost
 require(costConfig)
 
 -- Iterate through all research, and update the costs as configured.

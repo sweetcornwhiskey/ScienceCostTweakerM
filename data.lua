@@ -23,13 +23,8 @@ if (sciencecosttweaker.options.useNewIntermediates == true) then
 	end
 end
 
--- If enabled, then use the new labs
-if (sciencecosttweaker.options.useTieredLabs == true) then
-	require("tweaks.newlabs")
-end
-
 -- Select the cost file depending on which one is requested.
-evoConfig = "configs.evolutions." + sciencecosttweaker.options.difficulty
+evoConfig = "configs.evolutions." .. sciencecosttweaker.options.difficultyEvo
 require(evoConfig)
 
 -- Adjust evolution factor according to the config option chosen.

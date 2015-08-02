@@ -27,4 +27,4 @@ sciencecosttweaker.options.difficultyCost = "normal"
 
 -- Difficulty factor of alien evolution rate adjustments.
 -- biterinabarrel, allthetimeyouneed, normal, noadjustment, swarm
-sciencecosttweaker.options.difficultyCost = "normal"
+sciencecosttweaker.options.difficultyEvo = "normal"

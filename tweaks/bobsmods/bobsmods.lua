@@ -66,6 +66,8 @@ data:extend({
 	-- Pure Bobsmods Tier 1 Science Pack:
 	-- 5.5x time, 2x Iron plate, 1x Copper plate
 	-- <- 1x Iron gear (2x Iron plate) + 1x Copper plate
+	--
+	-- New cost: 8.72x time, 2x Iron plate, 1x Copper plate, 0.25x Raw Wood
 	{
 		type = "recipe",
 		name = "sct-t1-ironcore",
@@ -85,15 +87,15 @@ data:extend({
 		type = "recipe",
 		name = "sct-t1-magnet-coils",
 		enabled = "true",
-		energy_required = 2.48,
+		energy_required = 4.96,
 		ingredients =
 		{
-			{"copper-plate", 2},
+			{"copper-plate", 4},
 			{"resin", 1},
 		},
 		results = 
 		{
-			{type="item", name="sct-t1-magnet-coils", amount=4},
+			{type="item", name="sct-t1-magnet-coils", amount=8},
 		},
 	},
 	
@@ -104,6 +106,8 @@ data:extend({
 	-- <- 1x Transport Belt (0.5x Iron gear + 0.5x Iron plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate)
 	-- <- 1.5x Gear + 1.5x Iron plate + 3x Copper cable (1.5x copper plate) + 1x Wooden Board (0.5x Wood)
 	-- <- 5.5x Iron plate + 1.5x Copper plate + 0.5x Wood (0.25x Raw Wood)
+	--
+	-- New cost: 8.7x time, 8x Iron plate, 2x Copper plate, 2x Raw Wood
 	{
 		type = "recipe",
 		name = "sct-t2-reaction-nodes",
@@ -188,10 +192,14 @@ data:extend({
 	-- Tier 3 Intermediary products.
 	-- =============================
 	-- Pure Bobsmods Tier 3 Science Pack:
-	-- 66.7x time, 
+	-- 66.7x time, 11x Iron Plate, 13.3x Copper Plate, 2.625x Raw Wood, 2x Sulfiric Acid, 1.7x Tin Plate, 0.8x Coal, 0.2x Silicon Plate, 0.3x Lead, 1.2x PetroGas, 0.2x Water, 0.5x Ferric Chlorine
 	-- <- 1x Battery (1x Iron plate + 1x Copper plate + 2x Sulfiric Acid) + 1x Steel (5x Iron plate) + 1x Advanced Circuit (1x Circuit Board + 4x Basic ElecComp + 4x ElecComp + 1x Solder) + 1x Smart Inserter (1x Fast Inserter + 4x Electronic circuit)
 	-- <- 6x Iron plate + 1x Copper plate + 2x Sulfiric Acid + 1x Fast Inserter (1x Inserter + 2x Iron plate + 2x Electronic circuit) + 4x Electronic circuit (12x Copper cable + 4x Wooden Board) + 1x Circuit Board (1x Phenolic Board + 1x Copper Plate + 1x Tin Plate + 0.5x Ferric Chlorine)+ 4x Basic ElecComp (0.8x Tinned Copper Wire + 0.8x Carbon) + 4x ElecComp (0.8x Plastic Bar + 0.8x Tinned Copper Wire + 1.6x Silicon Wafer) + 1x Solder (0.5x Solder Plate + 0.125x Resin)
 	-- <- 8x Iron plate + 2x Copper plate + 2x Sulfiric Acid + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate) + 2x Electronic circuit (6x Copper cable + 2x Wooden Board) + 12x Copper cable (6x Copper Plate) + 4x Wooden Board (2x Wood) + 1x Phenolic Board (0.5x Wood + 0.5x Resin) + 1x Tin Plate + 0.5x Ferric Chlorine  + 1.6x Tinned Copper Wire (1.6x Copper Cable + 0.5x Tin Plate) + 0.8x Carbon (0.4x Coal + 0.2x Water) + 0.8x Plastic Bar (0.4x Coal + 1.2x PetroGas)+ 1.6x Silicon Wafer (0.2x Silicon plate) + 0.5x Solder Plate (0.2x Tin + 0.3x Lead) + 0.125x Resin (0.125x Raw Wood)
+	-- <- 9x Iron plate + 8x Copper plate + 2x Sulfiric Acid + 1x Electronic circuit (3x Copper cable + 1x Wooden Board) + 1x Iron gear (2x Iron plate) + 6x Copper cable (3x Copper plate) + 2x Wooden Board (1x Wood) + 2.5x Wood + 0.625x Raw Wood + 1.5x Tin Plate + 0.5x Ferric Chlorine  + 1.6x Copper Cable + 0.8x Coal + 0.2x Water + 1.2x PetroGas + 0.2x Silicon plate + 0.2x Tin + 0.3x Lead
+	-- <- 11x Iron plate + 11.8x Copper plate + 2x Sulfiric Acid + 3x Copper cable (1.5x Copper plate) + 1x Wooden Board (0.5x Wood) + 3.5x Wood (1.75x Raw Wood) + 0.625x Raw Wood + 1.7x Tin Plate + 0.5x Ferric Chlorine + 0.8x Coal + 0.2x Water + 1.2x PetroGas + 0.2x Silicon plate + 0.3x Lead
+	--
+	-- New cost: 61x time, 14x Iron plate, 12x Copper plate, 1x Quartz, 1x Coal, 1x Gold plate, 1x Silicon Wafer, 1x Brass Alloy, 2x Phenolic Board, 1x Aluminium Plate, 1x Solder, 1x Heavy Oil, 1x Light Oil, 0.5x Sulfiric Acid, 3x PetroGas, 10x Nitrogen, 0.5x Ferric Chlorine
 	{
 		type = "recipe",
 		name = "sct-t3-flash-fuel",
@@ -202,7 +210,7 @@ data:extend({
 		{
 			{type="fluid", name="heavy-oil", amount=1},
 			{type="fluid", name="light-oil", amount=1},
-			{type="item", name="iron-plate", amount=2}
+			{type="item", name="steel-plate", amount=1}
 		},
 		results = 
 		{
@@ -237,8 +245,8 @@ data:extend({
 		energy_required = 3,
 		ingredients =
 		{
-			{type="item", name="iron-plate", amount=2},
-			{type="item", name="plastic-bar", amount=1},
+			{type="item", name="steel-plate", amount=1},
+			{type="item", name="plastic-bar", amount=2},
 			{type="item", name="gold-plate", amount=1},
 			{type="item", name="solder", amount=1},
 			{type="fluid", name="sulfuric-acid", amount=0.5}
@@ -279,7 +287,7 @@ data:extend({
 			{type="item", name="phenolic-board", amount=2},
 			{type="item", name="aluminium-plate", amount=1},
 			{type="item", name="iron-plate", amount=4},
-			{type="item", name="copper-plate", amount=4},
+			{type="item", name="copper-plate", amount=12},
 			{type="fluid", name="ferric-chloride-solution", amount=0.5}
 		},
 		results = 
@@ -291,7 +299,9 @@ data:extend({
 	-- Tier 4 Intermediary products.
 	-- =============================
 	-- Pure Bobsmods Tier 4 Science Pack:
-	-- 10x Alien Science Pack = 12x time, 1x Alien Artifact
+	-- 1.2x time, 0.1x Alien Artifact
+	--
+	-- New cost: 18x time, 0.033x Alien Artifact, 0.91x Copper plate, 0.66x Silicon Wafer, 0.66x Gold plate, 0.5x Nitrogen, 0.25x Phenolic Board
 	{
 		type = "recipe",
 		name = "sct-t4-bioprocessor",

@@ -8,6 +8,8 @@ data:extend({
 	-- Vanilla Tier 1 Science Pack:
 	-- 5.5x time, 2x Iron plate, 1x Copper plate
 	-- <- 1x Iron gear (2x Iron plate) + 1x Copper plate
+	--
+	-- New cost: 8.72x time, 2x Iron plate, 1x Copper plate
 	{
 		type = "recipe",
 		name = "sct-t1-ironcore",
@@ -27,14 +29,14 @@ data:extend({
 		type = "recipe",
 		name = "sct-t1-magnet-coils",
 		enabled = "true",
-		energy_required = 2.48,
+		energy_required = 4.96,
 		ingredients =
 		{
-			{"copper-plate", 2},
+			{"copper-plate", 4},
 		},
 		results = 
 		{
-			{type="item", name="sct-t1-magnet-coils", amount=4},
+			{type="item", name="sct-t1-magnet-coils", amount=8},
 		},
 	},
 	
@@ -45,6 +47,8 @@ data:extend({
 	-- <- 1x Transport Belt (0.5x Iron gear + 0.5x Iron plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate)
 	-- <- 1.5x Gear + 2.5x Iron plate + 3x Copper cable (1.5x copper plate)
 	-- <- 5.5x Iron plate + 1.5x Copper plate
+	--
+	-- New cost: 8.7x time, 8x Iron plate, 2x Copper plate
 	{
 		type = "recipe",
 		name = "sct-t2-reaction-nodes",
@@ -134,6 +138,8 @@ data:extend({
 	-- <- 17x Iron plate + 12x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 1x Electronic circuit (1x Iron Plate + 3x Copper Cable) + 1x Iron gear (2x Iron plate) + 6x Copper Cable (3x copper plate)
 	-- <- 20x Iron plate + 15x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 3x Copper Cable (1.5x Copper Plate)
 	-- <- 20x Iron plate + 16.5x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid
+	--
+	-- New cost: 66x time, 18x Iron plate, 16.5x Copper plate, 1x Heavy Oil, 1x Light Oil, 6.5x Sulfiric Acid, 2x Coal, 6x PetroGas, 15x Water
 	{
 		type = "recipe",
 		name = "sct-t3-flash-fuel",
@@ -144,7 +150,7 @@ data:extend({
 		{
 			{type="fluid", name="heavy-oil", amount=1},
 			{type="fluid", name="light-oil", amount=1},
-			{type="item", name="iron-plate", amount=2}
+			{type="item", name="steel-plate", amount=1}
 		},
 		results = 
 		{
@@ -160,7 +166,7 @@ data:extend({
 		energy_required = 3,
 		ingredients =
 		{
-			{type="item", name="iron-plate", amount=3},
+			{type="item", name="steel-plate", amount=1},
 			{type="item", name="copper-plate", amount=3},
 			{type="fluid", name="sulfuric-acid", amount=4}
 		},
@@ -218,7 +224,7 @@ data:extend({
 		{
 			{type="item", name="electronic-circuit", amount=1},
 			{type="item", name="iron-plate", amount=4},
-			{type="item", name="copper-plate", amount=4},
+			{type="item", name="sct-t1-magnet-coils", amount=22},
 			{type="fluid", name="water", amount=5}
 		},
 		results = 
@@ -230,7 +236,9 @@ data:extend({
 	-- Tier 4 Intermediary products.
 	-- =============================
 	-- Vanilla Tier 4 Science Pack:
-	-- 10x Alien Science Pack = 12x time, 1x Alien Artifact
+	-- 1.2x time, 0.1x Alien Artifact
+	--
+	-- New cost: 18x time, 0.033x Alien Artifact, 1.83x Iron plate, 1.83x Copper plate, 1x Water
 	{
 		type = "recipe",
 		name = "sct-t4-bioprocessor",
