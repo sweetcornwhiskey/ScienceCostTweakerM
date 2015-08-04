@@ -5,6 +5,13 @@ if (sciencecosttweaker.options.useTieredLabs == true) then
 	require("tweaks.newlabs")
 end
 
+if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
+	if (data.raw["lab"]["lab-2"] and data.raw["assembling-machine"]["electrolyser-3"]) then
+		require("tweaks.bobsmods.bobsmodsfinal")
+	end
+end
+
+
 -- Select the cost file depending on which one is requested.
 costConfig = "configs.costs." .. sciencecosttweaker.options.difficultyCost
 require(costConfig)
