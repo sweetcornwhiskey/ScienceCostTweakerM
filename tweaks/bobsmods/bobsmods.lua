@@ -124,7 +124,7 @@ data:extend({
 		energy_required = 2.9,
 		ingredients =
 		{
-			{"iron-plate", 4},
+			{"steel-plate", 1},
 			{"resin", 1},
 		},
 		results = 
