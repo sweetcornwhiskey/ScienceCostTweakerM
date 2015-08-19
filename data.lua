@@ -7,7 +7,7 @@ if (sciencecosttweaker.options.useNewIntermediates == true) then
 	useOption = 1;
 	if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
 		-- Check that both bobsmod tech and bobsmod plates is installed
-		if (data.raw["lab"]["lab-2"] and data.raw["assembling-machine"]["electrolyser-3"]) then
+		if (data.raw["item"]["resin"] and data.raw["item"]["glass"] and data.raw["item"]["silicon-wafer"] and data.raw["item"]["brass-alloy"]) then
 			useOption = 2;
 		end
 	end
