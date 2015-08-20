@@ -6,7 +6,7 @@ if (sciencecosttweaker.options.useTieredLabs == true) then
 end
 
 if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
-	if (data.raw["lab"]["lab-2"] and data.raw["assembling-machine"]["electrolyser-3"]) then
+	if (data.raw["item"]["resin"] and data.raw["item"]["glass"] and data.raw["item"]["silicon-wafer"] and data.raw["item"]["brass-alloy"]) then
 		require("tweaks.bobsmods.bobsmodsfinal")
 	end
 end
@@ -85,20 +85,20 @@ for index,tech in pairs(data.raw.technology) do
 			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "alien-science-pack" then
 			mult = 1
-			if (multiplier.cost.circuit ~= nil) then
+			if (multiplier.cost.alien ~= nil) then
 				mult = multiplier.cost.alien
 			end
 			newCost = math.floor(Value[2] * mult)
 		-- Bobingabout's Tech
 		elseif Value[1] == "science-pack-4" then
 			mult = 1
-			if (multiplier.cost.circuit ~= nil) then
+			if (multiplier.cost.darkBlue ~= nil) then
 				mult = multiplier.cost.darkBlue
 			end
 			newCost = math.floor(Value[2] * mult)
 		elseif Value[1] == "science-pack-gold" then
 			mult = 1
-			if (multiplier.cost.circuit ~= nil) then
+			if (multiplier.cost.gold ~= nil) then
 				mult = multiplier.cost.gold
 			end
 			newCost = math.floor(Value[2] * mult)
