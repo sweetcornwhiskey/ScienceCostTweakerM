@@ -13,18 +13,16 @@ sciencecosttweaker.options.bobsmods = {}
 -- Is ignored if bobmods Tech or bobmods Plates is not installed.
 sciencecosttweaker.options.bobsmods.useNewOres = true
 
--- Bob's Mods: Will cause basic circuit boards to require basic electronic components.
--- This will force you to rely on burner inserters and tier 1 assemblers until you have completed enough research to produce basic electronic components and have made a manufacturing chain for it.
-sciencecosttweaker.options.bobsmods.moreComplexBasicCircuits = false
-
 -- If set to true, will disable the normal lab, and create the 4 different tiers of labs.
 -- If false, normal lab is enabled.
 sciencecosttweaker.options.useTieredLabs = true
 
 -- Difficulty factor of research cost adjustments.
 -- lolwhat, noadjustment, normal, extended
+-- Note: noadjustment is a special case, meaning the code for doing the cost adjustment isn't even run.
 sciencecosttweaker.options.difficultyCost = "normal"
 
 -- Difficulty factor of alien evolution rate adjustments.
 -- biterinabarrel, allthetimeyouneed, normal, noadjustment, swarm
+-- Note: noadjustment is a special case, meaning the code for doing the evolution adjustment isn't even run.
 sciencecosttweaker.options.difficultyEvo = "normal"

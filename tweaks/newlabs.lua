@@ -19,7 +19,7 @@ data:extend({
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-2"},
 		max_health = 200,
-		crafting_speed = 1,
+		researching_speed = 1,
 		corpse = "big-remnants",
 		dying_explosion = "medium-explosion",
 		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
@@ -103,7 +103,7 @@ data:extend({
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-3"},
 		max_health = 250,
-		crafting_speed = 1,
+		researching_speed = 1,
 		corpse = "big-remnants",
 		dying_explosion = "medium-explosion",
 		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
@@ -188,7 +188,7 @@ data:extend({
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-4"},
 		max_health = 300,
-		crafting_speed = 1,
+		researching_speed = 1,
 		corpse = "big-remnants",
 		dying_explosion = "medium-explosion",
 		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
@@ -278,7 +278,7 @@ data:extend({
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-1"},
 		max_health = 150,
-		crafting_speed = 1,
+		researching_speed = 1,
 		corpse = "big-remnants",
 		dying_explosion = "medium-explosion",
 		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
@@ -382,7 +382,7 @@ data.raw["lab"]["lab"].module_specification =
 	}
 data.raw["lab"]["lab"].fast_replaceable_group = "lab"
 
--- Change the normal lab recipe to use a tier 1 lab. So that people will not try to use the normal lab right off the bat.
+-- Change the lab recipe to use copper cables and extra iron plates instead of basic circuitry
 data.raw.recipe["lab"].enabled = "true"
 data.raw.recipe["lab"].ingredients =
 	{
