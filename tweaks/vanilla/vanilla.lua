@@ -138,8 +138,6 @@ data:extend({
 	-- <- 17x Iron plate + 12x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 1x Electronic circuit (1x Iron Plate + 3x Copper Cable) + 1x Iron gear (2x Iron plate) + 6x Copper Cable (3x copper plate)
 	-- <- 20x Iron plate + 15x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 3x Copper Cable (1.5x Copper Plate)
 	-- <- 20x Iron plate + 16.5x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid
-	--
-	-- New cost: 66x time, 18x Iron plate, 16.5x Copper plate, 1x Heavy Oil, 1x Light Oil, 6.5x Sulfiric Acid, 2x Coal, 6x PetroGas, 15x Water
 	{
 		type = "recipe",
 		name = "sct-t3-flash-fuel",
@@ -167,7 +165,7 @@ data:extend({
 		ingredients =
 		{
 			{type="item", name="steel-plate", amount=1},
-			{type="item", name="copper-plate", amount=3},
+			{type="item", name="copper-plate", amount=2},
 			{type="fluid", name="sulfuric-acid", amount=4}
 		},
 		results = 
@@ -185,8 +183,8 @@ data:extend({
 		ingredients =
 		{
 			{type="item", name="battery", amount=1},
-			{type="item", name="iron-plate", amount=2},
-			{type="item", name="plastic-bar", amount=4},
+			{type="item", name="electronic-circuit", amount=6},
+			{type="item", name="plastic-bar", amount=2},
 			{type="fluid", name="sulfuric-acid", amount=0.5}
 		},
 		results = 
@@ -222,7 +220,7 @@ data:extend({
 		energy_required = 3,
 		ingredients =
 		{
-			{type="item", name="electronic-circuit", amount=1},
+			{type="item", name="advanced-circuit", amount=1},
 			{type="item", name="iron-plate", amount=4},
 			{type="item", name="sct-t1-magnet-coils", amount=22},
 			{type="fluid", name="water", amount=5}

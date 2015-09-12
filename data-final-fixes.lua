@@ -25,8 +25,8 @@ if (sciencecosttweaker.options.difficultyCost ~= "noadjustment") then
 		-- Tier 3 = Any research that contains blue science packs
 		-- Tier 4 = Any research that contains (bobstech) dark-blue science packs
 		-- Tier 5 = Any research that contains (bobstech) gold science packs
-		-- Tier 6 = Any research that contains (bobsmodules) module circuit boards
 		-- Tier 10 = Any research that contains alien science packs
+		-- Tier 99 = Special Case research. Does not use the science packs. Things like Bob's Modules research or Dark Matter R
 
 		tier = 1
 		multiplier = sciencecosttweaker.costs.tier1;

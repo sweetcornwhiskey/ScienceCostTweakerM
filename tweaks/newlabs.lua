@@ -382,16 +382,9 @@ data.raw["lab"]["lab"].module_specification =
 	}
 data.raw["lab"]["lab"].fast_replaceable_group = "lab"
 
--- Change the lab recipe to use copper cables and extra iron plates instead of basic circuitry
+-- Backwards compatibility: Ensure the standard lab recipe is enabled.
 data.raw.recipe["lab"].enabled = "true"
-data.raw.recipe["lab"].ingredients =
-	{
-		{"iron-plate", 10},
-		{"copper-cable", 30},
-		{"iron-gear-wheel", 5},
-		{"basic-transport-belt", 4}
-	}
-
+-- Note: A lot of mods adjust the standard lab prototype and entity. Keep changes to it to a minimal.
 	
 -- Make technology research enable the Tier 3 and Tier 4 laboratories.
 -- ===================================================================

@@ -51,7 +51,7 @@ data:extend({
 	-- <- 1.5x Gear + 1.5x Iron plate + 3x Copper cable (1.5x copper plate) + 1x Wooden Board (0.5x Wood)
 	-- <- 5.5x Iron plate + 1.5x Copper plate + 0.5x Wood (0.25x Raw Wood)
 	--
-	-- New cost: 8.7x time, 8x Iron plate, 2x Copper plate, 2x Raw Wood
+	-- New cost: 12.21x time, 4x Iron plate, 2x Copper plate, 1.25x Raw Wood, 0.5xSteel
 	{
 		type = "recipe",
 		name = "sct-t2-reaction-nodes",
@@ -142,8 +142,6 @@ data:extend({
 	-- <- 8x Iron plate + 2x Copper plate + 2x Sulfiric Acid + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate) + 2x Electronic circuit (6x Copper cable + 2x Wooden Board) + 12x Copper cable (6x Copper Plate) + 4x Wooden Board (2x Wood) + 1x Phenolic Board (0.5x Wood + 0.5x Resin) + 1x Tin Plate + 0.5x Ferric Chlorine  + 1.6x Tinned Copper Wire (1.6x Copper Cable + 0.5x Tin Plate) + 0.8x Carbon (0.4x Coal + 0.2x Water) + 0.8x Plastic Bar (0.4x Coal + 1.2x PetroGas)+ 1.6x Silicon Wafer (0.2x Silicon plate) + 0.5x Solder Plate (0.2x Tin + 0.3x Lead) + 0.125x Resin (0.125x Raw Wood)
 	-- <- 9x Iron plate + 8x Copper plate + 2x Sulfiric Acid + 1x Electronic circuit (3x Copper cable + 1x Wooden Board) + 1x Iron gear (2x Iron plate) + 6x Copper cable (3x Copper plate) + 2x Wooden Board (1x Wood) + 2.5x Wood + 0.625x Raw Wood + 1.5x Tin Plate + 0.5x Ferric Chlorine  + 1.6x Copper Cable + 0.8x Coal + 0.2x Water + 1.2x PetroGas + 0.2x Silicon plate + 0.2x Tin + 0.3x Lead
 	-- <- 11x Iron plate + 11.8x Copper plate + 2x Sulfiric Acid + 3x Copper cable (1.5x Copper plate) + 1x Wooden Board (0.5x Wood) + 3.5x Wood (1.75x Raw Wood) + 0.625x Raw Wood + 1.7x Tin Plate + 0.5x Ferric Chlorine + 0.8x Coal + 0.2x Water + 1.2x PetroGas + 0.2x Silicon plate + 0.3x Lead
-	--
-	-- New cost: 61x time, 14x Iron plate, 12x Copper plate, 1x Quartz, 1x Coal, 1x Gold plate, 1x Silicon Wafer, 1x Brass Alloy, 2x Phenolic Board, 1x Aluminium Plate, 1x Solder, 1x Heavy Oil, 1x Light Oil, 0.5x Sulfiric Acid, 3x PetroGas, 10x Nitrogen, 0.5x Ferric Chlorine
 	{
 		type = "recipe",
 		name = "sct-t3-flash-fuel",
@@ -192,7 +190,7 @@ data:extend({
 			{type="item", name="steel-plate", amount=1},
 			{type="item", name="plastic-bar", amount=2},
 			{type="item", name="gold-plate", amount=1},
-			{type="item", name="solder", amount=1},
+			{type="item", name="electronic-circuit", amount=6},
 			{type="fluid", name="sulfuric-acid", amount=0.5}
 		},
 		results = 
@@ -228,10 +226,10 @@ data:extend({
 		energy_required = 3,
 		ingredients =
 		{
-			{type="item", name="phenolic-board", amount=2},
+			{type="item", name="advanced-circuit", amount=1},
 			{type="item", name="aluminium-plate", amount=1},
-			{type="item", name="iron-plate", amount=4},
-			{type="item", name="copper-plate", amount=12},
+			{type="item", name="iron-plate", amount=3},
+			{type="item", name="copper-plate", amount=6},
 			{type="fluid", name="ferric-chloride-solution", amount=0.5}
 		},
 		results = 
