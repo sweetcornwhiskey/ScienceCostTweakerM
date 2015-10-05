@@ -1,3 +1,8 @@
+-- Firstly, set the options for using the new intermediaries, as well as using the new tiered labs.
+require("tweaks.newintermediates")
+require("tweaks.tweakedsciencepacks")
+
+
 data:extend({
 
 	-- Recipes for new science packs intermediary products.

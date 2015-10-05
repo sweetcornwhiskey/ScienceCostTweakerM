@@ -1,3 +1,8 @@
+-- Firstly, set the options for using the new intermediaries, as well as using the new tiered labs.
+require("tweaks.newintermediates")
+require("tweaks.tweakedsciencepacks")
+
+
 -- Make resin craftable by hand, so that we can use it in science pack crafting.
 data.raw.recipe["bob-resin-wood"].category = "crafting"
 
@@ -259,7 +264,7 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-t4-bioprocessor", amount=30},
+			{type="item", name="sct-t4-bioprocessor", amount=10},
 		},
 	},
 

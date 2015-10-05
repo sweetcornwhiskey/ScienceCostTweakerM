@@ -1,27 +1,15 @@
 require("config")
 
-if (sciencecosttweaker.options.useNewIntermediates == true) then
-	require("tweaks.newintermediates")
-	require("tweaks.tweakedsciencepacks")
-
-	useOption = 1;
-	if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
-		-- Check that both bobsmod tech and bobsmod plates is installed
-		if (data.raw["item"]["resin"] and data.raw["item"]["glass"] and data.raw["item"]["silicon-wafer"] and data.raw["item"]["brass-alloy"]) then
-			useOption = 2;
-		end
-	end
-
-	-- Vanilla
-	if useOption == 1 then
-		require("tweaks.vanilla.vanilla")
-	end
-
-	-- Bob's Mods
-	if useOption == 2 then
-		require("tweaks.bobsmods.bobsmods")
+if (sciencecosttweaker.options.sciencePackConfig == "bobsmods") then
+	-- Check that both bobsmod tech and bobsmod plates is installed
+	if (data.raw["item"]["resin"] == nil or data.raw["item"]["glass"] == nil or data.raw["item"]["silicon-wafer"] == nil or data.raw["item"]["brass-alloy"] == nil) then
+		sciencecosttweaker.options.sciencePackConfig = "vanilla"
 	end
 end
+
+-- Select the science pack config file as requested. Initial data file.
+	sciencepackConfig = "tweaks." .. sciencecosttweaker.options.sciencePackConfig .. ".0_initial"
+	require(sciencepackConfig)
 
 if (sciencecosttweaker.options.difficultyEvo ~= "noadjustment") then
 

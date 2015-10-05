@@ -1,15 +1,15 @@
 require("config")
 
--- If enabled, then use the new labs
-if (sciencecosttweaker.options.useTieredLabs == true) then
-	require("tweaks.newlabs")
-end
-
-if (sciencecosttweaker.options.bobsmods.useNewOres == true) then
-	if (data.raw["item"]["resin"] and data.raw["item"]["glass"] and data.raw["item"]["silicon-wafer"] and data.raw["item"]["brass-alloy"]) then
-		require("tweaks.bobsmods.bobsmodsfinal")
+if (sciencecosttweaker.options.sciencePackConfig == "bobsmods") then
+	-- Check that both bobsmod tech and bobsmod plates is installed
+	if (data.raw["item"]["resin"] == nil or data.raw["item"]["glass"] == nil or data.raw["item"]["silicon-wafer"] == nil or data.raw["item"]["brass-alloy"] == nil) then
+		sciencecosttweaker.options.sciencePackConfig = "vanilla"
 	end
 end
+
+-- Select the science pack config file as requested. Initial data file.
+	sciencepackConfig = "tweaks." .. sciencecosttweaker.options.sciencePackConfig .. ".2_final"
+	require(sciencepackConfig)
 
 if (sciencecosttweaker.options.difficultyCost ~= "noadjustment") then
 
@@ -26,7 +26,7 @@ if (sciencecosttweaker.options.difficultyCost ~= "noadjustment") then
 		-- Tier 4 = Any research that contains (bobstech) dark-blue science packs
 		-- Tier 5 = Any research that contains (bobstech) gold science packs
 		-- Tier 10 = Any research that contains alien science packs
-		-- Tier 99 = Special Case research. Does not use the science packs. Things like Bob's Modules research or Dark Matter R
+		-- Tier 99 = Special Case research. Does not use the science packs. Things like Bob's Modules research or Dark Matter Replication.
 
 		tier = 1
 		multiplier = sciencecosttweaker.costs.tier1;
@@ -55,34 +55,37 @@ if (sciencecosttweaker.options.difficultyCost ~= "noadjustment") then
 				tier = 99
 				multiplier = sciencecosttweaker.costs.bobmodules;
 			end
-			if (tier < 99 and (tech.unit.ingredients[Index][1] == "tenemut" or tech.unit.ingredients[Index][1] == "dark-matter-scoop" or tech.unit.ingredients[Index][1] == "dark-matter-transducer" or tech.unit.ingredients[Index][1] == "matter-conduit") )  then
+			if (tier < 99 and (tech.unit.ingredients[Index][1] == "tenemut" or tech.unit.ingredients[Index][1] == "dark-matter-scoop" or tech.unit.ingredients[Index][1] == "dark-matter-transducer" or tech.unit.ingredients[Index][1] == "matter-conduit") ) then
 				tier = 99
 				multiplier = sciencecosttweaker.costs.darkmatter;
 			end
 		end
 
-		local unitCopy = table.deepcopy( tech.unit )
+		-- If a multiplier is defined for this tier, then apply it.
+		if (multiplier ~= nil) then
+			local unitCopy = table.deepcopy( tech.unit )
 
-		-- Now adjust by the modifiers for this tier
-		unitCopy.count = math.max(math.floor(unitCopy.count * multiplier.stepCount), 1);
-		unitCopy.time = math.max(unitCopy.time * multiplier.time, 1);
+			-- Now adjust by the modifiers for this tier
+			unitCopy.count = math.max(math.floor(unitCopy.count * multiplier.stepCount), 1);
+			unitCopy.time = math.max(unitCopy.time * multiplier.time, 1);
 		
-		for Index, Value in ipairs( unitCopy.ingredients ) do
-			-- For each type of science pack, multiply its count per research step by the given multiplier
-			local ingredientName = Value[1]
-			if (multiplier.cost[ingredientName] ~= nil) then
-				local ingredientCostCount = Value[2]
-				local mult = 1
-				
-				mult = multiplier.cost[ingredientName]
-				ingredientCostCount = math.floor(ingredientCostCount * mult)
-				ingredientCostCount = math.max(ingredientCostCount, 0);
-				
-				Value[2] = ingredientCostCount
+			for Index, Value in ipairs( unitCopy.ingredients ) do
+				-- For each type of science pack, multiply its count per research step by the given multiplier
+				local ingredientName = Value[1]
+				if (multiplier.cost[ingredientName] ~= nil) then
+					local ingredientCostCount = Value[2]
+					local mult = 1
+					
+					mult = multiplier.cost[ingredientName]
+					ingredientCostCount = math.floor(ingredientCostCount * mult)
+					ingredientCostCount = math.max(ingredientCostCount, 0);
+					
+					Value[2] = ingredientCostCount
+				end
 			end
-		end
 		
-		tech.unit = unitCopy
+			tech.unit = unitCopy
+		end
 		
 	end
 end
