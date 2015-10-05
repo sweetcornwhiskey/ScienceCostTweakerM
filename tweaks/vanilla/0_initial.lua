@@ -256,7 +256,7 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-t4-bioprocessor", amount=30},
+			{type="item", name="sct-t4-bioprocessor", amount=10},
 		},
 	},
 
