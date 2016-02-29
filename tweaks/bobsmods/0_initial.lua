@@ -256,7 +256,7 @@ if (bobIsAbout == true) then
 		-- Pure Bobsmods Tier 4 Science Pack:
 		-- 1.2x time, 0.1x Alien Artifact
 		--
-		-- New cost: 18x time, 0.033x Alien Artifact, 0.91x Copper plate, 0.66x Silicon Wafer, 0.66x Gold plate, 0.5x Nitrogen, 0.25x Phenolic Board
+		-- New cost: 18x time, 0.1x Alien Artifact, 2.25x Copper plate, 2x Silicon Wafer, 2x Gold plate, 0.5x Nitrogen, 0.25x Phenolic Board
 		{
 			type = "recipe",
 			name = "sct-t4-bioprocessor",

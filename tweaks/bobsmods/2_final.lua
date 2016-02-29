@@ -22,4 +22,7 @@ if (bobIsAbout == true) then
 		{"silicon-nitride", 1},
 		{"lithium-ion-battery", 1}
     }
+	
+	-- Make Lab Mk2 consume more power than Quantum lab.
+	data.raw["lab"]["lab-2"].energy_usage = "2MW"
 end

@@ -1,6 +1,6 @@
 require("config")
 
--- Select the science pack config file as requested. Initial data file.
+-- Select the science pack config file as requested. Final data file.
 	sciencepackConfig = "tweaks." .. sciencecosttweaker.options.sciencePackConfig .. ".2_final"
 	require(sciencepackConfig)
 
