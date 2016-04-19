@@ -1,5 +1,5 @@
 -- Firstly, set the options for using the new intermediaries, as well as using the new tiered labs.
-require("tweaks.newintermediates")
+require("tweaks.newIntermediates.newintermediates")
 
 
 data:extend({
@@ -246,7 +246,7 @@ data:extend({
 		name = "sct-t4-bioprocessor",
 		category = "crafting-with-fluid",
 		enabled = "false",
-		energy_required = 90,
+		energy_required = 30,
 		ingredients =
 		{
 			{type="item", name="alien-artifact", amount=1},

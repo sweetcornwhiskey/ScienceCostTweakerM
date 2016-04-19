@@ -8,21 +8,15 @@ end
 
 if (bobIsAbout == true) then
 	-- Use the new labs new tiered labs.
-	require("tweaks.newlabs")
-	require("tweaks.tweakedsciencepacks")
+	require("tweaks.newIntermediates.newlabs")
+	-- Use the new tweaked science packs (for vanilla packs 1 to alien)
+	require("tweaks.newIntermediates.tweakedsciencepacks")
 
 	-- Make resin craftable by hand, so that we can use it in science pack crafting.
 	data.raw.recipe["bob-resin-wood"].category = "crafting"
 	
-	-- Change the recipe for Science-Pack-4 (Dark Blue).
-	data.raw.recipe["science-pack-4"].ingredients =
-    {
-		{"processing-unit", 1},
-		{"express-transport-belt", 1},
-		{"silicon-nitride", 1},
-		{"lithium-ion-battery", 1}
-    }
-	
-	-- Make Lab Mk2 consume more power than Quantum lab.
-	data.raw["lab"]["lab-2"].energy_usage = "2MW"
+	-- If BobsTech is installed, then adjust the new science packs as well.
+	if (data.raw["item"]["lab-2"] ~= nil) then
+		require("tweaks.bobsmods.tweakedscience")
+	end
 end

@@ -9,7 +9,12 @@ end
 
 if (bobIsAbout == true) then
 	-- Firstly, set the options for using the new intermediaries, as well as using the new tiered labs.
-	require("tweaks.newintermediates")
+	require("tweaks.newIntermediates.newintermediates")
+	
+	-- If BobsTech is installed, then adjust the new science packs as well.
+	if (data.raw["item"]["lab-2"] ~= nil) then
+		require("tweaks.bobsmods.newintermediates")
+	end
 
 	-- Make resin craftable by hand, so that we can use it in science pack crafting.
 	data.raw.recipe["bob-resin-wood"].category = "crafting"
