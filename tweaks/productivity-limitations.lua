@@ -22,7 +22,12 @@ local science_packs_and_intermediates = {
   "sct-bm4-plating",
   "sct-bm4-injector",
   "sct-bm4-supercoils",
-  "sct-bm4-capbank"
+  "sct-bm4-capbank",
+  "sct-bm4-part1",
+  "sct-bm4-part2",
+  "sct-bm4-part3",
+  "sct-bm4-part4",
+  "sct-bm4-part5"
 }
 
 local finallist = {}

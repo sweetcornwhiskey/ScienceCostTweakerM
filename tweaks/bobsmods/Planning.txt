@@ -1,0 +1,27 @@
+sct-bm4-plating=VP Containment Plating			1x = 1x Chemical Temper	+ 1x Virtual Particle Shield + 1x Containment Array
+sct-bm4-injector=VP Injector					1x = 1x Nanofusion Core + 1x Virtual Particle Emitter + 1x Control Core	
+sct-bm4-supercoils=Superconductive Coils		1x = 1x Charged Coils + 1x Thermal Shield + 1x Layered Insulation
+sct-bm4-capbank=Capacitor Bank					1x = 1x Battery Core + 1x Capacitor Bank + 1x Regulator
+
+sct-bm4-part1a=Conductive Mesh					6x = 12x Copper Cable + 5x Bronze
+sct-bm4-part1b=Insulation						5x = 5x Rubber + 3x Plastic Bar
+sct-bm4-part1c=Shielding						4x = 5x Brass + 5x Invar
+
+sct-bm4-part2a=Supertransistor Array			4x = 1x Silicon Nitride + 4x Electronic Components
+sct-bm4-part2b=Chemical Paste					4x = 1x Solid Fuel + 1x Carbon
+sct-bm4-part2c=Atomic Components				4x = 3x Electrum + 3x Zinc Plate
+
+sct-bm4-part3a=Battery Core						1x = 2x Supertransistor Array + 1x Lithium Ion Battery
+sct-bm4-part3b=Charged Coils					1x = 3x Conductive Mesh + 1x Processing Unit
+sct-bm4-part3c=Chemical Temper					1x = 2x Chemical Paste
+sct-bm4-part3d=Virtual Particle Emitter			1x = 2x Atomic Components
+
+sct-bm4-part4a=Capacitor Stack					1x = 3x Conductive Mesh + 1x Nickel Plate
+sct-bm4-part4b=Thermal Shield					1x = 2x Insulation + 10x Lithium
+sct-bm4-part4c=Nanofusion Core					1x = 2x Chemical Paste
+sct-bm4-part4d=Virtual Particle Shield			1x = 2x Shielding
+
+sct-bm4-part5a=Regulator						1x = 2x Supertransistor Array + 1x Processing Unit
+sct-bm4-part5b=Layered Insulation				1x = 3x Insulation + 5x Silicon Wafer
+sct-bm4-part5c=Containment Array				1x = 2x Shielding
+sct-bm4-part5d=Control Core						1x = 2x Atomic Components
