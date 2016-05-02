@@ -267,7 +267,7 @@ if (bobIsAbout == true) then
 			name = "sct-t4-bioprocessor",
 			category = "crafting-with-fluid",
 			enabled = "false",
-			energy_required = 90,
+			energy_required = 30,
 			ingredients =
 			{
 				{type="item", name="alien-artifact", amount=1},
