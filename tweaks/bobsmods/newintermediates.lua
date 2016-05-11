@@ -190,7 +190,7 @@ data:extend({
 		subgroup = "intermediate-product",
 		order = "a[bm4-part3]",
 		enabled = false,
-		energy_required = 15.0,
+		energy_required = 5.0,
 		ingredients =
 		{
 			{type="item", name="sct-bm4-part2a", amount=2},
@@ -202,10 +202,10 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-part3a", amount=6},
-			{type="item", name="sct-bm4-part3b", amount=6},
-			{type="item", name="sct-bm4-part3c", amount=6},
-			{type="item", name="sct-bm4-part3d", amount=6},
+			{type="item", name="sct-bm4-part3a", amount=2},
+			{type="item", name="sct-bm4-part3b", amount=2},
+			{type="item", name="sct-bm4-part3c", amount=2},
+			{type="item", name="sct-bm4-part3d", amount=2},
 		},
 	},
 	
@@ -261,7 +261,7 @@ data:extend({
 		subgroup = "intermediate-product",
 		order = "a[bm4-part4]",
 		enabled = false,
-		energy_required = 15.0,
+		energy_required = 5.0,
 		ingredients =
 		{
 			{type="item", name="sct-bm4-part1a", amount=3},
@@ -273,10 +273,10 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-part4a", amount=6},
-			{type="item", name="sct-bm4-part4b", amount=6},
-			{type="item", name="sct-bm4-part4c", amount=6},
-			{type="item", name="sct-bm4-part4d", amount=6},
+			{type="item", name="sct-bm4-part4a", amount=2},
+			{type="item", name="sct-bm4-part4b", amount=2},
+			{type="item", name="sct-bm4-part4c", amount=2},
+			{type="item", name="sct-bm4-part4d", amount=2},
 		},
 	},
 	
@@ -329,7 +329,7 @@ data:extend({
 		subgroup = "intermediate-product",
 		order = "a[bm4-part5]",
 		enabled = false,
-		energy_required = 15.0,
+		energy_required = 5.0,
 		ingredients =
 		{
 			{type="item", name="sct-bm4-part2a", amount=2},
@@ -341,10 +341,10 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-part5a", amount=6},
-			{type="item", name="sct-bm4-part5b", amount=6},
-			{type="item", name="sct-bm4-part5c", amount=6},
-			{type="item", name="sct-bm4-part5d", amount=6},
+			{type="item", name="sct-bm4-part5a", amount=2},
+			{type="item", name="sct-bm4-part5b", amount=2},
+			{type="item", name="sct-bm4-part5c", amount=2},
+			{type="item", name="sct-bm4-part5d", amount=2},
 		},
 	},
 				
@@ -389,7 +389,7 @@ data:extend({
 		subgroup = "intermediate-product",
 		order = "a[bm4-part2]",
 		enabled = false,
-		energy_required = 15.0,
+		energy_required = 5.0,
 		ingredients =
 		{
 			{type="item", name="silicon-nitride", amount=1},
@@ -448,7 +448,7 @@ data:extend({
 		subgroup = "intermediate-product",
 		order = "a[bm4-part1]",
 		enabled = false,
-		energy_required = 15.0,
+		energy_required = 5.0,
 		ingredients =
 		{
 			{type="item", name="copper-cable", amount=12},
