@@ -62,13 +62,13 @@ data:extend({
 		energy_required = 15.0,
 		ingredients =
 		{
-			{type="item", name="sct-bm4-part4c", amount=1},
-			{type="item", name="sct-bm4-part3d", amount=1},
-			{type="item", name="sct-bm4-part5d", amount=1},
+			{type="item", name="sct-bm4-part4c", amount=3},
+			{type="item", name="sct-bm4-part3d", amount=3},
+			{type="item", name="sct-bm4-part5d", amount=3},
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-injector", amount=1},
+			{type="item", name="sct-bm4-injector", amount=3},
 		},
 	},
 	
@@ -95,13 +95,13 @@ data:extend({
 		energy_required = 15.0,
 		ingredients =
 		{
-			{type="item", name="sct-bm4-part3b", amount=1},
-			{type="item", name="sct-bm4-part4b", amount=1},
-			{type="item", name="sct-bm4-part5b", amount=1},
+			{type="item", name="sct-bm4-part3b", amount=3},
+			{type="item", name="sct-bm4-part4b", amount=3},
+			{type="item", name="sct-bm4-part5b", amount=3},
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-supercoils", amount=1},
+			{type="item", name="sct-bm4-supercoils", amount=3},
 		},
 	},
 
@@ -128,13 +128,13 @@ data:extend({
 		energy_required = 15.0,
 		ingredients =
 		{
-			{type="item", name="sct-bm4-part3a", amount=1},
-			{type="item", name="sct-bm4-part4a", amount=1},
-			{type="item", name="sct-bm4-part5a", amount=1},
+			{type="item", name="sct-bm4-part3a", amount=3},
+			{type="item", name="sct-bm4-part4a", amount=3},
+			{type="item", name="sct-bm4-part5a", amount=3},
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-capbank", amount=1},
+			{type="item", name="sct-bm4-capbank", amount=3},
 		},
 	},
 	
@@ -202,10 +202,10 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-part3a", amount=2},
-			{type="item", name="sct-bm4-part3b", amount=2},
-			{type="item", name="sct-bm4-part3c", amount=2},
-			{type="item", name="sct-bm4-part3d", amount=2},
+			{type="item", name="sct-bm4-part3a", amount=6},
+			{type="item", name="sct-bm4-part3b", amount=6},
+			{type="item", name="sct-bm4-part3c", amount=6},
+			{type="item", name="sct-bm4-part3d", amount=6},
 		},
 	},
 	
@@ -273,10 +273,10 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-part4a", amount=2},
-			{type="item", name="sct-bm4-part4b", amount=2},
-			{type="item", name="sct-bm4-part4c", amount=2},
-			{type="item", name="sct-bm4-part4d", amount=2},
+			{type="item", name="sct-bm4-part4a", amount=6},
+			{type="item", name="sct-bm4-part4b", amount=6},
+			{type="item", name="sct-bm4-part4c", amount=6},
+			{type="item", name="sct-bm4-part4d", amount=6},
 		},
 	},
 	
@@ -341,10 +341,10 @@ data:extend({
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-part5a", amount=2},
-			{type="item", name="sct-bm4-part5b", amount=2},
-			{type="item", name="sct-bm4-part5c", amount=2},
-			{type="item", name="sct-bm4-part5d", amount=2},
+			{type="item", name="sct-bm4-part5a", amount=6},
+			{type="item", name="sct-bm4-part5b", amount=6},
+			{type="item", name="sct-bm4-part5c", amount=6},
+			{type="item", name="sct-bm4-part5d", amount=6},
 		},
 	},
 				
