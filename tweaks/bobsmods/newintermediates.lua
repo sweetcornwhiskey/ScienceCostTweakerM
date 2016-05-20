@@ -29,13 +29,13 @@ data:extend({
 		energy_required = 15.0,
 		ingredients =
 		{
-			{type="item", name="sct-bm4-part3c", amount=1},
-			{type="item", name="sct-bm4-part4d", amount=1},
-			{type="item", name="sct-bm4-part5c", amount=1},
+			{type="item", name="sct-bm4-part3c", amount=3},
+			{type="item", name="sct-bm4-part4d", amount=3},
+			{type="item", name="sct-bm4-part5c", amount=3},
 		},
 		results = 
 		{
-			{type="item", name="sct-bm4-plating", amount=1},
+			{type="item", name="sct-bm4-plating", amount=3},
 		},
 	},
 
