@@ -19,8 +19,6 @@ data.raw.recipe["lab-2"].ingredients =
 		
 -- Make Lab Mk2 consume more power than Quantum lab.
 data.raw["lab"]["lab-2"].energy_usage = "3MW"
--- Make Lab Mk2 research at normal speed.
-data.raw["lab"]["lab-2"].researching_speed = 1  -- Normally 2
 -- Make Lab Mk2 not have any module slots.
 data.raw["lab"]["lab-2"].module_specification.module_slots = 0
 
