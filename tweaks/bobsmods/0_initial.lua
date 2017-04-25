@@ -189,7 +189,7 @@ if (bobIsAbout == true) then
 				{type="item", name="glass", amount=1},
 				{type="item", name="silicon-wafer", amount=1},
 				{type="item", name="brass-alloy", amount=1},
-				{type="fluid", name="nitrogen", amount=10}
+				{type="fluid", name="nitrogen", amount=5}
 			},
 			results = 
 			{
@@ -228,7 +228,7 @@ if (bobIsAbout == true) then
 				{type="item", name="sct-t3-laser-emitter", amount=1},
 				{type="item", name="sct-t3-laser-foci", amount=1},
 				{type="item", name="sct-t3-flash-fuel", amount=1},
-				{type="fluid", name="nitrogen", amount=10}
+				{type="fluid", name="nitrogen", amount=5}
 			},
 			results = 
 			{
@@ -291,7 +291,7 @@ if (bobIsAbout == true) then
 			{
 				{type="item", name="phenolic-board", amount=1},
 				{type="item", name="copper-plate", amount=1},
-				{type="fluid", name="nitrogen", amount=2}
+				{type="fluid", name="nitrogen", amount=1}
 			},
 			results = 
 			{

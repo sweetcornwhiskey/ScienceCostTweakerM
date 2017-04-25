@@ -13,7 +13,7 @@ data.raw.recipe["lab-2"].ingredients =
 {
 	{"sct-lab-4", 1},
 	{"advanced-circuit", 10},
-	{"smart-inserter", 4},
+	{"filter-inserter", 4},
 	{"copper-cable", 400}
 }
 		

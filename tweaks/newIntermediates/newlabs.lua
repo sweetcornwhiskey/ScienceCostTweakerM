@@ -166,7 +166,7 @@ data:extend({
 		{
 			{"sct-lab-2", 1},
 			{"advanced-circuit", 20},
-			{"smart-inserter", 4}
+			{"filter-inserter", 4}
 		},
 		result = "sct-lab-3"
 	},
@@ -232,7 +232,10 @@ data:extend({
 			"science-pack-1",
 			"science-pack-2",
 			"science-pack-3",
-			"alien-science-pack"
+			"military-science-pack",
+			"production-science-pack",
+			"high-tech-science-pack",
+			"space-science-pack"
 		},
 		module_specification =
 		{
@@ -252,7 +255,7 @@ data:extend({
 		{
 			{"sct-lab-3", 1},
 			{"processing-unit", 5},
-			{"smart-inserter", 2}
+			{"filter-inserter", 2}
 		},
 		result = "sct-lab-4"
 	},
@@ -339,7 +342,7 @@ data:extend({
 		{
 			{"copper-cable", 30},
 			{"iron-gear-wheel", 10},
-			{"basic-transport-belt", 4}
+			{"transport-belt", 4}
 		},
 		result = "sct-lab-1"
 	},

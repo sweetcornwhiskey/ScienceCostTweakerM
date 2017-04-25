@@ -1,3 +1,10 @@
+if bobmods == nil then
+	return
+end
+if bobmods.lib == nil then
+	return
+end
+
 local science_packs_and_intermediates = {
   "science-pack-1",
   "science-pack-2",

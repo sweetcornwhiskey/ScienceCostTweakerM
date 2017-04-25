@@ -32,25 +32,21 @@ if (sciencecosttweaker.options.difficultyCost ~= "noadjustment") then
 				tier = 3
 				multiplier = sciencecosttweaker.costs.tier3;
 			end
-			if (tier < 4 and tech.unit.ingredients[Index][1] == "science-pack-4") then
+			if (tier < 4 and tech.unit.ingredients[Index][1] == "military-science-pack") then
 				tier = 4
-				multiplier = sciencecosttweaker.costs.tier4;
+				multiplier = sciencecosttweaker.costs.military;
 			end
-			if (tier < 5 and tech.unit.ingredients[Index][1] == "science-pack-gold") then
+			if (tier < 5 and tech.unit.ingredients[Index][1] == "production-science-pack") then
 				tier = 5
-				multiplier = sciencecosttweaker.costs.tier5;
+				multiplier = sciencecosttweaker.costs.production;
 			end
-			if (tier < 10 and tech.unit.ingredients[Index][1] == "alien-science-pack") then
-				tier = 10
-				multiplier = sciencecosttweaker.costs.tier10;
+			if (tier < 6 and tech.unit.ingredients[Index][1] == "high-tech-science-pack") then
+				tier = 6
+				multiplier = sciencecosttweaker.costs.hightech;
 			end
-			if (tier < 99 and (tech.unit.ingredients[Index][1] == "module-circuit-board" or tech.unit.ingredients[Index][1] == "speed-processor" or tech.unit.ingredients[Index][1] == "effectivity-processor" or tech.unit.ingredients[Index][1] == "productivity-processor" or tech.unit.ingredients[Index][1] == "pollution-clean-processor" or tech.unit.ingredients[Index][1] == "pollution-create-processor") )  then
-				tier = 99
-				multiplier = sciencecosttweaker.costs.bobmodules;
-			end
-			if (tier < 99 and (tech.unit.ingredients[Index][1] == "tenemut" or tech.unit.ingredients[Index][1] == "dark-matter-scoop" or tech.unit.ingredients[Index][1] == "dark-matter-transducer" or tech.unit.ingredients[Index][1] == "matter-conduit") ) then
-				tier = 99
-				multiplier = sciencecosttweaker.costs.darkmatter;
+			if (tech.unit.count_formula ~= nil) then
+				tier = 999999
+				multiplier = sciencecosttweaker.costs.formula;
 			end
 		end
 
@@ -58,25 +54,35 @@ if (sciencecosttweaker.options.difficultyCost ~= "noadjustment") then
 		if (multiplier ~= nil) then
 			local unitCopy = table.deepcopy( tech.unit )
 
-			-- Now adjust by the modifiers for this tier
-			unitCopy.count = math.max(math.floor(unitCopy.count * multiplier.stepCount), 1);
 			unitCopy.time = math.max(unitCopy.time * multiplier.time, 1);
-		
-			for Index, Value in ipairs( unitCopy.ingredients ) do
-				-- For each type of science pack, multiply its count per research step by the given multiplier
-				local ingredientName = Value[1]
-				if (multiplier.cost[ingredientName] ~= nil) then
-					local ingredientCostCount = Value[2]
-					local mult = 1
-					
-					mult = multiplier.cost[ingredientName]
-					ingredientCostCount = math.floor(ingredientCostCount * mult)
-					ingredientCostCount = math.max(ingredientCostCount, 0);
-					
-					Value[2] = ingredientCostCount
+				
+			-- Now, since infinite research follows a slightly different layout, we have to account for that here.
+			-- Only adjust the count if it has a count field
+			if (unitCopy.count ~= nil) then
+				-- Now adjust by the modifiers for this tier
+				unitCopy.count = math.max(math.floor(unitCopy.count * multiplier.stepCount), 1);
+			
+				for Index, Value in ipairs( unitCopy.ingredients ) do
+					-- For each type of science pack, multiply its count per research step by the given multiplier
+					local ingredientName = Value[1]
+					if (multiplier.cost[ingredientName] ~= nil) then
+						local ingredientCostCount = Value[2]
+						local mult = 1
+						
+						mult = multiplier.cost[ingredientName]
+						ingredientCostCount = math.floor(ingredientCostCount * mult)
+						ingredientCostCount = math.max(ingredientCostCount, 0);
+						
+						Value[2] = ingredientCostCount
+					end
 				end
 			end
-		
+			
+			-- If the tech uses a count formulae instead, then adjust the formula by wrapping it in our added strings
+			if (unitCopy.count_formula ~= nil) then
+				unitCopy.count_formula = multiplier.prefix .. unitCopy.count_formula .. multiplier.postfix
+			end
+			
 			tech.unit = unitCopy
 		end
 		
