@@ -11,6 +11,11 @@ data.raw["recipe"]["science-pack-1"].ingredients =
     }
 data.raw["recipe"]["science-pack-1"].result = "science-pack-1"
 data.raw["recipe"]["science-pack-1"].result_count = 1
+data.raw["recipe"]["science-pack-1"].subgroup = "sct-sciencepack-1"
+data.raw["recipe"]["science-pack-1"].order = "a[science-pack-1]"
+
+data.raw["tool"]["science-pack-1"].subgroup = "sct-sciencepack-1"
+data.raw["tool"]["science-pack-1"].order = "a[science-pack-1]"
 
 -- Science Pack 2
 -- ===================================================================
@@ -22,6 +27,11 @@ data.raw["recipe"]["science-pack-2"].ingredients =
     }
 data.raw["recipe"]["science-pack-2"].result = "science-pack-2"
 data.raw["recipe"]["science-pack-2"].result_count = 1
+data.raw["recipe"]["science-pack-2"].subgroup = "sct-sciencepack-2"
+data.raw["recipe"]["science-pack-2"].order = "a[science-pack-2]"
+
+data.raw["tool"]["science-pack-2"].subgroup = "sct-sciencepack-2"
+data.raw["tool"]["science-pack-2"].order = "a[science-pack-2]"
 
 -- Science Pack 3
 -- ===================================================================
@@ -48,6 +58,11 @@ data.raw["recipe"]["science-pack-3"].ingredients =
     }
 data.raw["recipe"]["science-pack-3"].result = "science-pack-3"
 data.raw["recipe"]["science-pack-3"].result_count = 1
+data.raw["recipe"]["science-pack-3"].subgroup = "sct-sciencepack-3"
+data.raw["recipe"]["science-pack-3"].order = "a[science-pack-3]"
+
+data.raw["tool"]["science-pack-3"].subgroup = "sct-sciencepack-3"
+data.raw["tool"]["science-pack-3"].order = "a[science-pack-3]"
 
 -- Military Science Pack
 -- ===================================================================
@@ -71,6 +86,11 @@ data.raw["recipe"]["military-science-pack"].ingredients =
     }
 data.raw["recipe"]["military-science-pack"].result = "military-science-pack"
 data.raw["recipe"]["military-science-pack"].result_count = 1
+data.raw["recipe"]["military-science-pack"].subgroup = "sct-sciencepack-mil"
+data.raw["recipe"]["military-science-pack"].order = "a[military-science-pack]"
+
+data.raw["tool"]["military-science-pack"].subgroup = "sct-sciencepack-mil"
+data.raw["tool"]["military-science-pack"].order = "a[military-science-pack]"
 
 -- Production Science Pack
 -- ===================================================================
@@ -81,12 +101,22 @@ data.raw["recipe"]["military-science-pack"].result_count = 1
 		Complexity: Pumpjack (2 step, 4 ing) + Elec Furnace (2+3 step, 3 ing) + Elec Eng (2+2 step, liquid, nohand)
 		
 	Science Cost Tweaker:
-		Cost: 
-			=> 
-		Refunds: 
+		Cost: 17x IronGear, 16x CopperCable, 15x Steel, 20x Stone, 2x Plastic, 4x Adv Circuit, 2x Circuit, 6x Redwire, 20x Petroleum, 120x Water, 1x Electric Engine
+			=> 50x Iron, 43x Copper, 15x Steel, 20x Stone, 10x Plastic, 20x Petroleum, 120x Water, 1x Electric Engine
+		Refunds: 5x Iron, 11x Copper = 5x Mixed + 3x Copper
 		
 ]]--
-data.raw["recipe"]["production-science-pack"].energy_required = 14
+data.raw["recipe"]["production-science-pack"].energy_required = 1
+data.raw["recipe"]["production-science-pack"].ingredients =
+    {
+		{"sct-prod-bioprocessor", 1},
+		{"sct-prod-overclocker", 1}
+    }
+data.raw["recipe"]["production-science-pack"].subgroup = "sct-sciencepack-prod"
+data.raw["recipe"]["production-science-pack"].order = "a[production-science-pack]"
+
+data.raw["tool"]["production-science-pack"].subgroup = "sct-sciencepack-prod"
+data.raw["tool"]["production-science-pack"].order = "a[production-science-pack]"
 
 -- High Tech Science Pack
 -- ===================================================================
@@ -103,3 +133,4 @@ data.raw["recipe"]["production-science-pack"].energy_required = 14
 		
 ]]--
 data.raw["recipe"]["high-tech-science-pack"].energy_required = 14
+data.raw["recipe"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"

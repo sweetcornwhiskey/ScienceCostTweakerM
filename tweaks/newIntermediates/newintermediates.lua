@@ -18,6 +18,55 @@ data:extend({
 		order = "a-a",
 	},
 	
+	{
+		type = "item-subgroup",
+		name = "sct-byproducts",
+		group = "sct-science",
+		order = "b-a",
+	},
+	
+	{
+		type = "item-subgroup",
+		name = "sct-sciencepack-1",
+		group = "sct-science",
+		order = "c-a",
+	},
+	
+	{
+		type = "item-subgroup",
+		name = "sct-sciencepack-2",
+		group = "sct-science",
+		order = "d-a",
+	},
+	
+	{
+		type = "item-subgroup",
+		name = "sct-sciencepack-3",
+		group = "sct-science",
+		order = "e-a",
+	},
+	
+	{
+		type = "item-subgroup",
+		name = "sct-sciencepack-mil",
+		group = "sct-science",
+		order = "f-a",
+	},
+	
+	{
+		type = "item-subgroup",
+		name = "sct-sciencepack-prod",
+		group = "sct-science",
+		order = "g-a",
+	},
+	
+	{
+		type = "item-subgroup",
+		name = "sct-sciencepack-hightech",
+		group = "sct-science",
+		order = "h-a",
+	},
+	
 	-- Junk Byproducts
 	-- =============================
 	{
@@ -25,7 +74,7 @@ data:extend({
 		name = "sct-waste-ironcopper",
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-waste-ironcopper.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
+		subgroup = "sct-byproducts",
 		order = "a[mixedewaste]",
 		stack_size = 50
 	},
@@ -34,7 +83,7 @@ data:extend({
 		name = "sct-waste-copperonly",
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-waste-copperonly.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
+		subgroup = "sct-byproducts",
 		order = "a[copperwaste]",
 		stack_size = 50
 	},
@@ -50,7 +99,7 @@ data:extend({
 		category = "crafting-with-fluid",
 		ingredients = {{"sct-waste-ironcopper", 2}},
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-waste-ironcopper.png",
-		subgroup = "sct-sciencestuff",
+		subgroup = "sct-byproducts",
 		order = "a[waste-process-basic]",
 		results =
 		{
@@ -73,8 +122,8 @@ data:extend({
 		category = "crafting-with-fluid",
 		ingredients = {{"sct-waste-copperonly", 2}},
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-waste-copperonly.png",
-		subgroup = "sct-sciencestuff",
-		order = "a[waste-process-basic]",
+		subgroup = "sct-byproducts",
+		order = "a[waste-process-copper]",
 		results =
 		{
 			{
@@ -92,8 +141,8 @@ data:extend({
 		name = "sct-t1-ironcore",
 		icon = "__ScienceCostTweaker__/graphics/icons/iron-core.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t1-ironcore]",
+		subgroup = "sct-sciencepack-1",
+		order = "b[t1-ironcore]",
 		stack_size = 200
 	},
 
@@ -102,8 +151,8 @@ data:extend({
 		name = "sct-t1-magnet-coils",
 		icon = "__ScienceCostTweaker__/graphics/icons/magnet-coils.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t1-magnet-coils]",
+		subgroup = "sct-sciencepack-1",
+		order = "b[t1-magnet-coils]",
 		stack_size = 200
 	},
 
@@ -114,8 +163,8 @@ data:extend({
 		name = "sct-t2-reaction-nodes",
 		icon = "__ScienceCostTweaker__/graphics/icons/reaction-nodes.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t2-reaction-nodes]",
+		subgroup = "sct-sciencepack-2",
+		order = "b[t2-reaction-nodes]",
 		stack_size = 200
 	},
 
@@ -124,8 +173,8 @@ data:extend({
 		name = "sct-t2-instruments",
 		icon = "__ScienceCostTweaker__/graphics/icons/instruments.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t2-instruments]",
+		subgroup = "sct-sciencepack-2",
+		order = "b[t2-instruments]",
 		stack_size = 200
 	},
 
@@ -134,8 +183,8 @@ data:extend({
 		name = "sct-t2-microcircuits",
 		icon = "__ScienceCostTweaker__/graphics/icons/microcircuits.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t2-microcircuits]",
+		subgroup = "sct-sciencepack-2",
+		order = "b[t2-microcircuits]",
 		stack_size = 200
 	},
 
@@ -144,8 +193,8 @@ data:extend({
 		name = "sct-t2-micro-wafer",
 		icon = "__ScienceCostTweaker__/graphics/icons/micro-wafer.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t2-micro-wafer]",
+		subgroup = "sct-sciencepack-2",
+		order = "b[t2-micro-wafer]",
 		stack_size = 200
 	},
 
@@ -154,8 +203,8 @@ data:extend({
 		name = "sct-t2-wafer-stamp",
 		icon = "__ScienceCostTweaker__/graphics/icons/wafer-stamp.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t2-wafer-stamp]",
+		subgroup = "sct-sciencepack-2",
+		order = "b[t2-wafer-stamp]",
 		stack_size = 200
 	},
 
@@ -166,8 +215,8 @@ data:extend({
 		name = "sct-t3-flash-fuel",
 		icon = "__ScienceCostTweaker__/graphics/icons/flash-fuel.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t3-flash-fuel]",
+		subgroup = "sct-sciencepack-3",
+		order = "b[t3-flash-fuel]",
 		stack_size = 200
 	},
 
@@ -176,8 +225,8 @@ data:extend({
 		name = "sct-t3-laser-foci",
 		icon = "__ScienceCostTweaker__/graphics/icons/laser-foci.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t3-laser-foci]",
+		subgroup = "sct-sciencepack-3",
+		order = "b[t3-laser-foci]",
 		stack_size = 200
 	},
 
@@ -186,8 +235,8 @@ data:extend({
 		name = "sct-t3-laser-emitter",
 		icon = "__ScienceCostTweaker__/graphics/icons/laser-emitter.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t3-laser-emitter]",
+		subgroup = "sct-sciencepack-3",
+		order = "b[t3-laser-emitter]",
 		stack_size = 200
 	},
 
@@ -196,8 +245,8 @@ data:extend({
 		name = "sct-t3-femto-lasers",
 		icon = "__ScienceCostTweaker__/graphics/icons/femto-lasers.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t3-femto-lasers]",
+		subgroup = "sct-sciencepack-3",
+		order = "b[t3-femto-lasers]",
 		stack_size = 200
 	},
 
@@ -206,8 +255,8 @@ data:extend({
 		name = "sct-t3-atomic-sensors",
 		icon = "__ScienceCostTweaker__/graphics/icons/atomic-sensors.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t3-femto-lasers]",
+		subgroup = "sct-sciencepack-3",
+		order = "b[t3-femto-lasers]",
 		stack_size = 200
 	},
 
@@ -218,8 +267,8 @@ data:extend({
 		name = "sct-mil-circuit1",
 		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_1.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[mil-circuit1]",
+		subgroup = "sct-sciencepack-mil",
+		order = "b[mil-circuit1]",
 		stack_size = 200
 	},
 	{
@@ -227,8 +276,8 @@ data:extend({
 		name = "sct-mil-plating",
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-mil-plating.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[mil-plating]",
+		subgroup = "sct-sciencepack-mil",
+		order = "b[mil-plating]",
 		stack_size = 200
 	},
 	{
@@ -236,8 +285,8 @@ data:extend({
 		name = "sct-mil-subplating",
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-mil-subplating.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[mil-subplating]",
+		subgroup = "sct-sciencepack-mil",
+		order = "b[mil-subplating]",
 		stack_size = 200
 	},
 	{
@@ -245,8 +294,8 @@ data:extend({
 		name = "sct-mil-circuit2",
 		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_2.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[mil-circuit2]",
+		subgroup = "sct-sciencepack-mil",
+		order = "b[mil-circuit2]",
 		stack_size = 200
 	},
 	{
@@ -254,8 +303,8 @@ data:extend({
 		name = "sct-mil-circuit3",
 		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_3.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[mil-circuit3]",
+		subgroup = "sct-sciencepack-mil",
+		order = "b[mil-circuit3]",
 		stack_size = 200
 	},
 
@@ -263,34 +312,55 @@ data:extend({
 	-- =============================
 	{
 		type = "item",
-		name = "sct-t4-bioprocessor",
-		icon = "__ScienceCostTweaker__/graphics/icons/bioprocessor.png",
+		name = "sct-prod-biosilicate",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-prod-biosilicate.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t4-bioprocessor]",
+		subgroup = "sct-sciencepack-prod",
+		order = "b[biosilicate]",
 		stack_size = 200
 	},
 
 	{
 		type = "item",
-		name = "sct-t4-overclocker",
+		name = "sct-prod-baked-biopaste",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-prod-baked-biopaste.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-sciencepack-prod",
+		order = "b[biopaste]",
+		stack_size = 200
+	},
+
+	{
+		type = "item",
+		name = "sct-prod-bioprocessor",
+		icon = "__ScienceCostTweaker__/graphics/icons/bioprocessor.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-sciencepack-prod",
+		order = "b[bioprocessor]",
+		stack_size = 200
+	},
+
+	{
+		type = "item",
+		name = "sct-prod-overclocker",
 		icon = "__ScienceCostTweaker__/graphics/icons/overclocker.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[t4-overclocker]",
+		subgroup = "sct-sciencepack-prod",
+		order = "b[overclocker]",
 		stack_size = 200
 	},
 
 	-- High-Tech Intermediary products.
 	-- =============================
+	--[[
 	-- Quantum Plating
 	{
 		type = "item",
 		name = "sct-bm4-plating",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-plating.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part2a.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-plating]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-plating]",
 		stack_size = 200
 	},
 
@@ -300,19 +370,8 @@ data:extend({
 		name = "sct-bm4-injector",
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-injector.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-injector]",
-		stack_size = 200
-	},
-
-	-- Superconductive Coils
-	{
-		type = "item",
-		name = "sct-bm4-supercoils",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-supercoils.png",
-		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-supercoils]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-injector]",
 		stack_size = 200
 	},
 
@@ -322,8 +381,8 @@ data:extend({
 		name = "sct-bm4-capbank",
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-capbank.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-capbank]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-capbank]",
 		stack_size = 200
 	},
 
@@ -331,10 +390,10 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-bm4-part3a",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part3a.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part1b.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-part3a]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-part3a]",
 		stack_size = 200
 	},
 
@@ -342,10 +401,10 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-bm4-part3b",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part3b.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part1c.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-part3b]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-part3b]",
 		stack_size = 200
 	},
 
@@ -353,10 +412,10 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-bm4-part3c",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part3c.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part2a.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-part3c]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-part3c]",
 		stack_size = 200
 	},
 
@@ -364,10 +423,10 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-bm4-part3d",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part3d.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part2b.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-part3d]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-part3d]",
 		stack_size = 200
 	},
 
@@ -375,10 +434,10 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-bm4-part4a",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part4a.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part2a.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-part4a]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-part4a]",
 		stack_size = 200
 	},
 
@@ -386,10 +445,10 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-bm4-part4b",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part4b.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part2a.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-part4b]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-part4b]",
 		stack_size = 200
 	},
 
@@ -397,10 +456,10 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-bm4-part4c",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part4c.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part2a.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-part4c]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-part4c]",
 		stack_size = 200
 	},
 
@@ -408,13 +467,13 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-bm4-part4d",
-		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part4d.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-bm4-part2a.png",
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencestuff",
-		order = "a[bm4-part4d]",
+		subgroup = "sct-sciencepack-hightech",
+		order = "f[bm4-part4d]",
 		stack_size = 200
 	},
-
+	]]--
 
 })
 
@@ -433,6 +492,11 @@ table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", 
 table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit1"})
 table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit2"})
 table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit3"})
+
+-- Production Tech enabled by Advanced Material Processing 2
+table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-biosilicate"})
+table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-bioprocessor"})
+table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-overclocker"})
 
 -- High Tech enabled by Advanced Electronics 2
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-t4-bioprocessor"})
