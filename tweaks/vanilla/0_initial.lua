@@ -17,8 +17,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t1-ironcore",
+		subgroup = "sct-sciencestuff",
 		enabled = "true",
-		energy_required = 1.24,
+		energy_required = 1.25,
 		ingredients =
 		{
 			{"iron-plate", 2},
@@ -32,8 +33,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t1-magnet-coils",
+		subgroup = "sct-sciencestuff",
 		enabled = "true",
-		energy_required = 4.96,
+		energy_required = 5,
 		ingredients =
 		{
 			{"copper-plate", 4},
@@ -56,8 +58,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t2-reaction-nodes",
+		subgroup = "sct-sciencestuff",
 		enabled = "true",
-		energy_required = 1.45,
+		energy_required = 1.5,
 		ingredients =
 		{
 			{"sct-t1-magnet-coils", 2},
@@ -72,8 +75,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t2-instruments",
+		subgroup = "sct-sciencestuff",
 		enabled = "true",
-		energy_required = 1.45,
+		energy_required = 1.5,
 		ingredients =
 		{
 			{"sct-t2-microcircuits", 10},
@@ -88,8 +92,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t2-microcircuits",
+		subgroup = "sct-sciencestuff",
 		enabled = "true",
-		energy_required = 1.45,
+		energy_required = 1.5,
 		ingredients =
 		{
 			{"copper-plate", 1},
@@ -104,8 +109,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t2-micro-wafer",
+		subgroup = "sct-sciencestuff",
 		enabled = "true",
-		energy_required = 2.9,
+		energy_required = 3,
 		ingredients =
 		{
 			{"iron-plate", 2},
@@ -120,8 +126,9 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t2-wafer-stamp",
+		subgroup = "sct-sciencestuff",
 		enabled = "true",
-		energy_required = 2.9,
+		energy_required = 3,
 		ingredients =
 		{
 			{"iron-plate", 4},
@@ -134,24 +141,18 @@ data:extend({
 	
 	-- Tier 3 Intermediary products.
 	-- =============================
-	-- Vanilla Tier 3 Science Pack:
-	-- 57.8x time, 20x Iron plate, 16.5x Copper plate, 2x Sulfiric Acid, 1x Coal, 3x PetroGas
-	-- <- 1x Battery (1x Iron plate + 1x Copper plate + 2x Sulfiric Acid) + 1x Steel (5x Iron plate) + 1x Advanced Circuit (2x Electronic circuit + 2x Plastic + 4x Copper Cable) + 1x Smart Inserter (1x Fast Inserter + 4x Electronic circuit)
-	-- <- 6x Iron plate + 1x Copper plate + 2x Sulfiric Acid + 6x Electronic circuit (6x Iron Plate + 18x Copper Cable) + 2x Plastic (1x Coal + 3x PetroGas) + 4x Copper Cable (2x copper plate) + 1x Fast Inserter (1x Inserter + 2x Iron plate + 2x Electronic circuit)
-	-- <- 14x Iron plate + 3x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 18x Copper Cable (9x Copper plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate) + 2x Electronic circuit (2x Iron Plate + 6x Copper Cable)
-	-- <- 17x Iron plate + 12x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 1x Electronic circuit (1x Iron Plate + 3x Copper Cable) + 1x Iron gear (2x Iron plate) + 6x Copper Cable (3x copper plate)
-	-- <- 20x Iron plate + 15x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid + 3x Copper Cable (1.5x Copper Plate)
-	-- <- 20x Iron plate + 16.5x Copper plate + 1x Coal + 3x PetroGas + 2x Sulfiric Acid
 	{
 		type = "recipe",
 		name = "sct-t3-flash-fuel",
 		category = "chemistry",
+		icon = "__ScienceCostTweaker__/graphics/icons/flash-fuel.png",
+		subgroup = "sct-sciencestuff",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
-			{type="fluid", name="heavy-oil", amount=1},
-			{type="fluid", name="light-oil", amount=1},
+			{type="fluid", name="heavy-oil", amount=10},
+			{type="fluid", name="light-oil", amount=10},
 			{type="item", name="steel-plate", amount=1}
 		},
 		results = 
@@ -163,37 +164,41 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t3-laser-foci",
-		category = "crafting-with-fluid",
+		category = "crafting",
+		icon = "__ScienceCostTweaker__/graphics/icons/laser-foci.png",
+		subgroup = "sct-sciencestuff",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
-			{type="item", name="steel-plate", amount=1},
-			{type="item", name="copper-plate", amount=2},
-			{type="fluid", name="sulfuric-acid", amount=4}
+			{type="item", name="copper-plate", amount=4},
+			{type="item", name="iron-plate", amount=6}
 		},
 		results = 
 		{
 			{type="item", name="sct-t3-laser-foci", amount=1},
+			{type="item", name="sct-waste-copperonly", amount=4}
 		},
 	},
 
 	{
 		type = "recipe",
 		name = "sct-t3-laser-emitter",
-		category = "crafting-with-fluid",
+		icon = "__ScienceCostTweaker__/graphics/icons/laser-emitter.png",
+		subgroup = "sct-sciencestuff",
+		category = "crafting",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
-			{type="item", name="battery", amount=1},
 			{type="item", name="electronic-circuit", amount=6},
-			{type="item", name="plastic-bar", amount=2},
-			{type="fluid", name="sulfuric-acid", amount=0.5}
+			{type="item", name="copper-plate", amount=2},
+			{type="item", name="iron-plate", amount=2}
 		},
 		results = 
 		{
 			{type="item", name="sct-t3-laser-emitter", amount=1},
+			{type="item", name="sct-waste-copperonly", amount=4}
 		},
 	},
 
@@ -201,6 +206,8 @@ data:extend({
 		type = "recipe",
 		name = "sct-t3-femto-lasers",
 		category = "crafting-with-fluid",
+		icon = "__ScienceCostTweaker__/graphics/icons/femto-lasers.png",
+		subgroup = "sct-sciencestuff",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
@@ -220,36 +227,142 @@ data:extend({
 		type = "recipe",
 		name = "sct-t3-atomic-sensors",
 		category = "crafting-with-fluid",
+		icon = "__ScienceCostTweaker__/graphics/icons/atomic-sensors.png",
+		subgroup = "sct-sciencestuff",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
 		{
 			{type="item", name="advanced-circuit", amount=1},
-			{type="item", name="iron-plate", amount=4},
+			{type="item", name="iron-plate", amount=12},
 			{type="item", name="sct-t1-magnet-coils", amount=22},
 			{type="fluid", name="water", amount=5}
 		},
 		results = 
 		{
 			{type="item", name="sct-t3-atomic-sensors", amount=1},
+			{type="item", name="sct-waste-copperonly", amount=12}
 		},
 	},
 	
-	-- Tier 4 Intermediary products.
+	-- Military Intermediary products.
 	-- =============================
-	-- Vanilla Tier 4 Science Pack:
-	-- 1.2x time, 0.1x Alien Artifact
-	--
-	-- New cost: 18x time, 0.033x Alien Artifact, 1.83x Iron plate, 1.83x Copper plate, 1x Water
+	{
+		type = "recipe",
+		name = "sct-mil-subplating",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-mil-subplating.png",
+		category = "crafting",
+		subgroup = "sct-sciencestuff",
+		enabled = "false",
+		energy_required = 0.5,
+		ingredients =
+		{
+			{type="item", name="iron-plate", amount=3},
+			{type="item", name="copper-plate", amount=1}
+		},
+		results = 
+		{
+			{type="item", name="sct-mil-subplating", amount=1},
+			{type="item", name="sct-waste-ironcopper", amount=1}
+		},
+	},
+	{
+		type = "recipe",
+		name = "sct-mil-plating",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-mil-plating.png",
+		category = "advanced-crafting",
+		subgroup = "sct-sciencestuff",
+		enabled = "false",
+		energy_required = 10,
+		ingredients =
+		{
+			{type="item", name="steel-plate", amount=1},
+			{type="item", name="iron-plate", amount=6},
+			{type="item", name="sct-mil-subplating", amount=7},
+			{type="item", name="copper-plate", amount=2}
+		},
+		results = 
+		{
+			{type="item", name="sct-mil-plating", amount=1},
+			{type="item", name="sct-waste-ironcopper", amount=1}
+		},
+	},
+	{
+		type = "recipe",
+		name = "sct-mil-circuit1",
+		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_1.png",
+		category = "crafting",
+		subgroup = "sct-sciencestuff",
+		enabled = "false",
+		energy_required = 1,
+		ingredients =
+		{
+			{type="item", name="iron-plate", amount=2},
+			{type="item", name="copper-plate", amount=2},
+			{type="item", name="coal", amount=5}
+		},
+		results = 
+		{
+			{type="item", name="sct-mil-circuit1", amount=1},
+			{type="item", name="sct-waste-ironcopper", amount=1}
+		},
+	},
+	{
+		type = "recipe",
+		name = "sct-mil-circuit2",
+		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_2.png",
+		category = "crafting",
+		subgroup = "sct-sciencestuff",
+		enabled = "false",
+		energy_required = 1,
+		ingredients =
+		{
+			{type="item", name="sct-mil-circuit1", amount=1},
+			{type="item", name="copper-plate", amount=5}
+		},
+		results = 
+		{
+			{type="item", name="sct-mil-circuit2", amount=1},
+			{type="item", name="sct-waste-ironcopper", amount=5},
+			{type="item", name="sct-waste-copperonly", amount=1}
+		},
+	},
+	{
+		type = "recipe",
+		name = "sct-mil-circuit3",
+		category = "advanced-crafting",
+		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_3.png",
+		subgroup = "sct-sciencestuff",
+		enabled = "false",
+		energy_required = 1,
+		ingredients =
+		{
+			{type="item", name="sct-mil-circuit2", amount=1},
+			{type="item", name="electronic-circuit", amount=4},
+			{type="item", name="iron-plate", amount=6},
+			{type="item", name="copper-plate", amount=6}
+		},
+		results = 
+		{
+			{type="item", name="sct-mil-circuit3", amount=1},
+			{type="item", name="sct-waste-ironcopper", amount=7},
+			{type="item", name="sct-waste-copperonly", amount=2}
+		},
+	},
+	
+	
+	-- Production Intermediary products.
+	-- =============================
 	{
 		type = "recipe",
 		name = "sct-t4-bioprocessor",
-		category = "crafting-with-fluid",
+		category = "advanced-crafting",
+		icon = "__ScienceCostTweaker__/graphics/icons/bioprocessor.png",
+		subgroup = "sct-sciencestuff",
 		enabled = "false",
 		energy_required = 30,
 		ingredients =
 		{
-			{type="item", name="alien-artifact", amount=1},
 			{type="item", name="copper-plate", amount=40},
 			{type="item", name="iron-plate", amount=40}
 		},
@@ -263,6 +376,8 @@ data:extend({
 		type = "recipe",
 		name = "sct-t4-overclocker",
 		category = "crafting-with-fluid",
+		icon = "__ScienceCostTweaker__/graphics/icons/overclocker.png",
+		subgroup = "sct-sciencestuff",
 		enabled = "false",
 		energy_required = 12,
 		ingredients =
@@ -276,5 +391,8 @@ data:extend({
 			{type="item", name="sct-t4-overclocker", amount=4},
 		},
 	},
+	
+	-- High-Tech Intermediary products.
+	-- =============================
 	
 })

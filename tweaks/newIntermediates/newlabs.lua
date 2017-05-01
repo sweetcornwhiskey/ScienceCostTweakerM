@@ -146,7 +146,9 @@ data:extend({
 		{
 			"science-pack-1",
 			"science-pack-2",
-			"science-pack-3"
+			"science-pack-3",
+			"military-science-pack",
+			"production-science-pack"
 		},
 		module_specification =
 		{
@@ -391,7 +393,7 @@ data.raw.recipe["lab"].enabled = "true"
 	
 -- Make technology research enable the Tier 3 and Tier 4 laboratories.
 -- ===================================================================
--- Tier 3, enabled by Battery research
-table.insert(data.raw.technology["battery"].effects,{type = "unlock-recipe", recipe = "sct-lab-3"})
--- Tier 4, enabled by Alien Technology research
-table.insert(data.raw.technology["alien-technology"].effects,{type = "unlock-recipe", recipe = "sct-lab-4"})
+-- Tier 3, enabled by Advanced Electronics research (which is also enables science pack 3)
+table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-lab-3"})
+-- Tier 4, enabled by Advanced Electronics 2 research (which is also enables high tech science pack)
+table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-lab-4"})

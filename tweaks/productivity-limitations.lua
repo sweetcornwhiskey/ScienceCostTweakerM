@@ -4,6 +4,9 @@ end
 if bobmods.lib == nil then
 	return
 end
+if bobmods.lib.module == nil then
+	return
+end
 
 local science_packs_and_intermediates = {
   "science-pack-1",
@@ -46,4 +49,4 @@ for j, recipeName in pairs(science_packs_and_intermediates) do
 		table.insert(finallist, recipeName)
 	end
 end
-bobmods.lib.add_productivity_limitations(finallist)
+bobmods.lib.module.add_productivity_limitations(finallist)
