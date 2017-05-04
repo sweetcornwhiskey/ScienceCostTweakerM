@@ -18,6 +18,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t1-ironcore",
 		subgroup = "sct-sciencepack-1",
+		order = "b[ironcore]",
 		enabled = "true",
 		energy_required = 1.25,
 		ingredients =
@@ -34,6 +35,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t1-magnet-coils",
 		subgroup = "sct-sciencepack-1",
+		order = "b[magnetcoils]",
 		enabled = "true",
 		energy_required = 5,
 		ingredients =
@@ -59,6 +61,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t2-reaction-nodes",
 		subgroup = "sct-sciencepack-2",
+		order = "b[reactionnodes]",
 		enabled = "true",
 		energy_required = 1.5,
 		ingredients =
@@ -76,6 +79,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t2-instruments",
 		subgroup = "sct-sciencepack-2",
+		order = "b[instruments]",
 		enabled = "true",
 		energy_required = 1.5,
 		ingredients =
@@ -93,6 +97,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t2-microcircuits",
 		subgroup = "sct-sciencepack-2",
+		order = "b[microcircuits]",
 		enabled = "true",
 		energy_required = 1.5,
 		ingredients =
@@ -110,6 +115,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t2-micro-wafer",
 		subgroup = "sct-sciencepack-2",
+		order = "b[microwafer]",
 		enabled = "true",
 		energy_required = 3,
 		ingredients =
@@ -127,6 +133,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-t2-wafer-stamp",
 		subgroup = "sct-sciencepack-2",
+		order = "b[waferstamp]",
 		enabled = "true",
 		energy_required = 3,
 		ingredients =
@@ -147,6 +154,7 @@ data:extend({
 		category = "chemistry",
 		icon = "__ScienceCostTweaker__/graphics/icons/flash-fuel.png",
 		subgroup = "sct-sciencepack-3",
+		order = "b[flashfuel]",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
@@ -167,6 +175,7 @@ data:extend({
 		category = "crafting",
 		icon = "__ScienceCostTweaker__/graphics/icons/laser-foci.png",
 		subgroup = "sct-sciencepack-3",
+		order = "b[laserfoci]",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
@@ -177,7 +186,7 @@ data:extend({
 		results = 
 		{
 			{type="item", name="sct-t3-laser-foci", amount=1},
-			{type="item", name="sct-waste-copperonly", amount=4}
+			{type="item", name="sct-waste-copperonly", amount=1}
 		},
 	},
 
@@ -186,6 +195,7 @@ data:extend({
 		name = "sct-t3-laser-emitter",
 		icon = "__ScienceCostTweaker__/graphics/icons/laser-emitter.png",
 		subgroup = "sct-sciencepack-3",
+		order = "b[laseremitter]",
 		category = "crafting",
 		enabled = "false",
 		energy_required = 3,
@@ -198,7 +208,7 @@ data:extend({
 		results = 
 		{
 			{type="item", name="sct-t3-laser-emitter", amount=1},
-			{type="item", name="sct-waste-copperonly", amount=4}
+			{type="item", name="sct-waste-copperonly", amount=2}
 		},
 	},
 
@@ -208,6 +218,7 @@ data:extend({
 		category = "crafting-with-fluid",
 		icon = "__ScienceCostTweaker__/graphics/icons/femto-lasers.png",
 		subgroup = "sct-sciencepack-3",
+		order = "b[femtolasers]",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
@@ -228,6 +239,7 @@ data:extend({
 		name = "sct-t3-atomic-sensors",
 		category = "crafting-with-fluid",
 		icon = "__ScienceCostTweaker__/graphics/icons/atomic-sensors.png",
+		order = "b[atomicsensors]",
 		subgroup = "sct-sciencepack-3",
 		enabled = "false",
 		energy_required = 3,
@@ -241,7 +253,7 @@ data:extend({
 		results = 
 		{
 			{type="item", name="sct-t3-atomic-sensors", amount=1},
-			{type="item", name="sct-waste-copperonly", amount=12}
+			{type="item", name="sct-waste-copperonly", amount=7}
 		},
 	},
 	
@@ -253,6 +265,7 @@ data:extend({
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-mil-subplating.png",
 		category = "crafting",
 		subgroup = "sct-sciencepack-mil",
+		order = "b[subplating]",
 		enabled = "false",
 		energy_required = 0.5,
 		ingredients =
@@ -272,6 +285,7 @@ data:extend({
 		icon = "__ScienceCostTweaker__/graphics/icons/sct-mil-plating.png",
 		category = "advanced-crafting",
 		subgroup = "sct-sciencepack-mil",
+		order = "b[plating]",
 		enabled = "false",
 		energy_required = 10,
 		ingredients =
@@ -293,6 +307,7 @@ data:extend({
 		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_1.png",
 		category = "crafting",
 		subgroup = "sct-sciencepack-mil",
+		order = "b[circuit1]",
 		enabled = "false",
 		energy_required = 1,
 		ingredients =
@@ -313,6 +328,7 @@ data:extend({
 		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_2.png",
 		category = "crafting",
 		subgroup = "sct-sciencepack-mil",
+		order = "b[circuit2]",
 		enabled = "false",
 		energy_required = 1,
 		ingredients =
@@ -333,6 +349,7 @@ data:extend({
 		category = "advanced-crafting",
 		icon = "__ScienceCostTweaker__/graphics/icons/military_analysis_3.png",
 		subgroup = "sct-sciencepack-mil",
+		order = "b[circuit3]",
 		enabled = "false",
 		energy_required = 1,
 		ingredients =
@@ -357,8 +374,9 @@ data:extend({
 		type = "recipe",
 		name = "sct-prod-biosilicate",
 		category = "chemistry",
-		icon = "__ScienceCostTweaker__/graphics/icons/flash-fuel.png",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-prod-biosilicate.png",
 		subgroup = "sct-sciencepack-3",
+		order = "b[biosillicate]",
 		enabled = "false",
 		energy_required = 3,
 		ingredients =
@@ -379,8 +397,10 @@ data:extend({
 		type = "recipe",
 		name = "sct-prod-baked-biopaste",
 		category = "smelting",
+		subgroup = "sct-sciencepack-3",
+		order = "b[biopaste]",
 		energy_required = 3,
-		enabled = true,
+		enabled = "false",
 		ingredients = {{"sct-prod-biosilicate", 1}},
 		result = "sct-prod-baked-biopaste"
 	},
@@ -391,6 +411,7 @@ data:extend({
 		category = "advanced-crafting",
 		icon = "__ScienceCostTweaker__/graphics/icons/bioprocessor.png",
 		subgroup = "sct-sciencepack-prod",
+		order = "b[bioprocessor]",
 		enabled = "false",
 		energy_required = 30,
 		ingredients =
@@ -411,6 +432,7 @@ data:extend({
 		category = "crafting-with-fluid",
 		icon = "__ScienceCostTweaker__/graphics/icons/overclocker.png",
 		subgroup = "sct-sciencepack-prod",
+		order = "b[overclocker]",
 		enabled = "false",
 		energy_required = 1,
 		ingredients =
@@ -431,5 +453,102 @@ data:extend({
 	
 	-- High-Tech Intermediary products.
 	-- =============================
+	
+	{
+		type = "recipe",
+		name = "sct-htech-capbank",
+		category = "crafting-with-fluid",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-htech-capbank.png",
+		subgroup = "sct-sciencepack-hightech",
+		order = "b[capbank]",
+		enabled = "false",
+		energy_required = 4,
+		ingredients =
+		{
+			{type="item", name="battery", amount=1},
+			{type="item", name="iron-plate", amount=10},
+			{type="item", name="copper-cable", amount=15}
+		},
+		results = 
+		{
+			{type="item", name="sct-htech-capbank", amount=1},
+			{type="item", name="sct-waste-ironcopper", amount=5}
+		},
+	},
+	
+	{
+		type = "recipe",
+		name = "sct-htech-injector",
+		category = "crafting-with-fluid",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-htech-injector.png",
+		subgroup = "sct-sciencepack-hightech",
+		order = "b[capbank]",
+		enabled = "false",
+		energy_required = 3.5,
+		ingredients =
+		{
+			{type="item", name="processing-unit", amount=3},
+			{type="item", name="plastic-bar", amount=10},
+			{type="item", name="iron-plate", amount=15},
+			{type="item", name="copper-cable", amount=30}
+		},
+		results = 
+		{
+			{type="item", name="sct-htech-injector", amount=1},
+			{type="item", name="sct-waste-ironcopper", amount=10}
+		},
+	},
+	
+	{
+		type = "recipe",
+		name = "sct-htech-thermalstore",
+		category = "advanced-crafting",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-htech-thermalstore.png",
+		subgroup = "sct-sciencepack-hightech",
+		order = "b[thermalstore]",
+		enabled = "false",
+		energy_required = 3.5,
+		ingredients =
+		{
+			{type="item", name="copper-plate", amount=40}
+		},
+		results = 
+		{
+			{type="item", name="sct-htech-thermalstore", amount=1},
+			{type="item", name="sct-waste-copperonly", amount=1}
+		},
+	},
+	
+	{
+		type = "recipe",
+		name = "sct-htech-thermalstore-heated",
+		category = "smelting",
+		subgroup = "sct-sciencepack-hightech",
+		order = "b[heatedthermalstore]",
+		energy_required = 22,
+		enabled = "false",
+		ingredients = {{"sct-htech-thermalstore", 1}},
+		result = "sct-htech-thermalstore-heated"
+	},
+	
+	{
+		type = "recipe",
+		name = "sct-htech-random",
+		category = "advanced-crafting",
+		icon = "__ScienceCostTweaker__/graphics/icons/sct-htech-random.png",
+		subgroup = "sct-sciencepack-hightech",
+		order = "b[random]",
+		enabled = "false",
+		energy_required = 7,
+		ingredients =
+		{
+			{type="item", name="sct-htech-thermalstore-heated", amount=1},
+			{type="item", name="iron-gear-wheel", amount=5}
+		},
+		results = 
+		{
+			{type="item", name="sct-htech-random", amount=1}
+		},
+	},
 	
 })

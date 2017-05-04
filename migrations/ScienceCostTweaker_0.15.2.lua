@@ -23,23 +23,16 @@ for index, force in pairs(game.forces) do
 	if (force.technologies["advanced-material-processing-2"] ~= nil) then
 		if (force.technologies["advanced-material-processing-2"].researched) then
 			force.recipes["sct-prod-biosilicate"].enabled = true
+			force.recipes["sct-prod-baked-biopaste"].enabled = true
 			force.recipes["sct-prod-bioprocessor"].enabled = true
 			force.recipes["sct-prod-overclocker"].enabled = true
 		end
 	end
-	if (force.technologies["advanced-research"] ~= nil) then
-		if (force.technologies["advanced-research"].researched) then
-			--[[
-			force.recipes["sct-bm4-plating"].enabled = true
-			force.recipes["sct-bm4-injector"].enabled = true
-			force.recipes["sct-bm4-supercoils"].enabled = true
-			force.recipes["sct-bm4-capbank"].enabled = true
-			force.recipes["sct-bm4-part1"].enabled = true
-			force.recipes["sct-bm4-part2"].enabled = true
-			force.recipes["sct-bm4-part3"].enabled = true
-			force.recipes["sct-bm4-part4"].enabled = true
-			force.recipes["sct-bm4-part5"].enabled = true
-			]]--
+	if (force.technologies["advanced-electronics-2"] ~= nil) then
+		if (force.technologies["advanced-electronics-2"].researched) then
+			force.recipes["sct-htech-capbank"].enabled = true
+			force.recipes["sct-htech-random"].enabled = true
+			force.recipes["sct-htech-injector"].enabled = true
 		end
 	end
 end

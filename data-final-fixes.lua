@@ -4,10 +4,10 @@ require("config")
 	sciencepackConfig = "tweaks." .. sciencecosttweaker.options.sciencePackConfig .. ".2_final"
 	require(sciencepackConfig)
 
-if (sciencecosttweaker.options.difficultyCost ~= "noadjustment") then
+if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 
 	-- Select the cost file depending on which one is requested.
-	costConfig = "configs.costs." .. sciencecosttweaker.options.difficultyCost
+	costConfig = "configs.costs." .. settings.startup["sct-difficulty-cost"].value
 	require(costConfig)
 
 	-- Iterate through all research, and update the costs as configured.

@@ -122,15 +122,24 @@ data.raw["tool"]["production-science-pack"].order = "a[production-science-pack]"
 -- ===================================================================
 --[[
 	Vanilla:
-		Cost: 
+		Cost: 1x Battery, 3x Processing Unit, 15x Iron, 47.5x Copper, 10x Plastic
 		Time: 
 		Complexity: 
 
 	Science Cost Tweaker:
-		Cost: 
+		Cost: 90x Iron, 65x Copper, 1x Battery, 3x Processing Unit, 10x Plastic
 			=> 
-		Refunds: 
+		Refunds: 15x Iron, 17x Copper = 15x Mixed + 1x Copper
 		
 ]]--
 data.raw["recipe"]["high-tech-science-pack"].energy_required = 14
+data.raw["recipe"]["high-tech-science-pack"].ingredients =
+    {
+		{"sct-htech-capbank", 1},
+		{"sct-htech-injector", 1},
+		{"sct-htech-random", 1}
+    }
 data.raw["recipe"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"
+
+data.raw["tool"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"
+data.raw["tool"]["high-tech-science-pack"].order = "a[high-tech-science-pack]"
