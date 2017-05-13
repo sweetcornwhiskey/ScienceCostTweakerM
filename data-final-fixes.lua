@@ -1,4 +1,9 @@
 require("config")
+-- Cost requires
+require("configs.costs.lolwhat")
+require("configs.costs.uberwaffe")
+require("configs.costs.normal")
+require("configs.costs.extended")
 
 -- Select the science pack config file as requested. Final data file.
 	sciencepackConfig = "tweaks." .. sciencecosttweaker.options.sciencePackConfig .. ".2_final"
@@ -7,8 +12,8 @@ require("config")
 if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 
 	-- Select the cost file depending on which one is requested.
-	costConfig = "configs.costs." .. settings.startup["sct-difficulty-cost"].value
-	require(costConfig)
+	if not sciencecosttweaker then sciencecosttweaker = {} end
+	sciencecosttweaker = sct_cost[settings.startup["sct-difficulty-cost"].value]
 
 	-- Iterate through all research, and update the costs as configured.
 	for index,tech in pairs(data.raw.technology) do 
@@ -71,7 +76,7 @@ if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 						
 						mult = multiplier.cost[ingredientName]
 						ingredientCostCount = math.floor(ingredientCostCount * mult)
-						ingredientCostCount = math.max(ingredientCostCount, 0);
+						ingredientCostCount = math.max(ingredientCostCount, 1);
 						
 						Value[2] = ingredientCostCount
 					end

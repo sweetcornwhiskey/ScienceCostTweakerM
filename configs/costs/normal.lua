@@ -1,16 +1,17 @@
 require("configs.costs.rawmodels")
 
-if not sciencecosttweaker then sciencecosttweaker = {} end
-if not sciencecosttweaker.costs then sciencecosttweaker.costs = {} end
+if not sct_cost then sct_cost = {} end
+if not sct_cost.normal then sct_cost.normal = {} end
+if not sct_cost.normal.costs then sct_cost.normal.costs = {} end
 
 -- =================================================================================================================================================================== --
 -- Cost Adjustments for the various tiers of research.
 -- =================================================================================================================================================================== --
 -- SCT_newTier(timeMult, stepCountMult, redMult, greenMult, blueMult, militaryMult, productionMult, hightechMult)
-sciencecosttweaker.costs.tier1 = SCT_newTier(1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 2x overall more expensive
-sciencecosttweaker.costs.tier2 = SCT_newTier(1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 4x overall more expensive
-sciencecosttweaker.costs.tier3 = SCT_newTier(1.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 6x overall more expensive
-sciencecosttweaker.costs.military = SCT_newTier(1.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 6x overall more expensive
-sciencecosttweaker.costs.production = SCT_newTier(1.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 6x overall more expensive
-sciencecosttweaker.costs.hightech = SCT_newTier(1.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 6x overall more expensive
-sciencecosttweaker.costs.formula = SCT_formulaMod(1.0, "2*(", ")") -- 2x overall more expensive
+sct_cost.normal.costs.tier1 = SCT_newTier(1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0) -- No change
+sct_cost.normal.costs.tier2 = SCT_newTier(1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 2x overall more expensive
+sct_cost.normal.costs.tier3 = SCT_newTier(1.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 6x overall more expensive
+sct_cost.normal.costs.military = SCT_newTier(1.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 6x overall more expensive
+sct_cost.normal.costs.production = SCT_newTier(1.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 6x overall more expensive
+sct_cost.normal.costs.hightech = SCT_newTier(1.0, 3.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0) -- 6x overall more expensive
+sct_cost.normal.costs.formula = SCT_formulaMod(1.0, "2*(", ")") -- 2x overall more expensive

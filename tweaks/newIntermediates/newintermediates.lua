@@ -20,6 +20,13 @@ data:extend({
 	
 	{
 		type = "item-subgroup",
+		name = "sct-labs",
+		group = "sct-science",
+		order = "a-a",
+	},
+	
+	{
+		type = "item-subgroup",
 		name = "sct-byproducts",
 		group = "sct-science",
 		order = "b-a",

@@ -7,8 +7,8 @@ data:extend({
 		name = "sct-lab-2",
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-2/icon.png",
 		flags = {"goes-to-quickbar"},
-		subgroup = "production-machine",
-		order = "g[sct-lab-2]",
+		subgroup = "sct-labs",
+		order = "b[lab2]",
 		place_result = "sct-lab-2",
 		stack_size = 10
 	},
@@ -75,6 +75,8 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-2",
+		subgroup = "sct-labs",
+		order = "b[lab2]",
 		enabled = "true",
 		energy_required = 5,
 		ingredients =
@@ -91,8 +93,8 @@ data:extend({
 		name = "sct-lab-3",
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-3/icon.png",
 		flags = {"goes-to-quickbar"},
-		subgroup = "production-machine",
-		order = "g[sct-lab-3]",
+		subgroup = "sct-labs",
+		order = "c[lab3]",
 		place_result = "sct-lab-3",
 		stack_size = 10
 	},
@@ -162,6 +164,8 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-3",
+		subgroup = "sct-labs",
+		order = "c[lab3]",
 		enabled = "false",
 		energy_required = 5,
 		ingredients =
@@ -178,8 +182,8 @@ data:extend({
 		name = "sct-lab-4",
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-4/icon.png",
 		flags = {"goes-to-quickbar"},
-		subgroup = "production-machine",
-		order = "g[sct-lab-4]",
+		subgroup = "sct-labs",
+		order = "d[lab4]",
 		place_result = "sct-lab-4",
 		stack_size = 10
 	},
@@ -251,6 +255,8 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-4",
+		subgroup = "sct-labs",
+		order = "d[lab3]",
 		enabled = "false",
 		energy_required = 5,
 		ingredients =
@@ -338,6 +344,8 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-1",
+		subgroup = "sct-labs",
+		order = "a[lab1]",
 		enabled = "false",
 		energy_required = 5,
 		ingredients =
@@ -352,6 +360,8 @@ data:extend({
 })
 
 -- Rework vanilla science lab into a Tier 1 science lab.
+data.raw["lab"]["lab"].subgroup = "sct-labs"
+data.raw["lab"]["lab"].order = "a[lab1]"
 data.raw["lab"]["lab"].icon = "__ScienceCostTweaker__/graphics/sct-lab-1/icon.png"
 data.raw["lab"]["lab"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
 data.raw["lab"]["lab"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}

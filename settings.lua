@@ -6,7 +6,8 @@ data:extend({
 		setting_type = "startup",
 		default_value = "normal",
 		allowed_values =  {"lolwhat", "noadjustment", "uberwaffe", "normal", "extended"}
-	}
+	},
+
 })
 
 
