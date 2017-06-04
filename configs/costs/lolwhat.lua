@@ -14,5 +14,6 @@ sct_cost.lolwhat.costs.tier3 = SCT_newTier(0.01, 0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 
 sct_cost.lolwhat.costs.military = SCT_newTier(0.01, 0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0) -- Hundred times cheaper
 sct_cost.lolwhat.costs.production = SCT_newTier(0.01, 0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0) -- Hundred times cheaper
 sct_cost.lolwhat.costs.hightech = SCT_newTier(0.01, 0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0) -- Hundred times cheaper
+sct_cost.lolwhat.costs.bobmodules = SCT_newBobModules(0.01, 0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0) -- Hundred times cheaper
 sct_cost.lolwhat.costs.formula = SCT_formulaMod(0.01, "(", ")*0.01") -- Hundred times cheaper
 

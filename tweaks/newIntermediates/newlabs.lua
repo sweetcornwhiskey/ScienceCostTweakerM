@@ -360,8 +360,10 @@ data:extend({
 })
 
 -- Rework vanilla science lab into a Tier 1 science lab.
-data.raw["lab"]["lab"].subgroup = "sct-labs"
-data.raw["lab"]["lab"].order = "a[lab1]"
+data.raw["item"]["lab"].subgroup = "sct-labs"
+data.raw["item"]["lab"].order = "a[lab1]"
+data.raw["item"]["lab"].icon = "__ScienceCostTweaker__/graphics/sct-lab-1/icon.png"
+
 data.raw["lab"]["lab"].icon = "__ScienceCostTweaker__/graphics/sct-lab-1/icon.png"
 data.raw["lab"]["lab"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
 data.raw["lab"]["lab"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}

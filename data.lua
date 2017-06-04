@@ -1,5 +1,4 @@
 require("config")
-
--- Select the science pack config file as requested. Initial data file.
-sciencepackConfig = "tweaks." .. sciencecosttweaker.options.sciencePackConfig .. ".0_initial"
-require(sciencepackConfig)
+-- Recipes requires
+require("tweaks.vanilla.0_initial")
+require("tweaks.bobsmods.0_initial")

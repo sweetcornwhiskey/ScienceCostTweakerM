@@ -1,303 +1,275 @@
--- Check that both bobsmod tech and bobsmod plates is installed
--- If not, then revert to using 'vanilla' config files.
-bobIsAbout = true
-if (data.raw["item"]["resin"] == nil or data.raw["item"]["glass"] == nil or data.raw["item"]["silicon-wafer"] == nil or data.raw["item"]["brass-alloy"] == nil) then
-	require("tweaks.vanilla.0_initial")
-	bobIsAbout = false
+-- Check that bobsmod plates is installed
+bobIsAbout = false
+if (settings.startup["sct-recipes"].value == "bobsmods" and bobmods and bobmods.plates) then
+	bobIsAbout = true
 end
 
-
 if (bobIsAbout == true) then
-	-- Firstly, set the options for using the new intermediaries, as well as using the new tiered labs.
-	require("tweaks.newIntermediates.newintermediates")
+	-- Green Science Pack:
+	-- =============================
+	--[[
+		Vanilla SCT cost: 8.7x time, 8x Iron plate, 2x Copper plate
+		
+		Bobsmod SCT cost: 8.7x time, 2x Iron plate, 2x Copper plate, 2x Tin plate, 2x Lead plate, 1x Circuit board (no components one)
+	]]--
+
+	data.raw.recipe["sct-t2-instruments"].ingredients =
+	{
+		{"sct-t2-microcircuits", 10},
+		{"basic-circuit-board", 1},
+		{"tin-plate", 1}
+	}
+
+	data.raw.recipe["sct-t2-micro-wafer"].ingredients =
+	{
+		{"lead-plate", 4},
+		{"sct-t2-wafer-stamp", 4}
+	}
+
+	data.raw.recipe["sct-t2-wafer-stamp"].ingredients =
+	{
+		{"iron-plate", 2},
+		{"tin-plate", 2}
+	}
 	
-	-- If BobsTech is installed, then adjust the new science packs as well.
-	if (data.raw["item"]["lab-2"] ~= nil) then
-		require("tweaks.bobsmods.newintermediates")
-	end
-
-	-- Make resin craftable by hand, so that we can use it in science pack crafting.
-	data.raw.recipe["bob-resin-wood"].category = "crafting"
-
-	data:extend({
-		-- Recipes for new science packs intermediary products.
-		-- ===================================================================
-
-		-- Tier 1 Intermediary products.
-		-- =============================
-		-- Pure Bobsmods Tier 1 Science Pack:
-		-- 5.5x time, 2x Iron plate, 1x Copper plate
-		-- <- 1x Iron gear (2x Iron plate) + 1x Copper plate
-		--
-		-- New cost: 8.72x time, 2x Iron plate, 1x Copper plate, 0.25x Raw Wood
-		{
-			type = "recipe",
-			name = "sct-t1-ironcore",
-			enabled = "true",
-			energy_required = 1.24,
-			ingredients =
-			{
-				{"iron-plate", 2},
-			},
-			results = 
-			{
-				{type="item", name="sct-t1-ironcore", amount=1},
-			},
-		},
-
-		{
-			type = "recipe",
-			name = "sct-t1-magnet-coils",
-			enabled = "true",
-			energy_required = 4.96,
-			ingredients =
-			{
-				{"copper-plate", 4},
-				{"resin", 1},
-			},
-			results = 
-			{
-				{type="item", name="sct-t1-magnet-coils", amount=8},
-			},
-		},
+	-- Military Science Pack:
+	-- =============================
+	--[[
+		Vanilla SCT cost: 
+			Cost: 35x Iron, 22x Copper, 1x Steel, 5x Coal, 4x Circuit
+				=> 39x Iron, 28x Copper, 1x Steel, 5x Coal
+			Refunds: 14x Iron, 20x Copper = 14x Mixed + 3x Copper
 		
-		-- Tier 2 Intermediary products.
-		-- =============================
-		-- Pure Bobsmods Tier 2 Science Pack:
-		-- 9.4x time, 0.25x Raw Wood, 4.5x Iron plate, 1.5x Copper plate
-		-- <- 1x Transport Belt (0.5x Iron gear + 0.5x Iron plate) + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate)
-		-- <- 1.5x Gear + 1.5x Iron plate + 3x Copper cable (1.5x copper plate) + 1x Wooden Board (0.5x Wood)
-		-- <- 5.5x Iron plate + 1.5x Copper plate + 0.5x Wood (0.25x Raw Wood)
-		--
-		-- New cost: 12.21x time, 4x Iron plate, 2x Copper plate, 1.25x Raw Wood, 0.5xSteel
-		{
-			type = "recipe",
-			name = "sct-t2-reaction-nodes",
-			enabled = "true",
-			energy_required = 1.45,
-			ingredients =
-			{
-				{"sct-t1-magnet-coils", 2},
-				{"iron-plate", 1},
-			},
-			results = 
-			{
-				{type="item", name="sct-t2-reaction-nodes", amount=1},
-			},
-		},
+		Bobsmod SCT cost: 
+			Cost: 1x Steel, 10x Carbon, 4x Circuit, 40x Invar plate, 40x Brass plate
+				Alloys = 24x Iron + 24x Copper + 16x Zinc + 16x Nickel
+				
+			Refunds: 16x Iron, 16x Copper = 16x Mixed
+			
+			
+		Note:
+			5x Brass = 3x Copper + 2x Zinc
+			5x Invar = 3x Iron + 2x Nickel
+			Nickel to Zinc sulfiric acid ratio = 1:1
+	]]--
+	data.raw.recipe["sct-mil-subplating"].ingredients =
+	{
+		{type="item", name="invar-alloy", amount=4},
+		{type="item", name="brass-alloy", amount=4}
+	}
+	data.raw.recipe["sct-mil-subplating"].results = 
+	{
+		{type="item", name="sct-mil-subplating", amount=1},
+		{type="item", name="sct-waste-ironcopper", amount=2}
+	}
 
-		{
-			type = "recipe",
-			name = "sct-t2-instruments",
-			enabled = "true",
-			energy_required = 1.45,
-			ingredients =
-			{
-				{"sct-t2-microcircuits", 10},
-				{"iron-plate", 2},
-			},
-			results = 
-			{
-				{type="item", name="sct-t2-instruments", amount=1},
-			},
-		},
+	data.raw.recipe["sct-mil-plating"].ingredients =
+	{
+		{type="item", name="invar-alloy", amount=12},
+		{type="item", name="brass-alloy", amount=12},
+		{type="item", name="steel-plate", amount=1},
+		{type="item", name="sct-mil-subplating", amount=7}
+	}
+	data.raw.recipe["sct-mil-plating"].results = 
+	{
+		{type="item", name="sct-mil-plating", amount=1},
+		{type="item", name="sct-waste-ironcopper", amount=2}
+	}
 
-		{
-			type = "recipe",
-			name = "sct-t2-microcircuits",
-			enabled = "true",
-			energy_required = 1.45,
-			ingredients =
-			{
-				{"copper-plate", 1},
-				{"sct-t2-micro-wafer", 1},
-			},
-			results = 
-			{
-				{type="item", name="sct-t2-microcircuits", amount=10},
-			},
-		},
+	data.raw.recipe["sct-mil-circuit1"].ingredients =
+	{
+		{type="item", name="electronic-circuit", amount=2},
+		{type="item", name="carbon", amount=4}
+	}
+	data.raw.recipe["sct-mil-circuit1"].results = 
+	{
+		{type="item", name="sct-mil-circuit1", amount=1}
+	}
 
-		{
-			type = "recipe",
-			name = "sct-t2-micro-wafer",
-			enabled = "true",
-			energy_required = 2.9,
-			ingredients =
-			{
-				{"resin", 1},
-				{"iron-plate", 2},
-				{"sct-t2-wafer-stamp", 4}
-			},
-			results = 
-			{
-				{type="item", name="sct-t2-micro-wafer", amount=2},
-			},
-		},
+	data.raw.recipe["sct-mil-circuit2"].ingredients =
+	{
+		{type="item", name="sct-mil-circuit1", amount=1},
+		{type="item", name="electronic-circuit", amount=1},
+		{type="item", name="carbon", amount=3}
+	}
+	data.raw.recipe["sct-mil-circuit2"].results = 
+	{
+		{type="item", name="sct-mil-circuit2", amount=1}
+	}
 
-		{
-			type = "recipe",
-			name = "sct-t2-wafer-stamp",
-			enabled = "true",
-			energy_required = 2.9,
-			ingredients =
-			{
-				{"steel-plate", 1},
-				{"resin", 1},
-			},
-			results = 
-			{
-				{type="item", name="sct-t2-wafer-stamp", amount=4},
-			},
-		},
+	data.raw.recipe["sct-mil-circuit3"].ingredients =
+	{
+		{type="item", name="sct-mil-circuit2", amount=1},
+		{type="item", name="electronic-circuit", amount=1},
+		{type="item", name="carbon", amount=3}
+	}
+	data.raw.recipe["sct-mil-circuit3"].results = 
+	{
+		{type="item", name="sct-mil-circuit3", amount=1}
+	}
+	
+	-- Production Science Pack:
+	-- =============================
+	--[[
+		Vanilla SCT cost: 
+			Cost: 17x IronGear, 16x CopperCable, 15x Steel, 20x Stone, 2x Plastic, 4x Adv Circuit, 2x Circuit, 6x Redwire, 20x Petroleum, 120x Water, 1x Electric Engine
+				=> 50x Iron, 43x Copper, 15x Steel, 20x Stone, 10x Plastic, 20x Petroleum, 120x Water, 1x Electric Engine
+			Refunds: 5x Iron, 11x Copper = 5x Mixed + 3x Copper
+			
+		Bobsmod SCT cost: 
+			Cost: 10x Steel, 20x Silicon, 5x Plastic, 4x Adv Circuit, 2x Circuit, 4x Redwire, 20x Petroleum, 1x Electric Engine, 10x Silver, 10x Tin plate, 10x Lead plate, 120x Sulfur Dioxide
+			Refunds: 4x Sulfur
+			
+		Note: 1x Silicon = 1x Quartz, 1x Stone, 0.5 Coal, 2.5x Water, 10x Hydrogen Chlorine
+	]]--
+
+	data.raw.recipe["sct-prod-biosilicate"].ingredients =
+	{
+		{type="item", name="silicon", amount=20},
+		{type="item", name="steel-plate", amount=10},
+		{type="item", name="plastic-bar", amount=5},
+		{type="item", name="electronic-circuit", amount=2},
+		{type="fluid", name="petroleum-gas", amount=20}
+	}
+
+	data.raw.recipe["sct-prod-overclocker"].ingredients =
+	{
+		{type="item", name="tin-plate", amount=10},
+		{type="item", name="lead-plate", amount=10},
+		{type="item", name="silver-plate", amount=10},
+		{type="item", name="electric-engine-unit", amount=1},
+		{type="fluid", name="sulfur-dioxide", amount=120}
+	}
+	data.raw.recipe["sct-prod-overclocker"].results = 
+	{
+		{type="item", name="sct-prod-overclocker", amount=1},
+		{type="item", name="sulfur", amount=4}
+	}
+	
+
+	-- Blue Science Pack:
+	-- =============================
+	--[[
+		Vanilla SCT cost:
+			Cost: 20x Iron, 17x Copper, 1x Steel, 6x Eletronic Circuits, 1x Adv Circuit, 10x Heavy Oil, 10x Light Oil, 15x Water
+				=> 28x Iron, 31x Copper, 1x Steel, 2x Plastic, 10x Heavy Oil, 10x Light Oil, 15x Water
+			Refunds: 20x Copper
 		
-		-- Tier 3 Intermediary products.
-		-- =============================
-		-- Pure Bobsmods Tier 3 Science Pack:
-		-- 66.7x time, 11x Iron Plate, 13.3x Copper Plate, 2.625x Raw Wood, 2x Sulfiric Acid, 1.7x Tin Plate, 0.8x Coal, 0.2x Silicon Plate, 0.3x Lead, 1.2x PetroGas, 0.2x Water, 0.5x Ferric Chlorine
-		-- <- 1x Battery (1x Iron plate + 1x Copper plate + 2x Sulfiric Acid) + 1x Steel (5x Iron plate) + 1x Advanced Circuit (1x Circuit Board + 4x Basic ElecComp + 4x ElecComp + 1x Solder) + 1x Smart Inserter (1x Fast Inserter + 4x Electronic circuit)
-		-- <- 6x Iron plate + 1x Copper plate + 2x Sulfiric Acid + 1x Fast Inserter (1x Inserter + 2x Iron plate + 2x Electronic circuit) + 4x Electronic circuit (12x Copper cable + 4x Wooden Board) + 1x Circuit Board (1x Phenolic Board + 1x Copper Plate + 1x Tin Plate + 0.5x Ferric Chlorine)+ 4x Basic ElecComp (0.8x Tinned Copper Wire + 0.8x Carbon) + 4x ElecComp (0.8x Plastic Bar + 0.8x Tinned Copper Wire + 1.6x Silicon Wafer) + 1x Solder (0.5x Solder Plate + 0.125x Resin)
-		-- <- 8x Iron plate + 2x Copper plate + 2x Sulfiric Acid + 1x Inserter (1x Electronic circuit + 1x Iron gear + 1x Iron plate) + 2x Electronic circuit (6x Copper cable + 2x Wooden Board) + 12x Copper cable (6x Copper Plate) + 4x Wooden Board (2x Wood) + 1x Phenolic Board (0.5x Wood + 0.5x Resin) + 1x Tin Plate + 0.5x Ferric Chlorine  + 1.6x Tinned Copper Wire (1.6x Copper Cable + 0.5x Tin Plate) + 0.8x Carbon (0.4x Coal + 0.2x Water) + 0.8x Plastic Bar (0.4x Coal + 1.2x PetroGas)+ 1.6x Silicon Wafer (0.2x Silicon plate) + 0.5x Solder Plate (0.2x Tin + 0.3x Lead) + 0.125x Resin (0.125x Raw Wood)
-		-- <- 9x Iron plate + 8x Copper plate + 2x Sulfiric Acid + 1x Electronic circuit (3x Copper cable + 1x Wooden Board) + 1x Iron gear (2x Iron plate) + 6x Copper cable (3x Copper plate) + 2x Wooden Board (1x Wood) + 2.5x Wood + 0.625x Raw Wood + 1.5x Tin Plate + 0.5x Ferric Chlorine  + 1.6x Copper Cable + 0.8x Coal + 0.2x Water + 1.2x PetroGas + 0.2x Silicon plate + 0.2x Tin + 0.3x Lead
-		-- <- 11x Iron plate + 11.8x Copper plate + 2x Sulfiric Acid + 3x Copper cable (1.5x Copper plate) + 1x Wooden Board (0.5x Wood) + 3.5x Wood (1.75x Raw Wood) + 0.625x Raw Wood + 1.7x Tin Plate + 0.5x Ferric Chlorine + 0.8x Coal + 0.2x Water + 1.2x PetroGas + 0.2x Silicon plate + 0.3x Lead
-		{
-			type = "recipe",
-			name = "sct-t3-flash-fuel",
-			category = "chemistry",
-			enabled = "false",
-			energy_required = 3,
-			ingredients =
-			{
-				{type="fluid", name="heavy-oil", amount=1},
-				{type="fluid", name="light-oil", amount=1},
-				{type="item", name="steel-plate", amount=1}
-			},
-			results = 
-			{
-				{type="item", name="sct-t3-flash-fuel", amount=1},
-			},
-		},
-
-		{
-			type = "recipe",
-			name = "sct-t3-laser-foci",
-			category = "crafting-with-fluid",
-			enabled = "false",
-			energy_required = 3,
-			ingredients =
-			{
-				{type="item", name="glass", amount=1},
-				{type="item", name="silicon-wafer", amount=1},
-				{type="item", name="brass-alloy", amount=1},
-				{type="fluid", name="nitrogen", amount=5}
-			},
-			results = 
-			{
-				{type="item", name="sct-t3-laser-foci", amount=1},
-			},
-		},
-
-		{
-			type = "recipe",
-			name = "sct-t3-laser-emitter",
-			category = "crafting-with-fluid",
-			enabled = "false",
-			energy_required = 3,
-			ingredients =
-			{
-				{type="item", name="steel-plate", amount=1},
-				{type="item", name="plastic-bar", amount=2},
-				{type="item", name="gold-plate", amount=1},
-				{type="item", name="electronic-circuit", amount=6},
-				{type="fluid", name="sulfuric-acid", amount=0.5}
-			},
-			results = 
-			{
-				{type="item", name="sct-t3-laser-emitter", amount=1},
-			},
-		},
-
-		{
-			type = "recipe",
-			name = "sct-t3-femto-lasers",
-			category = "crafting-with-fluid",
-			enabled = "false",
-			energy_required = 3,
-			ingredients =
-			{
-				{type="item", name="sct-t3-laser-emitter", amount=1},
-				{type="item", name="sct-t3-laser-foci", amount=1},
-				{type="item", name="sct-t3-flash-fuel", amount=1},
-				{type="fluid", name="nitrogen", amount=5}
-			},
-			results = 
-			{
-				{type="item", name="sct-t3-femto-lasers", amount=1},
-			},
-		},
-
-		{
-			type = "recipe",
-			name = "sct-t3-atomic-sensors",
-			category = "crafting-with-fluid",
-			enabled = "false",
-			energy_required = 3,
-			ingredients =
-			{
-				{type="item", name="advanced-circuit", amount=1},
-				{type="item", name="aluminium-plate", amount=1},
-				{type="item", name="iron-plate", amount=3},
-				{type="item", name="copper-plate", amount=6},
-				{type="fluid", name="ferric-chloride-solution", amount=0.5}
-			},
-			results = 
-			{
-				{type="item", name="sct-t3-atomic-sensors", amount=1},
-			},
-		},
+		Bobsmod SCT cost:
+			Cost: 25x Copper, 1x Steel, 6x Electronic Circuits, 1x Adv Circuit, 20x Heavy Oil, 20x Light Oil, 30x Nitrogen, 14x Glass (Quartz), 10x Gold, 10x Aluminium (Bauxite)
+			Refunds: 20x Copper = 10x Copper
+	]]--
+	data.raw.recipe["sct-t3-flash-fuel"].ingredients =
+	{
+		{type="fluid", name="heavy-oil", amount=20},
+		{type="fluid", name="light-oil", amount=20},
+		{type="item", name="steel-plate", amount=1}
+	}
+	
+	data.raw.recipe["sct-t3-laser-foci"].ingredients =
+	{
+		{type="item", name="copper-plate", amount=5},
+		{type="item", name="glass", amount=8},
+		{type="item", name="gold-plate", amount=5}
+	}
+	data.raw.recipe["sct-t3-laser-foci"].results = 
+	{
+		{type="item", name="sct-t3-laser-foci", amount=1},
+		{type="item", name="sct-waste-copperonly", amount=2}
+	}
+	
+	data.raw.recipe["sct-t3-laser-emitter"].ingredients =
+	{
+		{type="item", name="electronic-circuit", amount=6},
+		{type="item", name="copper-plate", amount=8},
+		{type="item", name="glass", amount=4},
+		{type="item", name="aluminium-plate", amount=5}
+	}
+	data.raw.recipe["sct-t3-laser-emitter"].results = 
+	{
+		{type="item", name="sct-t3-laser-emitter", amount=1},
+		{type="item", name="sct-waste-copperonly", amount=3}
+	}
+	
+	data.raw.recipe["sct-t3-femto-lasers"].ingredients =
+	{
+		{type="item", name="sct-t3-laser-emitter", amount=1},
+		{type="item", name="sct-t3-laser-foci", amount=1},
+		{type="item", name="sct-t3-flash-fuel", amount=1},
+		{type="fluid", name="nitrogen", amount=15}
+	}
+	
+	data.raw.recipe["sct-t3-atomic-sensors"].ingredients =
+	{
+		{type="item", name="advanced-circuit", amount=1},
+		{type="item", name="aluminium-plate", amount=5},
+		{type="item", name="gold-plate", amount=5},
+		{type="item", name="copper-plate", amount=12},
+		{type="fluid", name="nitrogen", amount=15}
+	}
+	data.raw.recipe["sct-t3-atomic-sensors"].results = 
+	{
+		{type="item", name="sct-t3-atomic-sensors", amount=1},
+		{type="item", name="sct-waste-copperonly", amount=5}
+	}
+	
+	-- High-Tech Science Pack:
+	-- =============================
+	--[[
+		Vanilla SCT cost: 
+			Cost: 90x Iron, 65x Copper, 1x Battery, 3x Processing Unit, 10x Plastic
+			Refunds: 15x Iron, 15x Copper = 15x Mixed
 		
-		-- Tier 4 Intermediary products.
-		-- =============================
-		-- Pure Bobsmods Tier 4 Science Pack:
-		-- 1.2x time, 0.1x Alien Artifact
-		--
-		-- New cost: 18x time, 0.1x Alien Artifact, 2.25x Copper plate, 2x Silicon Wafer, 2x Gold plate, 0.5x Nitrogen, 0.25x Phenolic Board
-		{
-			type = "recipe",
-			name = "sct-t4-bioprocessor",
-			category = "crafting-with-fluid",
-			enabled = "false",
-			energy_required = 30,
-			ingredients =
-			{
-				{type="item", name="alien-artifact", amount=1},
-				{type="item", name="silicon-wafer", amount=20},
-				{type="item", name="copper-plate", amount=20},
-				{type="item", name="gold-plate", amount=20}
-			},
-			results = 
-			{
-				{type="item", name="sct-t4-bioprocessor", amount=10},
-			},
-		},
-
-		{
-			type = "recipe",
-			name = "sct-t4-overclocker",
-			category = "crafting-with-fluid",
-			enabled = "false",
-			energy_required = 12,
-			ingredients =
-			{
-				{type="item", name="phenolic-board", amount=1},
-				{type="item", name="copper-plate", amount=1},
-				{type="fluid", name="nitrogen", amount=1}
-			},
-			results = 
-			{
-				{type="item", name="sct-t4-overclocker", amount=4},
-			},
-		},
-		
-	})
+		Bobsmod SCT cost: 
+			Cost: 16x Iron, 16x Copper, 1x Battery, 3x Processing Unit, 10x Plastic, 20x Electrum, 20x copper-tungsten-alloy, 20x tungsten-carbide, 20x nitinol-alloy, 20x cobalt-steel-alloy, 10x silicon-nitride, 10x lithium, 3x titanium-plate, 1x Polished Ruby
+			Refunds: 14x Iron, 14x Copper = 14x Mixed
+	]]--
+	data.raw.recipe["sct-htech-capbank"].ingredients =
+	{
+		{type="item", name="battery", amount=1},
+		{type="item", name="iron-gear-wheel", amount=8},
+		{type="item", name="copper-cable", amount=32},
+		{type="item", name="lithium", amount=10},
+		{type="item", name="silicon-nitride", amount=10}
+	}
+	data.raw.recipe["sct-htech-capbank"].results = 
+	{
+		{type="item", name="sct-htech-capbank", amount=1},
+		{type="item", name="sct-waste-ironcopper", amount=14}
+	}
+	
+	data.raw.recipe["sct-htech-injector"].ingredients =
+	{
+		{type="item", name="processing-unit", amount=3},
+		{type="item", name="plastic-bar", amount=10},
+		{type="item", name="copper-tungsten-alloy", amount=20},
+		{type="item", name="tungsten-carbide", amount=20},
+		{type="item", name="ruby-5", amount=1}
+	}
+	data.raw.recipe["sct-htech-injector"].results = 
+	{
+		{type="item", name="sct-htech-injector", amount=1}
+	}
+	
+	data.raw.recipe["sct-htech-thermalstore"].ingredients =
+	{
+		{type="item", name="electrum-alloy", amount=20},
+		{type="item", name="cobalt-steel-alloy", amount=20}
+	}
+	data.raw.recipe["sct-htech-thermalstore"].results = 
+	{
+		{type="item", name="sct-htech-thermalstore", amount=1}
+	}
+	
+	data.raw.recipe["sct-htech-random"].ingredients =
+	{
+		{type="item", name="sct-htech-thermalstore-heated", amount=1},
+		{type="item", name="titanium-gear-wheel", amount=3},
+		{type="item", name="nitinol-gear-wheel", amount=20}
+	}
+	data.raw.recipe["sct-htech-random"].results = 
+	{
+		{type="item", name="sct-htech-random", amount=1}
+	}
+	
 end

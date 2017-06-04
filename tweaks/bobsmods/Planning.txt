@@ -1,27 +1,84 @@
-sct-bm4-plating=VP Containment Plating			3x = 3x Chemical Temper	+ 3x Virtual Particle Shield + 3x Containment Array
-sct-bm4-injector=VP Injector					3x = 3x Nanofusion Core + 3x Virtual Particle Emitter + 3x Control Core	
-sct-bm4-supercoils=Superconductive Coils		3x = 3x Charged Coils + 3x Thermal Shield + 3x Layered Insulation
-sct-bm4-capbank=Capacitor Bank					3x = 3x Battery Core + 3x Capacitor Bank + 3x Regulator
 
-sct-bm4-part1a=Conductive Mesh					6x = 12x Copper Cable + 5x Bronze
-sct-bm4-part1b=Insulation						5x = 5x Rubber + 3x Plastic Bar
-sct-bm4-part1c=Shielding						4x = 5x Brass + 5x Invar
+-- Red Science Pack:
+-- =============================
+--[[
+	Vanilla SCT cost: 8.72x time, 2x Iron plate, 1x Copper plate
+	
+	Bobsmod SCT cost: No change
+]]--
 
-sct-bm4-part2a=Supertransistor Array			4x = 1x Silicon Nitride + 4x Electronic Components
-sct-bm4-part2b=Chemical Paste					4x = 1x Solid Fuel + 1x Carbon
-sct-bm4-part2c=Atomic Components				4x = 3x Electrum + 3x Zinc Plate
 
-sct-bm4-part3a=Battery Core						6x = 2x Supertransistor Array + 1x Lithium Ion Battery
-sct-bm4-part3b=Charged Coils					6x = 3x Conductive Mesh + 1x Processing Unit
-sct-bm4-part3c=Chemical Temper					6x = 2x Chemical Paste
-sct-bm4-part3d=Virtual Particle Emitter			6x = 2x Atomic Components
+-- Green Science Pack:
+-- =============================
+--[[
+	Vanilla SCT cost: 8.7x time, 8x Iron plate, 2x Copper plate
+	
+	Bobsmod SCT cost: 8.7x time, 2x Iron plate, 2x Copper plate, 2x Tin plate, 2x Lead plate, 1x Circuit board (no components one)
+]]--
 
-sct-bm4-part4a=Capacitor Stack					6x = 3x Conductive Mesh + 1x Titanium
-sct-bm4-part4b=Thermal Shield					6x = 2x Insulation + 5x Lithium
-sct-bm4-part4c=Nanofusion Core					6x = 2x Chemical Paste
-sct-bm4-part4d=Virtual Particle Shield			6x = 2x Shielding
+-- Military Science Pack:
+-- =============================
+--[[
+	Vanilla SCT cost: 
+		Cost: 35x Iron, 22x Copper, 1x Steel, 5x Coal, 4x Circuit
+			=> 39x Iron, 28x Copper, 1x Steel, 5x Coal
+		Refunds: 14x Iron, 20x Copper = 14x Mixed + 3x Copper
+	
+	Bobsmod SCT cost: 
+		Cost: 1x Steel, 10x carbon, 4x Circuit, 40x Invar plate, 40x Brass plate
+			Alloys = 24x Iron + 24x Copper + 16x Zinc + 16x Nickel
+			
+		Refunds: 16x Iron, 16x Copper = 16x Mixed
+		
+		
+	Note:
+		5x Brass = 3x Copper + 2x Zinc
+		5x Invar = 3x Iron + 2x Nickel
+		Nickel to Zinc sulfiric acid ratio = 1:1
+]]--
 
-sct-bm4-part5a=Regulator						6x = 2x Supertransistor Array + 1x Processing Unit
-sct-bm4-part5b=Layered Insulation				6x = 3x Insulation + 5x Silicon Wafer
-sct-bm4-part5c=Containment Array				6x = 2x Shielding
-sct-bm4-part5d=Control Core						6x = 2x Atomic Components
+-- Production Science Pack:
+-- =============================
+--[[
+	Vanilla SCT cost: 
+		Cost: 17x IronGear, 16x CopperCable, 15x Steel, 20x Stone, 2x Plastic, 4x Adv Circuit, 2x Circuit, 6x Redwire, 20x Petroleum, 120x Water, 1x Electric Engine
+			=> 50x Iron, 43x Copper, 15x Steel, 20x Stone, 10x Plastic, 20x Petroleum, 120x Water, 1x Electric Engine
+		Refunds: 5x Iron, 11x Copper = 5x Mixed + 3x Copper
+		
+	Bobsmod SCT cost: 
+		Cost: 10x Steel, 20x Stone, 5x Plastic, 4x Adv Circuit, 2x Circuit, 4x Redwire, 20x Petroleum, 1x Electric Engine, 10x Silver, 10x Tin plate, 10x Lead plate, 120x Sulfur Dioxide
+		Refunds: 4x Sulfur
+]]--
+
+-- Blue Science Pack:
+-- =============================
+--[[
+	Vanilla SCT cost:
+		Cost: 20x Iron, 17x Copper, 1x Steel, 6x Eletronic Circuits, 1x Adv Circuit, 10x Heavy Oil, 10x Light Oil, 15x Water
+			=> 28x Iron, 31x Copper, 1x Steel, 2x Plastic, 10x Heavy Oil, 10x Light Oil, 15x Water
+		Refunds: 20x Copper
+	
+	Bobsmod SCT cost:
+		Cost: 23x Copper, 1x Steel, 6x Eletronic Circuits, 1x Adv Circuit, 10x Heavy Oil, 10x Light Oil, 30x Nitrogen, 14x Glass (Quartz), 10x Gold, 10x Aluminium (Bauxite)
+		Refunds: 20x Copper = 10x Copper
+]]--
+
+-- High-Tech Science Pack:
+-- =============================
+--[[
+	Vanilla SCT cost: 
+		Cost: 90x Iron, 65x Copper, 1x Battery, 3x Processing Unit, 10x Plastic
+		Refunds: 15x Iron, 15x Copper = 15x Mixed
+	
+	Bobsmod SCT cost: 
+		Cost: 16x Iron, 16x Copper, 1x Battery, 3x Processing Unit, 10x Plastic, 20x Electrum, 20x copper-tungsten-alloy, 20x tungsten-carbide, 20x nitinol-alloy, 20x cobalt-steel-alloy, 10x silicon-nitride, 10x lithium, 3x titanium-plate, 1x Ruby
+		Refunds: 14x Iron, 14x Copper = 14x Mixed
+]]--
+
+-- Space Science Pack:
+-- =============================
+--[[
+	Vanilla SCT cost: No change
+	
+	Bobsmod SCT cost: No change
+]]--
