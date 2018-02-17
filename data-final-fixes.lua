@@ -7,6 +7,7 @@ require("configs.costs.extended")
 -- Recipes requires
 require("tweaks.vanilla.2_final")
 require("tweaks.bobsmods.2_final")
+require("tweaks.angelsmods.2_final")
 
 if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 

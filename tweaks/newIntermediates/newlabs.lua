@@ -5,6 +5,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-2",
+		icon_size = 32,
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-2/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
@@ -15,6 +16,7 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-2",
+		icon_size = 32,
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-2/icon.png",
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-2"},
@@ -91,6 +93,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-3",
+		icon_size = 32,
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-3/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
@@ -101,6 +104,7 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-3",
+		icon_size = 32,
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-3/icon.png",
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-3"},
@@ -180,6 +184,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-4",
+		icon_size = 32,
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-4/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
@@ -190,6 +195,7 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-4",
+		icon_size = 32,
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-4/icon.png",
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-4"},
@@ -275,6 +281,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-1",
+		icon_size = 32,
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-1/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "production-machine",
@@ -285,6 +292,7 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-1",
+		icon_size = 32,
 		icon = "__ScienceCostTweaker__/graphics/sct-lab-1/icon.png",
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-1"},
