@@ -1,10 +1,11 @@
 -- Check that angels bioprocesssing is installed
-angelsIsbio = false
+angelsIsBio = false
+
 if (angelsmods and angelsmods.bioprocessing) then
-	angelsIsbio = true
+	angelsIsBio = true
 end
 
-if (angelsIsbio == true) then
+if(angelsIsBio) then
 	table.insert(data.raw["lab"]["lab"].inputs, "token-bio")
 --	table.insert(data.raw["lab"]["lab-2"].inputs, "token-bio")
 	table.insert(data.raw["lab"]["sct-lab-1"].inputs, "token-bio")

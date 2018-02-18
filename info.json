@@ -1,11 +1,11 @@
 {
   "name": "ScienceCostTweaker",
-  "version": "0.16.0",
+  "version": "0.16.1",
   "factorio_version":"0.16",
-  "title": "ScienceCostTweaker Mod",
-  "author": "UberWaffe",
-  "dependencies": ["base >= 0.16.0", "? boblibrary >= 0.16.0", "? bobelectronics >= 0.16.0", "? bobplates >= 0.16.0", "? bobtech >= 0.16.0", "? UberTweaks >= 0.0.1", "? peacemod"],
+  "title": "ScienceCostTweaker Mod 0.16(mexmer)",
+  "author": "mexmer",
+  "dependencies": ["base >= 0.16.0", "? boblibrary >= 0.16.0", "? bobelectronics >= 0.16.0", "? bobplates >= 0.16.0", "? bobtech >= 0.16.0", "? UberTweaks >= 0.0.1", "? peacemod", "? angelsbioprocessing >= 0.5"],
   "contact": "",
-  "homepage": "https://github.com/UberWaffe/ScienceCostTweaker",
-  "description": "Allows the cost of research to be tweaked, in terms of count, science packs and time. Edit its configs costs *.lua to tweak the multipliers."
+  "homepage": "https://github.com/mexmer/ScienceCostTweaker",
+  "description": "Allows the cost of research to be tweaked, in terms of count, science packs and time. Edit its configs costs *.lua to tweak the multipliers. - Original mod made by UberWafe, this is adopted 0.16 version"
 }

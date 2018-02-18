@@ -1,3 +1,6 @@
+--INITIALIZE
+if not SCTTweaks then SCTTweaks = {} end
+
 require("config")
 -- Recipes requires
 require("tweaks.vanilla.0_initial")
