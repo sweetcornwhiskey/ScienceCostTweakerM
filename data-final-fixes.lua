@@ -90,3 +90,7 @@ if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 		
 	end
 end
+
+if settings.startup["sct-military"].value == "tier2" then
+        table.insert(data.raw["lab"]["sct-lab-2"].inputs, "military-science-pack")
+end

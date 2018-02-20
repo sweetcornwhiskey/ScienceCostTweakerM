@@ -9,11 +9,11 @@ data:extend({
 	},
 	{
 		type = "string-setting",
-		name = "sct-recipes",
+		name = "sct-military",
 		order = "ab",
 		setting_type = "startup",
-		default_value = "vanilla",
-		allowed_values =  {"vanilla", "bobsmods"}
+		default_value = "tier3",
+		allowed_values =  {"tier3", "tier2"}
 	},
 
 })
