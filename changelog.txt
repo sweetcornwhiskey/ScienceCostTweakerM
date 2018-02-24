@@ -1,0 +1,12 @@
+0.16.2
+- disabled bob mk2 lab
+- moved all bob labs and bob science packs to science tab
+- removed angels bio token from T1 lab
+- angels bio token can be now enabled in T1 lab trough mod settings page
+0.16.1
+- added angels bio token to all labs
+- added bobs logistic pac to T3 and T4 lab
+- military can be now enabled in T2 lab trough mod settings page
+- remove science override option (bobs,vanilla), there minimal differences
+0.16.0
+- initial revision
