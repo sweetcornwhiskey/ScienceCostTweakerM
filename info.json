@@ -2,7 +2,7 @@
   "name": "ScienceCostTweaker",
   "version": "0.16.2",
   "factorio_version":"0.16",
-  "title": "ScienceCostTweaker Mod 0.16(mexmer)",
+  "title": "ScienceCostTweaker Mod (mexmer)",
   "author": "mexmer",
   "dependencies": ["base >= 0.16.0", "? boblibrary >= 0.16.0", "? bobelectronics >= 0.16.0", "? bobplates >= 0.16.0", "? bobtech >= 0.16.0", "? UberTweaks >= 0.0.1", "? peacemod", "? angelsbioprocessing >= 0.5"],
   "contact": "",
