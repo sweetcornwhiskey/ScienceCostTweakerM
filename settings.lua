@@ -15,7 +15,14 @@ data:extend({
 		default_value = "tier3",
 		allowed_values =  {"tier3", "tier2"}
 	},
-
+	{
+		type = "string-setting",
+		name = "sct-bio",
+		order = "ab",
+		setting_type = "startup",
+		default_value = "tier2",
+		allowed_values =  {"tier2", "tier1"}
+	},
 })
 
 
