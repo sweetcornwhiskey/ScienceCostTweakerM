@@ -1,3 +1,5 @@
+0.16.6
+- detects presence of bob inserters overhaul and updates tier 3 lab recipe to use red filter inserter if overhaul is on
 0.16.5
 - speed of labs scaling changed to be optional setting (default off, to preserve difficulty)
 0.16.4

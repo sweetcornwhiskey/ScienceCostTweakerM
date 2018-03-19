@@ -40,3 +40,10 @@ if mods["bobmodules"] then
 		data.raw.item["lab-module"].order = "f[lab6]"
 	end
 end
+
+if mods["boblogistics"] then
+	if settings.startup["bobmods-logistics-inserteroverhaul"].value and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
+		 bobmods.lib.recipe.replace_ingredient("sct-lab-3", "filter-inserter", "red-filter-inserter")
+	end
+end
+
