@@ -1,3 +1,5 @@
+0.16.5
+- speed of labs scaling changed to be optional setting (default off, to preserve difficulty)
 0.16.4
 - speed of labs changed to scale - 1, 1.1., 1.3., 1.5
 0.16.3

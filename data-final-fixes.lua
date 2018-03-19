@@ -94,3 +94,9 @@ end
 if settings.startup["sct-military"].value == "tier2" then
         table.insert(data.raw["lab"]["sct-lab-2"].inputs, "military-science-pack")
 end
+
+if settings.startup["sct-lab-scaling"].value == true then
+	data.raw["lab"]["sct-lab-2"].researching_speed = 1.1
+	data.raw["lab"]["sct-lab-3"].researching_speed = 1.3
+	data.raw["lab"]["sct-lab-4"].researching_speed = 1.5
+end

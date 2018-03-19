@@ -23,6 +23,12 @@ data:extend({
 		default_value = "tier2",
 		allowed_values =  {"tier2", "tier1"}
 	},
+	{
+		type = "bool-setting",
+		name = "sct-lab-scaling",
+		setting_type = "startup",
+		default_value = false,
+	},
 })
 
 
