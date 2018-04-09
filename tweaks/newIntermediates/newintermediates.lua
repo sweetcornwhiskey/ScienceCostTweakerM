@@ -106,7 +106,7 @@ data:extend({
 		type = "recipe",
 		name = "sct-waste-processing-mixed",
 		energy_required = 0.5,
-		enabled = true,
+		enabled = false,
 		category = "crafting-with-fluid",
 		ingredients = {{"sct-waste-ironcopper", 2}},
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-waste-ironcopper.png",
@@ -123,14 +123,15 @@ data:extend({
 				name = "copper-ore",
 				amount = 1
 			}
-		}
+		},
+		allow_decomposition = false,
 	},
 
 	{
 		type = "recipe",
 		name = "sct-waste-processing-copper",
 		energy_required = 0.5,
-		enabled = true,
+		enabled = false,
 		category = "crafting-with-fluid",
 		ingredients = {{"sct-waste-copperonly", 2}},
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-waste-copperonly.png",
@@ -143,7 +144,8 @@ data:extend({
 				name = "copper-ore",
 				amount = 2
 			}
-		}
+		},
+		allow_decomposition = false,
 	},
 
 
@@ -555,6 +557,7 @@ table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-laser-emitter"})
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-femto-lasers"})
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-atomic-sensors"})
+table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-copper"})
 
 -- Military enabled by Military 2
 table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-subplating"})
@@ -562,12 +565,15 @@ table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", 
 table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit1"})
 table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit2"})
 table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit3"})
+table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-copper"})
+table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-mixed"})
 
 -- Production Tech enabled by Advanced Material Processing 2
 table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-biosilicate"})
 table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-baked-biopaste"})
 table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-bioprocessor"})
 table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-overclocker"})
+table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-mixed"})
 
 -- High Tech enabled by Advanced Electronics 2
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-thermalstore"})
@@ -575,5 +581,6 @@ table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlo
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-capbank"})
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-random"})
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-injector"})
+table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-mixed"})
 
 
