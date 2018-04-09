@@ -1,3 +1,6 @@
+0.16.7
+- fix for pycoal processing t3 science override
+- moved science waste recipes behind respective technology unlock, that produce it
 0.16.6
 - detects presence of bob inserters overhaul and updates tier 3 lab recipe to use red filter inserter if overhaul is on
 0.16.5
