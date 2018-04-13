@@ -245,12 +245,20 @@ if mods["bobplates"] then
 	{
 		{type="item", name="sct-htech-injector", amount=1}
 	}
-	
-	data.raw.recipe["sct-htech-thermalstore"].ingredients =
-	{
-		{type="item", name="electrum-alloy", amount=20},
-		{type="item", name="cobalt-steel-alloy", amount=20}
-	}
+	if data.raw.item["electrum-alloy"] then
+		data.raw.recipe["sct-htech-thermalstore"].ingredients =
+		{
+			{type="item", name="electrum-alloy", amount=20},
+			{type="item", name="cobalt-steel-alloy", amount=20}
+		}
+	else
+		data.raw.recipe["sct-htech-thermalstore"].ingredients =
+		{
+			{type="item", name="copper-tungsten-alloy", amount=20},
+			{type="item", name="cobalt-steel-alloy", amount=20}
+		}
+	end
+
 	data.raw.recipe["sct-htech-thermalstore"].results = 
 	{
 		{type="item", name="sct-htech-thermalstore", amount=1}

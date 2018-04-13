@@ -1,3 +1,5 @@
+0.16.8
+- switched from electrum to copper-tungsten when electrum plate is not present (removed from bobs)
 0.16.7
 - fix for pycoal processing t3 science override
 - moved science waste recipes behind respective technology unlock, that produce it
