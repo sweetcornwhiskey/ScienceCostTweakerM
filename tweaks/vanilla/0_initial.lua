@@ -1,5 +1,5 @@
 -- Firstly, set the options for using the new intermediaries, as well as using the new tiered labs.
-require("tweaks.newIntermediates.newintermediates")
+-- require("tweaks.newIntermediates.newintermediates")
 
 
 data:extend({
