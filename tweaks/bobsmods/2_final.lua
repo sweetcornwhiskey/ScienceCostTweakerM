@@ -11,6 +11,11 @@ require("tweaks.bobsmods.sciencegroup")
 		table.insert(data.raw.item["lab-2"].flags, "hidden")	
 		bobmods.lib.tech.remove_recipe_unlock("advanced-research", "lab-2")
 	end
+	if data.raw.technology["advanced-research"] then
+		data.raw.technology["advanced-research"].upgrade = false
+		bobmods.lib.tech.remove_recipe_unlock("advanced-electronics-2", "sct-lab-4")
+		bobmods.lib.tech.add_recipe_unlock("advanced-research", "sct-lab-4")
+	end
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
 		data.raw.item["lab-alien"].order = "e[lab5]"
