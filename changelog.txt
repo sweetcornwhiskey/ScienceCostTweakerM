@@ -1,3 +1,6 @@
+0.16.9
+- force removed upgrade flag from all unlock technogies (upgrade technologies are not searcheable in tech tree, and neither items they unlock)
+- moved quantum lab unlock into bobs advanced research (when bobtech is present), intermediates not changed
 0.16.8
 - switched from electrum to copper-tungsten when electrum plate is not present (removed from bobs)
 0.16.7
