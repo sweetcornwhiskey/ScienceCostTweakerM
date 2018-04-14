@@ -101,3 +101,9 @@ if settings.startup["sct-lab-scaling"].value == true then
 	data.raw["lab"]["sct-lab-3"].researching_speed = 1.3
 	data.raw["lab"]["sct-lab-4"].researching_speed = 1.5
 end
+
+-- make sure unlock technologies are not hidden, making unsearcheable items in tech tree
+data.raw.technology["advanced-electronics"].upgrade = false
+data.raw.technology["military-2"].upgrade = false
+data.raw.technology["advanced-material-processing-2"].upgrade = false
+data.raw.technology["advanced-electronics-2"].upgrade = false
