@@ -1,3 +1,5 @@
+0.16.10
+- changed load order to prevent science pack recipe override
 0.16.9
 - force removed upgrade flag from all unlock technogies (upgrade technologies are not searcheable in tech tree, and neither items they unlock)
 - moved quantum lab unlock into bobs advanced research (when bobtech is present), intermediates not changed
