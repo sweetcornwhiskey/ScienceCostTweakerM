@@ -3,9 +3,8 @@ if not SCTTweaks then SCTTweaks = {} end
 
 require("config")
 -- Prototypes
-require("prototypes.intermediates")
-require("prototypes.labs")
-require("prototypes.sciencepacks")
+require("prototypes.entity")
+require("prototypes.technology")
 
 -- Recipes requires
 

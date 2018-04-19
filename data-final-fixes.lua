@@ -4,6 +4,8 @@ require("configs.costs.lolwhat")
 require("configs.costs.uberwaffe")
 require("configs.costs.normal")
 require("configs.costs.extended")
+-- recipes
+require("prototypes.recipe")
 -- Recipes requires
 require("tweaks.vanilla.2_final")
 require("tweaks.bobsmods.2_final")

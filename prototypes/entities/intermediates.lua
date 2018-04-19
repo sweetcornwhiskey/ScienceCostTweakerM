@@ -99,56 +99,6 @@ data:extend({
 		stack_size = 50
 	},
 	
-	-- Setup the recipe for smelting the junk byproducts back into useful stuff.
-	-- ===================================================================
-
-	{
-		type = "recipe",
-		name = "sct-waste-processing-mixed",
-		energy_required = 0.5,
-		enabled = false,
-		category = "crafting-with-fluid",
-		ingredients = {{"sct-waste-ironcopper", 2}},
-		icon = "__ScienceCostTweakerM__/graphics/icons/sct-waste-ironcopper.png",
-		icon_size = 32,
-		subgroup = "sct-byproducts",
-		order = "a[waste-process-basic]",
-		results =
-		{
-			{
-				name = "iron-ore",
-				amount = 1
-			},
-			{
-				name = "copper-ore",
-				amount = 1
-			}
-		},
-		allow_decomposition = false,
-	},
-
-	{
-		type = "recipe",
-		name = "sct-waste-processing-copper",
-		energy_required = 0.5,
-		enabled = false,
-		category = "crafting-with-fluid",
-		ingredients = {{"sct-waste-copperonly", 2}},
-		icon = "__ScienceCostTweakerM__/graphics/icons/sct-waste-copperonly.png",
-		icon_size = 32,
-		subgroup = "sct-byproducts",
-		order = "a[waste-process-copper]",
-		results =
-		{
-			{
-				name = "copper-ore",
-				amount = 2
-			}
-		},
-		allow_decomposition = false,
-	},
-
-
 	-- Tier 1 Intermediary products.
 	-- =============================
 	{
@@ -182,7 +132,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
-		order = "b[t2-reaction-nodes]",
+		order = "b5[t2-reaction-nodes]",
 		stack_size = 200
 	},
 
@@ -193,7 +143,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
-		order = "b[t2-instruments]",
+		order = "b1[t2-instruments]",
 		stack_size = 200
 	},
 
@@ -204,7 +154,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
-		order = "b[t2-microcircuits]",
+		order = "b2[t2-microcircuits]",
 		stack_size = 200
 	},
 
@@ -215,7 +165,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
-		order = "b[t2-micro-wafer]",
+		order = "b3[t2-micro-wafer]",
 		stack_size = 200
 	},
 
@@ -226,7 +176,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
-		order = "b[t2-wafer-stamp]",
+		order = "b4[t2-wafer-stamp]",
 		stack_size = 200
 	},
 
@@ -239,7 +189,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
-		order = "b[a]",
+		order = "b2",
 		stack_size = 200
 	},
 
@@ -250,7 +200,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
-		order = "b[b]",
+		order = "b3",
 		stack_size = 200
 	},
 
@@ -261,7 +211,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
-		order = "b[c]",
+		order = "b4",
 		stack_size = 200
 	},
 
@@ -272,7 +222,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
-		order = "b[d]",
+		order = "b1",
 		stack_size = 200
 	},
 
@@ -283,7 +233,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
-		order = "b[e]",
+		order = "b5",
 		stack_size = 200
 	},
 
@@ -296,7 +246,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-mil",
-		order = "b[a]",
+		order = "b2",
 		stack_size = 200
 	},
 	{
@@ -306,7 +256,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-mil",
-		order = "b[b]",
+		order = "b1",
 		stack_size = 200
 	},
 	{
@@ -316,7 +266,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-mil",
-		order = "b[c]",
+		order = "b5",
 		stack_size = 200
 	},
 	{
@@ -326,7 +276,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-mil",
-		order = "b[d]",
+		order = "b4",
 		stack_size = 200
 	},
 	{
@@ -336,7 +286,7 @@ data:extend({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-mil",
-		order = "b[e]",
+		order = "b3",
 		stack_size = 200
 	},
 
@@ -349,7 +299,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-prod-biosilicate.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-prod",
-		order = "b[biosilicate]",
+		order = "b3[biosilicate]",
 		stack_size = 200
 	},
 
@@ -360,7 +310,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-prod-baked-biopaste.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-prod",
-		order = "b[biopaste]",
+		order = "b1[biopaste]",
 		stack_size = 200
 	},
 
@@ -371,7 +321,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/bioprocessor.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-prod",
-		order = "b[bioprocessor]",
+		order = "b1[bioprocessor]",
 		stack_size = 200
 	},
 
@@ -382,7 +332,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/overclocker.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-prod",
-		order = "b[overclocker]",
+		order = "b4[overclocker]",
 		stack_size = 200
 	},
 
@@ -397,7 +347,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-htech-capbank.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-hightech",
-		order = "b[capbank]",
+		order = "b1[capbank]",
 		stack_size = 200
 	},
 	
@@ -409,7 +359,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-htech-injector.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-hightech",
-		order = "b[injector]",
+		order = "b2[injector]",
 		stack_size = 200
 	},
 
@@ -421,7 +371,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-htech-thermalstore.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-hightech",
-		order = "b[thermalstore]",
+		order = "b5[thermalstore]",
 		stack_size = 200
 	},
 
@@ -433,7 +383,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-htech-thermalstore-heated.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-hightech",
-		order = "b[thermalstore-heated]",
+		order = "b4[thermalstore-heated]",
 		stack_size = 200
 	},
 
@@ -445,7 +395,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-htech-random.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-hightech",
-		order = "b[random]",
+		order = "b3[random]",
 		stack_size = 200
 	},
 
@@ -548,39 +498,3 @@ data:extend({
 	]]--
 
 })
-
--- Make technology research enable the Tier 3 and Tier 4 intermediates
--- ===================================================================
--- Tier 3 enabled by Advanced Electronics
-table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-flash-fuel"})
-table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-laser-foci"})
-table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-laser-emitter"})
-table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-femto-lasers"})
-table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-atomic-sensors"})
-table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-copper"})
-
--- Military enabled by Military 2
-table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-subplating"})
-table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-plating"})
-table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit1"})
-table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit2"})
-table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-circuit3"})
-table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-copper"})
-table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-mixed"})
-
--- Production Tech enabled by Advanced Material Processing 2
-table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-biosilicate"})
-table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-baked-biopaste"})
-table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-bioprocessor"})
-table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-overclocker"})
-table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-mixed"})
-
--- High Tech enabled by Advanced Electronics 2
-table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-thermalstore"})
-table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-thermalstore-heated"})
-table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-capbank"})
-table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-random"})
-table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-injector"})
-table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-mixed"})
-
-

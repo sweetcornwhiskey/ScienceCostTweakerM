@@ -74,21 +74,6 @@ data:extend({
 		},
 		fast_replaceable_group = "lab",
 	},
-	{
-		type = "recipe",
-		name = "sct-lab-2",
-		subgroup = "sct-labs",
-		order = "b[lab2]",
-		enabled = "true",
-		energy_required = 5,
-		ingredients =
-		{
-			{"lab", 1},
-			{"electronic-circuit", 20},
-			{"iron-gear-wheel", 10}
-		},
-		result = "sct-lab-2"
-	},
 	-- == Tier 3 ==
 	{
 		type = "item",
@@ -165,21 +150,7 @@ data:extend({
 		},
 		fast_replaceable_group = "lab",
 	},
-	{
-		type = "recipe",
-		name = "sct-lab-3",
-		subgroup = "sct-labs",
-		order = "c[lab3]",
-		enabled = "false",
-		energy_required = 5,
-		ingredients =
-		{
-			{"sct-lab-2", 1},
-			{"advanced-circuit", 20},
-			{"filter-inserter", 4}
-		},
-		result = "sct-lab-3"
-	},
+
 	-- == Tier 4 ==
 	{
 		type = "item",
@@ -258,21 +229,6 @@ data:extend({
 		},
 		fast_replaceable_group = "lab",
 	},
-	{
-		type = "recipe",
-		name = "sct-lab-4",
-		subgroup = "sct-labs",
-		order = "d[lab3]",
-		enabled = "false",
-		energy_required = 5,
-		ingredients =
-		{
-			{"sct-lab-3", 1},
-			{"processing-unit", 5},
-			{"filter-inserter", 2}
-		},
-		result = "sct-lab-4"
-	},
 	
 })
 
@@ -348,23 +304,7 @@ data:extend({
 			module_info_icon_shift = {0, 0.9}
 		},
 		fast_replaceable_group = "lab",
-	},
-	{
-		type = "recipe",
-		name = "sct-lab-1",
-		subgroup = "sct-labs",
-		order = "a[lab1]",
-		enabled = "false",
-		energy_required = 5,
-		ingredients =
-		{
-			{"copper-cable", 30},
-			{"iron-gear-wheel", 10},
-			{"transport-belt", 4}
-		},
-		result = "sct-lab-1"
-	},
-	
+	},	
 })
 
 -- Rework vanilla science lab into a Tier 1 science lab.
@@ -410,10 +350,3 @@ data.raw["lab"]["lab"].fast_replaceable_group = "lab"
 -- Backwards compatibility: Ensure the standard lab recipe is enabled.
 data.raw.recipe["lab"].enabled = "true"
 -- Note: A lot of mods adjust the standard lab prototype and entity. Keep changes to it to a minimal.
-	
--- Make technology research enable the Tier 3 and Tier 4 laboratories.
--- ===================================================================
--- Tier 3, enabled by Advanced Electronics research (which is also enables science pack 3)
-table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-lab-3"})
--- Tier 4, enabled by Advanced Electronics 2 research (which is also enables high tech science pack)
-table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-lab-4"})
