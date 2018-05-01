@@ -7,7 +7,6 @@ require("configs.costs.extended")
 -- recipes
 require("prototypes.recipe")
 -- Recipes requires
-require("tweaks.vanilla.2_final")
 require("tweaks.bobsmods.2_final")
 require("tweaks.angelsmods.2_final")
 require("tweaks.pymods.2_final")

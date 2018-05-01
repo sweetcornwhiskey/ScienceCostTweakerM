@@ -9,7 +9,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "b[lab2]",
+		order = "b[labs]-b[lab2]",
 		place_result = "sct-lab-2",
 		stack_size = 10
 	},
@@ -82,7 +82,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "c[lab3]",
+		order = "b[labs]-c[lab3]",
 		place_result = "sct-lab-3",
 		stack_size = 10
 	},
@@ -159,7 +159,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "d[lab4]",
+		order = "b[labs]-b[lab4]",
 		place_result = "sct-lab-4",
 		stack_size = 10
 	},
@@ -241,7 +241,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "production-machine",
-		order = "g[sct-lab-1]",
+		order = "b[labs]-a[sct-lab-1]",
 		place_result = "sct-lab-1",
 		stack_size = 10
 	},
@@ -309,7 +309,7 @@ data:extend({
 
 -- Rework vanilla science lab into a Tier 1 science lab.
 data.raw["item"]["lab"].subgroup = "sct-labs"
-data.raw["item"]["lab"].order = "a[lab1]"
+data.raw["item"]["lab"].order = "b[labs]-a[lab1]"
 data.raw["item"]["lab"].icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png"
 
 data.raw["lab"]["lab"].icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png"
