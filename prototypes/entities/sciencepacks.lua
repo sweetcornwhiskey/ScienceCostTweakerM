@@ -17,3 +17,6 @@ data.raw["tool"]["production-science-pack"].order = "h[prod]-a[production-scienc
 
 data.raw["tool"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"
 data.raw["tool"]["high-tech-science-pack"].order = "i[ht]-a[high-tech-science-pack]"
+
+data.raw["tool"]["space-science-pack"].subgroup = "sct-sciencepack-space"
+data.raw["tool"]["space-science-pack"].order = "z[space]-a[space-science-pack]"

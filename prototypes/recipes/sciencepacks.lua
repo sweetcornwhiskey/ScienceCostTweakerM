@@ -126,3 +126,4 @@ data.raw["recipe"]["high-tech-science-pack"].ingredients =
     }
 data.raw["recipe"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"
 data.raw["recipe"]["high-tech-science-pack"].order = "i[ht]-a[sct-sciencepack-hightech]"
+

@@ -77,4 +77,15 @@
 		order = "i[ht]",
 	},
 	
+	{
+		type = "item-subgroup",
+		name = "sct-sciencepack-space",
+		group = "sct-science",
+		order = "z[space]",
+	},
+	
 })
+
+-- move everything in science-pack subgroup to sct-science (bilka)
+data.raw["item-subgroup"]["science-pack"].group = "sct-science"
+data.raw["item-subgroup"]["science-pack"].order = "z"
