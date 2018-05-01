@@ -1,3 +1,6 @@
+0.16.11
+- item reorder, recipe reorder (should fix chaos in signals and inventory, also in assembler and chemical lab recipes)
+- changed bob alien lab and module lab to require higher tier lab as ingredient (t2 and t3 respective to research)
 0.16.10
 - changed load order to prevent science pack recipe override
 0.16.9
