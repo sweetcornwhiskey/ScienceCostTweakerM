@@ -1,3 +1,6 @@
+0.16.12
+- moved recipe load to 0 phase, to fix issues with material overrides from other mods
+- added "show made in" flag to items, that are not made in assemblers
 0.16.11
 - item reorder, recipe reorder (should fix chaos in signals and inventory, also in assembler and chemical lab recipes)
 - changed bob alien lab and module lab to require higher tier lab as ingredient (t2 and t3 respective to research)
