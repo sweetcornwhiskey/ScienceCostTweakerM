@@ -1,11 +1,11 @@
 require("config")
+-- Recipes
+require("prototypes.2_recipe")
 -- Cost requires
 require("configs.costs.lolwhat")
 require("configs.costs.uberwaffe")
 require("configs.costs.normal")
 require("configs.costs.extended")
--- recipes
-require("prototypes.recipe")
 -- Recipes requires
 require("tweaks.bobsmods.2_final")
 require("tweaks.angelsmods.2_final")
@@ -105,6 +105,15 @@ end
 
 -- make sure unlock technologies are not hidden, making unsearcheable items in tech tree
 data.raw.technology["advanced-electronics"].upgrade = false
-data.raw.technology["military-2"].upgrade = false
-data.raw.technology["advanced-material-processing-2"].upgrade = false
 data.raw.technology["advanced-electronics-2"].upgrade = false
+data.raw.technology["advanced-material-processing"].upgrade = false
+data.raw.technology["automation"].upgrade = false
+data.raw.technology["automation-2"].upgrade = false
+data.raw.technology["automation-3"].upgrade = false
+data.raw.technology["military"].upgrade = false
+data.raw.technology["military-2"].upgrade = false
+data.raw.technology["military-3"].upgrade = false
+data.raw.technology["military-4"].upgrade = false
+data.raw.technology["logistics"].upgrade = false
+data.raw.technology["logistics-2"].upgrade = false
+data.raw.technology["logistics-3"].upgrade = false

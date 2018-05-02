@@ -2,10 +2,12 @@
 if not SCTTweaks then SCTTweaks = {} end
 
 require("config")
+
 -- Prototypes
-require("prototypes.itemgroups")
-require("prototypes.entity")
-require("prototypes.technology")
+require("prototypes.0_itemgroups")
+require("prototypes.0_entity")
+require("prototypes.0_technology")
+require("prototypes.0_recipe")
 
 -- Recipes requires
 

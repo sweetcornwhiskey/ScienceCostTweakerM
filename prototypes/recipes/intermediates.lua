@@ -25,6 +25,7 @@ data:extend({
 			}
 		},
 		allow_decomposition = false,
+		hidden_from_flow_stats = true,
 	},
 
 	{
@@ -46,6 +47,7 @@ data:extend({
 			}
 		},
 		allow_decomposition = false,
+		hidden_from_flow_stats = true,
 	},
 
 
@@ -236,6 +238,7 @@ data:extend({
 		{
 			{type="item", name="sct-t3-flash-fuel", amount=1},
 		},
+		always_show_made_in = true,
 	},
 
 	{
@@ -459,7 +462,8 @@ data:extend({
 		energy_required = 3,
 		enabled = "false",
 		ingredients = {{"sct-prod-biosilicate", 1}},
-		result = "sct-prod-baked-biopaste"
+		result = "sct-prod-baked-biopaste",
+		always_show_made_in = true,
 	},
 	
 	{
@@ -484,6 +488,7 @@ data:extend({
 		{
 			{type="item", name="sct-prod-biosilicate", amount=1},
 		},
+		always_show_made_in = true,
 	},
 
 	{
@@ -592,7 +597,8 @@ data:extend({
 		energy_required = 22,
 		enabled = "false",
 		ingredients = {{"sct-htech-thermalstore", 1}},
-		result = "sct-htech-thermalstore-heated"
+		result = "sct-htech-thermalstore-heated",
+		always_show_made_in = true,
 	},
 	
 	{
