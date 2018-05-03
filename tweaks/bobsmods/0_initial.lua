@@ -276,3 +276,11 @@ if mods["bobplates"] then
 	}
 	
 end
+
+if mods["bobelectronics"] then
+	data.raw.recipe["sct-lab1-mechanization"].ingredients =
+	{
+		{"transport-belt", 10},
+		{"basic-circuit-board", 10},
+	}
+end
