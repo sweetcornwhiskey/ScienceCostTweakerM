@@ -1,5 +1,11 @@
 -- Make technology research enable the Tier 3 and Tier 4 intermediates
 -- ===================================================================
+-- Tier 2 enabled by Automation 2
+table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-t2-instruments"})
+table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-t2-microcircuits"})
+table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-t2-micro-wafer"})
+table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-t2-wafer-stamp"})
+table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-t2-reaction-nodes"})
 -- Tier 3 enabled by Advanced Electronics
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-flash-fuel"})
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-laser-foci"})

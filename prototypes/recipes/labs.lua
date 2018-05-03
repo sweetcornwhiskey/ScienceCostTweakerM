@@ -2,9 +2,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-2",
-		subgroup = "sct-labs",
-		order = "b[labs]-b[lab2]",
-		enabled = "true",
+		enabled = "false",
 		energy_required = 5,
 		ingredients =
 		{
@@ -18,8 +16,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-3",
-		subgroup = "sct-labs",
-		order = "b[labs]-c[lab3]",
 		enabled = "false",
 		energy_required = 5,
 		ingredients =
@@ -34,8 +30,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab-4",
-		subgroup = "sct-labs",
-		order = "b[labs]-d[lab4]",
 		enabled = "false",
 		energy_required = 5,
 		ingredients =
