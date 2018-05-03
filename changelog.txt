@@ -1,3 +1,6 @@
+0.16.13
+- added main product
+- locked t2 lab behind automation 2 research
 0.16.12
 - moved recipe load to 0 phase, to fix issues with material overrides from other mods
 - added "show made in" flag to items, that are not made in assemblers
