@@ -1,3 +1,5 @@
+0.16.14
+- added lab intermediates
 0.16.13
 - added main product
 - locked t2 lab behind automation 2 research
