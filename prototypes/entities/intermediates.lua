@@ -426,4 +426,97 @@ data:extend({
 	},
 	]]--
 
+	-- Labs Intermediates
+	-- =====================
+	-- Electromagnetic lab construction
+	{
+		type = "item",
+		name = "sct-lab1-construction",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab1-construction.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-labparts",
+		order = "b[labparts]-a[lab1]-b[construction]",
+		stack_size = 10,
+	},
+	-- Electromagnetic lab mechanization
+	{
+		type = "item",
+		name = "sct-lab1-mechanization",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab1-mechanization.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-labparts",
+		order = "b[labparts]-a[lab1]-c[mechanization]",
+		stack_size = 10,
+	},
+
+	-- Electrochemic lab construction
+	{
+		type = "item",
+		name = "sct-lab2-construction",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab2-construction.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-labparts",
+		order = "b[labparts]-b[lab2]-b[construction]",
+		stack_size = 10,
+	},
+	-- Electrochemic lab automatization
+	{
+		type = "item",
+		name = "sct-lab2-automatization",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab2-automatization.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-labparts",
+		order = "b[labparts]-b[lab2]-c[automatization]",
+		stack_size = 10,
+	},
+
+	-- Spectrum lab construction
+	{
+		type = "item",
+		name = "sct-lab3-construction",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab3-construction.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-labparts",
+		order = "b[labparts]-c[lab3]-c[construction]",
+		stack_size = 10,
+	},
+	-- Spectrum lab optics
+	{
+		type = "item",
+		name = "sct-lab3-optics",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab3-optics.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-labparts",
+		order = "b[labparts]-c[lab3]-c[optics]",
+		stack_size = 10,
+	},
+
+	-- Quantum lab construction
+	{
+		type = "item",
+		name = "sct-lab4-construction",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab3-construction.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-labparts",
+		order = "b[labparts]-d[lab4]-b[construction]",
+		stack_size = 10,
+	},
+	-- Quantum lab manipulators
+	{
+		type = "item",
+		name = "sct-lab4-manipulators",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab4-manipulators.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-labparts",
+		order = "b[labparts]-d[lab4]-c[manipulators]",
+		stack_size = 10,
+	},
 })

@@ -12,3 +12,10 @@ if mods["angelsbioprocessing"] then
 		data.raw.tool["token-bio"].subgroup = "science-pack"
 	end
 end
+
+if mods["angelsrefinining"] then
+--	if (data.raw.recipe["sct-lab1-mechanization"].ingredients["basic-electronic-cirquit-board"]) then
+		bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "basic-electronic-cirquit-board", "basic-cirquit-board")
+--	end
+end
+	

@@ -16,16 +16,16 @@
 
 	{
 		type = "item-subgroup",
-		name = "sct-sciencestuff",
+		name = "sct-labs",
 		group = "sct-science",
-		order = "a",
+		order = "a[labs]",
 	},
 	
 	{
 		type = "item-subgroup",
-		name = "sct-labs",
+		name = "sct-labparts",
 		group = "sct-science",
-		order = "b[labs]",
+		order = "b[labparts]",
 	},
 	
 	{

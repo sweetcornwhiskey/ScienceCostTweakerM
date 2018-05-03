@@ -589,4 +589,123 @@ data:extend({
 		},
 		main_product = "sct-htech-thermalstore",
 	},		
+
+	-- lab intermediates
+	-- lab vanilla ingredients {{"electronic-circuit", 10}, {"iron-gear-wheel", 10}, {"transport-belt", 4}}, 
+	-- lab1 intermediates
+	{
+		type = "recipe",
+		name = "sct-lab1-construction",
+		category = "crafting",
+		energy_required = 5,
+		enabled = "true",
+		ingredients = 
+		{
+			{"iron-stick", 8},
+			{"iron-plate", 2},
+		},
+		result = "sct-lab1-construction",
+	},
+
+	{
+		type = "recipe",
+		name = "sct-lab1-mechanization",
+		category = "crafting",
+		energy_required = 5,
+		enabled = "true",
+		ingredients = 
+		{
+			{"transport-belt", 10},
+			{"electronic-circuit", 10},
+		},
+		result = "sct-lab1-mechanization",
+	},
+
+	-- lab2 intermediates
+	{
+		type = "recipe",
+		name = "sct-lab2-construction",
+		category = "crafting",
+		energy_required = 5,
+		enabled = "false",
+		ingredients = 
+		{
+			{"iron-stick", 4},
+			{"steel-plate", 2},
+		},
+		result = "sct-lab2-construction",
+	},
+
+	{
+		type = "recipe",
+		name = "sct-lab2-automatization",
+		category = "crafting",
+		energy_required = 10,
+		enabled = "false",
+		ingredients = 
+		{
+			{"fast-inserter", 2},
+			{"electronic-circuit", 10},
+		},
+		result = "sct-lab2-automatization",
+	},
+	
+	-- lab3 intermediates
+	{
+		type = "recipe",
+		name = "sct-lab3-construction",
+		category = "crafting",
+		energy_required = 10,
+		enabled = "false",
+		ingredients = 
+		{
+			{"plastic-bar", 5},
+			{"steel-plate", 5},
+		},
+		result = "sct-lab3-construction",
+	},
+
+	{
+		type = "recipe",
+		name = "sct-lab3-optics",
+		category = "crafting",
+		energy_required = 20,
+		enabled = "false",
+		ingredients = 
+		{
+			{"advanced-circuit", 20},
+			{"sct-t3-femto-lasers", 1}
+		},
+		result = "sct-lab3-optics",
+	},
+	
+	-- lab4 intermediates
+	{
+		type = "recipe",
+		name = "sct-lab4-construction",
+		category = "crafting",
+		energy_required = 15,
+		enabled = "false",
+		ingredients = 
+		{
+			{"solar-panel", 1},
+			{"plastic-bar", 5},
+		},
+		result = "sct-lab4-construction",
+	},
+
+	{
+		type = "recipe",
+		name = "sct-lab4-manipulators",
+		category = "crafting",
+		energy_required = 30,
+		enabled = "false",
+		ingredients = 
+		{
+			{"sct-htech-injector", 1},
+			{"filter-inserter", 2},
+			{"processing-unit", 5},
+		},
+		result = "sct-lab4-manipulators",
+	},
 })

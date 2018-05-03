@@ -58,9 +58,3 @@ data:extend({
 		result = "sct-lab-1"
 	},
 })
-
-data.raw.recipe["lab"].ingredients =
-{
-	{"sct-lab1-construction", 2},
-	{"sct-lab1-mechanization", 1},
-}

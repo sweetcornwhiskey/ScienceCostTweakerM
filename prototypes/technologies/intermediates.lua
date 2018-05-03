@@ -6,6 +6,9 @@ table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe"
 table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-t2-micro-wafer"})
 table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-t2-wafer-stamp"})
 table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-t2-reaction-nodes"})
+table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-lab2-construction"})
+table.insert(data.raw.technology["automation-2"].effects,{type = "unlock-recipe", recipe = "sct-lab2-automatization"})
+
 -- Tier 3 enabled by Advanced Electronics
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-flash-fuel"})
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-laser-foci"})
@@ -13,6 +16,8 @@ table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-femto-lasers"})
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-atomic-sensors"})
 table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-copper"})
+table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-lab3-construction"})
+table.insert(data.raw.technology["advanced-electronics"].effects,{type = "unlock-recipe", recipe = "sct-lab3-optics"})
 
 -- Military enabled by Military 2
 table.insert(data.raw.technology["military-2"].effects,{type = "unlock-recipe", recipe = "sct-mil-subplating"})
@@ -37,3 +42,6 @@ table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlo
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-random"})
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-htech-injector"})
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-mixed"})
+table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-lab4-construction"})
+table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-lab4-manipulators"})
+
