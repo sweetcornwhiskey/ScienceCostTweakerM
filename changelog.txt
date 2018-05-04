@@ -1,3 +1,6 @@
+0.16.14
+- omnifluid compatibility
+- expensive recipes for science packs
 0.16.13
 - added main product
 - locked t2 lab behind automation 2 research
