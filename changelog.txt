@@ -1,3 +1,6 @@
+0.16.16
+- split technology unlock loading to corresponding phases with recipes
+- another fix for omni + bobs + angels
 0.16.15
 - omnipack research fix
 0.16.14
