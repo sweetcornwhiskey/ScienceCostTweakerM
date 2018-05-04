@@ -6,6 +6,7 @@ require("configs.costs.normal")
 require("configs.costs.extended")
 -- Recipes
 require("prototypes.2_recipe")
+require("prototypes.2_technology")
 -- Recipes requires
 require("tweaks.bobsmods.2_final")
 require("tweaks.angelsmods.2_final")
