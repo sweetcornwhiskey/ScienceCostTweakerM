@@ -28,13 +28,14 @@ data.raw["recipe"]["science-pack-1"].normal =
 		{ type="item", amount=1, name="science-pack-1" },
 	},
 }
+data.raw["recipe"]["science-pack-1"].ingredients = data.raw["recipe"]["science-pack-1"].normal
 data.raw["recipe"]["science-pack-1"].subgroup = "sct-sciencepack-1"
 data.raw["recipe"]["science-pack-1"].order = "d[t1]-a[science-pack-1]"
 
 -- Science Pack 2
 -- ===================================================================
 data.raw["recipe"]["science-pack-2"].energy_required = 6
-data.raw["recipe"]["science-pack-2"].exxpensive =
+data.raw["recipe"]["science-pack-2"].expensive =
 {
 	ingredients =
     {
@@ -58,6 +59,7 @@ data.raw["recipe"]["science-pack-2"].normal =
 		{ type="item", amount=1, name="science-pack-2" },
 	},
 }
+data.raw["recipe"]["science-pack-2"].ingredients = data.raw["recipe"]["science-pack-2"].normal
 data.raw["recipe"]["science-pack-2"].enabled = false
 data.raw["recipe"]["science-pack-2"].main_product = "science-pack-2"
 data.raw["recipe"]["science-pack-2"].subgroup = "sct-sciencepack-2"
@@ -105,6 +107,7 @@ data.raw["recipe"]["science-pack-3"].normal =
 		{ type="item", amount=1, name="science-pack-3" },
 	},
 }
+data.raw["recipe"]["science-pack-3"].ingredients = data.raw["recipe"]["science-pack-3"].normal
 data.raw["recipe"]["science-pack-3"].subgroup = "sct-sciencepack-3"
 data.raw["recipe"]["science-pack-3"].order = "f[t3]-a[science-pack-3]"
 
@@ -147,6 +150,7 @@ data.raw["recipe"]["military-science-pack"].normal =
 		{ type="item", amount=2, name="military-science-pack" },
 	},
 }
+data.raw["recipe"]["military-science-pack"].ingredients = data.raw["recipe"]["military-science-pack"].normal
 data.raw["recipe"]["military-science-pack"].subgroup = "sct-sciencepack-mil"
 data.raw["recipe"]["military-science-pack"].order = "g[mil]-a[military-science-pack]"
 
@@ -189,6 +193,7 @@ data.raw["recipe"]["production-science-pack"].normal =
 		{ type="item", amount=2, name="production-science-pack" },
 	},
 }
+data.raw["recipe"]["production-science-pack"].ingredients = data.raw["recipe"]["production-science-pack"].normal
 data.raw["recipe"]["production-science-pack"].subgroup = "sct-sciencepack-prod"
 data.raw["recipe"]["production-science-pack"].order = "h[prod]-a[production-science-pack]"
 
@@ -233,5 +238,6 @@ data.raw["recipe"]["high-tech-science-pack"].normal =
 		{ type="item", amount=2, name="high-tech-science-pack" },
 	},
 }
+data.raw["recipe"]["high-tech-science-pack"].ingredients = data.raw["recipe"]["high-tech-science-pack"].normal
 data.raw["recipe"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"
 data.raw["recipe"]["high-tech-science-pack"].order = "i[ht]-a[high-tech-science-pack]"

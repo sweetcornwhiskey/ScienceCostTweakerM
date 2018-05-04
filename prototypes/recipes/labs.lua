@@ -10,7 +10,9 @@ data:extend({
 			{"electronic-circuit", 20},
 			{"iron-gear-wheel", 10}
 		},
-		result = "sct-lab-2"
+		result = "sct-lab-2",
+		subgroup = "sct-labs",
+		order = "b[labs]-b[lab2]",
 	},
 
 	{
@@ -24,7 +26,9 @@ data:extend({
 			{"advanced-circuit", 20},
 			{"filter-inserter", 4}
 		},
-		result = "sct-lab-3"
+		result = "sct-lab-3",
+		subgroup = "sct-labs",
+		order = "b[labs]-c[lab3]",
 	},
 
 	{
@@ -38,7 +42,9 @@ data:extend({
 			{"processing-unit", 5},
 			{"filter-inserter", 2}
 		},
-		result = "sct-lab-4"
+		result = "sct-lab-4",
+		subgroup = "sct-labs",
+		order = "b[labs]-d[lab4]",
 	},
 
 --old lab1 (compatibility)
@@ -55,6 +61,11 @@ data:extend({
 			{"iron-gear-wheel", 10},
 			{"transport-belt", 4}
 		},
-		result = "sct-lab-1"
+		result = "sct-lab-1",
+		subgroup = "sct-labs",
+		order = "b[labs]-a[sct-lab1]",
 	},
 })
+
+data.raw.recipe["lab"].order = "b[labs]-a[lab]"
+data.raw.recipe["lab"].subgroup = "sct-labs"
