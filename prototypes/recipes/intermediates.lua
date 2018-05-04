@@ -4,6 +4,28 @@ data:extend({
 
 	{
 		type = "recipe",
+		name = "sct-waste-processing-copper",
+		energy_required = 0.5,
+		enabled = false,
+		category = "crafting-with-fluid",
+		ingredients = {{"sct-waste-copperonly", 2}},
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-waste-copperonly.png",
+		icon_size = 32,
+		subgroup = "sct-byproducts",
+		order = "c[bp]-a[copperwaste]",
+		results =
+		{
+			{
+				name = "copper-ore",
+				amount = 2
+			}
+		},
+		allow_decomposition = false,
+		hidden_from_flow_stats = true,
+	},
+
+	{
+		type = "recipe",
 		name = "sct-waste-processing-mixed",
 		energy_required = 0.5,
 		enabled = false,
@@ -28,29 +50,6 @@ data:extend({
 		hidden_from_flow_stats = true,
 	},
 
-	{
-		type = "recipe",
-		name = "sct-waste-processing-copper",
-		energy_required = 0.5,
-		enabled = false,
-		category = "crafting-with-fluid",
-		ingredients = {{"sct-waste-copperonly", 2}},
-		icon = "__ScienceCostTweakerM__/graphics/icons/sct-waste-copperonly.png",
-		icon_size = 32,
-		subgroup = "sct-byproducts",
-		order = "c[bp]-a[copperwaste]",
-		results =
-		{
-			{
-				name = "copper-ore",
-				amount = 2
-			}
-		},
-		allow_decomposition = false,
-		hidden_from_flow_stats = true,
-	},
-
-
 	-- Recipes for new science packs intermediary products.
 	-- ===================================================================
 
@@ -74,6 +73,8 @@ data:extend({
 		{
 			{type="item", name="sct-t1-ironcore", amount=1},
 		},
+		subgroup = "sct-sciencepack-1",
+		order = "d[t1]-b[ironcore]",		
 	},
 
 	{
@@ -89,6 +90,8 @@ data:extend({
 		{
 			{type="item", name="sct-t1-magnet-coils", amount=8},
 		},
+		subgroup = "sct-sciencepack-1",
+		order = "d[t1]-c[magnet-coils]",
 	},
 	
 	-- Tier 2 Intermediary products.
@@ -114,6 +117,8 @@ data:extend({
 		{
 			{type="item", name="sct-t2-instruments", amount=1},
 		},
+		subgroup = "sct-sciencepack-2",
+		order = "e[t2]-b[instruments]",
 	},
 
 	{
@@ -130,6 +135,8 @@ data:extend({
 		{
 			{type="item", name="sct-t2-microcircuits", amount=10},
 		},
+		subgroup = "sct-sciencepack-2",
+		order = "e[t2]-c[microcircuits]",
 	},
 
 	{
@@ -146,6 +153,8 @@ data:extend({
 		{
 			{type="item", name="sct-t2-micro-wafer", amount=2},
 		},
+		subgroup = "sct-sciencepack-2",
+		order = "e[t2]-d[micro-wafer]",
 	},
 
 	{
@@ -161,6 +170,8 @@ data:extend({
 		{
 			{type="item", name="sct-t2-wafer-stamp", amount=4},
 		},
+		subgroup = "sct-sciencepack-2",
+		order = "e[t2]-e[wafer-stamp]",
 	},
 	
 	{
@@ -177,6 +188,8 @@ data:extend({
 		{
 			{type="item", name="sct-t2-reaction-nodes", amount=1},
 		},
+		subgroup = "sct-sciencepack-2",
+		order = "e[t2]-f[reaction-nodes]",
 	},
 
 	-- Tier 3 Intermediary products.
@@ -200,6 +213,8 @@ data:extend({
 		{
 			{type="item", name="sct-t3-femto-lasers", amount=1},
 		},
+		subgroup = "sct-sciencepack-3",
+		order = "f[t3]-b[femtolasers]",		
 	},
 
 	{
@@ -221,6 +236,8 @@ data:extend({
 			{type="item", name="sct-t3-flash-fuel", amount=1},
 		},
 		always_show_made_in = true,
+		subgroup = "sct-sciencepack-3",
+		order = "f[t3]-c[flashfuel]",
 	},
 
 	{
@@ -242,6 +259,8 @@ data:extend({
 			{type="item", name="sct-waste-copperonly", amount=1}
 		},
 		main_product = "sct-t3-laser-foci",
+		subgroup = "sct-sciencepack-3",
+		order = "f[t3]-d[laserfoci]",
 	},
 
 	{
@@ -264,6 +283,8 @@ data:extend({
 			{type="item", name="sct-waste-copperonly", amount=2}
 		},
 		main_product = "sct-t3-laser-emitter",
+		subgroup = "sct-sciencepack-3",
+		order = "f[t3]-e[laseremitter]",
 	},
 
 	{
@@ -287,6 +308,8 @@ data:extend({
 			{type="item", name="sct-waste-copperonly", amount=7}
 		},
 		main_product = "sct-t3-atomic-sensors",
+		subgroup = "sct-sciencepack-3",
+		order = "f[t3]-f[atomicsensors]",
 	},
 	
 	-- Military Intermediary products.
@@ -312,6 +335,8 @@ data:extend({
 			{type="item", name="sct-waste-ironcopper", amount=1}
 		},
 		main_product = "sct-mil-plating",
+		subgroup = "sct-sciencepack-mil",
+		order = "g[mil]-b[plating]",
 	},
 
 	{
@@ -333,6 +358,8 @@ data:extend({
 			{type="item", name="sct-waste-ironcopper", amount=1}
 		},
 		main_product = "sct-mil-subplating",
+		subgroup = "sct-sciencepack-mil",
+		order = "g[mil]-c[subplating]",
 	},
 
 	{
@@ -357,6 +384,8 @@ data:extend({
 			{type="item", name="sct-waste-copperonly", amount=2}
 		},
 		main_product = "sct-mil-circuit3",
+		subgroup = "sct-sciencepack-mil",
+		order = "g[mil]-d[circuit3]",
 	},
 	
 	{
@@ -379,6 +408,8 @@ data:extend({
 			{type="item", name="sct-waste-copperonly", amount=1}
 		},
 		main_product = "sct-mil-circuit2",
+		subgroup = "sct-sciencepack-mil",
+		order = "g[mil]-e[circuit2]",
 	},
 	
 	{
@@ -401,6 +432,8 @@ data:extend({
 			{type="item", name="sct-waste-ironcopper", amount=1}
 		},
 		main_product = "sct-mil-circuit1",
+		subgroup = "sct-sciencepack-mil",
+		order = "g[mil]-f[circuit1]",
 	},
 
 	-- Production Intermediary products.
@@ -425,6 +458,8 @@ data:extend({
 			{type="item", name="sct-waste-ironcopper", amount=4},
 		},
 		main_product = "sct-prod-bioprocessor",
+		subgroup = "sct-sciencepack-prod",
+		order = "h[prod]-b[bioprocessor]",
 	},
 
 	{
@@ -437,8 +472,13 @@ data:extend({
 		{
 			{"sct-prod-biosilicate", 1}
 		},
-		result = "sct-prod-baked-biopaste",
+		results = 
+		{
+			{ type="item", name="sct-prod-baked-biopaste", amount=1},
+		},
 		always_show_made_in = true,
+		subgroup = "sct-sciencepack-prod",
+		order = "h[prod]-c[biopaste]",
 	},
 	
 	{
@@ -462,6 +502,8 @@ data:extend({
 			{type="item", name="sct-prod-biosilicate", amount=1},
 		},
 		always_show_made_in = true,
+		subgroup = "sct-sciencepack-prod",
+		order = "h[prod]-d[biosilicate]",
 	},
 
 	{
@@ -487,6 +529,8 @@ data:extend({
 			{type="item", name="sct-waste-copperonly", amount=3}
 		},
 		main_product = "sct-prod-overclocker",
+		subgroup = "sct-sciencepack-prod",
+		order = "h[prod]-e[overclocker]",
 	},
 	
 	-- High-Tech Intermediary products.
@@ -512,6 +556,8 @@ data:extend({
 			{type="item", name="sct-waste-ironcopper", amount=5}
 		},
 		main_product = "sct-htech-capbank",
+		subgroup = "sct-sciencepack-hightech",
+		order = "i[ht]-b[capbank]",
 	},
 	
 	{
@@ -535,6 +581,8 @@ data:extend({
 			{type="item", name="sct-waste-ironcopper", amount=10}
 		},
 		main_product = "sct-htech-injector",
+		subgroup = "sct-sciencepack-hightech",
+		order = "i[ht]-c[injector]",
 	},
 	
 	{
@@ -554,6 +602,8 @@ data:extend({
 		{
 			{type="item", name="sct-htech-random", amount=1}
 		},
+		subgroup = "sct-sciencepack-hightech",
+		order = "i[ht]-d[random]",
 	},
 
 	{
@@ -566,8 +616,13 @@ data:extend({
 		{
 			{"sct-htech-thermalstore", 1}
 		},
-		result = "sct-htech-thermalstore-heated",
+		results = 
+		{
+			{type="item", name="sct-htech-thermalstore-heated", amount=1},
+		},
 		always_show_made_in = true,
+		subgroup = "sct-sciencepack-hightech",
+		order = "i[ht]-e[thermalstore-heated]",
 	},
 	
 	{
@@ -588,5 +643,7 @@ data:extend({
 			{type="item", name="sct-waste-copperonly", amount=1}
 		},
 		main_product = "sct-htech-thermalstore",
+		subgroup = "sct-sciencepack-hightech",
+		order = "i[ht]-f[thermalstore]",
 	},		
 })
