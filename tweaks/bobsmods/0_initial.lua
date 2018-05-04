@@ -8,12 +8,21 @@ if mods["bobplates"] then
 		Bobsmod SCT cost: 8.7x time, 2x Iron plate, 2x Copper plate, 2x Tin plate, 2x Lead plate, 1x Circuit board (no components one)
 	]]--
 
-	data.raw.recipe["sct-t2-instruments"].ingredients =
-	{
-		{"sct-t2-microcircuits", 10},
-		{"basic-circuit-board", 1},
-		{"tin-plate", 1}
-	}
+	if data.raw.item["basic-circuit-board"] then
+		data.raw.recipe["sct-t2-instruments"].ingredients =
+		{
+			{"sct-t2-microcircuits", 10},
+			{"basic-circuit-board", 1},
+			{"tin-plate", 1}
+		}
+	else
+		data.raw.recipe["sct-t2-instruments"].ingredients =
+		{
+			{"sct-t2-microcircuits", 10},
+			{"electronic-circuit", 1},
+			{"tin-plate", 1}
+		}
+	end
 
 	data.raw.recipe["sct-t2-micro-wafer"].ingredients =
 	{
