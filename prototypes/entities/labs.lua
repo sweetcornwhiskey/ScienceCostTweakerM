@@ -1,4 +1,77 @@
 data:extend({
+	{
+		type = "item",
+		name = "sct-lab-1",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
+		flags = {"goes-to-quickbar"},
+		subgroup = "sct-labs",
+		order = "a[labs]-a[lab1]",
+		place_result = "sct-lab-1",
+		stack_size = 10
+	},
+
+	{
+		type = "lab",
+		name = "sct-lab-1",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
+		flags = {"placeable-player", "player-creation"},
+		minable = {mining_time = 1, result = "sct-lab-1"},
+		max_health = 150,
+		researching_speed = 1,
+		corpse = "big-remnants",
+		dying_explosion = "medium-explosion",
+		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+		light = {intensity = 0.75, size = 8},
+		on_animation =
+		{
+			filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
+			width = 113,
+			height = 91,
+			frame_count = 33,
+			line_length = 11,
+			animation_speed = 1 / 3,
+			shift = {0.2, 0.15}
+		},
+		off_animation =
+		{
+			filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
+			width = 113,
+			height = 91,
+			frame_count = 1,
+			shift = {0.2, 0.15}
+		},
+		working_sound =
+		{
+			sound =
+			{
+				filename = "__base__/sound/lab.ogg",
+				volume = 0.7
+			},
+			apparent_volume = 1
+		},
+		energy_source =
+		{
+			type = "electric",
+			usage_priority = "secondary-input"
+		},
+		energy_usage = "60kW",
+		inputs =
+		{
+			"science-pack-1"
+		},
+		module_specification =
+		{
+			module_slots = 0,
+			max_entity_info_module_icons_per_row = 3,
+			max_entity_info_module_icon_rows = 1,
+			module_info_icon_shift = {0, 0.9}
+		},
+		fast_replaceable_group = "lab",
+	},	
+
 	-- New Science Labs, from Tier 2 to Tier 4. (Vanilla lab becomes Tier 1)
 	-- ===================================================================
 	-- == Tier 2 ==
@@ -9,7 +82,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "b[labs]-b[lab2]",
+		order = "a[labs]-b[lab2]",
 		place_result = "sct-lab-2",
 		stack_size = 10
 	},
@@ -82,7 +155,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "b[labs]-c[lab3]",
+		order = "a[labs]-c[lab3]",
 		place_result = "sct-lab-3",
 		stack_size = 10
 	},
@@ -159,7 +232,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "b[labs]-b[lab4]",
+		order = "a[labs]-d[lab4]",
 		place_result = "sct-lab-4",
 		stack_size = 10
 	},
@@ -232,121 +305,5 @@ data:extend({
 	
 })
 
-data:extend({
-	-- Old Tier 1 lab. Only for backwards compatibility.
-	{
-		type = "item",
-		name = "sct-lab-1",
-		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
-		flags = {"goes-to-quickbar"},
-		subgroup = "production-machine",
-		order = "b[labs]-a[sct-lab-1]",
-		place_result = "sct-lab-1",
-		stack_size = 10
-	},
-	{
-		type = "lab",
-		name = "sct-lab-1",
-		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
-		flags = {"placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "sct-lab-1"},
-		max_health = 150,
-		researching_speed = 1,
-		corpse = "big-remnants",
-		dying_explosion = "medium-explosion",
-		collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-		selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-		light = {intensity = 0.75, size = 8},
-		on_animation =
-		{
-			filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
-			width = 113,
-			height = 91,
-			frame_count = 33,
-			line_length = 11,
-			animation_speed = 1 / 3,
-			shift = {0.2, 0.15}
-		},
-		off_animation =
-		{
-			filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
-			width = 113,
-			height = 91,
-			frame_count = 1,
-			shift = {0.2, 0.15}
-		},
-		working_sound =
-		{
-			sound =
-			{
-				filename = "__base__/sound/lab.ogg",
-				volume = 0.7
-			},
-			apparent_volume = 1
-		},
-		energy_source =
-		{
-			type = "electric",
-			usage_priority = "secondary-input"
-		},
-		energy_usage = "60kW",
-		inputs =
-		{
-			"science-pack-1"
-		},
-		module_specification =
-		{
-			module_slots = 0,
-			max_entity_info_module_icons_per_row = 3,
-			max_entity_info_module_icon_rows = 1,
-			module_info_icon_shift = {0, 0.9}
-		},
-		fast_replaceable_group = "lab",
-	},	
-})
-
--- Rework vanilla science lab into a Tier 1 science lab.
-data.raw["item"]["lab"].subgroup = "sct-labs"
-data.raw["item"]["lab"].order = "b[labs]-a[lab1]"
-data.raw["item"]["lab"].icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png"
-
-data.raw["lab"]["lab"].icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png"
-data.raw["lab"]["lab"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
-data.raw["lab"]["lab"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
-data.raw["lab"]["lab"].on_animation =
-	{
-		filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
-		width = 113,
-		height = 91,
-		frame_count = 33,
-		line_length = 11,
-		animation_speed = 1 / 3,
-		shift = {0.2, 0.15}
-	}
-data.raw["lab"]["lab"].off_animation =
-	{
-		filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
-		width = 113,
-		height = 91,
-		frame_count = 1,
-		shift = {0.2, 0.15}
-	}
-data.raw["lab"]["lab"].energy_usage = "60kW"
-data.raw["lab"]["lab"].inputs =
-	{
-		"science-pack-1"
-	}
-data.raw["lab"]["lab"].module_specification =
-	{
-		module_slots = 0,
-		max_entity_info_module_icons_per_row = 3,
-		max_entity_info_module_icon_rows = 1,
-		module_info_icon_shift = {0, 0.9}
-	}
-data.raw["lab"]["lab"].fast_replaceable_group = "lab"
-
--- Backwards compatibility: Ensure the standard lab recipe is enabled.
-data.raw.recipe["lab"].enabled = "true"
--- Note: A lot of mods adjust the standard lab prototype and entity. Keep changes to it to a minimal.
+-- Disable standard lab - other mods change standard lab, so we disable it, and use our own, other modules can only change lab intermediates
+data.raw.lab["lab"].enabled = false

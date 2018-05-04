@@ -117,3 +117,8 @@ data.raw.technology["military-4"].upgrade = false
 data.raw.technology["logistics"].upgrade = false
 data.raw.technology["logistics-2"].upgrade = false
 data.raw.technology["logistics-3"].upgrade = false
+
+-- disable standard lab
+data.raw.recipe["lab"].enabled = false
+data.raw.recipe["lab"].hidden = true
+data.raw.lab["lab"].enabled = false
