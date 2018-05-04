@@ -10,7 +10,7 @@ data:extend({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-byproducts",
 		order = "c[bp]-a[copperwaste]",
-		stack_size = 50
+		stack_size = 200
 	},
 	{
 		type = "item",
@@ -20,7 +20,7 @@ data:extend({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-byproducts",
 		order = "c[bp]-b[mixedewaste]",
-		stack_size = 50
+		stack_size = 200
 	},
 	
 	-- Tier 1 Intermediary products.
