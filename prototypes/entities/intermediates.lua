@@ -502,7 +502,7 @@ data:extend({
 		type = "item",
 		name = "sct-lab4-construction",
 		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab3-construction.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab4-construction.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-labparts",
 		order = "b[labparts]-d[lab4]-b[construction]",
