@@ -8,8 +8,8 @@ data.raw["recipe"]["science-pack-1"].expensive =
 {
 	ingredients =
 	{
-		{"sct-t1-ironcore", 2},
-		{"sct-t1-magnet-coils", 3},
+		{"sct-t1-ironcore", 3},
+		{"sct-t1-magnet-coils", 5},
 	},
    	results = 
 	{
@@ -23,12 +23,12 @@ data.raw["recipe"]["science-pack-1"].normal =
 		{"sct-t1-ironcore", 1},
 		{"sct-t1-magnet-coils", 2},
 	},
-    results = 
+	results = 
 	{
 		{ type="item", amount=1, name="science-pack-1" },
 	},
 }
-data.raw["recipe"]["science-pack-1"].ingredients = data.raw["recipe"]["science-pack-1"].normal
+data.raw["recipe"]["science-pack-1"].ingredients = nil
 data.raw["recipe"]["science-pack-1"].subgroup = "sct-sciencepack-1"
 data.raw["recipe"]["science-pack-1"].order = "d[t1]-a[science-pack-1]"
 
@@ -37,31 +37,32 @@ data.raw["recipe"]["science-pack-1"].order = "d[t1]-a[science-pack-1]"
 data.raw["recipe"]["science-pack-2"].energy_required = 6
 data.raw["recipe"]["science-pack-2"].expensive =
 {
+	enabled = "false",
 	ingredients =
-    {
-		{"sct-t2-instruments", 2},
-		{"sct-t2-reaction-nodes", 1},
-    },
-    results =
+	{
+		{"sct-t2-instruments", 3},
+		{"sct-t2-reaction-nodes", 2},
+	},
+	results =
 	{
 		{ type="item", amount=1, name="science-pack-2" },
 	},
 }
 data.raw["recipe"]["science-pack-2"].normal =
 {
+	enabled = "false",
 	ingredients =
-    {
+	{
 		{"sct-t2-instruments", 1},
 		{"sct-t2-reaction-nodes", 1},
-    },
-    results =
+	},
+	results =
 	{
 		{ type="item", amount=1, name="science-pack-2" },
 	},
 }
-data.raw["recipe"]["science-pack-2"].ingredients = data.raw["recipe"]["science-pack-2"].normal
+data.raw["recipe"]["science-pack-2"].ingredients = nil
 data.raw["recipe"]["science-pack-2"].enabled = false
-data.raw["recipe"]["science-pack-2"].main_product = "science-pack-2"
 data.raw["recipe"]["science-pack-2"].subgroup = "sct-sciencepack-2"
 data.raw["recipe"]["science-pack-2"].order = "e[t2]-a[science-pack-2]"
 
@@ -85,29 +86,31 @@ data.raw["recipe"]["science-pack-2"].order = "e[t2]-a[science-pack-2]"
 data.raw["recipe"]["science-pack-3"].energy_required = 12
 data.raw["recipe"]["science-pack-3"].expensive =
 {
+	enabled = "false",
 	ingredients =
-    {
-		{"sct-t3-femto-lasers", 2},
-		{"sct-t3-atomic-sensors", 1},
-    },
-    results =
+	{
+		{"sct-t3-femto-lasers", 3},
+		{"sct-t3-atomic-sensors", 2},
+	},
+	results =
 	{
 		{ type="item", amount=1, name="science-pack-3" },
 	},
 }
 data.raw["recipe"]["science-pack-3"].normal =
 {
+	enabled = "false",
 	ingredients =
-    {
+	{
 		{"sct-t3-femto-lasers", 1},
 		{"sct-t3-atomic-sensors", 1},
-    },
-    results =
+	},
+	results =
 	{
 		{ type="item", amount=1, name="science-pack-3" },
 	},
 }
-data.raw["recipe"]["science-pack-3"].ingredients = data.raw["recipe"]["science-pack-3"].normal
+data.raw["recipe"]["science-pack-3"].ingredients = nil
 data.raw["recipe"]["science-pack-3"].subgroup = "sct-sciencepack-3"
 data.raw["recipe"]["science-pack-3"].order = "f[t3]-a[science-pack-3]"
 
@@ -128,29 +131,31 @@ data.raw["recipe"]["science-pack-3"].order = "f[t3]-a[science-pack-3]"
 data.raw["recipe"]["military-science-pack"].energy_required = 5
 data.raw["recipe"]["military-science-pack"].expensive =
 {
+	enabled = "false",
 	ingredients =
-    {
+	{
 		{"sct-mil-circuit3", 2},
-		{"sct-mil-plating", 2},
-    },
-    results =
+		{"sct-mil-plating", 3},
+	},
+	results =
 	{
 		{ type="item", amount=2, name="military-science-pack" },
 	},
 }
 data.raw["recipe"]["military-science-pack"].normal =
 {
+	enabled = "false",
 	ingredients =
-    {
+	{
 		{"sct-mil-circuit3", 1},
 		{"sct-mil-plating", 1},
-    },
-    results =
+	},
+	results =
 	{
 		{ type="item", amount=2, name="military-science-pack" },
 	},
 }
-data.raw["recipe"]["military-science-pack"].ingredients = data.raw["recipe"]["military-science-pack"].normal
+data.raw["recipe"]["military-science-pack"].ingredients = nil
 data.raw["recipe"]["military-science-pack"].subgroup = "sct-sciencepack-mil"
 data.raw["recipe"]["military-science-pack"].order = "g[mil]-a[military-science-pack]"
 
@@ -171,29 +176,31 @@ data.raw["recipe"]["military-science-pack"].order = "g[mil]-a[military-science-p
 data.raw["recipe"]["production-science-pack"].energy_required = 1
 data.raw["recipe"]["production-science-pack"].expensive =
 {
+	enabled = "false",
 	ingredients =
-    {
-		{"sct-prod-bioprocessor", 2},
-		{"sct-prod-overclocker", 1},
-    },
-    results =
+	{
+		{"sct-prod-bioprocessor", 3},
+		{"sct-prod-overclocker", 2},
+	},
+	results =
 	{
 		{ type="item", amount=2, name="production-science-pack" },
 	},
 }
 data.raw["recipe"]["production-science-pack"].normal =
 {
+	enabled = "false",
 	ingredients =
-    {
+	{
 		{"sct-prod-bioprocessor", 1},
 		{"sct-prod-overclocker", 1},
-    },
-    results =
+	},
+	results =
 	{
 		{ type="item", amount=2, name="production-science-pack" },
 	},
 }
-data.raw["recipe"]["production-science-pack"].ingredients = data.raw["recipe"]["production-science-pack"].normal
+data.raw["recipe"]["production-science-pack"].ingredients = nil
 data.raw["recipe"]["production-science-pack"].subgroup = "sct-sciencepack-prod"
 data.raw["recipe"]["production-science-pack"].order = "h[prod]-a[production-science-pack]"
 
@@ -214,30 +221,32 @@ data.raw["recipe"]["production-science-pack"].order = "h[prod]-a[production-scie
 data.raw["recipe"]["high-tech-science-pack"].energy_required = 14
 data.raw["recipe"]["high-tech-science-pack"].expensive =
 {
+	enabled = "false",
 	ingredients =
-    {
-		{"sct-htech-capbank", 2},
-		{"sct-htech-injector", 1},
-		{"sct-htech-random", 2},
-    },
-    results =
+	{
+		{"sct-htech-capbank", 3},
+		{"sct-htech-injector", 2},
+		{"sct-htech-random", 3},
+	},
+	results =
 	{
 		{ type="item", amount=2, name="high-tech-science-pack" },
 	},
 }
 data.raw["recipe"]["high-tech-science-pack"].normal =
 {
+	enabled = "false",
 	ingredients =
-    {
+	{
 		{"sct-htech-capbank", 1},
 		{"sct-htech-injector", 1},
 		{"sct-htech-random", 1},
-    },
-    results =
+	},
+	results =
 	{
 		{ type="item", amount=2, name="high-tech-science-pack" },
 	},
 }
-data.raw["recipe"]["high-tech-science-pack"].ingredients = data.raw["recipe"]["high-tech-science-pack"].normal
+data.raw["recipe"]["high-tech-science-pack"].ingredients = nil
 data.raw["recipe"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"
 data.raw["recipe"]["high-tech-science-pack"].order = "i[ht]-a[high-tech-science-pack]"
