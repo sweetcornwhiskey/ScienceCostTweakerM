@@ -44,4 +44,3 @@ table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlo
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-mixed"})
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-lab4-construction"})
 table.insert(data.raw.technology["advanced-electronics-2"].effects,{type = "unlock-recipe", recipe = "sct-lab4-manipulators"})
-

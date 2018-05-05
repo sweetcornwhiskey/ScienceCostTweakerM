@@ -41,8 +41,8 @@ require("tweaks.bobsmods.sciencegroup")
 		data.raw.tool["logistic-science-pack"].order = "j[logistic-science-pack]"
 	end
 	if data.raw.tool["science-pack-gold"] then
-		data.raw.tool["science-pack-gold"].subgroup = "sct-sciencepack-gold"
-		data.raw.tool["science-pack-gold"].order = "k[gold-science-pack]"
+		data.raw.tool["science-pack-gold"].subgroup = "science-pack"
+		data.raw.tool["science-pack-gold"].order = "gold-science-pack"
 	end
 	if data.raw.tool["alien-science-pack"] then
 		data.raw.tool["alien-science-pack"].subgroup = "sct-sciencepack-alien"

@@ -1,5 +1,4 @@
 -- omniscience 
---log(serpent.block(data.raw["lab"]["lab"].inputs))
 if mods["omnimatter_science"] then
 	if data.raw.tool["omni-pack"] then
 		-- remove omnipack from tier 1 lab
@@ -14,4 +13,3 @@ if mods["omnimatter_science"] then
 		table.insert(data.raw["lab"]["sct-lab-4"].inputs, "omni-pack")	
 	end
 end
---log(serpent.block(data.raw["lab"]["lab"].inputs))

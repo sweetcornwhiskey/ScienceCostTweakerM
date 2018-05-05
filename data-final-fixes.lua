@@ -5,6 +5,7 @@ require("configs.costs.uberwaffe")
 require("configs.costs.normal")
 require("configs.costs.extended")
 -- Recipes
+--log(serpent.block(data.raw["recipe"]["science-pack-3"]))
 require("prototypes.2_recipe")
 require("prototypes.2_technology")
 -- Recipes requires
@@ -124,3 +125,4 @@ data.raw.technology["logistics-3"].upgrade = false
 data.raw.recipe["lab"].enabled = false
 data.raw.recipe["lab"].hidden = true
 data.raw.lab["lab"].enabled = false
+--log(serpent.block(data.raw["recipe"]["science-pack-3"]))
