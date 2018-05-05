@@ -658,8 +658,8 @@ data:extend({
 		enabled = "true",
 		ingredients = 
 		{
-			{"iron-stick", 8},
-			{"iron-plate", 2},
+			{"iron-stick", 4},
+			{"iron-plate", 1},
 		},
 		result = "sct-lab1-construction",
 	},

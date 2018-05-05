@@ -41,9 +41,10 @@ data:extend({
 		energy_required = 5,
 		expensive =
 		{
+			enabled = "false",
 			ingredients =
 			{
-				{"lab", 1},
+				{"sct-lab-1", 1},
 				{"sct-lab2-construction", 3},
 				{"sct-lab2-automatization", 2},
 			},
@@ -54,9 +55,10 @@ data:extend({
 		},
 		normal = 
 		{
+			enabled = "false",
 			ingredients =
 			{
-				{"lab", 1},
+				{"sct-lab-1", 1},
 				{"sct-lab2-construction", 2},
 				{"sct-lab2-automatization", 1},
 			},
@@ -76,6 +78,7 @@ data:extend({
 		energy_required = 5,
 		expensive =
 		{
+			enabled = "false",
 			ingredients =
 			{
 				{"sct-lab-2", 1},
@@ -89,6 +92,7 @@ data:extend({
 		},
 		normal = 
 		{
+			enabled = "false",
 			ingredients =
 			{
 				{"sct-lab-2", 1},
@@ -111,6 +115,7 @@ data:extend({
 		energy_required = 5,
 		expensive =
 		{
+			enabled = "false",
 			ingredients =
 			{
 				{"sct-lab-3", 1},
@@ -124,6 +129,7 @@ data:extend({
 		},
 		normal = 
 		{
+			enabled = "false",
 			ingredients =
 			{
 				{"sct-lab-3", 1},
