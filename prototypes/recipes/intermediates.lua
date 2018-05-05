@@ -701,7 +701,7 @@ data:extend({
 		enabled = "false",
 		ingredients = 
 		{
-			{"fast-inserter", 2},
+			{"filter-inserter", 2},
 			{"electronic-circuit", 10},
 		},
 		result = "sct-lab2-automatization",

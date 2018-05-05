@@ -67,7 +67,10 @@ end
 
 if mods["boblogistics"] then
 	if settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
-		 bobmods.lib.recipe.replace_ingredient("sct-lab-3", "filter-inserter", "red-filter-inserter")
+		 bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "filter-inserter", "red-filter-inserter")
+	end
+	if settings.startup["bobmods-logistics-beltoverhaul"] and settings.startup["bobmods-logistics-beltoverhaul"].value == true then
+		 bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "transport-belt", "basic-transport-belt")
 	end
 end
 
