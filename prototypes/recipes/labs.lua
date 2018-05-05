@@ -1,31 +1,18 @@
 data:extend({
 	{
 		type = "recipe",
-		name = "sct-lab-1",
-		subgroup = "sct-labs",
-		order = "b[labs]-a[sct-lab1]",
-		enabled = "true",
-		energy_required = 5,
-		ingredients =
-		{
-			{"sct-lab1-construction", 2},
-			{"sct-lab1-mechanization", 1},
-		},
-		result = "sct-lab-1"
-	},
-
-	{
-		type = "recipe",
 		name = "sct-lab-2",
 		enabled = "false",
 		energy_required = 5,
 		ingredients =
 		{
-			{"sct-lab-1", 1},
-			{"sct-lab2-construction", 2},
-			{"sct-lab2-automatization", 1},
+			{"lab", 1},
+			{"electronic-circuit", 20},
+			{"iron-gear-wheel", 10}
 		},
-		result = "sct-lab-2"
+		result = "sct-lab-2",
+		subgroup = "sct-labs",
+		order = "b[labs]-b[lab2]",
 	},
 
 	{
@@ -36,10 +23,12 @@ data:extend({
 		ingredients =
 		{
 			{"sct-lab-2", 1},
-			{"sct-lab3-construction", 2},
-			{"sct-lab3-optics", 1},
+			{"advanced-circuit", 20},
+			{"filter-inserter", 4}
 		},
-		result = "sct-lab-3"
+		result = "sct-lab-3",
+		subgroup = "sct-labs",
+		order = "b[labs]-c[lab3]",
 	},
 
 	{
@@ -50,13 +39,33 @@ data:extend({
 		ingredients =
 		{
 			{"sct-lab-3", 1},
-			{"sct-lab4-construction", 2},
-			{"sct-lab4-manipulators", 1},
+			{"processing-unit", 5},
+			{"filter-inserter", 2}
 		},
-		result = "sct-lab-4"
+		result = "sct-lab-4",
+		subgroup = "sct-labs",
+		order = "b[labs]-d[lab4]",
 	},
 
+--old lab1 (compatibility)
+	{
+		type = "recipe",
+		name = "sct-lab-1",
+		subgroup = "sct-labs",
+		order = "b[labs]-a[sct-lab1]",
+		enabled = "false",
+		energy_required = 5,
+		ingredients =
+		{
+			{"copper-cable", 30},
+			{"iron-gear-wheel", 10},
+			{"transport-belt", 4}
+		},
+		result = "sct-lab-1",
+		subgroup = "sct-labs",
+		order = "b[labs]-a[sct-lab1]",
+	},
 })
 
-data.raw.recipe["lab"].enabled = false
-data.raw.recipe["lab"].hidden = true
+data.raw.recipe["lab"].order = "b[labs]-a[lab]"
+data.raw.recipe["lab"].subgroup = "sct-labs"

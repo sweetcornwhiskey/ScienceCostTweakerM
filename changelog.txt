@@ -1,5 +1,11 @@
+0.16.16
+- split technology unlock loading to corresponding phases with recipes
+- another fix for omni + bobs + angels
+0.16.15
+- omnipack research fix
 0.16.14
-- added lab intermediates
+- omnifluid compatibility
+- expensive recipes for science packs
 0.16.13
 - added main product
 - locked t2 lab behind automation 2 research
