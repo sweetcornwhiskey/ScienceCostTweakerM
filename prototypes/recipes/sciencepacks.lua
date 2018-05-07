@@ -3,7 +3,6 @@
 
 -- Science Pack 1
 -- ===================================================================
-data.raw["recipe"]["science-pack-1"].energy_required = 5
 data.raw["recipe"]["science-pack-1"].expensive = 
 {
 	ingredients =
@@ -15,6 +14,7 @@ data.raw["recipe"]["science-pack-1"].expensive =
 	{
 		{ type="item", amount=1, name="science-pack-1" },
 	},
+	energy_required = 12,
 }
 data.raw["recipe"]["science-pack-1"].normal =
 {
@@ -27,6 +27,7 @@ data.raw["recipe"]["science-pack-1"].normal =
 	{
 		{ type="item", amount=1, name="science-pack-1" },
 	},
+	energy_required = 5,
 }
 data.raw["recipe"]["science-pack-1"].ingredients = nil
 data.raw["recipe"]["science-pack-1"].subgroup = "sct-sciencepack-1"
@@ -34,7 +35,6 @@ data.raw["recipe"]["science-pack-1"].order = "d[t1]-a[science-pack-1]"
 
 -- Science Pack 2
 -- ===================================================================
-data.raw["recipe"]["science-pack-2"].energy_required = 6
 data.raw["recipe"]["science-pack-2"].expensive =
 {
 	enabled = "false",
@@ -47,6 +47,8 @@ data.raw["recipe"]["science-pack-2"].expensive =
 	{
 		{ type="item", amount=1, name="science-pack-2" },
 	},
+	energy_required = 15,
+	enabled = false,
 }
 data.raw["recipe"]["science-pack-2"].normal =
 {
@@ -60,6 +62,8 @@ data.raw["recipe"]["science-pack-2"].normal =
 	{
 		{ type="item", amount=1, name="science-pack-2" },
 	},
+	energy_required = 6,
+	enabled = false,
 }
 data.raw["recipe"]["science-pack-2"].ingredients = nil
 data.raw["recipe"]["science-pack-2"].enabled = false
@@ -83,7 +87,6 @@ data.raw["recipe"]["science-pack-2"].order = "e[t2]-a[science-pack-2]"
 	Note: Adv Circuit = 2x Iron + 5x Copper + 2x Plastic
 	Note: Engine = 1x Steel, 4x Iron
 ]]--
-data.raw["recipe"]["science-pack-3"].energy_required = 12
 data.raw["recipe"]["science-pack-3"].expensive =
 {
 	enabled = "false",
@@ -96,6 +99,8 @@ data.raw["recipe"]["science-pack-3"].expensive =
 	{
 		{ type="item", amount=1, name="science-pack-3" },
 	},
+	energy_required = 30,
+	enabled = false,
 }
 data.raw["recipe"]["science-pack-3"].normal =
 {
@@ -109,6 +114,8 @@ data.raw["recipe"]["science-pack-3"].normal =
 	{
 		{ type="item", amount=1, name="science-pack-3" },
 	},
+	energy_required = 12,
+	enabled = false,
 }
 data.raw["recipe"]["science-pack-3"].ingredients = nil
 data.raw["recipe"]["science-pack-3"].subgroup = "sct-sciencepack-3"
@@ -128,7 +135,6 @@ data.raw["recipe"]["science-pack-3"].order = "f[t3]-a[science-pack-3]"
 		Refunds: 14x Iron, 20x Copper = 14x Mixed + 3x Copper
 		
 ]]--
-data.raw["recipe"]["military-science-pack"].energy_required = 5
 data.raw["recipe"]["military-science-pack"].expensive =
 {
 	enabled = "false",
@@ -141,6 +147,8 @@ data.raw["recipe"]["military-science-pack"].expensive =
 	{
 		{ type="item", amount=2, name="military-science-pack" },
 	},
+	energy_required = 15,
+	enabled = false,
 }
 data.raw["recipe"]["military-science-pack"].normal =
 {
@@ -154,6 +162,8 @@ data.raw["recipe"]["military-science-pack"].normal =
 	{
 		{ type="item", amount=2, name="military-science-pack" },
 	},
+	energy_required = 6,
+	enabled = false,
 }
 data.raw["recipe"]["military-science-pack"].ingredients = nil
 data.raw["recipe"]["military-science-pack"].subgroup = "sct-sciencepack-mil"
@@ -173,10 +183,8 @@ data.raw["recipe"]["military-science-pack"].order = "g[mil]-a[military-science-p
 		Refunds: 5x Iron, 11x Copper = 5x Mixed + 3x Copper
 		
 ]]--
-data.raw["recipe"]["production-science-pack"].energy_required = 1
 data.raw["recipe"]["production-science-pack"].expensive =
 {
-	enabled = "false",
 	ingredients =
 	{
 		{"sct-prod-bioprocessor", 3},
@@ -186,10 +194,11 @@ data.raw["recipe"]["production-science-pack"].expensive =
 	{
 		{ type="item", amount=2, name="production-science-pack" },
 	},
+	energy_required = 15,
+	enabled = false,
 }
 data.raw["recipe"]["production-science-pack"].normal =
 {
-	enabled = "false",
 	ingredients =
 	{
 		{"sct-prod-bioprocessor", 1},
@@ -199,6 +208,8 @@ data.raw["recipe"]["production-science-pack"].normal =
 	{
 		{ type="item", amount=2, name="production-science-pack" },
 	},
+	energy_required = 6,
+	enabled = false,
 }
 data.raw["recipe"]["production-science-pack"].ingredients = nil
 data.raw["recipe"]["production-science-pack"].subgroup = "sct-sciencepack-prod"
@@ -218,10 +229,8 @@ data.raw["recipe"]["production-science-pack"].order = "h[prod]-a[production-scie
 		Refunds: 15x Iron, 17x Copper = 15x Mixed + 1x Copper
 		
 ]]--
-data.raw["recipe"]["high-tech-science-pack"].energy_required = 14
 data.raw["recipe"]["high-tech-science-pack"].expensive =
 {
-	enabled = "false",
 	ingredients =
 	{
 		{"sct-htech-capbank", 3},
@@ -232,6 +241,8 @@ data.raw["recipe"]["high-tech-science-pack"].expensive =
 	{
 		{ type="item", amount=2, name="high-tech-science-pack" },
 	},
+	energy_required = 35,
+	enabled = false,
 }
 data.raw["recipe"]["high-tech-science-pack"].normal =
 {
@@ -246,6 +257,8 @@ data.raw["recipe"]["high-tech-science-pack"].normal =
 	{
 		{ type="item", amount=2, name="high-tech-science-pack" },
 	},
+	energy_required = 14,
+	enabled = false,
 }
 data.raw["recipe"]["high-tech-science-pack"].ingredients = nil
 data.raw["recipe"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"

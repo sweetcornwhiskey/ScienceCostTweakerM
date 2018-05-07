@@ -1,3 +1,6 @@
+0.16.18
+- fixed science pack crafting times
+- normalized science pack crafting times (green, military, production - all 6 sec)
 0.16.17
 - increased marathon science pack cost
 0.16.16
