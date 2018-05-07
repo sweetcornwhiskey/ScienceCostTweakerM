@@ -1,6 +1,6 @@
 -- add bob logistic pack if found - for now, might replace with qol later
 if mods["bobtech"] then
-require("tweaks.bobsmods.sciencegroup")
+	require("tweaks.bobsmods.sciencegroup")
 	if data.raw.tool["logistic-science-pack"] or data.raw.recipe["logistic-science-pack"] then
 		-- remove omnipack from tier 1 lab
 		for i = 1, #data.raw["lab"]["lab"].inputs, 1 do

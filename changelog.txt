@@ -1,3 +1,5 @@
+0.16.19
+- fixed bobselectronic detection for science pack 1 recipe
 0.16.18
 - fixed science pack crafting times
 - normalized science pack crafting times (green, military, production - all 6 sec)
