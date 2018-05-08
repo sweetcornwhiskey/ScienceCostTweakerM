@@ -94,3 +94,10 @@ if mods["bobassembly"] then
 		 data.raw.technology["automation-6"].upgrade = false
 	end
 end
+
+if mods["bobplates"] then
+	bobmods.lib.recipe.remove_ingredient("science-pack-3", "bronze-plate")
+	bobmods.lib.recipe.remove_ingredient("high-tech-science-pack", "lithium-ion-battery")
+	bobmods.lib.recipe.remove_ingredient("high-tech-science-pack", "silicon-nitride")
+end
+	
