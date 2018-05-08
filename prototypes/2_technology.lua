@@ -1,2 +1,2 @@
-require ("technologies.labs")
-require ("technologies.sciencepacks")
+--require ("technologies.labs")
+--require ("technologies.sciencepacks")
