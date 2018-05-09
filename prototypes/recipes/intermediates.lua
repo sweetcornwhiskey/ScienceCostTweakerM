@@ -1196,7 +1196,7 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"iron-stick", 10},
+				{"iron-gear-wheel", 10},
 				{"steel-plate", 5},
 			},
 			result = "sct-lab2-construction",
@@ -1207,7 +1207,7 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"iron-stick", 4},
+				{"iron-gear-wheel", 4},
 				{"steel-plate", 2},
 			},
 			result = "sct-lab2-construction",
@@ -1235,7 +1235,7 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"filter-inserter", 2},
+				{"fast-inserter", 2},
 				{"electronic-circuit", 10},
 			},
 			result = "sct-lab2-automatization",

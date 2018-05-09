@@ -162,6 +162,7 @@ if mods["bobplates"] then
 	if data.raw.item["copper-tungsten-alloy"] and data.raw.item["tungsten-carbide"] and data.raw.item["ruby-5"] then
 		data.raw.recipe["sct-htech-injector"].normal.ingredients =
 		{
+			{type="item", name="coppper-cable", amount=20},
 			{type="item", name="processing-unit", amount=10},
 			{type="item", name="copper-tungsten-alloy", amount=20},
 			{type="item", name="tungsten-carbide", amount=20},
@@ -169,6 +170,7 @@ if mods["bobplates"] then
 		}
 		data.raw.recipe["sct-htech-injector"].expensive.ingredients =
 		{
+			{type="item", name="coppper-cable", amount=50},
 			{type="item", name="processing-unit", amount=25},
 			{type="item", name="copper-tungsten-alloy", amount=50},
 			{type="item", name="tungsten-carbide", amount=50},
@@ -204,6 +206,16 @@ if mods["bobplates"] then
 		table.insert(data.raw.recipe["sct-htech-random"].normal.ingredients, { type="item", name="nitinol-gear-wheel", amount=20})
 		table.insert(data.raw.recipe["sct-htech-random"].expensive.ingredients, { type="item", name="nitinol-gear-wheel", amount=50})
 	end
+	
+	-- lab intermediates
+	if data.raw.item["steel-gear-wheel"] then
+		bobmods.lib.recipe.replace_ingredient("sct-lab2-construction", "iron-gear-wheel", "steel-gear-wheel")
+	end
+	
+	if data.raw.item["invar-alloy"] and data.raw.item["cobalt-steel-alloy"] then
+		bobmods.lib.recipe.replace_ingredient("sct-lab3-construction", "plastic-bar", "invar-alloy")
+		bobmods.lib.recipe.replace_ingredient("sct-lab3-construction", "steel-plate", "cobalt-steel-alloy")
+	end
 end
 
 if mods["bobelectronics"] then
@@ -214,6 +226,7 @@ if mods["bobelectronics"] then
 	end
 	if data.raw.item["insulated-cable"] then
 		bobmods.lib.recipe.replace_ingredient("sct-htech-capbank", "copper-cable", "insulated-cable")
+		bobmods.lib.recipe.replace_ingredient("sct-htech-injector", "copper-cable", "insulated-cable")
 	end
 end
 --log(serpent.block(data.raw.recipe["sct-t2-instruments"]))
