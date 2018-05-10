@@ -599,7 +599,7 @@ data:extend({
 		category = "crafting",
 		subgroup = "sct-sciencepack-mil",
 		order = "g[mil]-c[subplating]",
-		normal =
+		expensive =
 		{
 			enabled = false,
 			energy_required = 2,
