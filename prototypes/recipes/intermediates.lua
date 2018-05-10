@@ -1253,7 +1253,7 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"plastic-bar", 10},
+				{"solar-panel", 10},
 				{"steel-plate", 15},
 			},
 			result = "sct-lab3-construction",
@@ -1264,7 +1264,7 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"plastic-bar", 5},
+				{"solar-panel", 5},
 				{"steel-plate", 5},
 			},
 			result = "sct-lab3-construction",
@@ -1310,8 +1310,8 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"solar-panel", 2},
-				{"plastic-bar", 10},
+				{"centrifuge", 2},
+				{"steel-plate", 20},
 			},
 			result = "sct-lab4-construction",
 		},
@@ -1321,8 +1321,8 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"solar-panel", 1},
-				{"plastic-bar", 5},
+				{"centrifuge", 1},
+				{"steel-plate", 5},
 			},
 			result = "sct-lab4-construction",
 		},
@@ -1339,7 +1339,7 @@ data:extend({
 			ingredients = 
 			{
 				{"sct-htech-injector", 1},
-				{"filter-inserter", 5},
+				{"stack-filter-inserter", 5},
 				{"processing-unit", 15},
 			},
 			result = "sct-lab4-manipulators",
@@ -1351,7 +1351,7 @@ data:extend({
 			ingredients = 
 			{
 				{"sct-htech-injector", 1},
-				{"filter-inserter", 2},
+				{"stack-filter-inserter", 2},
 				{"processing-unit", 5},
 			},
 			result = "sct-lab4-manipulators",
