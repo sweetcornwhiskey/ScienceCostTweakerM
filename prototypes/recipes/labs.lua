@@ -6,7 +6,8 @@ data:extend({
 		order = "a[labs]-a[sct-lab-1]",
 		expensive =
 		{
-			enabled = "true",
+			enabled = false,
+			hidden = true,
 			energy_required = 12,
 			ingredients =
 			{
@@ -20,7 +21,8 @@ data:extend({
 		},
 		normal = 
 		{
-			enabled = "true",
+			enabled = false,
+			hidden = true,
 			energy_required = 5,
 			ingredients =
 			{
@@ -144,10 +146,49 @@ data:extend({
 	},
 })
 
-data.raw.recipe["lab"].order = "b[labs]-a[lab]"
+if (settings.startup["sct-tier1-lab"].value == "sct-lab-1") then
+	data.raw.recipe["lab"].results = nil
+	data.raw.recipe["lab"].ingredients = nil
+	data.raw.recipe["lab"].expensive =
+		{
+			enabled = true,
+			energy_required = 12,
+			ingredients =
+			{
+				{"sct-lab1-construction", 3},
+				{"sct-lab1-mechanization", 2},
+			},
+			results =
+			{
+				{ type="item", amount=1, name="sct-lab-1",},
+			},
+		}
+	data.raw.recipe["lab"].normal = 
+		{
+			enabled = true,
+			energy_required = 5,
+			ingredients =
+			{
+				{"sct-lab1-construction", 2},
+				{"sct-lab1-mechanization", 1},
+			},
+			results =
+			{
+				{ type="item", amount=1, name="sct-lab-1",},
+			},
+		}
+end
+
+data.raw.recipe["lab"].order = "a[labs]-a[lab]"
 data.raw.recipe["lab"].subgroup = "sct-labs"
 
+--log(serpent.block(data.raw["recipe"]["lab"]))
+
+table.insert(data.raw.recipe["sct-lab-2"].expensive.ingredients, { type="item", name="lab", amount=1})
+table.insert(data.raw.recipe["sct-lab-2"].normal.ingredients, { type="item", name="lab", amount=1})
+
 -- insert proper lab as ingredient for tier 2
+--[[
 if (settings.startup["sct-tier1-lab"] == "sct-lab-1") then
 	table.insert(data.raw.recipe["sct-lab-2"].expensive.ingredients, { type="item", name="sct-lab-1", amount=1})
 	table.insert(data.raw.recipe["sct-lab-2"].normal.ingredients, { type="item", name="sct-lab-1", amount=1})
@@ -155,3 +196,4 @@ else
 	table.insert(data.raw.recipe["sct-lab-2"].expensive.ingredients, { type="item", name="lab", amount=1})
 	table.insert(data.raw.recipe["sct-lab-2"].normal.ingredients, { type="item", name="lab", amount=1})
 end
+]]--
