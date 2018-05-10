@@ -9,6 +9,7 @@ if mods["pycoalprocessing"] then
 		table.insert(data.raw.technology["fine-electronics"].effects,{type = "unlock-recipe", recipe = "sct-waste-processing-copper"})
 		table.insert(data.raw.technology["fine-electronics"].effects,{type = "unlock-recipe", recipe = "sct-lab3-construction"})
 		table.insert(data.raw.technology["fine-electronics"].effects,{type = "unlock-recipe", recipe = "sct-lab3-optics"})
+		table.insert(data.raw.technology["fine-electronics"].effects,{type = "unlock-recipe", recipe = "sct-lab-3"})
 	end
 end
 
