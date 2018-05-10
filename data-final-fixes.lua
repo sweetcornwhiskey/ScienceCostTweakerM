@@ -121,8 +121,41 @@ data.raw.technology["logistics"].upgrade = false
 data.raw.technology["logistics-2"].upgrade = false
 data.raw.technology["logistics-3"].upgrade = false
 
--- disable standard lab
-data.raw.recipe["lab"].enabled = false
-data.raw.recipe["lab"].hidden = true
-data.raw.lab["lab"].enabled = false
+
+-- disable tier 1, that is not used as ingredient
+if (settings.startup["sct-tier1-lab"] == "lab") then
+	data.raw.recipe["sct-lab-1"].enabled = false
+	data.raw.recipe["sct-lab-1"].normal.enabled = false
+	data.raw.recipe["sct-lab-1"].expensive.enabled = false
+	data.raw.recipe["sct-lab-1"].hidden = true
+	data.raw.recipe["sct-lab-1"].normal.hidden = true
+	data.raw.recipe["sct-lab-1"].expensive.hidden = true
+	data.raw.lab["sct-lab-1"].enabled = false
+	data.raw.recipe["sct-lab1-construction"].enabled = false
+	data.raw.recipe["sct-lab1-construction"].normal.enabled = false
+	data.raw.recipe["sct-lab1-construction"].expensive.enabled = false
+	data.raw.recipe["sct-lab1-construction"].hidden = true
+	data.raw.recipe["sct-lab1-construction"].normal.hidden = true
+	data.raw.recipe["sct-lab1-construction"].expensive.hidden = true
+	data.raw.item["sct-lab1-construction"].enabled = false
+	data.raw.recipe["sct-lab1-mechanization"].enabled = false
+	data.raw.recipe["sct-lab1-mechanization"].normal.enabled = false
+	data.raw.recipe["sct-lab1-mechanization"].expensive.enabled = false
+	data.raw.recipe["sct-lab1-mechanization"].hidden = true
+	data.raw.recipe["sct-lab1-mechanization"].normal.hidden = true
+	data.raw.recipe["sct-lab1-mechanization"].expensive.hidden = true
+	data.raw.item["sct-lab1-mechanization"].enabled = false
+else
+	data.raw.recipe["lab"].enabled = false
+	if data.raw.recipe["lab"].normal then
+		data.raw.recipe["lab"].normal.enabled = false
+		data.raw.recipe["lab"].normal.hidden = true
+	end
+	if data.raw.recipe["lab"].expensive then
+		data.raw.recipe["lab"].expensive.enabled = false
+		data.raw.recipe["lab"].expensive.hidden = true
+	end
+	data.raw.recipe["lab"].hidden = true
+	data.raw.lab["lab"].enabled = false
+end
 --log(serpent.block(data.raw["recipe"]["science-pack-3"]))

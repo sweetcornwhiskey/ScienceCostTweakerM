@@ -6,9 +6,10 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "a[labs]-a[lab1]",
+		order = "a[labs]-a[sct-lab-1]",
 		place_result = "sct-lab-1",
-		stack_size = 10
+		stack_size = 10,
+		enabled = true,
 	},
 
 	{
@@ -82,7 +83,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "a[labs]-b[lab2]",
+		order = "a[labs]-b[sct-lab-2]",
 		place_result = "sct-lab-2",
 		stack_size = 10
 	},
@@ -155,7 +156,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "a[labs]-c[lab3]",
+		order = "a[labs]-c[sct-lab-3]",
 		place_result = "sct-lab-3",
 		stack_size = 10
 	},
@@ -232,7 +233,7 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "a[labs]-d[lab4]",
+		order = "a[labs]-d[sct-lab-4]",
 		place_result = "sct-lab-4",
 		stack_size = 10
 	},
@@ -305,5 +306,42 @@ data:extend({
 	
 })
 
--- Disable standard lab - other mods change standard lab, so we disable it, and use our own, other modules can only change lab intermediates
-data.raw.lab["lab"].enabled = false
+-- Rework vanilla science lab into a Tier 1 science lab.
+data.raw["item"]["lab"].subgroup = "sct-labs"
+data.raw["item"]["lab"].order = "b[labs]-a[lab1]"
+data.raw["item"]["lab"].icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png"
+
+data.raw["lab"]["lab"].icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png"
+data.raw["lab"]["lab"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
+data.raw["lab"]["lab"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
+data.raw["lab"]["lab"].on_animation =
+	{
+		filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
+		width = 113,
+		height = 91,
+		frame_count = 33,
+		line_length = 11,
+		animation_speed = 1 / 3,
+		shift = {0.2, 0.15}
+	}
+data.raw["lab"]["lab"].off_animation =
+	{
+		filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
+		width = 113,
+		height = 91,
+		frame_count = 1,
+		shift = {0.2, 0.15}
+	}
+data.raw["lab"]["lab"].energy_usage = "60kW"
+data.raw["lab"]["lab"].inputs =
+	{
+		"science-pack-1"
+	}
+data.raw["lab"]["lab"].module_specification =
+	{
+		module_slots = 0,
+		max_entity_info_module_icons_per_row = 3,
+		max_entity_info_module_icon_rows = 1,
+		module_info_icon_shift = {0, 0.9}
+	}
+data.raw["lab"]["lab"].fast_replaceable_group = "lab"
