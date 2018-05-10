@@ -162,7 +162,7 @@ if mods["bobplates"] then
 	if data.raw.item["copper-tungsten-alloy"] and data.raw.item["tungsten-carbide"] and data.raw.item["ruby-5"] then
 		data.raw.recipe["sct-htech-injector"].normal.ingredients =
 		{
-			{type="item", name="coppper-cable", amount=20},
+			{type="item", name="copper-cable", amount=20},
 			{type="item", name="processing-unit", amount=10},
 			{type="item", name="copper-tungsten-alloy", amount=20},
 			{type="item", name="tungsten-carbide", amount=20},
@@ -170,14 +170,14 @@ if mods["bobplates"] then
 		}
 		data.raw.recipe["sct-htech-injector"].expensive.ingredients =
 		{
-			{type="item", name="coppper-cable", amount=50},
+			{type="item", name="copper-cable", amount=50},
 			{type="item", name="processing-unit", amount=25},
 			{type="item", name="copper-tungsten-alloy", amount=50},
 			{type="item", name="tungsten-carbide", amount=50},
 			{type="item", name="ruby-5", amount=3}
 		}
 	end
-	if data.raw.item["electrum-alloy"] then
+	if data.raw.item["electrum-alloy"] and data.raw.item["cobalt-steel-alloy"] then
 		data.raw.recipe["sct-htech-thermalstore"].normal.ingredients =
 		{
 			{type="item", name="electrum-alloy", amount=20},
@@ -189,16 +189,18 @@ if mods["bobplates"] then
 			{type="item", name="cobalt-steel-alloy", amount=50}
 		}
 	else
-		data.raw.recipe["sct-htech-thermalstore"].normal.ingredients =
-		{
-			{type="item", name="copper-tungsten-alloy", amount=20},
-			{type="item", name="cobalt-steel-alloy", amount=20}
-		}
-		data.raw.recipe["sct-htech-thermalstore"].expensive.ingredients =
-		{
-			{type="item", name="copper-tungsten-alloy", amount=50},
-			{type="item", name="cobalt-steel-alloy", amount=50}
-		}
+		if data.raw.item["copper-tungsten-alloy"] and data.raw.item["cobalt-steel-alloy"] then
+			data.raw.recipe["sct-htech-thermalstore"].normal.ingredients =
+			{
+				{type="item", name="copper-tungsten-alloy", amount=20},
+				{type="item", name="cobalt-steel-alloy", amount=20}
+			}
+			data.raw.recipe["sct-htech-thermalstore"].expensive.ingredients =
+			{
+				{type="item", name="copper-tungsten-alloy", amount=50},
+				{type="item", name="cobalt-steel-alloy", amount=50}
+			}
+		end
 	end
 	
 	if data.raw.item["titanium-gear-wheel"] and data.raw.item["nitinol-gear-wheel"] then
@@ -212,9 +214,12 @@ if mods["bobplates"] then
 		bobmods.lib.recipe.replace_ingredient("sct-lab2-construction", "iron-gear-wheel", "steel-gear-wheel")
 	end
 	
-	if data.raw.item["invar-alloy"] and data.raw.item["cobalt-steel-alloy"] then
-		bobmods.lib.recipe.replace_ingredient("sct-lab3-construction", "plastic-bar", "invar-alloy")
+	if data.raw.item["cobalt-steel-alloy"] then
 		bobmods.lib.recipe.replace_ingredient("sct-lab3-construction", "steel-plate", "cobalt-steel-alloy")
+	end
+
+	if data.raw.item["tungsten-plate"] then
+		bobmods.lib.recipe.replace_ingredient("sct-lab4-construction", "steel-plate", "tungsten-plate")
 	end
 end
 

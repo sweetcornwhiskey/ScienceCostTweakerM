@@ -65,14 +65,17 @@ if mods["bobmodules"] then
 	end
 end
 
+log(serpent.block(data.raw.recipe["sct-lab2-automatization"]))
+
 if mods["boblogistics"] then
 	if settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
-		 bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "filter-inserter", "red-filter-inserter")
+		 bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "fast-inserter", "red-filter-inserter")
 	end
 	if settings.startup["bobmods-logistics-beltoverhaul"] and settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 		 bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "transport-belt", "basic-transport-belt")
 	end
 end
+log(serpent.block(data.raw.recipe["sct-lab2-automatization"]))
 
 if mods["bobassembly"] then
 	if data.raw.technology["advanced-material-processing-2"] then
@@ -96,7 +99,7 @@ if mods["bobassembly"] then
 end
 
 if mods["bobplates"] then
-	bobmods.lib.recipe.remove_ingredient("science-pack-3", "bronze-plate")
+	bobmods.lib.recipe.remove_ingredient("science-pack-3", "bronze-alloy")
 	bobmods.lib.recipe.remove_ingredient("high-tech-science-pack", "lithium-ion-battery")
 	bobmods.lib.recipe.remove_ingredient("high-tech-science-pack", "silicon-nitride")
 end
