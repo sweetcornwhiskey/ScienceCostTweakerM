@@ -1,3 +1,11 @@
+0.16.20
+- added new lab recipes, that are made from subcomponents
+- rebalanced some intermediates
+- rebalanced expensive recipes (2.5 cost and 2.5 time of normal in average)
+- color tint o lab tier to easier distinguish between different tiers
+- increased price of tier 3 and tier 4 lab
+- rebalanced some intermediates when bobs mods are active (things are more expensive in most cases, but also match better their respective tier)
+- additional fixes for pyfusion and omniscience
 0.16.19
 - fixed bobselectronic detection for science pack 1 recipe
 0.16.18
