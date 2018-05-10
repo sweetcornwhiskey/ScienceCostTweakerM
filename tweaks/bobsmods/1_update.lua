@@ -234,4 +234,10 @@ if mods["bobelectronics"] then
 		bobmods.lib.recipe.replace_ingredient("sct-htech-injector", "copper-cable", "insulated-cable")
 	end
 end
+
+if mods["bobpower"] then
+	if data.raw.item["solar-panel-large"] then
+		bobmods.lib.recipe.replace_ingredient("sct-lab3-construction", "solar-panel", "solar-panel-large")
+	end
+end
 --log(serpent.block(data.raw.recipe["sct-t2-instruments"]))
