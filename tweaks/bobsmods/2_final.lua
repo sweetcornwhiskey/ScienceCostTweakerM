@@ -69,7 +69,11 @@ log(serpent.block(data.raw.recipe["sct-lab2-automatization"]))
 
 if mods["boblogistics"] then
 	if settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
-		 bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "fast-inserter", "red-filter-inserter")
+		if mods["omnimatter"] then
+			bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "fast-inserter", "inserter")
+		else
+			bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "fast-inserter", "red-filter-inserter")
+		end
 	end
 	if settings.startup["bobmods-logistics-beltoverhaul"] and settings.startup["bobmods-logistics-beltoverhaul"].value == true then
 		 bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "transport-belt", "basic-transport-belt")
