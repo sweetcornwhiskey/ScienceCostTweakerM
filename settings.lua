@@ -42,6 +42,15 @@ data:extend({
 		default_value = "sct-lab-1",
 		allowed_values = {"sct-lab-1","lab" },
 	},
+
+	{
+		type = "string-setting",
+		name = "sct-lab-modules",
+		order = "sct-f[modules]",
+		setting_type = "startup",
+		default_value = "none",
+		allowed_values = {"none", "tier3", "tier4" },
+	},
 })
 
 

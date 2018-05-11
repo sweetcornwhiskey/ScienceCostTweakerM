@@ -1,4 +1,6 @@
 data:extend({
+--[[
+	-- sct-lab-1 hidden, using normal lab
 	{
 		type = "item",
 		name = "sct-lab-1",
@@ -72,7 +74,7 @@ data:extend({
 		},
 		fast_replaceable_group = "lab",
 	},	
-
+]]--
 	-- New Science Labs, from Tier 2 to Tier 4. (Vanilla lab becomes Tier 1)
 	-- ===================================================================
 	-- == Tier 2 ==
@@ -144,7 +146,7 @@ data:extend({
 			module_slots = 0,
 			max_entity_info_module_icons_per_row = 3,
 			max_entity_info_module_icon_rows = 1,
-			module_info_icon_shift = {0, 0.9}
+			module_info_icon_shift = {0, 0.9},
 		},
 		fast_replaceable_group = "lab",
 	},
@@ -345,3 +347,12 @@ data.raw["lab"]["lab"].module_specification =
 		module_info_icon_shift = {0, 0.9}
 	}
 data.raw["lab"]["lab"].fast_replaceable_group = "lab"
+
+if settings.startup["sct-lab-modules"].value == "tier3" then
+	data.raw["lab"]["sct-lab-3"].module_specification.module_slots = 1
+	data.raw["lab"]["sct-lab-4"].module_specification.module_slots = 2
+end
+
+if settings.startup["sct-lab-modules"].value == "tier4" then
+	data.raw["lab"]["sct-lab-4"].module_specification.module_slots = 2
+end

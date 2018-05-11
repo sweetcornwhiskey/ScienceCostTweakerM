@@ -1,4 +1,5 @@
 data:extend({
+--[[ sct-lab-1 disabled
 	{
 		type = "recipe",
 		name = "sct-lab-1",
@@ -35,6 +36,7 @@ data:extend({
 			},
 		},
 	},
+]]--
 
 	{
 		type = "recipe",
@@ -47,6 +49,7 @@ data:extend({
 			energy_required = 12,
 			ingredients =
 			{
+				{"lab", 1},
 				{"sct-lab2-construction", 3},
 				{"sct-lab2-automatization", 2},
 			},
@@ -61,6 +64,7 @@ data:extend({
 			energy_required = 5,
 			ingredients =
 			{
+				{"lab", 1},
 				{"sct-lab2-construction", 2},
 				{"sct-lab2-automatization", 1},
 			},
@@ -160,7 +164,7 @@ if (settings.startup["sct-tier1-lab"].value == "sct-lab-1") then
 			},
 			results =
 			{
-				{ type="item", amount=1, name="sct-lab-1",},
+				{ type="item", amount=1, name="lab",},
 			},
 		}
 	data.raw.recipe["lab"].normal = 
@@ -174,26 +178,10 @@ if (settings.startup["sct-tier1-lab"].value == "sct-lab-1") then
 			},
 			results =
 			{
-				{ type="item", amount=1, name="sct-lab-1",},
+				{ type="item", amount=1, name="lab",},
 			},
 		}
 end
 
 data.raw.recipe["lab"].order = "a[labs]-a[lab]"
 data.raw.recipe["lab"].subgroup = "sct-labs"
-
---log(serpent.block(data.raw["recipe"]["lab"]))
-
-table.insert(data.raw.recipe["sct-lab-2"].expensive.ingredients, { type="item", name="lab", amount=1})
-table.insert(data.raw.recipe["sct-lab-2"].normal.ingredients, { type="item", name="lab", amount=1})
-
--- insert proper lab as ingredient for tier 2
---[[
-if (settings.startup["sct-tier1-lab"] == "sct-lab-1") then
-	table.insert(data.raw.recipe["sct-lab-2"].expensive.ingredients, { type="item", name="sct-lab-1", amount=1})
-	table.insert(data.raw.recipe["sct-lab-2"].normal.ingredients, { type="item", name="sct-lab-1", amount=1})
-else
-	table.insert(data.raw.recipe["sct-lab-2"].expensive.ingredients, { type="item", name="lab", amount=1})
-	table.insert(data.raw.recipe["sct-lab-2"].normal.ingredients, { type="item", name="lab", amount=1})
-end
-]]--
