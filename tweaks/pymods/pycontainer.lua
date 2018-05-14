@@ -8,7 +8,9 @@ data:extend({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-prod",
 		order = "h[prod]-f[pycontainer]",
-		stack_size = 200
+		stack_size = 200,
+		localised_name = "Fusion compound container",
+		localised_description = "Container with nuclear cells and other dangerous things",
 	},
 })
 

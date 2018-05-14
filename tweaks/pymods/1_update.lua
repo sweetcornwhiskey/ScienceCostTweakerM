@@ -6,6 +6,7 @@ require("pycontainer")
 	pycontainer.subgroup = "sct-sciencepack-prod"
 	pycontainer.icon = "__ScienceCostTweakerM__/graphics/pymods/sct-prod-pycontainer.png"
 	pycontainer.order = "h[prod]-f[pycontainer]"
+	pycontainer.localised_name = "Fusion compound container"
 	if (pycontainer.results) then
 		pycontainer.results = 		
 		{
