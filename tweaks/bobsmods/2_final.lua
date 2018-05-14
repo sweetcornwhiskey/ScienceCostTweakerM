@@ -72,7 +72,11 @@ if mods["boblogistics"] then
 		if mods["omnimatter"] then
 			bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "fast-inserter", "inserter")
 		else
-			bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "fast-inserter", "red-filter-inserter")
+			if data.raw.recipe["yellow-filter-inserter"] then
+				bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "fast-inserter", "yellow-filter-inserter")
+			else
+				bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "fast-inserter", "inserter")
+			end
 		end
 	end
 	if settings.startup["bobmods-logistics-beltoverhaul"] and settings.startup["bobmods-logistics-beltoverhaul"].value == true then
