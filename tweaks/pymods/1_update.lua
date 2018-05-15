@@ -20,6 +20,8 @@ require("pycontainer")
 	
 	if (data.raw.technology["diamond-mining"]) then
 		table.insert(data.raw.technology["diamond-mining"].effects,{type = "unlock-recipe", recipe = "sct-prod-pycontainer"})
+	else
+		table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-pycontainer"})
 	end
 	
 	data.raw["recipe"]["production-science-pack"].expensive =
