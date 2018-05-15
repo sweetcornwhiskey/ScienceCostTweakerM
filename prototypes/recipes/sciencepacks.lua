@@ -194,7 +194,7 @@ data.raw["recipe"]["production-science-pack"].expensive =
 	{
 		{ type="item", amount=2, name="production-science-pack" },
 	},
-	energy_required = 15,
+	energy_required = 25,
 	enabled = false,
 }
 data.raw["recipe"]["production-science-pack"].normal =
@@ -208,7 +208,7 @@ data.raw["recipe"]["production-science-pack"].normal =
 	{
 		{ type="item", amount=2, name="production-science-pack" },
 	},
-	energy_required = 6,
+	energy_required = 10,
 	enabled = false,
 }
 data.raw["recipe"]["production-science-pack"].ingredients = nil

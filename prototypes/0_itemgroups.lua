@@ -74,7 +74,7 @@
 		type = "item-subgroup",
 		name = "sct-sciencepack-hightech",
 		group = "sct-science",
-		order = "i[ht]",
+		order = "j[ht]",
 	},
 	
 	{
