@@ -215,3 +215,8 @@ bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-cargo-unit")
 bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-unimover")
 bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-automated-storage")
 bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-memory-unit")
+
+-- replace steel chest with brass chest if present
+if data.raw.item["brass-chest"] then
+	bobmods.lib.recipe.replace_ingredient("sct-logistic-automated-storage", "steel-chest", "brass-chest")
+end
