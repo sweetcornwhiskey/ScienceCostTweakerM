@@ -1,3 +1,3 @@
 if mods["bobtech"] then
-	require("science")
+	require("tweaks.bobsmods.science")
 end

@@ -9,10 +9,10 @@ require("configs.costs.extended")
 require("prototypes.2_recipe")
 require("prototypes.2_technology")
 -- Recipes requires
-require("tweaks.bobsmods.2_final")
 require("tweaks.angelsmods.2_final")
-require("tweaks.pymods.2_final")
+require("tweaks.bobsmods.2_final")
 require("tweaks.omnimatter.2_final")
+require("tweaks.pymods.2_final")
 
 if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 

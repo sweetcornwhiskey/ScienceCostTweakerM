@@ -1,5 +1,6 @@
 -- science groups
-data:extend ({
+data:extend (
+{
 	{
 		type = "item-subgroup",
 		name = "sct-sciencepack-bio",
@@ -8,10 +9,12 @@ data:extend ({
 		localised_name = "Agrictultural Planing",
 		localised_description = "They grow, thay evolve, they are consumed."
 	},
-})
+}
+)
 
 -- bio pack items
-data:extend ({
+data:extend (
+{
 	{
 		type = "tool",
 		name = "sct-sciencepack-bio",
@@ -22,10 +25,10 @@ data:extend ({
 		order = "d_a[bio]",
 		localised_name = "Optimized Biome Planner",
 		stack_size = 200,
-    	durability = 1,
+		durability = 1,
 	   	durability_description_key = "description.science-pack-remaining-amount-key",
-	    durability_description_value = "description.science-pack-remaining-amount-value"
-    },
+		durability_description_value = "description.science-pack-remaining-amount-value",
+	},
 
 	{
 		type = "item",
@@ -65,7 +68,8 @@ data:extend ({
 })
 
 -- logistic intermediate recipes
-data:extend ({
+data:extend (
+{
 	{
 		type = "recipe",
 		name = "sct-sciencepack-bio",
@@ -208,4 +212,5 @@ data:extend ({
 			},
 		},
 	},
-})
+}
+)

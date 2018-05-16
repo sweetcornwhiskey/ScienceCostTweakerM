@@ -1,3 +1,3 @@
 if mods["angelsbioprocessing"] then
-	require("science")
+	require("tweaks.angelsmods.science")
 end
