@@ -4,9 +4,9 @@ data:extend ({
 		type = "item-subgroup",
 		name = "sct-sciencepack-logistic",
 		group = "sct-science",
-		order = "i[logistic]",
+		order = "h_a[logistic]",
 		localised_name = "Commercial AI Implementation",
-		localised_description = "Technology for controling logistic item flow and optimal transfer and delivery."
+		localised_description = "Technology for controling logistic item flow and optimal transfer and delivery.",
 	},
 	{
 		type = "item-subgroup",
@@ -25,7 +25,7 @@ data:extend ({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-logistic",
-		order = "i[logistic]-b[cargo]",
+		order = "h_a[logistic]-b[cargo]",
 		localised_name = "Flying Cargo Kit",
 		stack_size = 200,
 	},
@@ -37,7 +37,7 @@ data:extend ({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-logistic",
-		order = "i[logistic]-c[unimover]",
+		order = "h_a[logistic]-c[unimover]",
 		localised_name = "Universal Transport Engine",
 		stack_size = 200,
 	},
@@ -49,7 +49,7 @@ data:extend ({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-logistic",
-		order = "i[logistic]-d[storage]",
+		order = "h_a[logistic]-d[storage]",
 		localised_name = "Automated Storage",
 		stack_size = 200,
 	},
@@ -61,7 +61,7 @@ data:extend ({
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-logistic",
-		order = "i[logistic]-e[memory-unit]",
+		order = "h_a[logistic]-e[memory-unit]",
 		localised_name = "Memory Unit",
 		stack_size = 200,
 	},	
@@ -73,7 +73,7 @@ data:extend ({
 		type = "recipe",
 		name = "sct-logistic-cargo-unit",
 		subgroup = "sct-sciencepack-logistic",
-		order = "i[logistic]-b[cargo]",
+		order = "h_a[logistic]-b[cargo]",
 		expensive =
 		{
 			enabled = false,
@@ -108,7 +108,7 @@ data:extend ({
 		type = "recipe",
 		name = "sct-logistic-unimover",
 		subgroup = "sct-sciencepack-logistic",
-		order = "i[logistic]-c[unimover]",
+		order = "h_a[logistic]-c[unimover]",
 		expensive =
 		{
 			enabled = false,
@@ -143,7 +143,7 @@ data:extend ({
 		type = "recipe",
 		name = "sct-logistic-automated-storage",
 		subgroup = "sct-sciencepack-logistic",
-		order = "i[logistic]-d[storage]",
+		order = "h_a[logistic]-d[storage]",
 		expensive =
 		{
 			enabled = false,
@@ -178,7 +178,7 @@ data:extend ({
 		type = "recipe",
 		name = "sct-logistic-memory-unit",
 		subgroup = "sct-sciencepack-logistic",
-		order = "i[logistic]-e[memory-unit]",
+		order = "h_a[logistic]-e[memory-unit]",
 		expensive =
 		{
 			enabled = false,
@@ -209,14 +209,3 @@ data:extend ({
 		},
 	},
 })
-
--- unlocks
-bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-cargo-unit")
-bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-unimover")
-bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-automated-storage")
-bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-memory-unit")
-
--- replace steel chest with brass chest if present
-if data.raw.item["brass-chest"] then
-	bobmods.lib.recipe.replace_ingredient("sct-logistic-automated-storage", "steel-chest", "brass-chest")
-end
