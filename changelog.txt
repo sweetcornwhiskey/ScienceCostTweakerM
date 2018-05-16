@@ -1,3 +1,5 @@
+0.16.25
+- migration script fix
 0.16.24
 - bob logistic pack overhaul
 0.16.23
