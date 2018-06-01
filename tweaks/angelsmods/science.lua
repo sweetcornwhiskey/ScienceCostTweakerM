@@ -1,20 +1,15 @@
 -- science groups
-data:extend (
-{
+data:extend ({
 	{
 		type = "item-subgroup",
 		name = "sct-sciencepack-bio",
 		group = "sct-science",
 		order = "d_a[bio]",
-		localised_name = "Agrictultural Planing",
-		localised_description = "They grow, thay evolve, they are consumed."
 	},
-}
-)
+})
 
 -- bio pack items
-data:extend (
-{
+data:extend ({
 	{
 		type = "tool",
 		name = "sct-sciencepack-bio",
@@ -23,7 +18,6 @@ data:extend (
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-bio",
 		order = "d_a[bio]",
-		localised_name = "Optimized Biome Planner",
 		stack_size = 200,
 		durability = 1,
 	   	durability_description_key = "description.science-pack-remaining-amount-key",
@@ -38,7 +32,6 @@ data:extend (
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-bio",
 		order = "d_a[bio]-b[groundsample]",
-		localised_name = "Ground Sample",
 		stack_size = 200,
 	},
 
@@ -50,7 +43,6 @@ data:extend (
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-bio",
 		order = "d_a[bio]-c[scaffold]",
-		localised_name = "Scaffolding",
 		stack_size = 200,
 	},
 
@@ -62,7 +54,6 @@ data:extend (
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-bio",
 		order = "d_a[bio]-d[filling]",
-		localised_name = "Seedling Nest",
 		stack_size = 200,
 	},
 })
@@ -75,6 +66,7 @@ data:extend (
 		name = "sct-sciencepack-bio",
 		subgroup = "sct-sciencepack-bio",
 		order = "d_a[bio]",
+		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -110,6 +102,7 @@ data:extend (
 		name = "sct-bio-ground-sample",
 		subgroup = "sct-sciencepack-bio",
 		order = "d_a[bio]-b[groundsample]",
+		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -212,5 +205,4 @@ data:extend (
 			},
 		},
 	},
-}
-)
+})

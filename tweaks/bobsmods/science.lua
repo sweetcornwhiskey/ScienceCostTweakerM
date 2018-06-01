@@ -5,8 +5,6 @@ data:extend ({
 		name = "sct-sciencepack-logistic",
 		group = "sct-science",
 		order = "h_a[logistic]",
-		localised_name = "Commercial AI Implementation",
-		localised_description = "Technology for controling logistic item flow and optimal transfer and delivery.",
 	},
 	{
 		type = "item-subgroup",
@@ -26,7 +24,6 @@ data:extend ({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-logistic",
 		order = "h_a[logistic]-b[cargo]",
-		localised_name = "Flying Cargo Kit",
 		stack_size = 200,
 	},
 
@@ -38,7 +35,6 @@ data:extend ({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-logistic",
 		order = "h_a[logistic]-c[unimover]",
-		localised_name = "Universal Transport Engine",
 		stack_size = 200,
 	},
 
@@ -50,7 +46,6 @@ data:extend ({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-logistic",
 		order = "h_a[logistic]-d[storage]",
-		localised_name = "Automated Storage",
 		stack_size = 200,
 	},
 
@@ -62,7 +57,6 @@ data:extend ({
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-logistic",
 		order = "h_a[logistic]-e[memory-unit]",
-		localised_name = "Memory Unit",
 		stack_size = 200,
 	},	
 })
@@ -74,6 +68,7 @@ data:extend ({
 		name = "sct-logistic-cargo-unit",
 		subgroup = "sct-sciencepack-logistic",
 		order = "h_a[logistic]-b[cargo]",
+		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -109,6 +104,7 @@ data:extend ({
 		name = "sct-logistic-unimover",
 		subgroup = "sct-sciencepack-logistic",
 		order = "h_a[logistic]-c[unimover]",
+		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -144,6 +140,7 @@ data:extend ({
 		name = "sct-logistic-automated-storage",
 		subgroup = "sct-sciencepack-logistic",
 		order = "h_a[logistic]-d[storage]",
+		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -179,6 +176,7 @@ data:extend ({
 		name = "sct-logistic-memory-unit",
 		subgroup = "sct-sciencepack-logistic",
 		order = "h_a[logistic]-e[memory-unit]",
+		category = "crafting",
 		expensive =
 		{
 			enabled = false,
