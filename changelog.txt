@@ -1,3 +1,5 @@
+0.16.27
+- research tree branch for science
 0.16.26
 - science pack for angels bio
 0.16.25
@@ -15,7 +17,7 @@
 - added new lab recipes, that are made from subcomponents
 - rebalanced some intermediates
 - rebalanced expensive recipes (2.5 cost and 2.5 time of normal in average)
-- color tint o lab tier to easier distinguish between different tiers
+- color tint on lab tier to easier distinguish between different tiers
 - increased price of tier 3 and tier 4 lab
 - rebalanced some intermediates when bobs mods are active (things are more expensive in most cases, but also match better their respective tier)
 - additional fixes for pyfusion and omniscience
@@ -47,7 +49,7 @@
 0.16.10
 - changed load order to prevent science pack recipe override
 0.16.9
-- force removed upgrade flag from all unlock technogies (upgrade technologies are not searcheable in tech tree, and neither items they unlock)
+- force removed upgrade flag from all unlock technologies (upgrade technologies are not searchable in tech tree, and neither items they unlock)
 - moved quantum lab unlock into bobs advanced research (when bobtech is present), intermediates not changed
 0.16.8
 - switched from electrum to copper-tungsten when electrum plate is not present (removed from bobs)
@@ -69,7 +71,7 @@
 - military can be now enabled in T2 lab trough mod settings page
 0.16.1
 - added angels bio token to all labs
-- added bobs logistic pac to T3 and T4 lab
+- added bobs logistic pack to T3 and T4 lab
 - remove science override option (bobs,vanilla), there minimal differences
 0.16.0
 - initial revision
