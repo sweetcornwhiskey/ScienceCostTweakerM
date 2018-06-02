@@ -1,1 +1,3 @@
--- There is no spoon.
+if mods["omnimatter_science"] then
+	require("science_omni")
+end

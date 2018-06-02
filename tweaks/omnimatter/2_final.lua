@@ -1,15 +1,16 @@
 -- omniscience 
+--[[
 if mods["omnimatter_science"] then
-	if data.raw.tool["omni-pack"] then
-		-- remove omnipack from tier 1 lab
-		for i = 1, #data.raw["lab"]["lab"].inputs, 1 do
-			if data.raw["lab"]["lab"].inputs[i] == "omni-pack" then
-				table.remove(data.raw["lab"]["lab"].inputs, i)
-				break
+	if data.raw.tool["omni-pack"] and data.raw.technology["omnitractor-2"] then
+		-- remove omnipack from omni-tractor, it has own research now
+		for _i, eff in pairs(data.raw.technology["omnitractor-2"].effects) do
+			if eff.type == "recipe-unlock" then
+				if eff.recipe == "omni-pack" then
+					table.remove(data.raw.technology["omnitractor-2"].effects, _j)
+					break;
+				end
 			end
 		end
-		table.insert(data.raw["lab"]["sct-lab-2"].inputs, "omni-pack")
-		table.insert(data.raw["lab"]["sct-lab-3"].inputs, "omni-pack")
-		table.insert(data.raw["lab"]["sct-lab-4"].inputs, "omni-pack")	
 	end
 end
+]]--
