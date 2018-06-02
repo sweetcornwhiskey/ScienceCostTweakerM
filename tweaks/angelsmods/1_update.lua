@@ -1,4 +1,5 @@
 if mods["angelsbioprocessing"] then
+--[[
 		if settings.startup["sct-bio"].value == "tier1" then
 		        table.insert(data.raw["lab"]["sct-lab-1"].inputs, "sct-sciencepack-bio")
 		end
@@ -12,4 +13,5 @@ if mods["angelsbioprocessing"] then
 			table.insert(data.raw.technology["gardens"].effects,{type = "unlock-recipe", recipe = "sct-bio-sample-scaffold"})
 			table.insert(data.raw.technology["gardens"].effects,{type = "unlock-recipe", recipe = "sct-bio-sample-filling"})
 		end
+]]--
 end

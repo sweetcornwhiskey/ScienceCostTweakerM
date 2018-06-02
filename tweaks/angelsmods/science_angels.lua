@@ -2,7 +2,7 @@
 data:extend ({
 	{
 		type = "item-subgroup",
-		name = "sct-sciencepack-bio",
+		name = "sct-science-pack-bio",
 		group = "sct-science",
 		order = "d_a[bio]",
 	},
@@ -12,11 +12,11 @@ data:extend ({
 data:extend ({
 	{
 		type = "tool",
-		name = "sct-sciencepack-bio",
-		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-sciencepack-bio.png",
+		name = "sct-science-pack-bio",
+		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-science-pack-bio.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencepack-bio",
+		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]",
 		stack_size = 200,
 		durability = 1,
@@ -30,7 +30,7 @@ data:extend ({
 		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-ground-sample.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencepack-bio",
+		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]-b[groundsample]",
 		stack_size = 200,
 	},
@@ -41,7 +41,7 @@ data:extend ({
 		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-sample-scaffold.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencepack-bio",
+		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]-c[scaffold]",
 		stack_size = 200,
 	},
@@ -52,7 +52,7 @@ data:extend ({
 		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-sample-filling.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencepack-bio",
+		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]-d[filling]",
 		stack_size = 200,
 	},
@@ -63,8 +63,8 @@ data:extend (
 {
 	{
 		type = "recipe",
-		name = "sct-sciencepack-bio",
-		subgroup = "sct-sciencepack-bio",
+		name = "sct-science-pack-bio",
+		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]",
 		category = "crafting",
 		expensive =
@@ -78,7 +78,7 @@ data:extend (
 			},
 			results = 
 			{
-				{type="item", name="sct-sciencepack-bio", amount=1},
+				{type="item", name="sct-science-pack-bio", amount=1},
 			},
 		},
 		normal =
@@ -92,7 +92,7 @@ data:extend (
 			},
 			results = 
 			{
-				{type="item", name="sct-sciencepack-bio", amount=1},
+				{type="item", name="sct-science-pack-bio", amount=1},
 			},
 		},
 	},
@@ -100,7 +100,7 @@ data:extend (
 	{
 		type = "recipe",
 		name = "sct-bio-ground-sample",
-		subgroup = "sct-sciencepack-bio",
+		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]-b[groundsample]",
 		category = "crafting",
 		expensive =
@@ -136,7 +136,7 @@ data:extend (
 	{
 		type = "recipe",
 		name = "sct-bio-sample-scaffold",
-		subgroup = "sct-sciencepack-bio",
+		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]-c[scaffold]",
 		expensive =
 		{
@@ -171,7 +171,7 @@ data:extend (
 	{
 		type = "recipe",
 		name = "sct-bio-sample-filling",
-		subgroup = "sct-sciencepack-bio",
+		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]-d[filling]",
 		category = "crafting-with-fluid",
 		expensive =
@@ -204,5 +204,36 @@ data:extend (
 				{type="item", name="sct-bio-sample-filling", amount=1},
 			},
 		},
+	},
+})
+
+-- bio pack technology
+data:extend({
+	{
+		type = "technology",
+		name = "sct-research-bio",
+		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-science-pack-bio-128.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "sct-science-pack-bio",
+			},
+		},
+		prerequisites =
+		{
+			"gardens", 
+		},
+		unit =
+		{
+			count = 60,
+			ingredients = 
+			{
+				{type="item", name="science-pack-1", amount=1},
+			},
+			time = 1,
+		},
+		order = "sct-pack-b[bio]",
 	},
 })
