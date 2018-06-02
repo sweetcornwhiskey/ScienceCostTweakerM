@@ -1,22 +1,3 @@
--- remove science packs from respective technologies
-for _i, _tech in pairs(data.raw.technology) do
-	if _tech.effects then
-		for _j, _eff in pairs(_tech.effects) do
-			if _eff.type == "unlock-recipe" then
-				if 
-					_eff.recipe == "science-pack-2" or 
-					_eff.recipe == "science-pack-3" or
-					_eff.recipe == "military-science-pack" or
-					_eff.recipe == "production-science-pack" or
-					_eff.recipe == "high-tech-science-pack" 
-				then
-					table.remove(_tech.effects, _j)
-				end
-			end
-		end
-	end
-end
-
 -- add new technology
 data:extend({
 	-- TIER 2
@@ -24,8 +5,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t2",
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
-		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon-128.png",
+		icon_size = 128,
 		effects = 
 		{
 			{
@@ -62,8 +43,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-research-t2",
-		icon = "__base__/graphics/icons/science-pack-2.png",
-		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-2-128.png",
+		icon_size = 128,
 		effects = 
 		{
 			{
@@ -113,8 +94,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t3",
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
-		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon-128.png",
+		icon_size = 128,
 		effects = 
 		{
 			{
@@ -174,8 +155,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-research-t3",
-		icon = "__base__/graphics/icons/science-pack-3.png",
-		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-3-128.png",
+		icon_size = 128,
 		effects = 
 		{
 			{
@@ -209,8 +190,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-research-mil",
-		icon = "__base__/graphics/icons/military-science-pack.png",
-		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/military-science-pack-128.png",
+		icon_size = 128,
 		effects = 
 		{
 			{
@@ -267,8 +248,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-research-prod",
-		icon = "__base__/graphics/icons/production-science-pack.png",
-		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/production-science-pack-128.png",
+		icon_size = 128,
 		effects = 
 		{
 			{
@@ -321,8 +302,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t4",
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
-		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon-128.png",
+		icon_size = 128,
 		effects = 
 		{
 			{
@@ -366,8 +347,8 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-research-ht",
-		icon = "__base__/graphics/icons/high-tech-science-pack.png",
-		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/high-tech-science-pack-128.png",
+		icon_size = 128,
 		effects = 
 		{
 			{

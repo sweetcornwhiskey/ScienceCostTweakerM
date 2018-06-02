@@ -1,0 +1,10 @@
+{
+  "tool":
+  [
+    ["sct-sciencepack-bio", "sct-science-pack-bio"]
+  ],
+  "recipe":
+  [
+    ["sct-sciencepack-bio", "sct-science-pack-bio"]
+  ]
+}
