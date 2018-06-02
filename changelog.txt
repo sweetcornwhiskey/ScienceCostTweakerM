@@ -1,5 +1,6 @@
 0.16.27
-- research tree branch for science
+- typo fixes
+- mod specific localizations moved to localization file from code
 0.16.26
 - science pack for angels bio
 0.16.25
