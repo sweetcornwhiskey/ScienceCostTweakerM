@@ -107,6 +107,8 @@ if settings.startup["sct-lab-scaling"].value == true then
 end
 
 -- make sure unlock technologies are not hidden, making unsearcheable items in tech tree
+-- no need for this after research rework
+--[[
 data.raw.technology["advanced-electronics"].upgrade = false
 data.raw.technology["advanced-electronics-2"].upgrade = false
 data.raw.technology["advanced-material-processing"].upgrade = false
@@ -120,5 +122,5 @@ data.raw.technology["military-4"].upgrade = false
 data.raw.technology["logistics"].upgrade = false
 data.raw.technology["logistics-2"].upgrade = false
 data.raw.technology["logistics-3"].upgrade = false
-
---log(serpent.block(data.raw["recipe"]["science-pack-3"]))
+]]--
+--log(serpent.block(data.raw.technology["research-speed-6"]))
