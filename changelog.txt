@@ -1,3 +1,6 @@
+0.16.28
+- research tree branch for science
+- default multiplier set to noadjustment
 0.16.27
 - typo fixes
 - mod specific localizations moved to localization file from code
