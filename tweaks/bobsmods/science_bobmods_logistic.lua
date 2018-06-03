@@ -6,12 +6,6 @@ data:extend ({
 		group = "sct-science",
 		order = "h_a[logistic]",
 	},
-	{
-		type = "item-subgroup",
-		name = "sct-science-pack-alien",
-		group = "sct-science",
-		order = "k[alien]",
-	},
 })
 
 -- logistic pack items
@@ -256,94 +250,5 @@ data:extend({
 			time = 1,
 		},
 		order = "sct-pack-d[logistic]",
-	},
-
-	{
-		type = "technology",
-		name = "sct-lab-alien",
-		icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab-128.png",
-		icon_size = 128,
-		effects = 
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "lab-alien",
-			},
-		},
-		prerequisites =
-		{
-			"alien-research",
-			"sct-research-t3",
-		},
-		unit =
-		{
-			count = 30,
-			ingredients =
-			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
-				{type="item", name="science-pack-3", amount=1},
-			},
-			time = 3,
-		},
-		order = "sct-lab-d[alien]",
-	},
-	
-	{
-		type = "technology",
-		name = "sct-research-alien",
-		icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-science-pack-128.png",
-		icon_size = 128,
-		effects =
-		{
-			{
-				type = "unlock-recipe",
-				recipe = "alien-science-pack",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "alien-science-pack-blue",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "alien-science-pack-orange",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "alien-science-pack-purple",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "alien-science-pack-yellow",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "alien-science-pack-green",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "alien-science-pack-red",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "science-pack-gold",
-			},
-		},
-		prerequisites =
-		{
-			"sct-lab-alien"
-		},
-		unit =
-		{
-			count = 60,
-			ingredients = 
-			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
-				{type="item", name="science-pack-3", amount=1},
-			},
-			time = 1,
-		},
-		order = "sct-pack-c[omni]",
 	},
 })

@@ -224,11 +224,9 @@ if mods["bobplates"] then
 end
 
 if mods["bobelectronics"] then
-	log(serpent.block(data.raw.recipe["sct-mil-circuit3"]))
 	if settings.startup["sct-military"].value == "tier2" then
 		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit3", "advanced-circuit", "electronic-circuit")
 	end
-	log(serpent.block(data.raw.recipe["sct-mil-circuit3"]))
 	if data.raw.item["basic-circuit-board"] then
 		bobmods.lib.recipe.replace_ingredient("sct-t2-instruments", "electronic-circuit", "basic-circuit-board")
 		bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "electronic-circuit", "basic-circuit-board")
@@ -298,10 +296,15 @@ if mods["bobtech"] then
 		table.insert(data.raw["lab"]["sct-lab-4"].inputs, "logistic-science-pack")	
 		data.raw.tool["logistic-science-pack"].subgroup = "sct-science-pack-logistic"
 		data.raw.tool["logistic-science-pack"].order = "h_a[logistic]"
-		data.raw.tool["logistic-science-pack"].localised_name = "Commercial AI Implementation"
+		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
+			data.raw.tool["logistic-science-pack"].icon_size = 64
+			data.raw.tool["logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-64.png"
+		else
+			data.raw.tool["logistic-science-pack"].icon_size = 32
+			data.raw.tool["logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack.png"
+		end
 		data.raw.recipe["logistic-science-pack"].subgroup = "sct-science-pack-logistic"
 		data.raw.recipe["logistic-science-pack"].order = "h_a[logistic]"
-		data.raw.recipe["logistic-science-pack"].localised_name = "Commercial AI Implementation"
 		data.raw.recipe["logistic-science-pack"].ingredients = nil
 		data.raw.recipe["logistic-science-pack"].results = nil
 		data.raw.recipe["logistic-science-pack"].expensive = 
@@ -343,11 +346,25 @@ if mods["bobtech"] then
 	if data.raw.tool["science-pack-gold"] then
 		data.raw.tool["science-pack-gold"].subgroup = "science-pack"
 		data.raw.tool["science-pack-gold"].order = "gold-science-pack"
+		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
+			data.raw.tool["science-pack-gold"].icon_size = 64
+			data.raw.tool["science-pack-gold"].icon = "__ScienceCostTweakerM__/graphics/bobmods/gold-science-pack-64.png"
+		else
+			data.raw.tool["science-pack-gold"].icon_size = 32
+			data.raw.tool["science-pack-gold"].icon = "__ScienceCostTweakerM__/graphics/bobmods/gold-science-pack.png"
+		end
 		data.raw.recipe["science-pack-gold"].subgroup = "science-pack"
 		data.raw.recipe["science-pack-gold"].order = "gold-science-pack"
 	end
 	if data.raw.tool["alien-science-pack"] then
 		data.raw.tool["alien-science-pack"].subgroup = "sct-science-pack-alien"
+		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
+			data.raw.tool["alien-science-pack"].icon_size = 64
+			data.raw.tool["alien-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-science-pack-64.png"
+		else
+			data.raw.tool["alien-science-pack"].icon_size = 32
+			data.raw.tool["alien-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-science-pack.png"
+		end
 		data.raw.tool["alien-science-pack-blue"].subgroup = "sct-science-pack-alien"
 		data.raw.tool["alien-science-pack-orange"].subgroup = "sct-science-pack-alien"
 		data.raw.tool["alien-science-pack-purple"].subgroup = "sct-science-pack-alien"
