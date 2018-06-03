@@ -16,6 +16,7 @@ data:extend({
 		{
 			"crystallology-1", 
 			"sct-research-t2",
+			"logistics-2",
 		},
 		unit =
 		{

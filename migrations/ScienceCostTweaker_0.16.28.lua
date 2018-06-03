@@ -31,7 +31,6 @@ for index, force in pairs(game.forces) do
 		
 	if force.technologies["military-2"] and force.technologies["military-2"].researched then
 		for prereq,_obj in pairs(force.technologies["sct-research-mil"].prerequisites) do
-			--log(serpent.block(force.technologies["sct-research-mil"].prerequisites) .. " .. " .. i)
 			if prereq == "sct-research-t2" and force.technologies["sct-research-t2"] and force.technologies["sct-research-t2"].researched then
 				force.technologies["sct-research-mil"].researched = true
 				break
