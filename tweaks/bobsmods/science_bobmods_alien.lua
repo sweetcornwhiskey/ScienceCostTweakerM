@@ -8,7 +8,7 @@ data:extend ({
 	},
 })
 
--- technology
+-- technology lab
 data:extend({
 	{
 		type = "technology",
@@ -40,7 +40,10 @@ data:extend({
 		},
 		order = "sct-lab-d[alien]",
 	},
-	
+})
+
+-- technology science packs
+data:extend({
 	{
 		type = "technology",
 		name = "sct-research-gold",
@@ -55,7 +58,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-lab-alien"
+			"sct-lab-alien",
 		},
 		unit =
 		{
@@ -109,7 +112,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-gold"
+			"sct-research-gold",
 		},
 		unit =
 		{

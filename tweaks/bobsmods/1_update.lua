@@ -224,6 +224,7 @@ if mods["bobplates"] then
 end
 
 if mods["bobelectronics"] then
+	bobmods.lib.tech.add_prerequisite("sct-lab-t2", "electronics")
 	if settings.startup["sct-military"].value == "tier2" then
 		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit3", "advanced-circuit", "electronic-circuit")
 	end
@@ -275,6 +276,8 @@ if mods["bobtech"] then
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
 		data.raw.item["lab-alien"].order = "b[labs]-f[lab6]"
+		data.raw.item["lab-alien"].icon_size = 32
+		data.raw.item["lab-alien"].icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab.png"
 		data.raw.recipe["lab-alien"].subgroup = "sct-labs"
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
 		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-3")
@@ -383,8 +386,11 @@ if mods["bobmodules"] then
 	if data.raw.item["lab-module"] then
 		data.raw.item["lab-module"].subgroup = "sct-labs"
 		data.raw.item["lab-module"].order = "b[labs]-g[lab7]"
+		data.raw.item["lab-module"].icon_size = 32
+		data.raw.item["lab-module"].icon = "__ScienceCostTweakerM__/graphics/bobmods/module-lab.png"
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
 		data.raw.recipe["lab-module"].order = "b[labs]-g[lab7]"
 		bobmods.lib.recipe.replace_ingredient("lab-module", "lab", "sct-lab-2")
+		bobmods.lib.tech.add_prerequisite("effect-transmission","sct-research-t3")
 	end
 end

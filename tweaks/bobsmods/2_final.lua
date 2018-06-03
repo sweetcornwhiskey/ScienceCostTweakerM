@@ -45,3 +45,18 @@ if mods["bobplates"] then
 	bobmods.lib.recipe.remove_ingredient("high-tech-science-pack", "silicon-nitride")
 end
 	
+if mods["bobmodules"] then
+	bobmods.lib.tech.replace_prerequisite("modular-armor","modules","advanced-electronics")	
+	bobmods.lib.tech.replace_prerequisite("modules","advanced-electronics","sct-lab-modules")
+	bobmods.lib.tech.remove_recipe_unlock("modules", "lab-module")
+	bobmods.lib.tech.remove_recipe_unlock("modules", "module-processor-board")
+	bobmods.lib.tech.remove_recipe_unlock("modules", "effectivity-processor")
+	bobmods.lib.tech.remove_recipe_unlock("modules", "speed-processor")
+	bobmods.lib.tech.remove_recipe_unlock("modules", "productivity-processor")
+	
+	if mods["bobclasses"] then
+		log(serpent.block(data.raw.technology["bodies"]))
+		bobmods.lib.tech.remove_prerequisite("bodies","modules")
+		log(serpent.block(data.raw.technology["bodies"]))
+	end
+end

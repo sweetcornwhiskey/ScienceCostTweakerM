@@ -4,3 +4,7 @@ if mods["bobtech"] then
 		require("science_bobmods_alien")
 	end	
 end
+
+if mods["bobmodules"]then
+	require("science_bobmods_modules")
+end
