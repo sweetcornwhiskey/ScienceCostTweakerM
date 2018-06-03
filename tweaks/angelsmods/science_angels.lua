@@ -220,6 +220,18 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "sct-science-pack-bio",
 			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-bio-ground-sample",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-bio-sample-scaffold",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-bio-sample-filling",
+			},
 		},
 		prerequisites =
 		{
