@@ -55,8 +55,8 @@ if mods["bobmodules"] then
 	bobmods.lib.tech.remove_recipe_unlock("modules", "productivity-processor")
 	
 	if mods["bobclasses"] then
-		log(serpent.block(data.raw.technology["bodies"]))
+--		log(serpent.block(data.raw.technology["bodies"]))
 		bobmods.lib.tech.remove_prerequisite("bodies","modules")
-		log(serpent.block(data.raw.technology["bodies"]))
+--		log(serpent.block(data.raw.technology["bodies"]))
 	end
 end
