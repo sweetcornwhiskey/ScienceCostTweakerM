@@ -133,7 +133,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-lab-t2",
+			"sct-research-t2",
 			"oil-processing",
 			"advanced-electronics",
 			"solar-energy",			
@@ -170,7 +170,6 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-t2",
 			"sct-lab-t3",
 		},
 		unit =
@@ -325,7 +324,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-lab-t3",
+			"sct-research-t3",
 			"advanced-electronics-2",
 			"nuclear-power",
 		},
@@ -382,7 +381,6 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-t3",
 			"sct-lab-t4",
 			"battery",
 			"advanced-material-processing",
