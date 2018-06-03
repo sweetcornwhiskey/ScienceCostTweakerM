@@ -249,3 +249,9 @@ data:extend({
 		order = "sct-pack-b[bio]",
 	},
 })
+
+-- hd icon for biopack
+if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
+	data.raw.tool["sct-science-pack-bio"].icon_size = 64
+	data.raw.tool["sct-science-pack-bio"].icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-science-pack-bio-64.png"
+end
