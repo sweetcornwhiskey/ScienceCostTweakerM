@@ -51,6 +51,14 @@ data:extend({
 		default_value = "none",
 		allowed_values = {"none", "tier3", "tier4" },
 	},
+	
+	{
+		type = "bool-setting",
+		name = "sct-hd-icons",
+		order = "sct-g[icons]",
+		setting_type = "startup",
+		default_value = false,
+	},
 })
 
 

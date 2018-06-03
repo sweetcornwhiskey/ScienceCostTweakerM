@@ -1,4 +1,5 @@
 -- remove science packs from respective technologies
+local omnipackfound = false
 for _i, _tech in pairs(data.raw.technology) do
 --	log(_i .. "(" .. _i:len() .. ")" .. (_i:find("sct-research",1,true) == nil and "nonsct" or "sct"))
 	if (_i:len() < 13 or _i:find("sct-research",1,true) == nil) then
@@ -22,15 +23,22 @@ for _i, _tech in pairs(data.raw.technology) do
 						name == "logistic-science-pack"
 					) then
 						table.remove(_tech.effects, _j)
-						log("Removed science pack '" .. name .. "', unlocked by '" .. _i .. "'")
+						log("Moved science pack '" .. name .. "', unlocked by '" .. _i .. "' to research tree.")
 					elseif (
 							name:len() > 12 and
 							name:find("science-pack",1,true) ~= nil
 					) then
 						log("Found unknown science pack '" .. name .. "', unlocked by '" .. _i .. "'")
 					end
+					if name == "omni-pack" then
+						omnipackfound = true
+					end
 				end
 			end
 		end
 	end
+end
+
+if omnipackfound == false and mods["omnimatter_science"] then
+	log("zelos still have not fixed omnipack research")
 end
