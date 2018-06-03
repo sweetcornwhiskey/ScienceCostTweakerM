@@ -224,6 +224,11 @@ if mods["bobplates"] then
 end
 
 if mods["bobelectronics"] then
+	log(serpent.block(data.raw.recipe["sct-mil-circuit3"]))
+	if settings.startup["sct-military"].value == "tier2" then
+		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit3", "advanced-circuit", "electronic-circuit")
+	end
+	log(serpent.block(data.raw.recipe["sct-mil-circuit3"]))
 	if data.raw.item["basic-circuit-board"] then
 		bobmods.lib.recipe.replace_ingredient("sct-t2-instruments", "electronic-circuit", "basic-circuit-board")
 		bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "electronic-circuit", "basic-circuit-board")
@@ -258,6 +263,7 @@ if mods["bobtech"] then
 		data.raw.recipe["lab-2"].order = "b[labs]-e[lab5]"
 		bobmods.lib.recipe.replace_ingredient("lab-2", "lab", "sct-lab-4")
 	end
+	--[[
 	if data.raw.technology["advanced-research"] then
 		data.raw.technology["advanced-research"].upgrade = false
 		bobmods.lib.tech.remove_recipe_unlock("advanced-electronics-2", "sct-lab-4")
@@ -267,12 +273,17 @@ if mods["bobtech"] then
 		bobmods.lib.tech.remove_recipe_unlock("advanced-electronics-2", "sct-lab4-construction")
 		bobmods.lib.tech.add_recipe_unlock("advanced-research", "sct-lab4-construction")
 	end
+	]]--
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
 		data.raw.item["lab-alien"].order = "b[labs]-f[lab6]"
 		data.raw.recipe["lab-alien"].subgroup = "sct-labs"
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
 		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-3")
+		bobmods.lib.tech.remove_recipe_unlock("alien-research", "lab-alien")
+		if (#data.raw.technology["alien-research"].effects == 0) then
+			data.raw.technology["alien-research"].upgrade = true
+		end
 	end
 	if data.raw.tool["logistic-science-pack"] and  data.raw.recipe["logistic-science-pack"] then
 		-- remove logistic pack from tier 1 lab
@@ -285,10 +296,10 @@ if mods["bobtech"] then
 --		table.insert(data.raw["lab"]["sct-lab-2"].inputs, "logistic-science-pack")
 		table.insert(data.raw["lab"]["sct-lab-3"].inputs, "logistic-science-pack")
 		table.insert(data.raw["lab"]["sct-lab-4"].inputs, "logistic-science-pack")	
-		data.raw.tool["logistic-science-pack"].subgroup = "sct-sciencepack-logistic"
+		data.raw.tool["logistic-science-pack"].subgroup = "sct-science-pack-logistic"
 		data.raw.tool["logistic-science-pack"].order = "h_a[logistic]"
 		data.raw.tool["logistic-science-pack"].localised_name = "Commercial AI Implementation"
-		data.raw.recipe["logistic-science-pack"].subgroup = "sct-sciencepack-logistic"
+		data.raw.recipe["logistic-science-pack"].subgroup = "sct-science-pack-logistic"
 		data.raw.recipe["logistic-science-pack"].order = "h_a[logistic]"
 		data.raw.recipe["logistic-science-pack"].localised_name = "Commercial AI Implementation"
 		data.raw.recipe["logistic-science-pack"].ingredients = nil
@@ -322,10 +333,12 @@ if mods["bobtech"] then
 			},
 		}
 		-- unlocks
+		--[[
 		bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-cargo-unit")
 		bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-unimover")
 		bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-automated-storage")
 		bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-memory-unit")
+		]]--
 	end
 	if data.raw.tool["science-pack-gold"] then
 		data.raw.tool["science-pack-gold"].subgroup = "science-pack"
@@ -334,17 +347,18 @@ if mods["bobtech"] then
 		data.raw.recipe["science-pack-gold"].order = "gold-science-pack"
 	end
 	if data.raw.tool["alien-science-pack"] then
-		data.raw.tool["alien-science-pack"].subgroup = "sct-sciencepack-alien"
-		data.raw.tool["alien-science-pack-blue"].subgroup = "sct-sciencepack-alien"
-		data.raw.tool["alien-science-pack-orange"].subgroup = "sct-sciencepack-alien"
-		data.raw.tool["alien-science-pack-purple"].subgroup = "sct-sciencepack-alien"
-		data.raw.tool["alien-science-pack-yellow"].subgroup = "sct-sciencepack-alien"
-		data.raw.tool["alien-science-pack-green"].subgroup = "sct-sciencepack-alien"
-		data.raw.tool["alien-science-pack-red"].subgroup = "sct-sciencepack-alien"
+		data.raw.tool["alien-science-pack"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["alien-science-pack-blue"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["alien-science-pack-orange"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["alien-science-pack-purple"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["alien-science-pack-yellow"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["alien-science-pack-green"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["alien-science-pack-red"].subgroup = "sct-science-pack-alien"
 	end
 
 	if data.raw.item["brass-chest"] then
 		bobmods.lib.recipe.replace_ingredient("sct-logistic-automated-storage", "steel-chest", "brass-chest")
+		table.insert(data.raw.technology["sct-research-logistic"].prerequisites, "zinc-processing")
 	end
 end
 

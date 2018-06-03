@@ -2,13 +2,13 @@
 data:extend ({
 	{
 		type = "item-subgroup",
-		name = "sct-sciencepack-logistic",
+		name = "sct-science-pack-logistic",
 		group = "sct-science",
 		order = "h_a[logistic]",
 	},
 	{
 		type = "item-subgroup",
-		name = "sct-sciencepack-alien",
+		name = "sct-science-pack-alien",
 		group = "sct-science",
 		order = "k[alien]",
 	},
@@ -22,7 +22,7 @@ data:extend ({
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-cargo-unit.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencepack-logistic",
+		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-b[cargo]",
 		stack_size = 200,
 	},
@@ -33,7 +33,7 @@ data:extend ({
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-unimover.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencepack-logistic",
+		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-c[unimover]",
 		stack_size = 200,
 	},
@@ -44,7 +44,7 @@ data:extend ({
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-automated-storage.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencepack-logistic",
+		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-d[storage]",
 		stack_size = 200,
 	},
@@ -55,7 +55,7 @@ data:extend ({
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-memory-unit.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
-		subgroup = "sct-sciencepack-logistic",
+		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-e[memory-unit]",
 		stack_size = 200,
 	},	
@@ -66,7 +66,7 @@ data:extend ({
 	{
 		type = "recipe",
 		name = "sct-logistic-cargo-unit",
-		subgroup = "sct-sciencepack-logistic",
+		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-b[cargo]",
 		category = "crafting",
 		expensive =
@@ -102,7 +102,7 @@ data:extend ({
 	{
 		type = "recipe",
 		name = "sct-logistic-unimover",
-		subgroup = "sct-sciencepack-logistic",
+		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-c[unimover]",
 		category = "crafting",
 		expensive =
@@ -138,7 +138,7 @@ data:extend ({
 	{
 		type = "recipe",
 		name = "sct-logistic-automated-storage",
-		subgroup = "sct-sciencepack-logistic",
+		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-d[storage]",
 		category = "crafting",
 		expensive =
@@ -174,7 +174,7 @@ data:extend ({
 	{
 		type = "recipe",
 		name = "sct-logistic-memory-unit",
-		subgroup = "sct-sciencepack-logistic",
+		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-e[memory-unit]",
 		category = "crafting",
 		expensive =
@@ -205,5 +205,145 @@ data:extend ({
 				{type="item", name="sct-logistic-memory-unit", amount=1},
 			},
 		},
+	},
+})
+
+-- technology
+data:extend({
+	{
+		type = "technology",
+		name = "sct-research-logistic",
+		icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-128.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "logistic-science-pack",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-logistic-cargo-unit",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-logistic-memory-unit",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-logistic-unimover",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-logistic-automated-storage",
+			},
+		},
+		prerequisites =
+		{
+			"robotics",
+			"sct-research-t3",
+			"circuit-network",
+		},
+		unit =
+		{
+			count = 60,
+			ingredients = 
+			{
+				{type="item", name="science-pack-1", amount=1},
+				{type="item", name="science-pack-2", amount=1},
+				{type="item", name="science-pack-3", amount=1},
+			},
+			time = 1,
+		},
+		order = "sct-pack-d[logistic]",
+	},
+
+	{
+		type = "technology",
+		name = "sct-lab-alien",
+		icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab-128.png",
+		icon_size = 128,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "lab-alien",
+			},
+		},
+		prerequisites =
+		{
+			"alien-research",
+			"sct-research-t3",
+		},
+		unit =
+		{
+			count = 30,
+			ingredients =
+			{
+				{type="item", name="science-pack-1", amount=1},
+				{type="item", name="science-pack-2", amount=1},
+				{type="item", name="science-pack-3", amount=1},
+			},
+			time = 3,
+		},
+		order = "sct-lab-d[alien]",
+	},
+	
+	{
+		type = "technology",
+		name = "sct-research-alien",
+		icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-science-pack-128.png",
+		icon_size = 128,
+		effects =
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "alien-science-pack",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "alien-science-pack-blue",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "alien-science-pack-orange",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "alien-science-pack-purple",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "alien-science-pack-yellow",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "alien-science-pack-green",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "alien-science-pack-red",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "science-pack-gold",
+			},
+		},
+		prerequisites =
+		{
+			"sct-lab-alien"
+		},
+		unit =
+		{
+			count = 60,
+			ingredients = 
+			{
+				{type="item", name="science-pack-1", amount=1},
+				{type="item", name="science-pack-2", amount=1},
+				{type="item", name="science-pack-3", amount=1},
+			},
+			time = 1,
+		},
+		order = "sct-pack-c[omni]",
 	},
 })
