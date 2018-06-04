@@ -23,5 +23,18 @@ if mods["omnimatter_science"] then
 				data.raw.tool["omni-pack"].icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack.png"
 			end
 		end
+		-- fix missing omnipack in bobs alien lab
+		if data.raw.lab["lab-alien"] then
+			local omniin = false
+			for _j, input in pairs (data.raw.lab["lab-alien"].inputs) do
+				if input == "omni-pack" then
+					omniin = true
+					break
+				end
+			end
+			if omniin == false then
+				table.insert(data.raw.labs["lab-alien"].inputs, "omni-pack")
+			end
+		end
 	end
 end

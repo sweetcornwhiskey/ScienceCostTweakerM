@@ -282,9 +282,11 @@ if mods["bobtech"] then
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
 		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-3")
 		bobmods.lib.tech.remove_recipe_unlock("alien-research", "lab-alien")
-		if (#data.raw.technology["alien-research"].effects == 0) then
-			data.raw.technology["alien-research"].upgrade = true
-		end
+		bobmods.lib.tech.add_prerequisite("alien-research", "sct-research-alien")
+		bobmods.lib.tech.remove_prerequisite("alien-research", "advanced-research")
+		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-1", "science-pack-gold")
+		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-2", "alien-science-pack")
+		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-3", "military-science-pack")
 	end
 	if data.raw.tool["logistic-science-pack"] and  data.raw.recipe["logistic-science-pack"] then
 		-- remove logistic pack from tier 1 lab
@@ -358,6 +360,8 @@ if mods["bobtech"] then
 		end
 		data.raw.recipe["science-pack-gold"].subgroup = "science-pack"
 		data.raw.recipe["science-pack-gold"].order = "gold-science-pack"
+--		table.insert(data.raw.lab["sct-lab-3"].inputs, "science-pack-gold")
+--		table.insert(data.raw.lab["sct-lab-4"].inputs, "science-pack-gold")
 	end
 	if data.raw.tool["alien-science-pack"] then
 		data.raw.tool["alien-science-pack"].subgroup = "sct-science-pack-alien"
@@ -391,6 +395,9 @@ if mods["bobmodules"] then
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
 		data.raw.recipe["lab-module"].order = "b[labs]-g[lab7]"
 		bobmods.lib.recipe.replace_ingredient("lab-module", "lab", "sct-lab-2")
-		bobmods.lib.tech.add_prerequisite("effect-transmission","sct-research-t3")
+		--bobmods.lib.tech.add_prerequisite("effect-transmission","sct-research-t3")
+		bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-1", "speed-processor")
+		bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-2", "effectivity-processor")
+		bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-333", "productivity-processor")
 	end
 end

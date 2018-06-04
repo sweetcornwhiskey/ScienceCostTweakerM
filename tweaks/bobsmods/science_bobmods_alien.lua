@@ -24,7 +24,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"alien-research",
+			"advanced-research",
 			"sct-research-t3",
 		},
 		unit =
@@ -58,7 +58,8 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-lab-alien",
+			"sct-research-t3",
+			"sct-research-mil",
 		},
 		unit =
 		{
@@ -68,6 +69,7 @@ data:extend({
 				{type="item", name="science-pack-1", amount=1},
 				{type="item", name="science-pack-2", amount=1},
 				{type="item", name="science-pack-3", amount=1},
+				{type="item", name="military-science-pack", amount=1},
 			},
 			time = 1,
 		},
@@ -85,6 +87,7 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "alien-science-pack",
 			},
+--[[			
 			{
 				type = "unlock-recipe",
 				recipe = "alien-science-pack-blue",
@@ -109,19 +112,18 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "alien-science-pack-red",
 			},
+]]--			
 		},
 		prerequisites =
 		{
 			"sct-research-gold",
+			"sct-lab-alien",
 		},
 		unit =
 		{
 			count = 60,
 			ingredients = 
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
-				{type="item", name="science-pack-3", amount=1},
 				{type="item", name="science-pack-gold", amount=1},
 			},
 			time = 1,

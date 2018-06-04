@@ -13,8 +13,8 @@ data:extend({
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "module-processor-board",
-			},
+				recipe = "module-processor-board",				
+			},			
 			{
 				type = "unlock-recipe",
 				recipe = "speed-processor",
@@ -26,7 +26,7 @@ data:extend({
 			{
 				type = "unlock-recipe",
 				recipe = "productivity-processor",
-			},
+			},			
 		},
 		prerequisites =
 		{

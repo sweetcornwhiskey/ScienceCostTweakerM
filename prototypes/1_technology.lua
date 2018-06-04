@@ -18,7 +18,8 @@ for _i, _tech in pairs(data.raw.technology) do
 						name == "high-tech-science-pack" or
 						name == "sct-science-pack-bio" or
 						name == "omni-pack"	or 
-						(name:find("alien-science-pack",1,true) ~= nil) or
+--						(name:find("alien-science-pack",1,true) ~= nil) or
+						name == "alien-science-pack" or
 						name == "science-pack-gold" or
 						name == "logistic-science-pack"
 					) then
@@ -26,7 +27,8 @@ for _i, _tech in pairs(data.raw.technology) do
 						log("Moved science pack '" .. name .. "', unlocked by '" .. _i .. "' to research tree.")
 					elseif (
 							name:len() > 12 and
-							name:find("science-pack",1,true) ~= nil
+							name:find("science-pack",1,true) ~= nil and 
+							name:find("alien",1,true) == nil
 					) then
 						log("Found unknown science pack '" .. name .. "', unlocked by '" .. _i .. "'")
 					end
