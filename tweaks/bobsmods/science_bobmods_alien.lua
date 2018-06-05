@@ -26,6 +26,7 @@ data:extend({
 		{
 			"advanced-research",
 			"sct-research-t3",
+			"sct-research-mil",
 		},
 		unit =
 		{
@@ -35,6 +36,7 @@ data:extend({
 				{type="item", name="science-pack-1", amount=1},
 				{type="item", name="science-pack-2", amount=1},
 				{type="item", name="science-pack-3", amount=1},
+				{type="item", name="military-science-pack", amount=1},
 			},
 			time = 3,
 		},

@@ -286,7 +286,7 @@ if mods["bobtech"] then
 		bobmods.lib.tech.remove_prerequisite("alien-research", "advanced-research")
 		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-1", "science-pack-gold")
 		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-2", "alien-science-pack")
-		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-3", "military-science-pack")
+		bobmods.lib.tech.remove_science_pack("alien-research", "science-pack-3")
 	end
 	if data.raw.tool["logistic-science-pack"] and  data.raw.recipe["logistic-science-pack"] then
 		-- remove logistic pack from tier 1 lab
@@ -395,9 +395,20 @@ if mods["bobmodules"] then
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
 		data.raw.recipe["lab-module"].order = "b[labs]-g[lab7]"
 		bobmods.lib.recipe.replace_ingredient("lab-module", "lab", "sct-lab-2")
-		--bobmods.lib.tech.add_prerequisite("effect-transmission","sct-research-t3")
-		bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-1", "speed-processor")
-		bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-2", "effectivity-processor")
-		bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-333", "productivity-processor")
+		bobmods.lib.tech.add_prerequisite("effect-transmission","sct-research-t3")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-1", "speed-processor")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-2", "effectivity-processor")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-3", "productivity-processor")
+		bobmods.lib.tech.add_prerequisite("effect-transmission-2", "sct-research-prod")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission-2","science-pack-1", "speed-processor")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission-2","science-pack-2", "effectivity-processor")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission-2","science-pack-3", "productivity-processor")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission-2","production-science-pack", "module-circuit-board")
+		bobmods.lib.tech.add_prerequisite("effect-transmission-3", "sct-research-ht")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission-3","science-pack-1", "speed-processor")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission-3","science-pack-2", "effectivity-processor")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission-3","science-pack-3", "productivity-processor")
+		--bobmods.lib.tech.replace_science_pack("effect-transmission-3","high-tech-science-pack", "module-case")
+		--bobmods.lib.tech.add_science_pack("effect-transmission-3", "module-circuit-board", 1)
 	end
 end
