@@ -28,7 +28,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t1-ironcore",
-		icon = "__ScienceCostTweakerM__/graphics/icons/iron-core.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t1-iron-core.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-1",
@@ -39,7 +39,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t1-magnet-coils",
-		icon = "__ScienceCostTweakerM__/graphics/icons/magnet-coils.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t1-magnet-coils.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-1",
@@ -52,7 +52,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t2-instruments",
-		icon = "__ScienceCostTweakerM__/graphics/icons/instruments.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t2-instruments.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
@@ -63,7 +63,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t2-microcircuits",
-		icon = "__ScienceCostTweakerM__/graphics/icons/microcircuits.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t2-microcircuits.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
@@ -74,7 +74,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t2-micro-wafer",
-		icon = "__ScienceCostTweakerM__/graphics/icons/micro-wafer.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t2-micro-wafer.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
@@ -85,7 +85,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t2-wafer-stamp",
-		icon = "__ScienceCostTweakerM__/graphics/icons/wafer-stamp.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t2-wafer-stamp.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
@@ -96,7 +96,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t2-reaction-nodes",
-		icon = "__ScienceCostTweakerM__/graphics/icons/reaction-nodes.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t2-reaction-nodes.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-2",
@@ -110,7 +110,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t3-femto-lasers",
-		icon = "__ScienceCostTweakerM__/graphics/icons/femto-lasers.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t3-femto-lasers.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
@@ -121,7 +121,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t3-flash-fuel",
-		icon = "__ScienceCostTweakerM__/graphics/icons/flash-fuel.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t3-flash-fuel.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
@@ -132,7 +132,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t3-laser-foci",
-		icon = "__ScienceCostTweakerM__/graphics/icons/laser-foci.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t3-laser-foci.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
@@ -143,7 +143,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t3-laser-emitter",
-		icon = "__ScienceCostTweakerM__/graphics/icons/laser-emitter.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t3-laser-emitter.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
@@ -154,7 +154,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-t3-atomic-sensors",
-		icon = "__ScienceCostTweakerM__/graphics/icons/atomic-sensors.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-t3-atomic-sensors.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-3",
@@ -189,7 +189,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-mil-circuit3",
-		icon = "__ScienceCostTweakerM__/graphics/icons/military_analysis_3.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-mil-circuit3.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-mil",
@@ -200,7 +200,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-mil-circuit2",
-		icon = "__ScienceCostTweakerM__/graphics/icons/military_analysis_2.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-mil-circuit2.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-mil",
@@ -211,7 +211,7 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-mil-circuit1",
-		icon = "__ScienceCostTweakerM__/graphics/icons/military_analysis_1.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-mil-circuit1.png",
 		icon_size = 32,
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-mil",
@@ -225,7 +225,7 @@ data:extend({
 		type = "item",
 		name = "sct-prod-bioprocessor",
 		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/icons/bioprocessor.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-prod-bioprocessor.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-prod",
 		order = "h[prod]-b[bioprocessor]",
