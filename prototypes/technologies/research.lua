@@ -273,6 +273,10 @@ data:extend({
 			},
 			{
 				type = "unlock-recipe",
+				recipe = "sct-prod-chipcase",
+			},
+			{
+				type = "unlock-recipe",
 				recipe = "sct-waste-processing-mixed",
 			},
 		},

@@ -894,7 +894,7 @@ data:extend({
 				{type="item", name="iron-gear-wheel", amount=40},
 				{type="item", name="copper-cable", amount=40},
 				{type="item", name="steel-plate", amount=20},
-				{type="item", name="electric-engine-unit", amount=2},
+				{type="item", name="sct-prod-chipcase", amount=2},
 				{type="fluid", name="water", amount=300}
 			},
 			results = 
@@ -914,7 +914,7 @@ data:extend({
 				{type="item", name="iron-gear-wheel", amount=17},
 				{type="item", name="copper-cable", amount=16},
 				{type="item", name="steel-plate", amount=9},
-				{type="item", name="electric-engine-unit", amount=1},
+				{type="item", name="sct-prod-chipcase", amount=1},
 				{type="fluid", name="water", amount=120}
 			},
 			results = 
@@ -924,6 +924,50 @@ data:extend({
 				{type="item", name="sct-waste-copperonly", amount=3}
 			},
 			main_product = "sct-prod-overclocker",
+		},
+	},
+	
+	{
+		type = "recipe",
+		name = "sct-prod-chipcase",
+		category = "crafting-with-fluid",
+		subgroup = "sct-sciencepack-prod",
+		order = "h[prod]-f[chipcase]",
+		expensive =
+		{
+			enabled = false,
+			energy_required = 3,
+			ingredients =
+			{
+				{type="item", name="plastic-bar", amount=12},
+				{type="item", name="green-wire", amount=13},
+				{type="item", name="advanced-circuit", amount=2},
+				{type="fluid", name="heavy-oil", amount=300}
+			},
+			results = 
+			{
+				{type="item", name="sct-prod-chipcase", amount=1},
+				{type="item", name="sct-waste-copperonly", amount=3}
+			},
+			main_product = "sct-prod-chipcase",
+		},
+		normal =
+		{
+			enabled = false,
+			energy_required = 1,
+			ingredients =
+			{
+				{type="item", name="plastic-bar", amount=5},
+				{type="item", name="green-wire", amount=5},
+				{type="item", name="advanced-circuit", amount=1},
+				{type="fluid", name="heavy-oil", amount=120}
+			},
+			results = 
+			{
+				{type="item", name="sct-prod-chipcase", amount=1},
+				{type="item", name="sct-waste-copperonly", amount=3}
+			},
+			main_product = "sct-prod-chipcase",
 		},
 	},
 	

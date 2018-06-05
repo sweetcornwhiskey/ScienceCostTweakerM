@@ -258,10 +258,21 @@ data:extend({
 		type = "item",
 		name = "sct-prod-overclocker",
 		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/icons/overclocker.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-prod-overclocker.png",
 		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-sciencepack-prod",
 		order = "h[prod]-e[overclocker]",
+		stack_size = 200
+	},
+
+	{
+		type = "item",
+		name = "sct-prod-chipcase",
+		icon_size = 32,
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-prod-chipcase.png",
+		flags = {"goes-to-main-inventory"},
+		subgroup = "sct-sciencepack-prod",
+		order = "h[prod]-f[chipcase]",
 		stack_size = 200
 	},
 
