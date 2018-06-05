@@ -284,7 +284,6 @@ data:extend({
 		{
 			"sct-research-t3",
 			"circuit-network",
-			"electric-engine",			
 		},
 		unit =
 		{
