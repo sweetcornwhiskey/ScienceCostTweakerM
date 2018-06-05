@@ -12,6 +12,7 @@ if mods["omnimatter_science"] then
 			end
 		end
 		table.insert(data.raw["lab"]["sct-lab-2"].inputs, "omni-pack")
+		table.insert(data.raw.technology["sct-lab-t3"].prerequisites, "sct-research-omni")
 		table.insert(data.raw["lab"]["sct-lab-3"].inputs, "omni-pack")
 		table.insert(data.raw["lab"]["sct-lab-4"].inputs, "omni-pack")	
 		if data.raw.tool["omni-pack"] then
@@ -33,7 +34,7 @@ if mods["omnimatter_science"] then
 				end
 			end
 			if omniin == false then
-				table.insert(data.raw.labs["lab-alien"].inputs, "omni-pack")
+				table.insert(data.raw.lab["lab-alien"].inputs, "omni-pack")
 			end
 		end
 	end
