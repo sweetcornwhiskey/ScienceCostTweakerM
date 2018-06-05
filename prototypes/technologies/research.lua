@@ -5,7 +5,17 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t2",
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon-128.png",
+		icons = 
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon-128.png",
+				icon_size = 128,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/2-128.png",
+				icon_size = 128,
+			},
+		},
 		icon_size = 128,
 		effects = 
 		{
@@ -94,7 +104,17 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t3",
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon-128.png",
+		icons = 
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon-128.png",
+				icon_size = 128,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/3-128.png",
+				icon_size = 128,
+			},
+		},
 		icon_size = 128,
 		effects = 
 		{
@@ -304,8 +324,17 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t4",
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon-128.png",
-		icon_size = 128,
+		icons = 
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon-128.png",
+				icon_size = 128,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/4-128.png",
+				icon_size = 128,
+			},
+		},
 		effects = 
 		{
 			{

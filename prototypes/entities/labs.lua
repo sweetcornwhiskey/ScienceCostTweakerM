@@ -81,8 +81,17 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-2",
-		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
+		icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/2.png",
+				icon_size = 32,
+			},
+		},		
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
 		order = "a[labs]-b[sct-lab-2]",
@@ -92,8 +101,17 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-2",
-		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
+		icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/2.png",
+				icon_size = 32,
+			},
+		},		
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-2"},
 		max_health = 200,
@@ -154,8 +172,17 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-3",
-		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
+		icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/3.png",
+				icon_size = 32,
+			},
+		},		
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
 		order = "a[labs]-c[sct-lab-3]",
@@ -166,7 +193,28 @@ data:extend({
 		type = "lab",
 		name = "sct-lab-3",
 		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
+		icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/4.png",
+				icon_size = 32,
+			},
+		},		
+		icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/3.png",
+				icon_size = 32,
+			},
+		},		
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-3"},
 		max_health = 250,
@@ -231,8 +279,17 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-4",
-		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
+		icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/4.png",
+				icon_size = 32,
+			},
+		},		
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
 		order = "a[labs]-d[sct-lab-4]",
@@ -242,8 +299,17 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-4",
-		icon_size = 32,
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
+		icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/4.png",
+				icon_size = 32,
+			},
+		},		
 		flags = {"placeable-player", "player-creation"},
 		minable = {mining_time = 1, result = "sct-lab-4"},
 		max_health = 300,
@@ -311,9 +377,29 @@ data:extend({
 -- Rework vanilla science lab into a Tier 1 science lab.
 data.raw["item"]["lab"].subgroup = "sct-labs"
 data.raw["item"]["lab"].order = "b[labs]-a[lab1]"
-data.raw["item"]["lab"].icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png"
+data.raw["item"]["lab"].icons = 
+{
+	{
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
+		icon_size = 32,
+	},
+	{
+		icon = "__ScienceCostTweakerM__/graphics/overlays/1.png",
+		icon_size = 32,
+	},
+}
 
-data.raw["lab"]["lab"].icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png"
+data.raw["lab"]["lab"].icons = 
+{
+	{
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
+		icon_size = 32,
+	},
+	{
+		icon = "__ScienceCostTweakerM__/graphics/overlays/1.png",
+		icon_size = 32,
+	},
+}
 data.raw["lab"]["lab"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
 data.raw["lab"]["lab"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
 data.raw["lab"]["lab"].on_animation =

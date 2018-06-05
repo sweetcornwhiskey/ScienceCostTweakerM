@@ -17,11 +17,21 @@ if mods["omnimatter_science"] then
 		table.insert(data.raw["lab"]["sct-lab-4"].inputs, "omni-pack")	
 		if data.raw.tool["omni-pack"] then
 			if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
-				data.raw.tool["omni-pack"].icon_size = 64
-				data.raw.tool["omni-pack"].icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack-64.png"
+				data.raw.tool["omni-pack"].icons =
+				{
+					{
+						icon_size = 64,
+						icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack-64.png",
+					},
+				}
 			else
-				data.raw.tool["omni-pack"].icon_size = 32
-				data.raw.tool["omni-pack"].icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack.png"
+				data.raw.tool["omni-pack"].icons =
+				{
+					{
+						icon_size = 32,
+						icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack.png",
+					},
+				}
 			end
 		end
 		-- fix missing omnipack in bobs alien lab

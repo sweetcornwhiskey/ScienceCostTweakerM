@@ -13,8 +13,17 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-alien",
-		icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab-128.png",
-		icon_size = 128,
+		icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab-128.png",
+				icon_size = 128,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/alien-128.png",
+				icon_size = 128,
+			},
+		},		
 		effects = 
 		{
 			{

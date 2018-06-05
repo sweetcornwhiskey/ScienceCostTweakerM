@@ -1,4 +1,4 @@
-﻿data:extend({
+data:extend({
 	
 	-- Create new intermediary products unique to science pack creation.
 	-- ===================================================================
@@ -9,7 +9,7 @@
 		name = "sct-science",
 		order = "c-sct",
 		inventory_order = "c-sct",
-		icon = "__base__/graphics/item-group/fluids.png",
+		icon = "__ScienceCostTweakerM__/graphics/icons/sct-science-64.png",
 		icon_size = 64,
 
 	},

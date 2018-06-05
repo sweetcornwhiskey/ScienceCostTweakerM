@@ -258,6 +258,17 @@ if mods["bobtech"] then
 		-- if someone enables it, move it to sct labs group, and make it hightest tier lab
 		data.raw.item["lab-2"].subgroup = "sct-labs"
 		data.raw.item["lab-2"].order = "b[labs]-e[lab5]"
+		data.raw.item["lab-2"].icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/bobmods/lab2.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/beta.png",
+				icon_size = 32,
+			},
+		}		
 		data.raw.recipe["lab-2"].subgroup = "sct-labs"
 		data.raw.recipe["lab-2"].order = "b[labs]-e[lab5]"
 		bobmods.lib.recipe.replace_ingredient("lab-2", "lab", "sct-lab-4")
@@ -276,8 +287,17 @@ if mods["bobtech"] then
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
 		data.raw.item["lab-alien"].order = "b[labs]-f[lab6]"
-		data.raw.item["lab-alien"].icon_size = 32
-		data.raw.item["lab-alien"].icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab.png"
+		data.raw.item["lab-alien"].icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/alien.png",
+				icon_size = 32,
+			},
+		}
 		data.raw.recipe["lab-alien"].subgroup = "sct-labs"
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
 		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-3")
@@ -390,8 +410,17 @@ if mods["bobmodules"] then
 	if data.raw.item["lab-module"] then
 		data.raw.item["lab-module"].subgroup = "sct-labs"
 		data.raw.item["lab-module"].order = "b[labs]-g[lab7]"
-		data.raw.item["lab-module"].icon_size = 32
-		data.raw.item["lab-module"].icon = "__ScienceCostTweakerM__/graphics/bobmods/module-lab.png"
+		data.raw.item["lab-module"].icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/bobmods/module-lab.png",
+				icon_size = 32,
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/module.png",
+				icon_size = 32,
+			},
+		}
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
 		data.raw.recipe["lab-module"].order = "b[labs]-g[lab7]"
 		bobmods.lib.recipe.replace_ingredient("lab-module", "lab", "sct-lab-2")

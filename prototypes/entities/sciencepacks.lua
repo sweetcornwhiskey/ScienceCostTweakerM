@@ -38,18 +38,53 @@ if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value =
 	data.raw["tool"]["space-science-pack"].icon_size = 64
 	data.raw["tool"]["space-science-pack"].icon = "__ScienceCostTweakerM__/graphics/icons/space-science-pack-64.png"
 else
-	data.raw["tool"]["science-pack-1"].icon_size = 32
-	data.raw["tool"]["science-pack-1"].icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-1.png"
-	data.raw["tool"]["science-pack-3"].icon_size = 32
-	data.raw["tool"]["science-pack-3"].icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-3.png"
-	data.raw["tool"]["science-pack-2"].icon_size = 32
-	data.raw["tool"]["science-pack-2"].icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-2.png"
-	data.raw["tool"]["military-science-pack"].icon_size = 32
-	data.raw["tool"]["military-science-pack"].icon = "__ScienceCostTweakerM__/graphics/icons/military-science-pack.png"
-	data.raw["tool"]["production-science-pack"].icon_size = 32
-	data.raw["tool"]["production-science-pack"].icon = "__ScienceCostTweakerM__/graphics/icons/production-science-pack.png"
-	data.raw["tool"]["high-tech-science-pack"].icon_size = 32
-	data.raw["tool"]["high-tech-science-pack"].icon = "__ScienceCostTweakerM__/graphics/icons/high-tech-science-pack.png"
-	data.raw["tool"]["space-science-pack"].icon_size = 32
-	data.raw["tool"]["space-science-pack"].icon = "__ScienceCostTweakerM__/graphics/icons/space-science-pack.png"
+	data.raw["tool"]["science-pack-1"].icons =
+	{
+		{
+			icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-1.png",
+			icon_size = 32,
+		},
+	}
+	data.raw["tool"]["science-pack-2"].icons =
+	{
+		{
+			icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-2.png",
+			icon_size = 32,
+		},
+	}
+	data.raw["tool"]["science-pack-3"].icons =
+	{
+		{
+			icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-3.png",
+			icon_size = 32,
+		},
+	}
+	data.raw["tool"]["military-science-pack"].icons =
+	{
+		{
+			icon = "__ScienceCostTweakerM__/graphics/icons/military-science-pack.png",
+			icon_size = 32,
+		},
+	}
+	data.raw["tool"]["production-science-pack"].icons =
+	{
+		{
+			icon = "__ScienceCostTweakerM__/graphics/icons/production-science-pack.png",
+			icon_size = 32,
+		},
+	}
+	data.raw["tool"]["high-tech-science-pack"].icons =
+	{
+		{
+			icon = "__ScienceCostTweakerM__/graphics/icons/high-tech-science-pack.png",
+			icon_size = 32,
+		},
+	}
+	data.raw["tool"]["space-science-pack"].icons =
+	{
+		{
+			icon = "__ScienceCostTweakerM__/graphics/icons/space-science-pack.png",
+			icon_size = 32,
+		},
+	}
 end
