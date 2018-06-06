@@ -62,7 +62,6 @@ data:extend ({
 		name = "sct-logistic-cargo-unit",
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-b[cargo]",
-		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -98,7 +97,6 @@ data:extend ({
 		name = "sct-logistic-unimover",
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-c[unimover]",
-		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -134,7 +132,6 @@ data:extend ({
 		name = "sct-logistic-automated-storage",
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-d[storage]",
-		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -170,7 +167,6 @@ data:extend ({
 		name = "sct-logistic-memory-unit",
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-e[memory-unit]",
-		category = "crafting",
 		expensive =
 		{
 			enabled = false,

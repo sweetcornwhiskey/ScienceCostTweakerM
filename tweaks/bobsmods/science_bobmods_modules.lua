@@ -3,15 +3,14 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-modules",
+		icon_size = 128,
 		icons =
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/bobmods/module-lab-128.png",
-				icon_size = 128,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/module-128.png",
-				icon_size = 128,
 			},
 		},		
 		effects = 

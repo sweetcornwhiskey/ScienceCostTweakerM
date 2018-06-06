@@ -424,7 +424,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t3-laser-foci",
-		category = "crafting",
 		subgroup = "sct-sciencepack-3",
 		order = "f[t3]-d[laserfoci]",
 		expensive =
@@ -464,7 +463,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-t3-laser-emitter",
-		category = "crafting",
 		subgroup = "sct-sciencepack-3",
 		order = "f[t3]-e[laseremitter]",
 		expensive =
@@ -596,7 +594,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-mil-subplating",
-		category = "crafting",
 		subgroup = "sct-sciencepack-mil",
 		order = "g[mil]-c[subplating]",
 		expensive =
@@ -678,7 +675,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-mil-circuit2",
-		category = "crafting",
 		subgroup = "sct-sciencepack-mil",
 		order = "g[mil]-e[circuit2]",
 		expensive =
@@ -720,7 +716,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-mil-circuit1",
-		category = "crafting",
 		subgroup = "sct-sciencepack-mil",
 		order = "g[mil]-f[circuit1]",
 		expensive = 
@@ -1176,7 +1171,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab1-construction",
-		category = "crafting",
 		expensive =
 		{
 			energy_required = 5,
@@ -1204,7 +1198,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab1-mechanization",
-		category = "crafting",
 		expensive =
 		{
 			energy_required = 10,
@@ -1233,7 +1226,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab2-construction",
-		category = "crafting",
 		expensive = 
 		{
 			energy_required = 10,
@@ -1261,7 +1253,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab2-automatization",
-		category = "crafting",
 		expensive = 
 		{
 			energy_required = 20,
@@ -1290,7 +1281,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab3-construction",
-		category = "crafting",
 		expensive = 
 		{
 			energy_required = 15,
@@ -1318,7 +1308,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab3-optics",
-		category = "crafting",
 		expensive =
 		{
 			energy_required = 30,
@@ -1347,7 +1336,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab4-construction",
-		category = "crafting",
 		expensive = 
 		{
 			energy_required = 15,
@@ -1375,7 +1363,6 @@ data:extend({
 	{
 		type = "recipe",
 		name = "sct-lab4-manipulators",
-		category = "crafting",
 		expensive =
 		{
 			energy_required = 30,

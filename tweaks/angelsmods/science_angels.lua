@@ -66,7 +66,6 @@ data:extend (
 		name = "sct-science-pack-bio",
 		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]",
-		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -102,7 +101,6 @@ data:extend (
 		name = "sct-bio-ground-sample",
 		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]-b[groundsample]",
-		category = "crafting",
 		expensive =
 		{
 			enabled = false,
@@ -242,7 +240,7 @@ data:extend({
 			count = 60,
 			ingredients = 
 			{
-				{type="item", name="science-pack-1", amount=1},
+				{"science-pack-1", 1},
 			},
 			time = 1,
 		},

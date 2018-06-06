@@ -5,18 +5,16 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t2",
+		icon_size = 128,
 		icons = 
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon-128.png",
-				icon_size = 128,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/2-128.png",
-				icon_size = 128,
 			},
 		},
-		icon_size = 128,
 		effects = 
 		{
 			{
@@ -42,7 +40,7 @@ data:extend({
 			count = 30,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
+				{"science-pack-1", 1},
 			},
 			time = 1,
 		},
@@ -92,7 +90,7 @@ data:extend({
 			count = 60,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
+				{"science-pack-1", 1},
 			},
 			time = 1,
 		},
@@ -104,18 +102,16 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t3",
+		icon_size = 128,
 		icons = 
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon-128.png",
-				icon_size = 128,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/3-128.png",
-				icon_size = 128,
 			},
 		},
-		icon_size = 128,
 		effects = 
 		{
 			{
@@ -163,8 +159,8 @@ data:extend({
 			count = 30,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
 			},
 			time = 2,
 		},
@@ -197,8 +193,8 @@ data:extend({
 			count = 60,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
 			},
 			time = 2,
 		},
@@ -255,8 +251,8 @@ data:extend({
 			count = 60,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
 			},
 			time = 3,
 		},
@@ -310,9 +306,9 @@ data:extend({
 			count = 60,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
-				{type="item", name="science-pack-3", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
 			},
 			time = 3,
 		},
@@ -324,15 +320,14 @@ data:extend({
 	{
 		type = "technology",
 		name = "sct-lab-t4",
+		icon_size = 128,
 		icons = 
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon-128.png",
-				icon_size = 128,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/4-128.png",
-				icon_size = 128,
 			},
 		},
 		effects = 
@@ -365,9 +360,9 @@ data:extend({
 			count = 30,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
-				{type="item", name="science-pack-3", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
 			},
 			time = 3,
 		},
@@ -422,9 +417,9 @@ data:extend({
 			count = 60,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
-				{type="item", name="science-pack-3", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
 			},
 			time = 4,
 		},
@@ -438,7 +433,7 @@ if settings.startup["sct-military"].value == "tier2" then
 	data.raw.technology["sct-research-mil"].unit.time = 2
 else
 	table.insert(data.raw.technology["sct-research-mil"].prerequisites, "sct-research-t3")
-	table.insert(data.raw.technology["sct-research-mil"].unit.ingredients, {type="item",name="science-pack-3",amount=1})
+	table.insert(data.raw.technology["sct-research-mil"].unit.ingredients, {"science-pack-3",1})
 end
 
 -- add pack as prerequisity for research speed research

@@ -287,15 +287,24 @@ if mods["bobtech"] then
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
 		data.raw.item["lab-alien"].order = "b[labs]-f[lab6]"
+		data.raw.item["lab-alien"].icon_size = 32
 		data.raw.item["lab-alien"].icons =
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab.png",
-				icon_size = 32,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/alien.png",
-				icon_size = 32,
+			},
+		}
+		data.raw.lab["lab-alien"].icon_size = 32
+		data.raw.lab["lab-alien"].icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-lab.png",
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/alien.png",
 			},
 		}
 		data.raw.recipe["lab-alien"].subgroup = "sct-labs"
@@ -410,15 +419,24 @@ if mods["bobmodules"] then
 	if data.raw.item["lab-module"] then
 		data.raw.item["lab-module"].subgroup = "sct-labs"
 		data.raw.item["lab-module"].order = "b[labs]-g[lab7]"
+		data.raw.item["lab-module"].icon_size = 32
 		data.raw.item["lab-module"].icons =
 		{
 			{
 				icon = "__ScienceCostTweakerM__/graphics/bobmods/module-lab.png",
-				icon_size = 32,
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/module.png",
-				icon_size = 32,
+			},
+		}
+		data.raw.lab["lab-module"].icon_size = 32
+		data.raw.lab["lab-module"].icons =
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/bobmods/module-lab.png",
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/module.png",
 			},
 		}
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
