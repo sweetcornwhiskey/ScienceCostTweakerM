@@ -45,7 +45,7 @@ data:extend({
 		order = "a[labs]-b[sct-lab-2]",
 		expensive =
 		{
-			enabled = "false",
+			enabled = false,
 			energy_required = 12,
 			ingredients =
 			{
@@ -60,7 +60,7 @@ data:extend({
 		},
 		normal = 
 		{
-			enabled = "false",
+			enabled = false,
 			energy_required = 5,
 			ingredients =
 			{
@@ -82,7 +82,7 @@ data:extend({
 		order = "b[labs]-c[sct-lab-3]",
 		expensive =
 		{
-			enabled = "false",
+			enabled = false,
 			energy_required = 12,
 			ingredients =
 			{
@@ -97,7 +97,7 @@ data:extend({
 		},
 		normal = 
 		{
-			enabled = "false",
+			enabled = false,
 			energy_required = 5,
 			ingredients =
 			{
@@ -119,7 +119,7 @@ data:extend({
 		order = "b[labs]-d[lab4]",
 		expensive =
 		{
-			enabled = "false",
+			enabled = false,
 			energy_required = 12,
 			ingredients =
 			{
@@ -134,7 +134,7 @@ data:extend({
 		},
 		normal = 
 		{
-			enabled = "false",
+			enabled = false,
 			energy_required = 5,
 			ingredients =
 			{
@@ -185,3 +185,4 @@ end
 
 data.raw.recipe["lab"].order = "a[labs]-a[lab]"
 data.raw.recipe["lab"].subgroup = "sct-labs"
+data.raw.recipe["lab"].enabled = false

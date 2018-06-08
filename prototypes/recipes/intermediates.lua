@@ -97,7 +97,7 @@ data:extend({
 		order = "d[t1]-b[ironcore]",		
 		expensive =
 		{
-			enabled = true,
+			enabled = false,
 			energy_required = 2.5,
 			ingredients = 
 			{
@@ -110,7 +110,7 @@ data:extend({
 		},
 		normal =
 		{
-			enabled = true,
+			enabled = false,
 			energy_required = 1.25,
 			ingredients = 
 			{
@@ -130,7 +130,7 @@ data:extend({
 		order = "d[t1]-c[magnet-coils]",
 		expensive = 
 		{
-			enabled = true,
+			enabled = false,
 			energy_required = 12.5,
 			ingredients =
 			{
@@ -143,7 +143,7 @@ data:extend({
 		},
 		normal = 
 		{
-			enabled = true,
+			enabled = false,
 			energy_required = 5,
 			ingredients =
 			{

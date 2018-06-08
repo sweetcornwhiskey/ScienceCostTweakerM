@@ -5,6 +5,7 @@
 -- ===================================================================
 data.raw["recipe"]["science-pack-1"].expensive = 
 {
+	enabled = false,
 	ingredients =
 	{
 		{"sct-t1-ironcore", 3},
@@ -18,6 +19,7 @@ data.raw["recipe"]["science-pack-1"].expensive =
 }
 data.raw["recipe"]["science-pack-1"].normal =
 {
+	enabled = false,
 	ingredients =
 	{
 		{"sct-t1-ironcore", 1},
@@ -37,7 +39,7 @@ data.raw["recipe"]["science-pack-1"].order = "d[t1]-a[science-pack-1]"
 -- ===================================================================
 data.raw["recipe"]["science-pack-2"].expensive =
 {
-	enabled = "false",
+	enabled = false,
 	ingredients =
 	{
 		{"sct-t2-instruments", 3},
@@ -52,7 +54,7 @@ data.raw["recipe"]["science-pack-2"].expensive =
 }
 data.raw["recipe"]["science-pack-2"].normal =
 {
-	enabled = "false",
+	enabled = false,
 	ingredients =
 	{
 		{"sct-t2-instruments", 1},
@@ -89,7 +91,7 @@ data.raw["recipe"]["science-pack-2"].order = "e[t2]-a[science-pack-2]"
 ]]--
 data.raw["recipe"]["science-pack-3"].expensive =
 {
-	enabled = "false",
+	enabled = false,
 	ingredients =
 	{
 		{"sct-t3-femto-lasers", 3},
@@ -104,7 +106,7 @@ data.raw["recipe"]["science-pack-3"].expensive =
 }
 data.raw["recipe"]["science-pack-3"].normal =
 {
-	enabled = "false",
+	enabled = false,
 	ingredients =
 	{
 		{"sct-t3-femto-lasers", 1},
@@ -137,7 +139,7 @@ data.raw["recipe"]["science-pack-3"].order = "f[t3]-a[science-pack-3]"
 ]]--
 data.raw["recipe"]["military-science-pack"].expensive =
 {
-	enabled = "false",
+	enabled = false,
 	ingredients =
 	{
 		{"sct-mil-circuit3", 2},
@@ -152,7 +154,7 @@ data.raw["recipe"]["military-science-pack"].expensive =
 }
 data.raw["recipe"]["military-science-pack"].normal =
 {
-	enabled = "false",
+	enabled = false,
 	ingredients =
 	{
 		{"sct-mil-circuit3", 1},
@@ -246,7 +248,7 @@ data.raw["recipe"]["high-tech-science-pack"].expensive =
 }
 data.raw["recipe"]["high-tech-science-pack"].normal =
 {
-	enabled = "false",
+	enabled = false,
 	ingredients =
 	{
 		{"sct-htech-capbank", 1},
