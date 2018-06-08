@@ -1,5 +1,87 @@
 -- add new technology
 data:extend({
+	-- TIER 1
+	-- tier 1 lab
+	{
+		type = "technology",
+		name = "sct-lab-t1",
+		icon_size = 128,
+		icons = 
+		{
+			{
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon-128.png",
+			},
+			{
+				icon = "__ScienceCostTweakerM__/graphics/overlays/1-128.png",
+			},
+		},
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "lab",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-lab1-construction",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-lab1-mechanization",
+			},
+		},
+		prerequisites =
+		{
+		},
+		unit =
+		{
+			count = 15,
+			ingredients =
+			{
+--				{"science-pack-0", 1},
+			},
+			time = 1,
+		},
+		order = "sct-lab-a[t1]",
+	},
+	
+	-- tier 1 pack
+	{
+		type = "technology",
+		name = "sct-research-t1",
+		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-1-128.png",
+		icon_size = 128,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "science-pack-1",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-t1-ironcore",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-t1-magnet-coils",
+			},
+		},
+		prerequisites =
+		{
+			"sct-lab-t1",
+		},
+		unit =
+		{
+			count = 30,
+			ingredients =
+			{
+--				{"science-pack-0", 1},
+			},
+			time = 1,
+		},
+		order = "sct-pack-a[t1]",
+	},
+
 	-- TIER 2
 	-- tier 2 lab
 	{
@@ -42,7 +124,7 @@ data:extend({
 			{
 				{"science-pack-1", 1},
 			},
-			time = 1,
+			time = 2,
 		},
 		order = "sct-lab-b[t2]",
 	},
@@ -92,7 +174,7 @@ data:extend({
 			{
 				{"science-pack-1", 1},
 			},
-			time = 1,
+			time = 2,
 		},
 		order = "sct-pack-b[t2]",
 	},
@@ -156,13 +238,13 @@ data:extend({
 		},
 		unit =
 		{
-			count = 30,
+			count = 45,
 			ingredients =
 			{
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 			},
-			time = 2,
+			time = 3,
 		},
 		order = "sct-lab-c[t3]",
 	},
@@ -190,15 +272,15 @@ data:extend({
 		},
 		unit =
 		{
-			count = 60,
+			count = 90,
 			ingredients =
 			{
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 			},
-			time = 2,
+			time = 3,
 		},
-		order = "sct-pack-c[t2]",
+		order = "sct-pack-c[t3]",
 	},
 
 	-- military // unlocked by t2/t3 depends on settings
@@ -254,7 +336,7 @@ data:extend({
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 			},
-			time = 3,
+			time = 2,
 		},
 		order = "sct-pack-d[mil]",
 	},
@@ -303,7 +385,7 @@ data:extend({
 		},
 		unit =
 		{
-			count = 60,
+			count = 90,
 			ingredients =
 			{
 				{"science-pack-1", 1},
@@ -357,7 +439,7 @@ data:extend({
 		},
 		unit =
 		{
-			count = 30,
+			count = 60,
 			ingredients =
 			{
 				{"science-pack-1", 1},
@@ -414,7 +496,7 @@ data:extend({
 		},
 		unit =
 		{
-			count = 60,
+			count = 120,
 			ingredients =
 			{
 				{"science-pack-1", 1},
@@ -430,10 +512,11 @@ data:extend({
 -- military tech dependencies, based on settings
 if settings.startup["sct-military"].value == "tier2" then
 	table.insert(data.raw.technology["sct-research-mil"].prerequisites, "sct-research-t2")
-	data.raw.technology["sct-research-mil"].unit.time = 2
 else
 	table.insert(data.raw.technology["sct-research-mil"].prerequisites, "sct-research-t3")
 	table.insert(data.raw.technology["sct-research-mil"].unit.ingredients, {"science-pack-3",1})
+	data.raw.technology["sct-research-mil"].unit.time = 3
+	data.raw.technology["sct-research-mil"].unit.count = 90
 end
 
 -- add pack as prerequisity for research speed research
