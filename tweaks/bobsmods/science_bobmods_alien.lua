@@ -38,7 +38,7 @@ data:extend({
 		},
 		unit =
 		{
-			count = 30,
+			count = 45,
 			ingredients =
 			{
 				{"science-pack-1", 1},
@@ -73,7 +73,7 @@ data:extend({
 		},
 		unit =
 		{
-			count = 60,
+			count = 90,
 			ingredients = 
 			{
 				{"science-pack-1", 1},
@@ -81,7 +81,7 @@ data:extend({
 				{"science-pack-3", 1},
 				{"military-science-pack", 1},
 			},
-			time = 1,
+			time = 3,
 		},
 		order = "sct-pack-d[gold]",
 	},
@@ -131,12 +131,12 @@ data:extend({
 		},
 		unit =
 		{
-			count = 60,
+			count = 120,
 			ingredients = 
 			{
 				{"science-pack-gold", 1},
 			},
-			time = 1,
+			time = 4,
 		},
 		order = "sct-pack-e[alien]",
 	},

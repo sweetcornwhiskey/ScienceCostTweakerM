@@ -236,14 +236,14 @@ data:extend({
 		},
 		unit =
 		{
-			count = 60,
+			count = 90,
 			ingredients = 
 			{
 				{"science-pack-1", 1},
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
 			},
-			time = 1,
+			time = 3,
 		},
 		order = "sct-pack-d[logistic]",
 	},

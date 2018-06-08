@@ -242,7 +242,7 @@ data:extend({
 			{
 				{"science-pack-1", 1},
 			},
-			time = 1,
+			time = 2,
 		},
 		order = "sct-pack-b[bio]",
 	},

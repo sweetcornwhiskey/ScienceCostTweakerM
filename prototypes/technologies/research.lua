@@ -446,7 +446,7 @@ data:extend({
 				{"science-pack-2", 1},
 				{"science-pack-3", 1},
 			},
-			time = 3,
+			time = 4,
 		},
 		order = "sct-lab-d[t4]",
 	},
