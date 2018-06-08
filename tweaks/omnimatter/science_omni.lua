@@ -23,8 +23,8 @@ data:extend({
 			count = 60,
 			ingredients = 
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
 			},
 			time = 1,
 		},

@@ -41,10 +41,10 @@ data:extend({
 			count = 30,
 			ingredients =
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
-				{type="item", name="science-pack-3", amount=1},
-				{type="item", name="military-science-pack", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"military-science-pack", 1},
 			},
 			time = 3,
 		},
@@ -76,10 +76,10 @@ data:extend({
 			count = 60,
 			ingredients = 
 			{
-				{type="item", name="science-pack-1", amount=1},
-				{type="item", name="science-pack-2", amount=1},
-				{type="item", name="science-pack-3", amount=1},
-				{type="item", name="military-science-pack", amount=1},
+				{"science-pack-1", 1},
+				{"science-pack-2", 1},
+				{"science-pack-3", 1},
+				{"military-science-pack", 1},
 			},
 			time = 1,
 		},
@@ -134,7 +134,7 @@ data:extend({
 			count = 60,
 			ingredients = 
 			{
-				{type="item", name="science-pack-gold", amount=1},
+				{"science-pack-gold", 1},
 			},
 			time = 1,
 		},
