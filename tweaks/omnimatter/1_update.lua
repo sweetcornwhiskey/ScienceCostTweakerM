@@ -1,5 +1,5 @@
-if mods["omnimatter_science"] then
-	if data.raw.tool["omni-pack"] then
+if mods["omnimatter_science"] and mods["omnimatter-crystal"] then
+	if data.raw.tool["omni-pack"] and data.raw.recipe["omni-pack"] then
 		-- remove omnipack from all labs
 		for _i, lab in pairs(data.raw["lab"]) do
 			if lab.inputs then
@@ -47,5 +47,7 @@ if mods["omnimatter_science"] then
 				table.insert(data.raw.lab["lab-alien"].inputs, "omni-pack")
 			end
 		end
+	else
+		data.raw.technology["sct-research-omni"].enabled = false
 	end
 end
