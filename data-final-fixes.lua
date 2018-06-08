@@ -7,12 +7,13 @@ require("configs.costs.extended")
 -- Recipes
 --log(serpent.block(data.raw["recipe"]["science-pack-3"]))
 require("prototypes.2_recipe")
-require("prototypes.2_technology")
 -- Recipes requires
 require("tweaks.angelsmods.2_final")
 require("tweaks.bobsmods.2_final")
 require("tweaks.omnimatter.2_final")
 require("tweaks.pymods.2_final")
+-- Technolgoy map fix
+require("prototypes.2_technology")
 
 if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 
