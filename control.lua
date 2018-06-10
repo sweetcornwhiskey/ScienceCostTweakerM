@@ -15,13 +15,15 @@ sct.unlockstart = function(playerforce)
 	end
 
 	if 
-		playerforce.technologies["sct-research-t1"].valid and (
+		playerforce.technologies["sct-research-t1"].valid and 
+		playerforce.technologies["sct-research-t1"].enabled and (
 			playerforce.technologies["sct-research-t1"].researched == false and (
 				playerforce.technologies["sct-research-t1"].prerequisites == nil or 
 				playerforce.technologies["sct-research-t1"].prerequisites == false or
 				table_size(playerforce.technologies["sct-research-t1"].prerequisites) == 0 or (
 					table_size(playerforce.technologies["sct-research-t1"].prerequisites) == 1 and
-					playerforce.technologies["sct-research-t1"].prerequisites[1] == "sct-lab-t1"
+					playerforce.technologies["sct-research-t1"].prerequisites["sct-lab-t1"] and
+					playerforce.technologies["sct-lab-t1"].researched
 				)
 			)
 		)

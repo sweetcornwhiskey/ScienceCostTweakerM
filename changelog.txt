@@ -1,3 +1,5 @@
+0.16.34
+- better autounlock fix (more sanity checks)
 0.16.33
 - aai compatibility
 0.16.32
