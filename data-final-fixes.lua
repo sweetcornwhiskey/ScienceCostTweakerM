@@ -12,6 +12,7 @@ require("tweaks.angelsmods.2_final")
 require("tweaks.bobsmods.2_final")
 require("tweaks.omnimatter.2_final")
 require("tweaks.pymods.2_final")
+require("tweaks.aai.2_final")
 -- Technolgoy map fix
 require("prototypes.2_technology")
 
