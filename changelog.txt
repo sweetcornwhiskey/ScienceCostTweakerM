@@ -1,6 +1,9 @@
+0.16.32
+- fixed bob lab2 requirement, when it's enabled (sct disables it)
 0.16.31
 - migration fix
 0.16.30
+- fixed t1 lab prerequisity check
 - normalized lab recipe/item/technology names to be same
 0.16.29
 - fixed check for omni-pack requirement

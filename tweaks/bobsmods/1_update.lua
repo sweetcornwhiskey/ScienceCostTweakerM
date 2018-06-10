@@ -271,7 +271,7 @@ if mods["bobtech"] then
 		}		
 		data.raw.recipe["lab-2"].subgroup = "sct-labs"
 		data.raw.recipe["lab-2"].order = "b[labs]-e[lab5]"
-		bobmods.lib.recipe.replace_ingredient("lab-2", "lab", "sct-lab-4")
+		bobmods.lib.recipe.replace_ingredient("lab-2", "lab", "sct-lab-t4")
 	end
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
@@ -378,8 +378,6 @@ if mods["bobtech"] then
 		end
 		data.raw.recipe["science-pack-gold"].subgroup = "sct-science-pack-alien"
 		data.raw.recipe["science-pack-gold"].order = "0-gold-science-pack"
---		table.insert(data.raw.lab["sct-lab-3"].inputs, "science-pack-gold")
---		table.insert(data.raw.lab["sct-lab-4"].inputs, "science-pack-gold")
 	end
 	if data.raw.tool["alien-science-pack"] then
 		data.raw.tool["alien-science-pack"].subgroup = "sct-science-pack-alien"
