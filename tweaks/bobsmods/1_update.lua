@@ -378,8 +378,8 @@ if mods["bobtech"] then
 		]]--
 	end
 	if data.raw.tool["science-pack-gold"] then
-		data.raw.tool["science-pack-gold"].subgroup = "science-pack"
-		data.raw.tool["science-pack-gold"].order = "gold-science-pack"
+		data.raw.tool["science-pack-gold"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["science-pack-gold"].order = "0-gold-science-pack"
 		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
 			data.raw.tool["science-pack-gold"].icon_size = 64
 			data.raw.tool["science-pack-gold"].icon = "__ScienceCostTweakerM__/graphics/bobmods/gold-science-pack-64.png"
@@ -387,8 +387,8 @@ if mods["bobtech"] then
 			data.raw.tool["science-pack-gold"].icon_size = 32
 			data.raw.tool["science-pack-gold"].icon = "__ScienceCostTweakerM__/graphics/bobmods/gold-science-pack.png"
 		end
-		data.raw.recipe["science-pack-gold"].subgroup = "science-pack"
-		data.raw.recipe["science-pack-gold"].order = "gold-science-pack"
+		data.raw.recipe["science-pack-gold"].subgroup = "sct-science-pack-alien"
+		data.raw.recipe["science-pack-gold"].order = "0-gold-science-pack"
 --		table.insert(data.raw.lab["sct-lab-3"].inputs, "science-pack-gold")
 --		table.insert(data.raw.lab["sct-lab-4"].inputs, "science-pack-gold")
 	end
