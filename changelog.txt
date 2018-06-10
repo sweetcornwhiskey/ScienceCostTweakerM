@@ -1,3 +1,5 @@
+0.16.33
+- aai compatibility
 0.16.32
 - fixed bob lab2 requirement, when it's enabled (sct disables it)
 0.16.31
