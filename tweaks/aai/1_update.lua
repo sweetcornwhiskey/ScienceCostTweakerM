@@ -36,7 +36,7 @@ if mods["aai-industry"] then
 		table.insert(data.raw.technology["sct-lab-t1"].unit.ingredients, {"sct-science-pack-0", 1})
 		data.raw.technology["sct-lab-t1"].unit.time = 20
 		table.insert(data.raw.lab["lab"].inputs, "sct-science-pack-0")
-		log(serpent.block(data.raw.item["burner-lab"]))
+--		log(serpent.block(data.raw.item["burner-lab"]))
 		if data.raw.item["burner-lab"].icon_size == 32 then
 			data.raw.item["burner-lab"].icons = 
 			{
@@ -59,7 +59,7 @@ if mods["aai-industry"] then
 				},
 			}			
 		end			
-		log(serpent.block(data.raw.item["burner-lab"]))
+--		log(serpent.block(data.raw.item["burner-lab"]))
 	end
 	if data.raw.technology["electricity"]then
 		table.insert(data.raw.technology["sct-lab-t1"].prerequisites, "electricity")
@@ -72,4 +72,7 @@ if mods["aai-industry"] then
 --		table.insert(data.raw.technology["sct-research-t1"].prerequisites, "electric-lab")
 --		table.insert(data.raw.technology["sct-lab-t1"].unit.ingredients, {"sct-science-pack-0", 1})
 	end
+
+-- too early, gets overriden	
+--	require("fuel_aai")
 end

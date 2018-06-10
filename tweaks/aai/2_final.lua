@@ -22,4 +22,6 @@ if mods["aai-industry"] then
 			table.insert(data.raw.lab["burner-lab"].inputs, "sct-science-pack-0")
 		end
 	end
+
+	require("fuel_aai")	
 end

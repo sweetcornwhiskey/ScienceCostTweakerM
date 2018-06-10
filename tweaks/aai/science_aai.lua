@@ -154,3 +154,129 @@ data:extend({
 		},
 	},
 })
+
+-- aai fuel processing rework
+data:extend({
+    {
+        type = "technology",
+        name = "sct-aai-basic-fuel-processing",
+        icon = "__aai-industry__/graphics/technology/fuel-processing.png",
+        icon_size = 128,
+        order = "a",
+        effects = 
+        {
+--[[
+			{
+				type = "unlock-recipe",
+				recipe = "fuel-processor",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "vehicle-fuel-from-coal",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "vehicle-fuel-from-wood",
+			},
+			{
+				type = "unlock-recipe",
+				recipe = "vehicle-fuel-from-raw-wood",
+			},
+]]--
+		},
+        prerequisites = {
+        	"electricity",
+        },
+        unit = 
+        {
+            count = 20,
+            ingredients = 
+            {
+                {"sct-science-pack-0", 1},
+            },
+            time = 10
+        },
+    },
+    {
+        type = "technology",
+        name = "sct-aai-advanced-fuel-processing",
+        icon = "__aai-industry__/graphics/technology/fuel-processing.png",
+        icon_size = 128,
+        order = "a",
+        effects = 
+        {
+		},
+        prerequisites = 
+        {
+        	"fuel-processing",
+        	"oil-processing",
+        },
+        unit = 
+        {
+            count = 40,
+            ingredients = 
+            {
+                {"science-pack-1", 1},
+                {"science-pack-2", 1},
+            },
+            time = 20
+        },
+    },
+    {
+        type = "technology",
+        name = "sct-aai-nuclear-fuel-processing",
+        icon = "__aai-industry__/graphics/technology/fuel-processing.png",
+        icon_size = 128,
+        order = "a",
+        effects = 
+        {
+		},
+        prerequisites = 
+        {
+        	"sct-aai-advanced-fuel-processing",
+        	"kovarex-enrichment-process",
+        },
+        unit = 
+        {
+            count = 100,
+            ingredients = 
+            {
+                {"science-pack-1", 1},
+                {"science-pack-2", 1},
+                {"science-pack-3", 1},
+                {"production-science-pack", 1},
+                {"high-tech-science-pack", 1},
+            },
+            time = 40
+        },
+    },
+    {
+        type = "technology",
+        name = "sct-aai-rocket-fuel-processing",
+        icon = "__aai-industry__/graphics/technology/fuel-processing.png",
+        icon_size = 128,
+        order = "a",
+        effects = 
+        {
+		},
+        prerequisites = 
+        {
+        	"sct-aai-advanced-fuel-processing",
+        	"rocket-silo",
+        },
+        unit = 
+        {
+            count = 100,
+            ingredients = 
+            {
+                {"science-pack-1", 1},
+                {"science-pack-2", 1},
+                {"science-pack-3", 1},
+                {"military-science-pack", 1},
+                {"production-science-pack", 1},
+                {"high-tech-science-pack", 1},
+            },
+            time = 40
+        },
+    },
+})
