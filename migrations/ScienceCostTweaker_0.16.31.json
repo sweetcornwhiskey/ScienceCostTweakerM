@@ -1,0 +1,23 @@
+{
+  "recipe":
+  [
+    ["sct-lab-1", "sct-lab-t1"],
+    ["sct-lab-2", "sct-lab-t2"],
+    ["sct-lab-3", "sct-lab-t3"],
+    ["sct-lab-4", "sct-lab-t4"]
+  ],
+  "item":
+  [
+    ["sct-lab-1", "lab"],
+    ["sct-lab-2", "sct-lab-t2"],
+    ["sct-lab-3", "sct-lab-t3"],
+    ["sct-lab-4", "sct-lab-t4"]
+  ],
+  "entity":
+  [
+    ["sct-lab-1", "lab"],
+    ["sct-lab-2", "sct-lab-t2"],
+    ["sct-lab-3", "sct-lab-t3"],
+    ["sct-lab-4", "sct-lab-t4"]
+  ]
+}

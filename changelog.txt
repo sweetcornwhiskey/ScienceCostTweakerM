@@ -1,6 +1,7 @@
+0.16.31
+- migration fix
 0.16.30
 - normalized lab recipe/item/technology names to be same
-- fixed t1 lab technology prerequisity check
 0.16.29
 - fixed check for omni-pack requirement
 0.16.28
