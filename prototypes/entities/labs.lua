@@ -3,20 +3,20 @@ data:extend({
 	-- sct-lab-1 hidden, using normal lab
 	{
 		type = "item",
-		name = "sct-lab-1",
+		name = "sct-lab-t1",
 		icon_size = 32,
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "a[labs]-a[sct-lab-1]",
-		place_result = "sct-lab-1",
+		order = "a[labs]-a[sct-lab-t1]",
+		place_result = "sct-lab-t1",
 		stack_size = 10,
 		enabled = true,
 	},
 
 	{
 		type = "lab",
-		name = "sct-lab-1",
+		name = "sct-lab-t1",
 		icon_size = 32,
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
 		flags = {"placeable-player", "player-creation"},
@@ -80,12 +80,12 @@ data:extend({
 	-- == Tier 2 ==
 	{
 		type = "item",
-		name = "sct-lab-2",
+		name = "sct-lab-t2",
 		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/2.png",
@@ -93,25 +93,25 @@ data:extend({
 		},		
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "a[labs]-b[sct-lab-2]",
-		place_result = "sct-lab-2",
+		order = "a[labs]-b[sct-lab-t2]",
+		place_result = "sct-lab-t2",
 		stack_size = 10
 	},
 	{
 		type = "lab",
-		name = "sct-lab-2",
+		name = "sct-lab-t2",
 		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/2.png",
 			},
 		},		
 		flags = {"placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "sct-lab-2"},
+		minable = {mining_time = 1, result = "sct-lab-t2"},
 		max_health = 200,
 		researching_speed = 1,
 		corpse = "big-remnants",
@@ -121,7 +121,7 @@ data:extend({
 		light = {intensity = 0.75, size = 8},
 		on_animation =
 		{
-			filename = "__ScienceCostTweakerM__/graphics/sct-lab-2/entity.png",
+			filename = "__ScienceCostTweakerM__/graphics/sct-lab-t2/entity.png",
 			width = 113,
 			height = 91,
 			frame_count = 33,
@@ -131,7 +131,7 @@ data:extend({
 		},
 		off_animation =
 		{
-			filename = "__ScienceCostTweakerM__/graphics/sct-lab-2/entity.png",
+			filename = "__ScienceCostTweakerM__/graphics/sct-lab-t2/entity.png",
 			width = 113,
 			height = 91,
 			frame_count = 1,
@@ -169,12 +169,12 @@ data:extend({
 	-- == Tier 3 ==
 	{
 		type = "item",
-		name = "sct-lab-3",
+		name = "sct-lab-t3",
 		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/3.png",
@@ -182,25 +182,25 @@ data:extend({
 		},		
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "a[labs]-c[sct-lab-3]",
-		place_result = "sct-lab-3",
+		order = "a[labs]-c[sct-lab-t3]",
+		place_result = "sct-lab-t3",
 		stack_size = 10
 	},
 	{
 		type = "lab",
-		name = "sct-lab-3",
+		name = "sct-lab-t3",
 		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/3.png",
 			},
 		},		
 		flags = {"placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "sct-lab-3"},
+		minable = {mining_time = 1, result = "sct-lab-t3"},
 		max_health = 250,
 		researching_speed = 1,
 		corpse = "big-remnants",
@@ -210,7 +210,7 @@ data:extend({
 		light = {intensity = 0.75, size = 8},
 		on_animation =
 		{
-			filename = "__ScienceCostTweakerM__/graphics/sct-lab-3/entity.png",
+			filename = "__ScienceCostTweakerM__/graphics/sct-lab-t3/entity.png",
 			width = 113,
 			height = 91,
 			frame_count = 33,
@@ -220,7 +220,7 @@ data:extend({
 		},
 		off_animation =
 		{
-			filename = "__ScienceCostTweakerM__/graphics/sct-lab-3/entity.png",
+			filename = "__ScienceCostTweakerM__/graphics/sct-lab-t3/entity.png",
 			width = 113,
 			height = 91,
 			frame_count = 1,
@@ -262,12 +262,12 @@ data:extend({
 	-- == Tier 4 ==
 	{
 		type = "item",
-		name = "sct-lab-4",
+		name = "sct-lab-t4",
 		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/4.png",
@@ -275,25 +275,25 @@ data:extend({
 		},		
 		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
-		order = "a[labs]-d[sct-lab-4]",
-		place_result = "sct-lab-4",
+		order = "a[labs]-d[sct-lab-t4]",
+		place_result = "sct-lab-t4",
 		stack_size = 10
 	},
 	{
 		type = "lab",
-		name = "sct-lab-4",
+		name = "sct-lab-t4",
 		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/4.png",
 			},
 		},		
 		flags = {"placeable-player", "player-creation"},
-		minable = {mining_time = 1, result = "sct-lab-4"},
+		minable = {mining_time = 1, result = "sct-lab-t4"},
 		max_health = 300,
 		researching_speed = 1,
 		corpse = "big-remnants",
@@ -303,7 +303,7 @@ data:extend({
 		light = {intensity = 0.75, size = 8},
 		on_animation =
 		{
-			filename = "__ScienceCostTweakerM__/graphics/sct-lab-4/entity.png",
+			filename = "__ScienceCostTweakerM__/graphics/sct-lab-t4/entity.png",
 			width = 113,
 			height = 91,
 			frame_count = 33,
@@ -313,7 +313,7 @@ data:extend({
 		},
 		off_animation =
 		{
-			filename = "__ScienceCostTweakerM__/graphics/sct-lab-4/entity.png",
+			filename = "__ScienceCostTweakerM__/graphics/sct-lab-t4/entity.png",
 			width = 113,
 			height = 91,
 			frame_count = 1,
@@ -358,12 +358,12 @@ data:extend({
 
 -- Rework vanilla science lab into a Tier 1 science lab.
 data.raw["item"]["lab"].subgroup = "sct-labs"
-data.raw["item"]["lab"].order = "b[labs]-a[lab1]"
+data.raw["item"]["lab"].order = "a[labs]-a[lab1]"
 data.raw["item"]["lab"].icon_size = 32
 data.raw["item"]["lab"].icons = 
 {
 	{
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon.png",
 	},
 	{
 		icon = "__ScienceCostTweakerM__/graphics/overlays/1.png",
@@ -374,7 +374,7 @@ data.raw["lab"]["lab"].icon_size = 32
 data.raw["lab"]["lab"].icons = 
 {
 	{
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon.png",
 	},
 	{
 		icon = "__ScienceCostTweakerM__/graphics/overlays/1.png",
@@ -384,7 +384,7 @@ data.raw["lab"]["lab"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
 data.raw["lab"]["lab"].selection_box = {{-1.5, -1.5}, {1.5, 1.5}}
 data.raw["lab"]["lab"].on_animation =
 	{
-		filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
+		filename = "__ScienceCostTweakerM__/graphics/sct-lab-t1/entity.png",
 		width = 113,
 		height = 91,
 		frame_count = 33,
@@ -394,7 +394,7 @@ data.raw["lab"]["lab"].on_animation =
 	}
 data.raw["lab"]["lab"].off_animation =
 	{
-		filename = "__ScienceCostTweakerM__/graphics/sct-lab-1/entity.png",
+		filename = "__ScienceCostTweakerM__/graphics/sct-lab-t1/entity.png",
 		width = 113,
 		height = 91,
 		frame_count = 1,
@@ -415,10 +415,10 @@ data.raw["lab"]["lab"].module_specification =
 data.raw["lab"]["lab"].fast_replaceable_group = "lab"
 
 if settings.startup["sct-lab-modules"].value == "tier3" then
-	data.raw["lab"]["sct-lab-3"].module_specification.module_slots = 1
-	data.raw["lab"]["sct-lab-4"].module_specification.module_slots = 2
+	data.raw["lab"]["sct-lab-t3"].module_specification.module_slots = 1
+	data.raw["lab"]["sct-lab-t4"].module_specification.module_slots = 2
 end
 
 if settings.startup["sct-lab-modules"].value == "tier4" then
-	data.raw["lab"]["sct-lab-4"].module_specification.module_slots = 2
+	data.raw["lab"]["sct-lab-t4"].module_specification.module_slots = 2
 end

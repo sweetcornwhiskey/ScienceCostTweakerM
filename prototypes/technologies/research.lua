@@ -9,7 +9,7 @@ data:extend({
 		icons = 
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon-128.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon-128.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/1-128.png",
@@ -91,7 +91,7 @@ data:extend({
 		icons = 
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-2/icon-128.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon-128.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/2-128.png",
@@ -101,7 +101,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "sct-lab-2",
+				recipe = "sct-lab-t2",
 			},
 			{
 				type = "unlock-recipe",
@@ -188,7 +188,7 @@ data:extend({
 		icons = 
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-3/icon-128.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon-128.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/3-128.png",
@@ -196,6 +196,10 @@ data:extend({
 		},
 		effects = 
 		{
+			{
+				type = "unlock-recipe",
+				recipe = "sct-lab-t3",
+			},
 			{
 				type = "unlock-recipe",
 				recipe = "sct-t3-flash-fuel",
@@ -215,10 +219,6 @@ data:extend({
 			{
 				type = "unlock-recipe",
 				recipe = "sct-waste-processing-copper",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "sct-lab-3",
 			},
 			{
 				type = "unlock-recipe",
@@ -406,7 +406,7 @@ data:extend({
 		icons = 
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-4/icon-128.png",
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon-128.png",
 			},
 			{
 				icon = "__ScienceCostTweakerM__/graphics/overlays/4-128.png",
@@ -416,7 +416,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "sct-lab-4",
+				recipe = "sct-lab-t4",
 			},
 			{
 				type = "unlock-recipe",

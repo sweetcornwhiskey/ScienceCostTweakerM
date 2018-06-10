@@ -1174,7 +1174,7 @@ data:extend({
 		expensive =
 		{
 			energy_required = 5,
-			enabled = true,
+			enabled = false,
 			ingredients = 
 			{
 				{"iron-stick", 10},
@@ -1185,7 +1185,7 @@ data:extend({
 		normal =
 		{
 			energy_required = 2,
-			enabled = true,
+			enabled = false,
 			ingredients = 
 			{
 				{"iron-stick", 4},
@@ -1201,7 +1201,7 @@ data:extend({
 		expensive =
 		{
 			energy_required = 10,
-			enabled = true,
+			enabled = false,
 			ingredients = 
 			{
 				{"transport-belt", 30},
@@ -1212,7 +1212,7 @@ data:extend({
 		normal =
 		{
 			energy_required = 4,
-			enabled = true,
+			enabled = false,
 			ingredients = 
 			{
 				{"transport-belt", 10},

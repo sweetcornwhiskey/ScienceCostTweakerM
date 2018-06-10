@@ -31,6 +31,8 @@ scttechmap =
 	["alien-science-pack-purple"] = "alien-reseach",
 	["alien-science-pack-red"] = "alien-reseach",
 	["alien-science-pack-yellow"] = "alien-reseach",
+-- aai
+	["sct-science-pack-0"] = "sct-research-t0",
 }
 
 local function checkpacks(tech, checkpacklist, deptech, packmap)

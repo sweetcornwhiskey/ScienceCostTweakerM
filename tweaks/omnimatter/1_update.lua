@@ -11,10 +11,10 @@ if mods["omnimatter_science"] and mods["omnimatter-crystal"] then
 				end
 			end
 		end
-		table.insert(data.raw["lab"]["sct-lab-2"].inputs, "omni-pack")
+		table.insert(data.raw["lab"]["sct-lab-t2"].inputs, "omni-pack")
 		table.insert(data.raw.technology["sct-lab-t3"].prerequisites, "sct-research-omni")
-		table.insert(data.raw["lab"]["sct-lab-3"].inputs, "omni-pack")
-		table.insert(data.raw["lab"]["sct-lab-4"].inputs, "omni-pack")	
+		table.insert(data.raw["lab"]["sct-lab-t3"].inputs, "omni-pack")
+		table.insert(data.raw["lab"]["sct-lab-t4"].inputs, "omni-pack")	
 		if data.raw.tool["omni-pack"] then
 			if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
 				data.raw.tool["omni-pack"].icons =

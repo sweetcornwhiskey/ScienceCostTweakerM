@@ -273,17 +273,6 @@ if mods["bobtech"] then
 		data.raw.recipe["lab-2"].order = "b[labs]-e[lab5]"
 		bobmods.lib.recipe.replace_ingredient("lab-2", "lab", "sct-lab-4")
 	end
-	--[[
-	if data.raw.technology["advanced-research"] then
-		data.raw.technology["advanced-research"].upgrade = false
-		bobmods.lib.tech.remove_recipe_unlock("advanced-electronics-2", "sct-lab-4")
-		bobmods.lib.tech.add_recipe_unlock("advanced-research", "sct-lab-4")
-		bobmods.lib.tech.remove_recipe_unlock("advanced-electronics-2", "sct-lab4-manipulators")
-		bobmods.lib.tech.add_recipe_unlock("advanced-research", "sct-lab4-manipulators")
-		bobmods.lib.tech.remove_recipe_unlock("advanced-electronics-2", "sct-lab4-construction")
-		bobmods.lib.tech.add_recipe_unlock("advanced-research", "sct-lab4-construction")
-	end
-	]]--
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
 		data.raw.item["lab-alien"].order = "b[labs]-f[lab6]"
@@ -309,7 +298,7 @@ if mods["bobtech"] then
 		}
 		data.raw.recipe["lab-alien"].subgroup = "sct-labs"
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
-		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-3")
+		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-t3")
 		bobmods.lib.tech.remove_recipe_unlock("alien-research", "lab-alien")
 		bobmods.lib.tech.add_prerequisite("alien-research", "sct-research-alien")
 		bobmods.lib.tech.remove_prerequisite("alien-research", "advanced-research")
@@ -325,9 +314,9 @@ if mods["bobtech"] then
 				break
 			end
 		end
---		table.insert(data.raw["lab"]["sct-lab-2"].inputs, "logistic-science-pack")
-		table.insert(data.raw["lab"]["sct-lab-3"].inputs, "logistic-science-pack")
-		table.insert(data.raw["lab"]["sct-lab-4"].inputs, "logistic-science-pack")	
+--		table.insert(data.raw["lab"]["sct-lab-t2"].inputs, "logistic-science-pack")
+		table.insert(data.raw["lab"]["sct-lab-t3"].inputs, "logistic-science-pack")
+		table.insert(data.raw["lab"]["sct-lab-t4"].inputs, "logistic-science-pack")	
 		data.raw.tool["logistic-science-pack"].subgroup = "sct-science-pack-logistic"
 		data.raw.tool["logistic-science-pack"].order = "h_a[logistic]"
 		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
@@ -441,7 +430,7 @@ if mods["bobmodules"] then
 		}
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
 		data.raw.recipe["lab-module"].order = "b[labs]-g[lab7]"
-		bobmods.lib.recipe.replace_ingredient("lab-module", "lab", "sct-lab-2")
+		bobmods.lib.recipe.replace_ingredient("lab-module", "lab", "sct-lab-t2")
 		bobmods.lib.tech.add_prerequisite("effect-transmission","sct-research-t3")
 		--bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-1", "speed-processor")
 		--bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-2", "effectivity-processor")

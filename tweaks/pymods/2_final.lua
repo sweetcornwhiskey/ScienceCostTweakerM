@@ -1,4 +1,5 @@
--- add biotokens to all labs except basic one
+-- fixes
+--[[
 if mods["pycoalprocessing"] then
 	if(data.raw.technology["fine-electronics"]) then
 		table.insert(data.raw.technology["fine-electronics"].effects,{type = "unlock-recipe", recipe = "sct-t3-flash-fuel"})
@@ -18,3 +19,4 @@ if mods["pyfusionenergy"] then
 		table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "production-science-pack"})
 	end
 end
+]]--
