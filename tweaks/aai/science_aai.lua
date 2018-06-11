@@ -44,7 +44,7 @@ data:extend({
 			energy_required = 2.5,
 			ingredients = 
 			{
-				{"stone", 5},
+				{type="item", name="stone", amount=5},
 			},
 			results = 
 			{
@@ -57,7 +57,7 @@ data:extend({
 			energy_required = 1,
 			ingredients = 
 			{
-				{"stone", 2},
+				{type="item", name="stone", amount=2},
 			},
 			results = 
 			{
@@ -77,8 +77,8 @@ data:extend({
 			energy_required = 2.5,
 			ingredients = 
 			{
-				{"iron-ore", 5},
-				{"wood", 5},
+				{type="item", name="iron-ore", amount=5},
+				{type="item", name="wood", amount=5},
 			},
 			results = 
 			{
@@ -91,8 +91,8 @@ data:extend({
 			energy_required = 1,
 			ingredients = 
 			{
-				{"iron-ore", 2},
-				{"wood", 2},
+				{type="item", name="iron-ore", amount=2},
+				{type="item", name="wood", amount=2},
 			},
 			results = 
 			{
@@ -130,8 +130,8 @@ data:extend({
 			energy_required = 7.5,
 			ingredients = 
 			{
-				{"sct-t0-crate", 5},
-				{"sct-t0-solvent", 5},
+				{type="item", name="sct-t0-crate", amount=5},
+				{type="item", name="sct-t0-solvent", amount=5},
 			},
 			results = 
 			{
@@ -144,8 +144,8 @@ data:extend({
 			energy_required = 3,
 			ingredients = 
 			{
-				{"sct-t0-crate", 2},
-				{"sct-t0-solvent", 2},
+				{type="item", name="sct-t0-crate", amount=2},
+				{type="item", name="sct-t0-solvent", amount=2},
 			},
 			results = 
 			{

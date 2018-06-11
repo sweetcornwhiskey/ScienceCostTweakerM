@@ -73,6 +73,68 @@ if mods["aai-industry"] then
 --		table.insert(data.raw.technology["sct-lab-t1"].unit.ingredients, {"sct-science-pack-0", 1})
 	end
 
+--	log(serpent.block(data.raw.item["stone-crushed"]))
+	if data.raw.item["stone-crushed"] and data.raw.recipe["sct-t0-crate"] then
+		for _i, ingredient in pairs(data.raw.recipe["sct-t0-crate"].normal.ingredients) do
+			if ingredient.name == "stone" then
+				ingredient.name = "stone-crushed"
+				break
+			end
+		end
+		for _i, ingredient in pairs(data.raw.recipe["sct-t0-crate"].expensive.ingredients) do
+			if ingredient.name == "stone" then
+				ingredient.name = "stone-crushed"
+				break
+			end
+		end
+	end
+--	log(serpent.block(data.raw.recipe["sct-t0-crate"]))
+
+--	log(serpent.block(data.raw.item["angels-ore1-crushed"]))
+	if data.raw.item["crushed-omnite"] and data.raw.recipe["sct-t0-solvent"] then
+		for _i, ingredient in pairs(data.raw.recipe["sct-t0-solvent"].normal.ingredients) do
+			if ingredient.name == "iron-ore" then
+				ingredient.name = "crushed-omnite"
+				break
+			end
+		end
+		for _i, ingredient in pairs(data.raw.recipe["sct-t0-solvent"].expensive.ingredients) do
+			if ingredient.name == "iron-ore" then
+				ingredient.name = "crushed-omnite"
+				break
+			end
+		end
+	elseif data.raw.item["angels-ore1-crushed"] and data.raw.recipe["sct-t0-solvent"] then
+		for _i, ingredient in pairs(data.raw.recipe["sct-t0-solvent"].normal.ingredients) do
+			if ingredient.name == "iron-ore" then
+				ingredient.name = "angels-ore1-crushed"
+				break
+			end
+		end
+		for _i, ingredient in pairs(data.raw.recipe["sct-t0-solvent"].expensive.ingredients) do
+			if ingredient.name == "iron-ore" then
+				ingredient.name = "angels-ore1-crushed"
+				break
+			end
+		end
+	end
+
+	if data.raw.item["omniwood"] and data.raw.recipe["sct-t0-solvent"] then
+		for _i, ingredient in pairs(data.raw.recipe["sct-t0-solvent"].normal.ingredients) do
+			if ingredient.name == "wood" then
+				ingredient.name = "omniwood"
+				break
+			end
+		end
+		for _i, ingredient in pairs(data.raw.recipe["sct-t0-solvent"].expensive.ingredients) do
+			if ingredient.name == "wood" then
+				ingredient.name = "omniwood"
+				break
+			end
+		end
+	end
+--	log(serpent.block(data.raw.recipe["sct-t0-solvent"]))
+
 -- too early, gets overriden	
 --	require("fuel_aai")
 end
