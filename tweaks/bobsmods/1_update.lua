@@ -6,11 +6,11 @@ if mods["bobplates"] then
 	-- Green Science Pack:
 	-- =============================
 
-	if data.raw.item["tin-plate"] and mods["omnimatter"] == nil then
+	if data.raw.item["tin-plate"] then
 		bobmods.lib.recipe.replace_ingredient("sct-t2-instruments", "iron-plate", "tin-plate")
 	end
 
-	if data.raw.item["lead-plate"] and mods["omnimatter"] == nil then
+	if data.raw.item["lead-plate"] then
 		bobmods.lib.recipe.replace_ingredient("sct-t2-micro-wafer", "iron-plate", "lead-plate")
 	end
 
@@ -232,9 +232,7 @@ if mods["bobelectronics"] then
 		bobmods.lib.recipe.replace_ingredient("sct-t2-instruments", "electronic-circuit", "basic-circuit-board")
 		bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "electronic-circuit", "basic-circuit-board")
 		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit1", "electronic-circuit", "basic-circuit-board")
-		if mods["omnimatter"] then
-			bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "electronic-circuit", "basic-circuit-board")
-		end
+		bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "electronic-circuit", "basic-circuit-board")
 	end
 	if data.raw.item["insulated-cable"] then
 		bobmods.lib.recipe.replace_ingredient("sct-htech-capbank", "copper-cable", "insulated-cable")
