@@ -1,3 +1,9 @@
+0.16.39
+- changed production times on intermediates (mainly military, production and hightech)
+- fixed bobs recipes not using all sct intermiedates
+- replaced coal with carbon when present in all intermediates
+- fixed biopack dependencies
+- changed some intermediates to available in bobs electronic assemblers
 0.16.38
 - tin and lead present in green pack with omnimatter when bobplates/ores are installed
 0.16.37
