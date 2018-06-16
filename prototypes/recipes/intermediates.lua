@@ -556,7 +556,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 25,
+			energy_required = 22.5,
 			ingredients =
 			{
 				{type="item", name="steel-plate", amount=2},
@@ -574,7 +574,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 10,
+			energy_required = 9,
 			ingredients =
 			{
 				{type="item", name="steel-plate", amount=1},
@@ -599,7 +599,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 2,
+			energy_required = 2.5,
 			ingredients =
 			{
 				{type="item", name="iron-plate", amount=8},
@@ -615,7 +615,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 0.5,
+			energy_required = 1,
 			ingredients =
 			{
 				{type="item", name="iron-plate", amount=3},
@@ -639,7 +639,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 3,
+			energy_required = 7.5,
 			ingredients =
 			{
 				{type="item", name="sct-mil-circuit2", amount=2},
@@ -656,7 +656,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 1,
+			energy_required = 3,
 			ingredients =
 			{
 				{type="item", name="sct-mil-circuit2", amount=1},
@@ -680,7 +680,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 3,
+			energy_required = 5,
 			ingredients =
 			{
 				{type="item", name="sct-mil-circuit1", amount=2},
@@ -697,7 +697,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 1,
+			energy_required = 2,
 			ingredients =
 			{
 				{type="item", name="sct-mil-circuit1", amount=1},
@@ -721,7 +721,7 @@ data:extend({
 		expensive = 
 		{
 			enabled = false,
-			energy_required = 3,
+			energy_required = 2.5,
 			ingredients =
 			{
 				{type="item", name="electronic-circuit", amount=5},
@@ -763,7 +763,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 60,
+			energy_required = 37.5,
 			ingredients =
 			{
 				{type="item", name="sct-prod-baked-biopaste", amount=2},
@@ -780,7 +780,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 30,
+			energy_required = 15,
 			ingredients =
 			{
 				{type="item", name="sct-prod-baked-biopaste", amount=1},
@@ -805,7 +805,7 @@ data:extend({
 		always_show_made_in = true,
 		expensive =
 		{
-			energy_required = 7,
+			energy_required = 12.5,
 			enabled = false,
 			ingredients = 
 			{
@@ -818,7 +818,7 @@ data:extend({
 		},
 		normal =
 		{
-			energy_required = 3,
+			energy_required = 5,
 			enabled = false,
 			ingredients = 
 			{
@@ -841,7 +841,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 7,
+			energy_required = 12.5,
 			ingredients =
 			{
 				{type="item", name="stone", amount=50},
@@ -858,7 +858,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 3,
+			energy_required = 5,
 			ingredients =
 			{
 				{type="item", name="stone", amount=20},
@@ -883,7 +883,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 3,
+			energy_required = 37.5,
 			ingredients =
 			{
 				{type="item", name="iron-gear-wheel", amount=40},
@@ -903,7 +903,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 1,
+			energy_required = 15,
 			ingredients =
 			{
 				{type="item", name="iron-gear-wheel", amount=17},
@@ -931,7 +931,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 3,
+			energy_required = 12.5,
 			ingredients =
 			{
 				{type="item", name="plastic-bar", amount=12},
@@ -949,7 +949,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 1,
+			energy_required = 5,
 			ingredients =
 			{
 				{type="item", name="plastic-bar", amount=5},
@@ -978,7 +978,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 10,
+			energy_required = 35,
 			ingredients =
 			{
 				{type="item", name="battery", amount=2},
@@ -995,7 +995,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 4,
+			energy_required = 14,
 			ingredients =
 			{
 				{type="item", name="battery", amount=1},
@@ -1020,7 +1020,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 10,
+			energy_required = 17.5,
 			ingredients =
 			{
 				{type="item", name="processing-unit", amount=8},
@@ -1038,7 +1038,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 3.5,
+			energy_required = 7,
 			ingredients =
 			{
 				{type="item", name="processing-unit", amount=3},
@@ -1064,7 +1064,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 17,
+			energy_required = 17.5,
 			ingredients =
 			{
 				{type="item", name="sct-htech-thermalstore-heated", amount=2},
@@ -1099,7 +1099,7 @@ data:extend({
 		order = "i[ht]-e[thermalstore-heated]",
 		expensive =
 		{
-			energy_required = 55,
+			energy_required = 26.25,
 			enabled = false,
 			ingredients = 
 			{
@@ -1113,7 +1113,7 @@ data:extend({
 		},
 		normal =
 		{
-			energy_required = 22,
+			energy_required = 10.5,
 			enabled = false,
 			ingredients = 
 			{
@@ -1136,7 +1136,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 10,
+			energy_required = 17.5,
 			ingredients =
 			{
 				{type="item", name="copper-plate", amount=100}
@@ -1151,7 +1151,7 @@ data:extend({
 		normal =
 		{
 			enabled = false,
-			energy_required = 3.5,
+			energy_required = 7,
 			ingredients =
 			{
 				{type="item", name="copper-plate", amount=40}
