@@ -233,7 +233,9 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"gardens", 
+			"gardens",
+			"bio-paper-1",
+			"bio-farm",
 		},
 		unit =
 		{
