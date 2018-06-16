@@ -110,8 +110,9 @@ if mods["bobplates"] then
 		table.insert(data.raw.recipe["sct-mil-circuit3"].expensive.ingredients, { type="item", name="carbon", amount=10 })
 		table.insert(data.raw.recipe["sct-mil-circuit2"].normal.ingredients, { type="item", name="carbon", amount=3 })
 		table.insert(data.raw.recipe["sct-mil-circuit2"].expensive.ingredients, { type="item", name="carbon", amount=8 })
-		table.insert(data.raw.recipe["sct-mil-circuit1"].normal.ingredients, { type="item", name="carbon", amount=2 })
-		table.insert(data.raw.recipe["sct-mil-circuit1"].expensive.ingredients, { type="item", name="carbon", amount=5 })
+--		table.insert(data.raw.recipe["sct-mil-circuit1"].normal.ingredients, { type="item", name="carbon", amount=2 })
+--		table.insert(data.raw.recipe["sct-mil-circuit1"].expensive.ingredients, { type="item", name="carbon", amount=5 })		
+		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit1", "coal", "carbon")
 	end
 	
 	-- Production Science Pack:
@@ -126,7 +127,7 @@ if mods["bobplates"] then
 			{type="item", name="tin-plate", amount=10},
 			{type="item", name="lead-plate", amount=10},
 			{type="item", name="silver-plate", amount=10},
-			{type="item", name="electric-engine-unit", amount=1},
+			{type="item", name="sct-prod-chipcase", amount=1},
 			{type="fluid", name="sulfur-dioxide", amount=120},
 		}
 		data.raw.recipe["sct-prod-overclocker"].normal.results = 
@@ -139,7 +140,7 @@ if mods["bobplates"] then
 			{type="item", name="tin-plate", amount=25},
 			{type="item", name="lead-plate", amount=25},
 			{type="item", name="silver-plate", amount=25},
-			{type="item", name="electric-engine-unit", amount=3},
+			{type="item", name="sct-prod-chipcase", amount=2},
 			{type="fluid", name="sulfur-dioxide", amount=300},
 		}
 		data.raw.recipe["sct-prod-overclocker"].expensive.results = 
@@ -237,6 +238,18 @@ if mods["bobelectronics"] then
 	if data.raw.item["insulated-cable"] then
 		bobmods.lib.recipe.replace_ingredient("sct-htech-capbank", "copper-cable", "insulated-cable")
 		bobmods.lib.recipe.replace_ingredient("sct-htech-injector", "copper-cable", "insulated-cable")
+	end
+
+	if data.raw["recipe-category"]["electronics"] then
+		data.raw.recipe["sct-t1-ironcore"].category = "electronics"
+		data.raw.recipe["sct-t1-magnet-coils"].category = "electronics"
+		data.raw.recipe["sct-t2-microcircuits"].category = "electronics"
+		data.raw.recipe["sct-t2-micro-wafer"].category = "electronics"
+		data.raw.recipe["sct-t2-reaction-nodes"].category = "electronics"
+		data.raw.recipe["sct-mil-circuit3"].category = "electronics"
+		data.raw.recipe["sct-mil-circuit2"].category = "electronics"
+		data.raw.recipe["sct-mil-circuit1"].category = "electronics"
+		data.raw.recipe["sct-logistic-memory-unit"].category = "electronics"
 	end
 end
 
