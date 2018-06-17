@@ -1,3 +1,5 @@
+0.16.40
+- fixed t3 lab dependency for pyhightech
 0.16.39
 - changed production times on intermediates (mainly military, production and hightech)
 - fixed bobs recipes not using all sct intermiedates

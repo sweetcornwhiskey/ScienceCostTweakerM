@@ -58,3 +58,19 @@ require("pycontainer")
 	data.raw["recipe"]["production-science-pack"].subgroup = "sct-sciencepack-prod"
 	data.raw["recipe"]["production-science-pack"].order = "h[prod]-a[production-science-pack]"	
 end
+
+if mods["pyhightech"] then
+	if data.raw.technology["basic-electronics"] then
+		local electtroswap = false
+		for _i, prereq in pairs(data.raw.technology["sct-lab-t3"].prerequisites) do
+			if prereq == "advanced-electronics" then
+				table.remove(data.raw.technology["sct-lab-t3"].prerequisites, _i)
+				electroswap = true
+				break
+			end
+		end	
+		if electroswap then
+			table.insert(data.raw.technology["sct-lab-t3"].prerequisites, "basic-electronics")
+		end
+	end
+end
