@@ -41,8 +41,6 @@ local function checkpacks(tech, checkpacklist, deptech, packmap)
 	local checktech = data.raw.technology[tech]
 	if checktech then
 		if checktech.unit and checktech.unit.ingredients and #checktech.unit.ingredients > 0 then
---			log(tech)
---			log(serpent.block(packlist))
 			local deepcheck = 0
 			for tpack, _known in pairs(packlist) do
 				if _known == 0 then
@@ -65,13 +63,12 @@ local function checkpacks(tech, checkpacklist, deptech, packmap)
 					end
 				end
 ]]--				
---			log(serpent.block(packlist))
 			end
 		else
---			log("unable to determine science packs for technology " .. tech)
+			sctm.debug("unable to determine science packs for technology " .. tech)
 		end
 	else
-		log("unknown technology " .. tech .. " in dependencies for " .. deptech);
+		sctm.debug("unknown technology " .. tech .. " in dependencies for " .. deptech);
 	end
 	return packlist
 end
@@ -85,24 +82,18 @@ function connect_sciencepack(sciencepackmap)
 	
 	for tech, _obj in pairs(data.raw.technology) do
 		if _obj.unit then	
---			log("checking " .. tech .. ":" .. serpent.block(_obj))
 			if _obj.unit.ingredients and #_obj.unit.ingredients > 0 then
 				local packlist = {} 
 				for _packid, _packobj in pairs(_obj.unit.ingredients) do
---						log("pack:" .. _packid .. ":" .. serpent.block(_packobj))
 					local packname = _packobj[1];
 					packlist[packname] = 0
---					table.insert(packlist, { = 0})
 				end
---					log(serpent.block(packlist))
 				if _obj.prerequisites and #_obj.prerequisites > 0 then
 					for _i, reqtech in pairs(_obj.prerequisites) do
 						local newpacklist = checkpacks(reqtech, packlist, tech, techmap)
 						packlist = newpacklist
 					end
 				end
---				log(tech)
---				log(serpent.block(packlist))
 				for packname, known in pairs(packlist) do
 					local deptech = techmap[packname]
 					if (deptech == nil) then
@@ -126,21 +117,20 @@ function connect_sciencepack(sciencepackmap)
 								_obj.prerequisites = {}
 							end
 							table.insert(_obj.prerequisites, deptech)
---							log("adding dependency on " .. deptech .. " to " .. tech .. " from " ..packname )
 						end
 					end
 				end
 			else
---					log("unable to determine science packs for " .. tech);
+				sctm.debug("unable to determine science packs for " .. tech);
 			end
 		else
---			log(tech .. " has not defined requirements")
+			sctm.debug(tech .. " has not defined requirements")
 		end
 	end
 end
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
-	log("science connect started")
+	sctm.log("science connect started")
 	connect_sciencepack(nil)
-	log("science connect finished - processed " .. tostring(#data.raw.technology) .. " technologies")
+	sctm.log("science connect finished - processed " .. tostring(#data.raw.technology) .. " technologies")
 end

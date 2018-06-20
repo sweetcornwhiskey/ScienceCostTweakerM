@@ -1,5 +1,3 @@
---log(serpent.block(data.raw.recipe["sct-lab2-automatization"]))
-
 if mods["boblogistics"] then
 	if settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 		if mods["omnimatter"] then
@@ -16,7 +14,6 @@ if mods["boblogistics"] then
 		 bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "transport-belt", "basic-transport-belt")
 	end
 end
---log(serpent.block(data.raw.recipe["sct-lab2-automatization"]))
 
 if mods["bobassembly"] then
 	if data.raw.technology["advanced-material-processing-2"] then
@@ -55,8 +52,6 @@ if mods["bobmodules"] then
 	bobmods.lib.tech.remove_recipe_unlock("modules", "productivity-processor")
 	
 	if mods["bobclasses"] then
---		log(serpent.block(data.raw.technology["bodies"]))
 		bobmods.lib.tech.remove_prerequisite("bodies","modules")
---		log(serpent.block(data.raw.technology["bodies"]))
 	end
 end

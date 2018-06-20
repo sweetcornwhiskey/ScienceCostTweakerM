@@ -5,7 +5,6 @@ require("configs.costs.uberwaffe")
 require("configs.costs.normal")
 require("configs.costs.extended")
 -- Recipes
---log(serpent.block(data.raw["recipe"]["science-pack-3"]))
 require("prototypes.2_recipe")
 -- Recipes requires
 require("tweaks.angelsmods.2_final")
@@ -125,4 +124,3 @@ data.raw.technology["logistics"].upgrade = false
 data.raw.technology["logistics-2"].upgrade = false
 data.raw.technology["logistics-3"].upgrade = false
 ]]--
---log(serpent.block(data.raw.technology["research-speed-6"]))

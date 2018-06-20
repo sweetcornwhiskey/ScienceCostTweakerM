@@ -1,6 +1,3 @@
---log(serpent.block(data.raw.item["basic-circuit-board"]))
---log(serpent.block(data.raw.recipe["basic-circuit-board"]))
---log(serpent.block(data.raw.recipe["sct-t2-instruments"]))
 -- Check that bobsmod plates is installed
 if mods["bobplates"] then
 	-- Green Science Pack:
@@ -258,7 +255,6 @@ if mods["bobpower"] then
 		bobmods.lib.recipe.replace_ingredient("sct-lab3-construction", "solar-panel", "solar-panel-large")
 	end
 end
---log(serpent.block(data.raw.recipe["sct-t2-instruments"]))
 
 -- add bob logistic pack if found - for now, might replace with qol later
 if mods["bobtech"] then

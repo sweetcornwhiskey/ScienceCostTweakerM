@@ -49,5 +49,4 @@ if data.raw.technology["fuel-processing"] then
 		table.insert(data.raw.technology["fuel-processing"].prerequisites, "sct-aai-basic-fuel-processing")
 	end
 end
---	log(serpent.block(data.raw.technology["fuel-processing"]))
 	

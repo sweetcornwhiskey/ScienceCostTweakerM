@@ -524,5 +524,3 @@ table.insert(data.raw.technology["research-speed-1"].prerequisites, "sct-researc
 table.insert(data.raw.technology["research-speed-3"].prerequisites, "sct-research-t3")
 table.insert(data.raw.technology["research-speed-5"].prerequisites, "sct-research-prod")
 table.insert(data.raw.technology["research-speed-6"].prerequisites, "sct-research-ht")
-
---log(serpent.block(data.raw.technology["research-speed-6"]))
