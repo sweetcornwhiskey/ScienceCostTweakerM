@@ -1,4 +1,6 @@
-if mods["omnimatter_science"] and mods["omnimatter-crystal"] then
+if mods["omnimatter_science"] and (mods["omnimatter_crystal"]  or mods["omnimatter-crystal"]) then
+	sctm.debug(serpent.block(data.raw.tool["omni-pack"]))
+	sctm.debug(serpent.block(data.raw.recipe["omni-pack"]))
 	if data.raw.tool["omni-pack"] and data.raw.recipe["omni-pack"] then
 		-- remove omnipack from all labs
 		for _i, lab in pairs(data.raw["lab"]) do
