@@ -1,3 +1,3 @@
 require ("entities.intermediates")
-require ("entities.labs")
 require ("entities.sciencepacks")
+require ("entities.labs")

@@ -113,10 +113,7 @@ function connect_sciencepack(sciencepackmap)
 							end
 						end
 						if prereqfound == false then
-							if (_obj.prerequisites == false or _obj.prerequisites == nil) then
-								_obj.prerequisites = {}
-							end
-							table.insert(_obj.prerequisites, deptech)
+							sctm.tech_dependency_add(tech, deptech)
 						end
 					end
 				end

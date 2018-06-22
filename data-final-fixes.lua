@@ -96,31 +96,3 @@ if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 		
 	end
 end
-
-if settings.startup["sct-military"].value == "tier2" then
-        table.insert(data.raw["lab"]["sct-lab-t2"].inputs, "military-science-pack")
-end
-
-if settings.startup["sct-lab-scaling"].value == true then
-	data.raw["lab"]["sct-lab-t2"].researching_speed = 1.1
-	data.raw["lab"]["sct-lab-t3"].researching_speed = 1.3
-	data.raw["lab"]["sct-lab-t4"].researching_speed = 1.5
-end
-
--- make sure unlock technologies are not hidden, making unsearcheable items in tech tree
--- no need for this after research rework
---[[
-data.raw.technology["advanced-electronics"].upgrade = false
-data.raw.technology["advanced-electronics-2"].upgrade = false
-data.raw.technology["advanced-material-processing"].upgrade = false
-data.raw.technology["automation"].upgrade = false
-data.raw.technology["automation-2"].upgrade = false
-data.raw.technology["automation-3"].upgrade = false
-data.raw.technology["military"].upgrade = false
-data.raw.technology["military-2"].upgrade = false
-data.raw.technology["military-3"].upgrade = false
-data.raw.technology["military-4"].upgrade = false
-data.raw.technology["logistics"].upgrade = false
-data.raw.technology["logistics-2"].upgrade = false
-data.raw.technology["logistics-3"].upgrade = false
-]]--

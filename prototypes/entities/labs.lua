@@ -422,3 +422,13 @@ end
 if settings.startup["sct-lab-modules"].value == "tier4" then
 	data.raw["lab"]["sct-lab-t4"].module_specification.module_slots = 2
 end
+
+if settings.startup["sct-lab-scaling"].value == true then
+	data.raw["lab"]["sct-lab-t2"].researching_speed = 1.1
+	data.raw["lab"]["sct-lab-t3"].researching_speed = 1.3
+	data.raw["lab"]["sct-lab-t4"].researching_speed = 1.5
+end
+
+if settings.startup["sct-military"].value == "tier2" then
+        sctm.lab_input_add("sct-lab-t2", "military-science-pack")
+end
