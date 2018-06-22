@@ -1,11 +1,6 @@
 if mods["angelsbioprocessing"] then
-	if data.raw.technology["bio-temperate-farming"] then
-		table.insert(data.raw.technology["bio-temperate-farming"].prerequisites, "sct-research-bio")
-	end
-	if data.raw.technology["bio-swamp-farming"] then
-		table.insert(data.raw.technology["bio-swamp-farming"].prerequisites, "sct-research-bio")
-	end
-	if data.raw.technology["bio-desert-farming"] then
-		table.insert(data.raw.technology["bio-desert-farming"].prerequisites, "sct-research-bio")
-	end
+	sctm.tech_dependency_add("bio-temperate-farming", "sct-research-bio")
+	sctm.tech_dependency_add("bio-swamp-farming", "sct-research-bio")
+	sctm.tech_dependency_add("bio-desert-farming", "sct-research-bio")
+	sctm.lab_input_add("lab-2", "sct-science-pack-bio")
 end
