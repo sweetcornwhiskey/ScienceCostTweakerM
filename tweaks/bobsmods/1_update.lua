@@ -260,8 +260,8 @@ end
 if mods["bobtech"] then
 	-- hide bob lab mk2	
 	if data.raw.lab["lab-2"] then
-		table.insert(data.raw.item["lab-2"].flags, "hidden")
-		bobmods.lib.tech.remove_recipe_unlock("advanced-research", "lab-2")
+		--table.insert(data.raw.item["lab-2"].flags, "hidden")
+		sctm.recipe_unlock_remove("lab-2", "advanced-research")
 		-- if someone enables it, move it to sct labs group, and make it hightest tier lab
 		data.raw.item["lab-2"].subgroup = "sct-labs"
 		data.raw.item["lab-2"].order = "b[labs]-e[lab5]"
@@ -279,6 +279,12 @@ if mods["bobtech"] then
 		data.raw.recipe["lab-2"].subgroup = "sct-labs"
 		data.raw.recipe["lab-2"].order = "b[labs]-e[lab5]"
 		bobmods.lib.recipe.replace_ingredient("lab-2", "lab", "sct-lab-t4")
+		sctm.lab_input_remove("sct-lab-t4","space-science-pack")
+		if settings.startup["sct-lab-scaling"].value == true then
+			data.raw.lab["lab-2"].researching_speed = 2
+		else
+			data.raw.lab["lab-2"].researching_speed = 1
+		end
 	end
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
@@ -306,24 +312,19 @@ if mods["bobtech"] then
 		data.raw.recipe["lab-alien"].subgroup = "sct-labs"
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
 		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-t3")
-		bobmods.lib.tech.remove_recipe_unlock("alien-research", "lab-alien")
-		bobmods.lib.tech.add_prerequisite("alien-research", "sct-research-alien")
-		bobmods.lib.tech.remove_prerequisite("alien-research", "advanced-research")
+		sctm.recipe_unlock_remove("lab-alien", "alien-research")
+		sctm.tech_dependency_add("alien-research", "sct-research-alien")
+		sctm.tech_dependency_remove("alien-research", "advanced-research")
 		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-1", "science-pack-gold")
 		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-2", "alien-science-pack")
 		bobmods.lib.tech.remove_science_pack("alien-research", "science-pack-3")
 	end
 	if data.raw.tool["logistic-science-pack"] and  data.raw.recipe["logistic-science-pack"] then
 		-- remove logistic pack from tier 1 lab
-		for i = 1, #data.raw["lab"]["lab"].inputs, 1 do
-			if data.raw["lab"]["lab"].inputs[i] == "logistic-science-pack" then
-				table.remove(data.raw["lab"]["lab"].inputs, i)
-				break
-			end
-		end
---		table.insert(data.raw["lab"]["sct-lab-t2"].inputs, "logistic-science-pack")
-		table.insert(data.raw["lab"]["sct-lab-t3"].inputs, "logistic-science-pack")
-		table.insert(data.raw["lab"]["sct-lab-t4"].inputs, "logistic-science-pack")	
+		sctm.lab_input_remove("lab", "logistic-science-pack")
+		sctm.lab_input_add("sct-lab-t3", "logistic-science-pack")
+		sctm.lab_input_add("sct-lab-t4", "logistic-science-pack")
+
 		data.raw.tool["logistic-science-pack"].subgroup = "sct-science-pack-logistic"
 		data.raw.tool["logistic-science-pack"].order = "h_a[logistic]"
 		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
@@ -365,13 +366,6 @@ if mods["bobtech"] then
 				{ type="item", name="logistic-science-pack", amount=2 },
 			},
 		}
-		-- unlocks
-		--[[
-		bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-cargo-unit")
-		bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-unimover")
-		bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-automated-storage")
-		bobmods.lib.tech.add_recipe_unlock("logistics-3", "sct-logistic-memory-unit")
-		]]--
 	end
 	if data.raw.tool["science-pack-gold"] then
 		data.raw.tool["science-pack-gold"].subgroup = "sct-science-pack-alien"
@@ -405,7 +399,7 @@ if mods["bobtech"] then
 
 	if data.raw.item["brass-chest"] then
 		bobmods.lib.recipe.replace_ingredient("sct-logistic-automated-storage", "steel-chest", "brass-chest")
-		table.insert(data.raw.technology["sct-research-logistic"].prerequisites, "zinc-processing")
+		sctm.tech_dependency_add("sct-research-logistic", "zinc-processing")
 	end
 end
 
@@ -436,20 +430,8 @@ if mods["bobmodules"] then
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
 		data.raw.recipe["lab-module"].order = "b[labs]-g[lab7]"
 		bobmods.lib.recipe.replace_ingredient("lab-module", "lab", "sct-lab-t2")
-		bobmods.lib.tech.add_prerequisite("effect-transmission","sct-research-t3")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-1", "speed-processor")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-2", "effectivity-processor")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission","science-pack-3", "productivity-processor")
-		bobmods.lib.tech.add_prerequisite("effect-transmission-2", "sct-research-prod")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission-2","science-pack-1", "speed-processor")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission-2","science-pack-2", "effectivity-processor")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission-2","science-pack-3", "productivity-processor")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission-2","production-science-pack", "module-circuit-board")
-		bobmods.lib.tech.add_prerequisite("effect-transmission-3", "sct-research-ht")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission-3","science-pack-1", "speed-processor")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission-3","science-pack-2", "effectivity-processor")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission-3","science-pack-3", "productivity-processor")
-		--bobmods.lib.tech.replace_science_pack("effect-transmission-3","high-tech-science-pack", "module-case")
-		--bobmods.lib.tech.add_science_pack("effect-transmission-3", "module-circuit-board", 1)
+		sctm.tech_dependency_add("effect-transmission", "sct-research-t3")
+		sctm.tech_dependency_add("effect-transmission-2", "sct-research-prod")
+		sctm.tech_dependency_add("effect-transmission-3", "sct-research-ht")
 	end
 end

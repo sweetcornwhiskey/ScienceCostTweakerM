@@ -15,27 +15,6 @@ if mods["boblogistics"] then
 	end
 end
 
-if mods["bobassembly"] then
-	if data.raw.technology["advanced-material-processing-2"] then
-		 data.raw.technology["advanced-material-processing-2"].upgrade = false
-	end
-	if data.raw.technology["advanced-material-processing-3"] then
-		 data.raw.technology["advanced-material-processing-3"].upgrade = false
-	end
-	if data.raw.technology["advanced-material-processing-4"] then
-		 data.raw.technology["advanced-material-processing-4"].upgrade = false
-	end
-	if data.raw.technology["automation-4"] then
-		 data.raw.technology["automation-4"].upgrade = false
-	end
-	if data.raw.technology["automation-5"] then
-		 data.raw.technology["automation-5"].upgrade = false
-	end
-	if data.raw.technology["automation-6"] then
-		 data.raw.technology["automation-6"].upgrade = false
-	end
-end
-
 if mods["bobplates"] then
 	bobmods.lib.recipe.remove_ingredient("science-pack-3", "bronze-alloy")
 	bobmods.lib.recipe.remove_ingredient("high-tech-science-pack", "lithium-ion-battery")
@@ -43,15 +22,19 @@ if mods["bobplates"] then
 end
 	
 if mods["bobmodules"] then
-	bobmods.lib.tech.replace_prerequisite("modular-armor","modules","advanced-electronics")	
-	bobmods.lib.tech.replace_prerequisite("modules","advanced-electronics","sct-lab-modules")
-	bobmods.lib.tech.remove_recipe_unlock("modules", "lab-module")
-	bobmods.lib.tech.remove_recipe_unlock("modules", "module-processor-board")
-	bobmods.lib.tech.remove_recipe_unlock("modules", "effectivity-processor")
-	bobmods.lib.tech.remove_recipe_unlock("modules", "speed-processor")
-	bobmods.lib.tech.remove_recipe_unlock("modules", "productivity-processor")
+	if sctm.tech_dependency_remove("modular-armor","modules") then
+		sctm.tech_dependency_add("modular-armor","advanced-electronics")
+	end
+	if sctm.tech_dependency_remove("modules","advanced-electronics") then
+		sctm.tech_dependency_add("modules","sct-lab-modules")
+	end
+	sctm.recipe_unlock_remove("lab-module", "modules")
+	sctm.recipe_unlock_remove("module-processor-board", "modules")
+	sctm.recipe_unlock_remove("effectivity-processor", "modules")
+	sctm.recipe_unlock_remove("speed-processor", "modules")
+	sctm.recipe_unlock_remove("productivity-processor", "modules")
 	
 	if mods["bobclasses"] then
-		bobmods.lib.tech.remove_prerequisite("bodies","modules")
+		sctm.tech_dependency_remove("bodies","modules")
 	end
 end
