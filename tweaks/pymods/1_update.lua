@@ -1,12 +1,11 @@
 if mods["pyfusionenergy"] then
 require("pycontainer")
 	-- copy py recipe onto new one, and make it ingredient
-	pycontainer = table.deepcopy(data.raw["recipe"]["production-science-pack"])
+	local pycontainer = table.deepcopy(data.raw["recipe"]["production-science-pack"])
 	pycontainer.name = "sct-prod-pycontainer"
 	pycontainer.subgroup = "sct-sciencepack-prod"
 	pycontainer.icon = "__ScienceCostTweakerM__/graphics/pymods/sct-prod-pycontainer.png"
 	pycontainer.order = "h[prod]-f[pycontainer]"
-	pycontainer.localised_name = "Fusion compound container"
 	if (pycontainer.results) then
 		pycontainer.results = 		
 		{
@@ -17,11 +16,14 @@ require("pycontainer")
 	end
 	
 	data.raw["recipe"]["sct-prod-pycontainer"] = pycontainer
-	
+
+	sctm.recipe_unlock_add("sct-prod-pycontainer", "sct-research-prod")
 	if (data.raw.technology["diamond-mining"]) then
-		table.insert(data.raw.technology["diamond-mining"].effects,{type = "unlock-recipe", recipe = "sct-prod-pycontainer"})
+		sctm.tech_dependency_add("sct-research-prod", "diamond-mining")
+--		sctm.recipe_unlock_add("sct-prod-pycontainer", "diamond-mining")
 	else
-		table.insert(data.raw.technology["advanced-material-processing-2"].effects,{type = "unlock-recipe", recipe = "sct-prod-pycontainer"})
+		sctm.tech_dependency_add("sct-research-prod", "advanced-material-processing-2")
+--		sctm.recipe_unlock_add("sct-prod-pycontainer", "advanced-material-processing-2")
 	end
 	
 	data.raw["recipe"]["production-science-pack"].expensive =
@@ -60,17 +62,6 @@ require("pycontainer")
 end
 
 if mods["pyhightech"] then
-	if data.raw.technology["basic-electronics"] then
-		local electtroswap = false
-		for _i, prereq in pairs(data.raw.technology["sct-lab-t3"].prerequisites) do
-			if prereq == "advanced-electronics" then
-				table.remove(data.raw.technology["sct-lab-t3"].prerequisites, _i)
-				electroswap = true
-				break
-			end
-		end	
-		if electroswap then
-			table.insert(data.raw.technology["sct-lab-t3"].prerequisites, "basic-electronics")
-		end
-	end
+	sctm.tech_dependency_remove("sct-research-t3","advanced-electronics")
+	sctm.tech_dependency_add("sct-research-t3","basic-electronics")
 end
