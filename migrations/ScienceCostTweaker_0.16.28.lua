@@ -108,15 +108,15 @@ for index, force in pairs(game.forces) do
 	
 	for _i, techtocheck in pairs(techchecklist) do
 		if force.technologies[techtocheck] then
-			sctm.debug("tech:" .. techtocheck .. ":" .. (force.technologies[techtocheck].researched and 'true' or 'false') .. ":" .. serpent.block(force.technologies[techtocheck].prerequisites))
+--			log("tech:" .. techtocheck .. ":" .. (force.technologies[techtocheck].researched and 'true' or 'false') .. ":" .. serpent.block(force.technologies[techtocheck].prerequisites))
 			local researched = true;
 			for prereq, _obj in pairs(force.technologies[techtocheck].prerequisites) do
-				sctm.debug("pre:" .. prereq .. ":" .. (force.technologies[prereq].researched and 'true' or 'false'))
+--				log("pre:" .. prereq .. ":" .. (force.technologies[prereq].researched and 'true' or 'false'))
 				researched = (researched and force.technologies[prereq].researched)
-				sctm.debug("newstate:" .. (researched and 'true' or 'false'))
+--				log("newstate:" .. (researched and 'true' or 'false'))
 			end
 			force.technologies[techtocheck].researched = researched
-			sctm.debug("reslt:" .. techtocheck .. ":" .. (force.technologies[techtocheck].researched and 'true' or 'false'))
+--			log("reslt:" .. techtocheck .. ":" .. (force.technologies[techtocheck].researched and 'true' or 'false'))
 		end
 	end
 
