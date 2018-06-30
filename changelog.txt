@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.43
+  Changes:
+    - lib functions
+    - some normalization on tech and recipes
+  Bugfixes:
+    - fixed compatibility with mods that use difficulty with tech
+---------------------------------------------------------------------------------------------------
 Version: 0.16.42
   Bugfixes:
     - migration fix
@@ -206,6 +213,7 @@ Version: 0.16.1
     - remove science override option (bobs,vanilla), there minimal differences
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.0
-  Feature:
+  Features:
     - initial revision
     - 0.16 compatibility
+---------------------------------------------------------------------------------------------------
