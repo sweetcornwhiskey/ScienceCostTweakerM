@@ -511,10 +511,10 @@ data:extend({
 
 -- military tech dependencies, based on settings
 if settings.startup["sct-military"].value == "tier2" then
-	table.insert(data.raw.technology["sct-research-mil"].prerequisites, "sct-research-t2")
+	sctm.tech_dependency_add("sct-research-mil", "sct-research-t2")
 else
-	table.insert(data.raw.technology["sct-research-mil"].prerequisites, "sct-research-t3")
-	table.insert(data.raw.technology["sct-research-mil"].unit.ingredients, {"science-pack-3",1})
+	sctm.tech_dependency_add("sct-research-mil", "sct-research-t3")
+	sctm.tech_pack_add("sct-research-mil", {"science-pack-3",1})
 	data.raw.technology["sct-research-mil"].unit.time = 3
 	data.raw.technology["sct-research-mil"].unit.count = 90
 end
