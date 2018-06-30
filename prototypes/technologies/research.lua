@@ -519,8 +519,3 @@ else
 	data.raw.technology["sct-research-mil"].unit.count = 90
 end
 
--- add pack as prerequisity for research speed research
-table.insert(data.raw.technology["research-speed-1"].prerequisites, "sct-research-t2")
-table.insert(data.raw.technology["research-speed-3"].prerequisites, "sct-research-t3")
-table.insert(data.raw.technology["research-speed-5"].prerequisites, "sct-research-prod")
-table.insert(data.raw.technology["research-speed-6"].prerequisites, "sct-research-ht")

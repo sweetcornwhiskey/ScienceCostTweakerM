@@ -206,22 +206,22 @@ local function addpack(ingredientstable, newpack)
 			found = true
 			break
 		end
-		if not found then
-			table.insert(ingredientstable, pack)
-			added = true
-		end
+	end
+	if not found then
+		table.insert(ingredientstable, newpack)
+		added = true
 	end
 	return addedd
 end
 
 function sctm.tech_pack_add(techname, packnormal, packexpensive)
-	sctm.debug("add pack " .. packname .. " to " .. techname)
 	local added = false
 	if not packnormal and not packexpensive then
 		return false
 	end
-	local normal = packnormal and packnormal or table.deepcopy(packexpensive)
-	local expensive = packexpensive and packexpensive or table.deepcopy(packnormal)
+	local normal = packnormal and table.deepcopy(packnormal) or table.deepcopy(packexpensive)
+	local expensive = packexpensive and table.deepcopy(packexpensive) or table.deepcopy(packnormal)
+	sctm.debug("add pack " .. normal[1] .. " to " .. techname)
 	if data.raw.technology[techname] and data.raw.tool[normal[1]] then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
@@ -243,7 +243,7 @@ function sctm.tech_pack_add(techname, packnormal, packexpensive)
 			end
 			hasdiff = true
 		end
-		if not hasdiff then
+		if not hasdiff or not added then
 			if tech.unit then
 				if not tech.unit.ingredients then
 					tech.unit.ingredients = {}
@@ -279,6 +279,7 @@ local function replacepack(ingredientstable, oldpackname, newpackname)
 end
 
 function sctm.tech_pack_replace(techname, oldpackname, newpackname)
+	sctm.debug("replace pack " .. oldpackname .. " by " .. newpackname .. " in " .. techname)
 	local replaced = false
 	if data.raw.technology[techname] and data.raw.tool[newpackname] then
 		local tech = data.raw.technology[techname]
@@ -291,27 +292,24 @@ function sctm.tech_pack_replace(techname, oldpackname, newpackname)
 		end
 		if tech.expensive then
 			if tech.expensive.unit and tech.expensive.unit.ingredients then
-				replaced = removed or replacepack(tech.expensive.unit.ingredients, oldpackname, newpackname)
+				replaced = replaced or replacepack(tech.expensive.unit.ingredients, oldpackname, newpackname)
 			end
 			hasdiff = true
 		end
-		if not hasdiff then
+		if not hasdiff or not replaced then
 			if tech.unit and tech.unit.ingredients then
 				replaced = replacepack(tech.unit.ingredients, oldpackname, newpackname) 
 			end
 		end
 	end
-	if replaced then
-		sctm.debug("replace pack " .. oldpackname .. " by " .. newpackname .. " in " .. techname)
-	end
 	if not data.raw.technology[techname] then
 		sctm.debug("attempting to update nonexistent technology " .. techname)
 	end
 	if not data.raw.tool[oldpackname] then
-		sctm.debug("attempting to remove nonexistent pack " .. packname)
+		sctm.debug("attempting to remove nonexistent pack " .. oldpackname)
 	end
 	if not data.raw.tool[newpackname] then
-		sctm.debug("attempting to insert nonexistent pack " .. packname)
+		sctm.debug("attempting to insert nonexistent pack " .. newpackname)
 	end
 	return replaced
 end
@@ -319,13 +317,13 @@ end
 local function addunlock(effectstable, recipename)
 	local hasunlock = false
 	for _i, effect in pairs(effectstable) do
-		if efftect.type == "recipe-unlock" and effect.recipe == recipename then
+		if effect.type == "unlock-recipe" and effect.recipe == recipename then
 			hasunlock = true
 			break
 		end
 	end
 	if not hasunlock then
-		table.insert(effectstable, { type="recipe-unlock", recipe = recipename })
+		table.insert(effectstable, { type="unlock-recipe", recipe = recipename })
 	end
 end
 
@@ -365,7 +363,7 @@ end
 local function removeunlock(effectstable, recipename)
 	local removed = false
 	for _i, effect in pairs(effectstable) do
-		if effect.type == "recipe-unlock" and effect.recipe == recipename then
+		if effect.type == "unlock-recipe" and effect.recipe == recipename then
 			table.remove(effectstable, _i)
 			removed = true
 			break
@@ -468,8 +466,8 @@ end
 
 function sctm.recipe_ingredient_add(recipename, ingredientnormal, ingredientexpensive)
 	local added = false
-	local normal = ingredientnormal and ingredientnormal or ingredientexpensive
-	local expensive = ingredientexpensive and ingredientexpensive or ingredientnormal
+	local normal = ingredientnormal and table.deepcopy(ingredientnormal) or table.deepcopy(ingredientexpensive)
+	local expensive = ingredientexpensive and table.deepcopy(ingredientexpensive) or table.deepcopy(ingredientnormal)
 	sctm.debug(recipename .. " insert " .. normal.name .. ", " .. expensive.name)
 	if data.raw.recipe[recipename] and (data.raw.item[normal.name] or data.raw.fluid[normal.name]) and (data.raw.item[expensive.name] or data.raw.fluid[expensive.name]) then
 		local recipe = data.raw.recipe[recipename]
@@ -534,10 +532,10 @@ end
 
 function sctm.recipe_ingredient_replace(recipename, oldingredientnormal, newingredientnormal, oldingredientexpensive, newingredientexpensive)
 	local replaced = false
-	local normal = newingredientnormal and newingredientnormal or newingredientexpensive
-	local expensive = newingredientexpensive and newingredientexpensive or newingredientnormal
-	local oldnormal = oldingredientnormal and oldingredientnormal or oldingredientexpensive
-	local oldexpensive = oldingredientexpensive and oldingredientexpensive or oldingredientnormal
+	local normal = newingredientnormal and table.deepcopy(newingredientnormal) or table.deepcopy(newingredientexpensive)
+	local expensive = newingredientexpensive and table.deepcopy(newingredientexpensive) or table.deepcopy(newingredientnormal)
+	local oldnormal = oldingredientnormal and table.deepcopy(oldingredientnormal) or table.deepcopy(oldingredientexpensive)
+	local oldexpensive = oldingredientexpensive and table.deepcopy(oldingredientexpensive) or table.deepcopy(oldingredientnormal)
 	if data.raw.recipe[recipename] and (data.raw.item[normal.name] or data.raw.fluid[normal.name]) and (data.raw.item[expensive.name] or data.raw.fluid[expensive.name]) then
 		local recipe = data.raw.recipe[recipename]
 		local hasdiff = false

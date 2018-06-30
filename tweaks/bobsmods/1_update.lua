@@ -93,29 +93,27 @@ if mods["bobplates"] then
 	-- Military Science Pack:
 	-- =============================
 	if data.raw.item["invar-alloy"] then
-		bobmods.lib.recipe.replace_ingredient("sct-mil-subplating", "iron-plate", "invar-alloy")
-		bobmods.lib.recipe.replace_ingredient("sct-mil-plating", "iron-plate", "invar-alloy")
+		sctm.recipe_ingredient_replace("sct-mil-subplating", "iron-plate", { type="item", name="invar-alloy", amount = 0})
+		sctm.recipe_ingredient_replace("sct-mil-plating", "iron-plate", { type="item", name="invar-alloy", amount = 0})
 	end
 		
 	if data.raw.item["brass-alloy"] then
-		bobmods.lib.recipe.replace_ingredient("sct-mil-subplating", "copper-plate", "brass-alloy")
-		bobmods.lib.recipe.replace_ingredient("sct-mil-plating", "copper-plate", "brass-alloy")
+		sctm.recipe_ingredient_replace("sct-mil-subplating", "copper-plate", { type="item", name="brass-alloy", amount = 0})
+		sctm.recipe_ingredient_replace("sct-mil-plating", "copper-plate", { type="item", name="brass-alloy", amount = 0})
 	end
 
 	if data.raw.item["carbon"] then
-		table.insert(data.raw.recipe["sct-mil-circuit3"].normal.ingredients, { type="item", name="carbon", amount=4 })
-		table.insert(data.raw.recipe["sct-mil-circuit3"].expensive.ingredients, { type="item", name="carbon", amount=10 })
-		table.insert(data.raw.recipe["sct-mil-circuit2"].normal.ingredients, { type="item", name="carbon", amount=3 })
-		table.insert(data.raw.recipe["sct-mil-circuit2"].expensive.ingredients, { type="item", name="carbon", amount=8 })
+		sctm.recipe_ingredient_add("sct-mil-circuit3" , { type="item", name="carbon", amount=4 }, { type="item", name="carbon", amount=10 })
+		sctm.recipe_ingredient_add("sct-mil-circuit2", { type="item", name="carbon", amount=3 }, { type="item", name="carbon", amount=8 })
 --		table.insert(data.raw.recipe["sct-mil-circuit1"].normal.ingredients, { type="item", name="carbon", amount=2 })
 --		table.insert(data.raw.recipe["sct-mil-circuit1"].expensive.ingredients, { type="item", name="carbon", amount=5 })		
-		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit1", "coal", "carbon")
+		sctm.recipe_ingredient_replace("sct-mil-circuit1", "coal", { type="item", name="carbon", amount=0 })
 	end
 	
 	-- Production Science Pack:
 	-- =============================
 	if data.raw.item["silicon"] then
-		bobmods.lib.recipe.replace_ingredient("sct-prod-biosilicate", "stone", "silicon")
+		sctm.recipe_ingredient_replace("sct-prod-biosilicate", "stone", {type="item", name="silicon", amount = 0})
 	end
 	
 	if data.raw.item["tin-plate"] and data.raw.item["lead-plate"] and data.raw.item["silver-plate"] and data.raw.fluid["sulfur-dioxide"] then
@@ -222,7 +220,7 @@ if mods["bobplates"] then
 end
 
 if mods["bobelectronics"] then
-	bobmods.lib.tech.add_prerequisite("sct-lab-t2", "electronics")
+	sctm.tech_dependency_add("sct-lab-t2", "electronics")
 	if settings.startup["sct-military"].value == "tier2" then
 		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit3", "advanced-circuit", "electronic-circuit")
 	end
@@ -261,7 +259,7 @@ if mods["bobtech"] then
 	-- hide bob lab mk2	
 	if data.raw.lab["lab-2"] then
 		--table.insert(data.raw.item["lab-2"].flags, "hidden")
-		sctm.recipe_unlock_remove("lab-2", "advanced-research")
+		sctm.tech_unlock_remove("advanced-research", "lab-2")
 		-- if someone enables it, move it to sct labs group, and make it hightest tier lab
 		data.raw.item["lab-2"].subgroup = "sct-labs"
 		data.raw.item["lab-2"].order = "b[labs]-e[lab5]"
@@ -312,12 +310,12 @@ if mods["bobtech"] then
 		data.raw.recipe["lab-alien"].subgroup = "sct-labs"
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
 		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-t3")
-		sctm.recipe_unlock_remove("lab-alien", "alien-research")
+		sctm.tech_unlock_remove("alien-research", "lab-alien")
 		sctm.tech_dependency_add("alien-research", "sct-research-alien")
 		sctm.tech_dependency_remove("alien-research", "advanced-research")
-		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-1", "science-pack-gold")
-		bobmods.lib.tech.replace_science_pack("alien-research", "science-pack-2", "alien-science-pack")
-		bobmods.lib.tech.remove_science_pack("alien-research", "science-pack-3")
+		sctm.tech_pack_replace("alien-research", "science-pack-1", "science-pack-gold")
+		sctm.tech_pack_replace("alien-research", "science-pack-2", "alien-science-pack")
+		sctm.tech_pack_remove("alien-research", "science-pack-3")
 	end
 	if data.raw.tool["logistic-science-pack"] and  data.raw.recipe["logistic-science-pack"] then
 		-- remove logistic pack from tier 1 lab

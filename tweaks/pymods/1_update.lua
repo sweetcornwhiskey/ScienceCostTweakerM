@@ -1,7 +1,7 @@
 if mods["pyfusionenergy"] then
 require("pycontainer")
 	-- copy py recipe onto new one, and make it ingredient
-	local pycontainer = table.deepcopy(data.raw["recipe"]["production-science-pack"])
+	local pycontainer = table.deepcopy(data.raw.recipe["production-science-pack"])
 	pycontainer.name = "sct-prod-pycontainer"
 	pycontainer.subgroup = "sct-sciencepack-prod"
 	pycontainer.icon = "__ScienceCostTweakerM__/graphics/pymods/sct-prod-pycontainer.png"
@@ -15,18 +15,14 @@ require("pycontainer")
 		pycontainer.result = "sct-prod-pycontainer"
 	end
 	
-	data.raw["recipe"]["sct-prod-pycontainer"] = pycontainer
+	data.raw.recipe["sct-prod-pycontainer"] = pycontainer
 
-	sctm.recipe_unlock_add("sct-prod-pycontainer", "sct-research-prod")
-	if (data.raw.technology["diamond-mining"]) then
-		sctm.tech_dependency_add("sct-research-prod", "diamond-mining")
---		sctm.recipe_unlock_add("sct-prod-pycontainer", "diamond-mining")
-	else
+	sctm.tech_unlock_add("sct-research-prod", "sct-prod-pycontainer")
+	if not sctm.tech_dependency_add("sct-research-prod", "diamond-mining") then
 		sctm.tech_dependency_add("sct-research-prod", "advanced-material-processing-2")
---		sctm.recipe_unlock_add("sct-prod-pycontainer", "advanced-material-processing-2")
 	end
 	
-	data.raw["recipe"]["production-science-pack"].expensive =
+	data.raw.recipe["production-science-pack"].expensive =
 	{
 		ingredients =
 		{
@@ -41,7 +37,7 @@ require("pycontainer")
 		energy_required = 15,
 		enabled = false,
 	}
-	data.raw["recipe"]["production-science-pack"].normal =
+	data.raw.recipe["production-science-pack"].normal =
 	{
 		ingredients =
 		{
@@ -56,9 +52,9 @@ require("pycontainer")
 		energy_required = 6,
 		enabled = false,
 	}
-	data.raw["recipe"]["production-science-pack"].ingredients = nil
-	data.raw["recipe"]["production-science-pack"].subgroup = "sct-sciencepack-prod"
-	data.raw["recipe"]["production-science-pack"].order = "h[prod]-a[production-science-pack]"	
+	data.raw.recipe["production-science-pack"].ingredients = nil
+	data.raw.recipe["production-science-pack"].subgroup = "sct-sciencepack-prod"
+	data.raw.recipe["production-science-pack"].order = "h[prod]-a[production-science-pack]"	
 end
 
 if mods["pyhightech"] then

@@ -3,75 +3,74 @@
 
 -- Science Pack 1
 -- ===================================================================
-data.raw["recipe"]["science-pack-1"].expensive = 
-{
-	enabled = false,
-	ingredients =
+data:extend(
 	{
-		{"sct-t1-ironcore", 3},
-		{"sct-t1-magnet-coils", 5},
-	},
-   	results = 
-	{
-		{ type="item", amount=1, name="science-pack-1" },
-	},
-	energy_required = 12,
-}
-data.raw["recipe"]["science-pack-1"].normal =
-{
-	enabled = false,
-	ingredients =
-	{
-		{"sct-t1-ironcore", 1},
-		{"sct-t1-magnet-coils", 2},
-	},
-	results = 
-	{
-		{ type="item", amount=1, name="science-pack-1" },
-	},
-	energy_required = 5,
-}
-data.raw["recipe"]["science-pack-1"].ingredients = nil
-data.raw["recipe"]["science-pack-1"].subgroup = "sct-sciencepack-1"
-data.raw["recipe"]["science-pack-1"].order = "d[t1]-a[science-pack-1]"
-
+		{
+			type = "recipe",
+			name = "sct-science-pack-t1",
+			subgroup = "sct-sciencepack-1",
+			order = "d[t1]-a[science-pack-1]",
+			expensive = {
+				enabled = false,
+				ingredients = {
+					{"sct-t1-ironcore", 3},
+					{"sct-t1-magnet-coils", 5}
+				},
+				results = {
+					{type = "item", amount = 1, name = "science-pack-1"}
+				},
+				energy_required = 12
+			},
+			normal = {
+				enabled = false,
+				ingredients = {
+					{"sct-t1-ironcore", 1},
+					{"sct-t1-magnet-coils", 2}
+				},
+				results = {
+					{type = "item", amount = 1, name = "science-pack-1"}
+				},
+				energy_required = 5
+			}
+		}
+	}
+)
 -- Science Pack 2
 -- ===================================================================
-data.raw["recipe"]["science-pack-2"].expensive =
-{
-	enabled = false,
-	ingredients =
+data:extend(
 	{
-		{"sct-t2-instruments", 3},
-		{"sct-t2-reaction-nodes", 2},
-	},
-	results =
-	{
-		{ type="item", amount=1, name="science-pack-2" },
-	},
-	energy_required = 15,
-	enabled = false,
-}
-data.raw["recipe"]["science-pack-2"].normal =
-{
-	enabled = false,
-	ingredients =
-	{
-		{"sct-t2-instruments", 1},
-		{"sct-t2-reaction-nodes", 1},
-	},
-	results =
-	{
-		{ type="item", amount=1, name="science-pack-2" },
-	},
-	energy_required = 6,
-	enabled = false,
-}
-data.raw["recipe"]["science-pack-2"].ingredients = nil
-data.raw["recipe"]["science-pack-2"].enabled = false
-data.raw["recipe"]["science-pack-2"].subgroup = "sct-sciencepack-2"
-data.raw["recipe"]["science-pack-2"].order = "e[t2]-a[science-pack-2]"
-
+		{
+			type = "recipe",
+			name = "sct-science-pack-t2",
+			subgroup = "sct-sciencepack-2",
+			order = "e[t2]-a[science-pack-2]",
+			expensive = {
+				enabled = false,
+				ingredients = {
+					{"sct-t2-instruments", 3},
+					{"sct-t2-reaction-nodes", 2}
+				},
+				results = {
+					{type = "item", amount = 1, name = "science-pack-2"}
+				},
+				energy_required = 15,
+				enabled = false
+			},
+			normal = {
+				enabled = false,
+				ingredients = {
+					{"sct-t2-instruments", 1},
+					{"sct-t2-reaction-nodes", 1}
+				},
+				results = {
+					{type = "item", amount = 1, name = "science-pack-2"}
+				},
+				energy_required = 6,
+				enabled = false
+			}
+		}
+	}
+)
 -- Science Pack 3
 -- ===================================================================
 --[[
@@ -88,41 +87,41 @@ data.raw["recipe"]["science-pack-2"].order = "e[t2]-a[science-pack-2]"
 	Note: Circuit = 1x Iron + 1.5x Copper
 	Note: Adv Circuit = 2x Iron + 5x Copper + 2x Plastic
 	Note: Engine = 1x Steel, 4x Iron
-]]--
-data.raw["recipe"]["science-pack-3"].expensive =
-{
-	enabled = false,
-	ingredients =
+]]
+data:extend(
 	{
-		{"sct-t3-femto-lasers", 3},
-		{"sct-t3-atomic-sensors", 2},
-	},
-	results =
-	{
-		{ type="item", amount=1, name="science-pack-3" },
-	},
-	energy_required = 30,
-	enabled = false,
-}
-data.raw["recipe"]["science-pack-3"].normal =
-{
-	enabled = false,
-	ingredients =
-	{
-		{"sct-t3-femto-lasers", 1},
-		{"sct-t3-atomic-sensors", 1},
-	},
-	results =
-	{
-		{ type="item", amount=1, name="science-pack-3" },
-	},
-	energy_required = 12,
-	enabled = false,
-}
-data.raw["recipe"]["science-pack-3"].ingredients = nil
-data.raw["recipe"]["science-pack-3"].subgroup = "sct-sciencepack-3"
-data.raw["recipe"]["science-pack-3"].order = "f[t3]-a[science-pack-3]"
-
+		{
+			type = "recipe",
+			name = "sct-science-pack-t3",
+			subgroup = "sct-sciencepack-3",
+			order = "f[t3]-a[science-pack-3]",
+			expensive = {
+				enabled = false,
+				ingredients = {
+					{"sct-t3-femto-lasers", 3},
+					{"sct-t3-atomic-sensors", 2}
+				},
+				results = {
+					{type = "item", amount = 1, name = "science-pack-3"}
+				},
+				energy_required = 30,
+				enabled = false
+			},
+			normal = {
+				enabled = false,
+				ingredients = {
+					{"sct-t3-femto-lasers", 1},
+					{"sct-t3-atomic-sensors", 1}
+				},
+				results = {
+					{type = "item", amount = 1, name = "science-pack-3"}
+				},
+				energy_required = 12,
+				enabled = false
+			}
+		}
+	}
+)
 -- Military Science Pack
 -- ===================================================================
 --[[
@@ -136,41 +135,41 @@ data.raw["recipe"]["science-pack-3"].order = "f[t3]-a[science-pack-3]"
 			=> 39x Iron, 28x Copper, 1x Steel, 5x Coal
 		Refunds: 14x Iron, 20x Copper = 14x Mixed + 3x Copper
 		
-]]--
-data.raw["recipe"]["military-science-pack"].expensive =
-{
-	enabled = false,
-	ingredients =
+]]
+data:extend(
 	{
-		{"sct-mil-circuit3", 2},
-		{"sct-mil-plating", 3},
-	},
-	results =
-	{
-		{ type="item", amount=2, name="military-science-pack" },
-	},
-	energy_required = 15,
-	enabled = false,
-}
-data.raw["recipe"]["military-science-pack"].normal =
-{
-	enabled = false,
-	ingredients =
-	{
-		{"sct-mil-circuit3", 1},
-		{"sct-mil-plating", 1},
-	},
-	results =
-	{
-		{ type="item", amount=2, name="military-science-pack" },
-	},
-	energy_required = 6,
-	enabled = false,
-}
-data.raw["recipe"]["military-science-pack"].ingredients = nil
-data.raw["recipe"]["military-science-pack"].subgroup = "sct-sciencepack-mil"
-data.raw["recipe"]["military-science-pack"].order = "g[mil]-a[military-science-pack]"
-
+		{
+			type = "recipe",
+			name = "sct-science-pack-mil",
+			expensive = {
+				enabled = false,
+				ingredients = {
+					{"sct-mil-circuit3", 2},
+					{"sct-mil-plating", 3}
+				},
+				results = {
+					{type = "item", amount = 2, name = "military-science-pack"}
+				},
+				energy_required = 15,
+				enabled = false
+			},
+			normal = {
+				enabled = false,
+				ingredients = {
+					{"sct-mil-circuit3", 1},
+					{"sct-mil-plating", 1}
+				},
+				results = {
+					{type = "item", amount = 2, name = "military-science-pack"}
+				},
+				energy_required = 6,
+				enabled = false
+			},
+			subgroup = "sct-sciencepack-mil",
+			order = "g[mil]-a[military-science-pack]"
+		}
+	}
+)
 -- Production Science Pack
 -- ===================================================================
 --[[
@@ -184,39 +183,39 @@ data.raw["recipe"]["military-science-pack"].order = "g[mil]-a[military-science-p
 			=> 50x Iron, 43x Copper, 15x Steel, 20x Stone, 10x Plastic, 20x Petroleum, 120x Water, 1x Electric Engine
 		Refunds: 5x Iron, 11x Copper = 5x Mixed + 3x Copper
 		
-]]--
-data.raw["recipe"]["production-science-pack"].expensive =
-{
-	ingredients =
+]]
+data:extend(
 	{
-		{"sct-prod-bioprocessor", 3},
-		{"sct-prod-overclocker", 2},
-	},
-	results =
-	{
-		{ type="item", amount=2, name="production-science-pack" },
-	},
-	energy_required = 25,
-	enabled = false,
-}
-data.raw["recipe"]["production-science-pack"].normal =
-{
-	ingredients =
-	{
-		{"sct-prod-bioprocessor", 1},
-		{"sct-prod-overclocker", 1},
-	},
-	results =
-	{
-		{ type="item", amount=2, name="production-science-pack" },
-	},
-	energy_required = 10,
-	enabled = false,
-}
-data.raw["recipe"]["production-science-pack"].ingredients = nil
-data.raw["recipe"]["production-science-pack"].subgroup = "sct-sciencepack-prod"
-data.raw["recipe"]["production-science-pack"].order = "h[prod]-a[production-science-pack]"
-
+		{
+			type = "recipe",
+			name = "sct-science-pack-prod",
+			expensive = {
+				ingredients = {
+					{"sct-prod-bioprocessor", 3},
+					{"sct-prod-overclocker", 2}
+				},
+				results = {
+					{type = "item", amount = 2, name = "production-science-pack"}
+				},
+				energy_required = 25,
+				enabled = false
+			},
+			normal = {
+				ingredients = {
+					{"sct-prod-bioprocessor", 1},
+					{"sct-prod-overclocker", 1}
+				},
+				results = {
+					{type = "item", amount = 2, name = "production-science-pack"}
+				},
+				energy_required = 10,
+				enabled = false
+			},
+			subgroup = "sct-sciencepack-prod",
+			order = "h[prod]-a[production-science-pack]"
+		}
+	}
+)
 -- High Tech Science Pack
 -- ===================================================================
 --[[
@@ -230,38 +229,63 @@ data.raw["recipe"]["production-science-pack"].order = "h[prod]-a[production-scie
 			=> 
 		Refunds: 15x Iron, 17x Copper = 15x Mixed + 1x Copper
 		
-]]--
-data.raw["recipe"]["high-tech-science-pack"].expensive =
-{
-	ingredients =
+]]
+data:extend(
 	{
-		{"sct-htech-capbank", 3},
-		{"sct-htech-injector", 2},
-		{"sct-htech-random", 3},
-	},
-	results =
-	{
-		{ type="item", amount=2, name="high-tech-science-pack" },
-	},
-	energy_required = 35,
-	enabled = false,
-}
-data.raw["recipe"]["high-tech-science-pack"].normal =
-{
-	enabled = false,
-	ingredients =
-	{
-		{"sct-htech-capbank", 1},
-		{"sct-htech-injector", 1},
-		{"sct-htech-random", 1},
-	},
-	results =
-	{
-		{ type="item", amount=2, name="high-tech-science-pack" },
-	},
-	energy_required = 14,
-	enabled = false,
-}
-data.raw["recipe"]["high-tech-science-pack"].ingredients = nil
-data.raw["recipe"]["high-tech-science-pack"].subgroup = "sct-sciencepack-hightech"
-data.raw["recipe"]["high-tech-science-pack"].order = "i[ht]-a[high-tech-science-pack]"
+		{
+			type = "recipe",
+			name = "sct-science-pack-ht",
+			expensive = {
+				ingredients = {
+					{"sct-htech-capbank", 3},
+					{"sct-htech-injector", 2},
+					{"sct-htech-random", 3}
+				},
+				results = {
+					{type = "item", amount = 2, name = "high-tech-science-pack"}
+				},
+				energy_required = 35,
+				enabled = false
+			},
+			normal = {
+				enabled = false,
+				ingredients = {
+					{"sct-htech-capbank", 1},
+					{"sct-htech-injector", 1},
+					{"sct-htech-random", 1}
+				},
+				results = {
+					{type = "item", amount = 2, name = "high-tech-science-pack"}
+				},
+				energy_required = 14,
+				enabled = false
+			},
+			subgroup = "sct-sciencepack-hightech",
+			order = "i[ht]-a[ht-science-pack]"
+		}
+	}
+)
+
+local sciencepack1 = table.deepcopy(data.raw.recipe["sct-science-pack-t1"])
+sciencepack1.name = "science-pack-1"
+data.raw.recipe["science-pack-1"] = sciencepack1
+
+local sciencepack2 = table.deepcopy(data.raw.recipe["sct-science-pack-t2"])
+sciencepack2.name = "science-pack-2"
+data.raw.recipe["science-pack-2"] = sciencepack2
+
+local sciencepack3 = table.deepcopy(data.raw.recipe["sct-science-pack-t3"])
+sciencepack3.name = "science-pack-3"
+data.raw.recipe["science-pack-3"] = sciencepack3
+
+local sciencepackm = table.deepcopy(data.raw.recipe["sct-science-pack-mil"])
+sciencepackm.name = "military-science-pack"
+data.raw.recipe["military-science-pack"] = sciencepackm
+
+local sciencepackp = table.deepcopy(data.raw.recipe["sct-science-pack-prod"])
+sciencepackp.name = "production-science-pack"
+data.raw.recipe["production-science-pack"] = sciencepackp
+
+local sciencepackh = table.deepcopy(data.raw.recipe["sct-science-pack-ht"])
+sciencepackh.name = "high-tech-science-pack"
+data.raw.recipe["high-tech-science-pack"] = sciencepackh

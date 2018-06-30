@@ -25,16 +25,15 @@ if mods["bobmodules"] then
 	if sctm.tech_dependency_remove("modular-armor","modules") then
 		sctm.tech_dependency_add("modular-armor","advanced-electronics")
 	end
+	
 	if sctm.tech_dependency_remove("modules","advanced-electronics") then
 		sctm.tech_dependency_add("modules","sct-lab-modules")
 	end
-	sctm.recipe_unlock_remove("lab-module", "modules")
-	sctm.recipe_unlock_remove("module-processor-board", "modules")
-	sctm.recipe_unlock_remove("effectivity-processor", "modules")
-	sctm.recipe_unlock_remove("speed-processor", "modules")
-	sctm.recipe_unlock_remove("productivity-processor", "modules")
+	sctm.tech_unlock_remove("modules", "lab-module")
+	sctm.tech_unlock_remove("modules", "module-processor-board")
+	sctm.tech_unlock_remove("modules", "effectivity-processor")
+	sctm.tech_unlock_remove("modules", "speed-processor")
+	sctm.tech_unlock_remove("modules", "productivity-processor")
 	
-	if mods["bobclasses"] then
-		sctm.tech_dependency_remove("bodies","modules")
-	end
+	sctm.tech_dependency_remove("bodies","modules")
 end

@@ -148,38 +148,6 @@ data:extend({
 })
 
 if (settings.startup["sct-tier1-lab"].value == "sct-lab-1") then
---[[
-	data.raw.recipe["lab"].results = nil
-	data.raw.recipe["lab"].ingredients = nil
-	data.raw.recipe["lab"].expensive = 
-		{
-			enabled = true,
-			energy_required = 12,
-			ingredients =
-			{
-				{"sct-lab1-construction", 3},
-				{"sct-lab1-mechanization", 2},
-			},
-			results =
-			{
-				{ type="item", amount=1, name="lab",},
-			},
-		}
-	data.raw.recipe["lab"].normal = 
-		{
-			enabled = true,
-			energy_required = 5,
-			ingredients =
-			{
-				{"sct-lab1-construction", 2},
-				{"sct-lab1-mechanization", 1},
-			},
-			results =
-			{
-				{ type="item", amount=1, name="lab",},
-			},
-		}
-]]--
 	local sctlab = table.deepcopy(data.raw.recipe["sct-lab-t1"])
 	sctlab.name = "lab"
 	data.raw.recipe["lab"] = sctlab
