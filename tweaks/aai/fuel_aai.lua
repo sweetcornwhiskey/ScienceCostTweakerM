@@ -2,16 +2,11 @@ if data.raw.technology["fuel-processing"] then
 	function fixfuel(fueltable, targettech)
 		for _i, fueltofix in pairs (fueltable) do
 			if data.raw.recipe[fueltofix] and data.raw.technology[targettech] then
-				table.insert(data.raw.technology[targettech].effects, { type="unlock-recipe", recipe=fueltofix })
-			end
-			if data.raw.technology["fuel-processing"] and data.raw.technology["fuel-processing"].effects then
-				for _j, eff in pairs(data.raw.technology["fuel-processing"].effects) do
-					if eff.type == "unlock-recipe" and eff.recipe == fueltofix then
-						table.remove(data.raw.technology["fuel-processing"].effects, _j)
-						break
-					end
+				sctm.tech_unlock_add(targettech, fueltofix)
+				if data.raw.technology["fuel-processing"] and data.raw.technology["fuel-processing"].effects then
+					sctm.tech_unlock_remove("fuel-processing", fueltofix)
 				end
-			end		
+			end
 		end	
 	end
 
@@ -46,7 +41,7 @@ if data.raw.technology["fuel-processing"] then
 	fixfuel(aainuclearfuel, "sct-aai-nuclear-fuel-processing")
 	
 	if data.raw.technology["sct-aai-basic-fuel-processing"] then
-		table.insert(data.raw.technology["fuel-processing"].prerequisites, "sct-aai-basic-fuel-processing")
+		sctm.tech_dependency_add("fuel-processing", "sct-aai-basic-fuel-processing")
 	end
 end
 	

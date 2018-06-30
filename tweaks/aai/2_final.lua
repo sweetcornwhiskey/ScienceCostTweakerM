@@ -8,7 +8,7 @@ if mods["aai-industry"] then
 		end
 	end
 	if (foundlab == false) then
-		table.insert(data.raw.technology["sct-lab-t1"].effects, { type = "unlock-recipe", recipe = "sct-lab-t1"})
+		sctm.tech_unlock_add("sct-lab-t1", "sct-lab-t1")
 	end
 	
 	if data.raw.lab["burner-lab"] then
@@ -19,7 +19,7 @@ if mods["aai-industry"] then
 			end
 		end
 		if packfound == false then
-			table.insert(data.raw.lab["burner-lab"].inputs, "sct-science-pack-0")
+			sctm.lab_pack_add("burner-lab", "sct-science-pack-0")
 		end
 	end
 

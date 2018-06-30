@@ -11,7 +11,7 @@ if mods["aai-industry"] then
 	}
 	
 	for _i, tech in pairs(aaitech0) do
-		sctm.tech_replace_pack(tech, "science-pack-1", "science-pack-0")
+		sctm.tech_pack_replace(tech, "science-pack-1", "sct-science-pack-0")
 	end
 
 --	if data.raw.technology["electric-lab"] then
@@ -19,16 +19,16 @@ if mods["aai-industry"] then
 --	end
 	
 	if data.raw.lab["burner-lab"] then
-		table.insert(data.raw.lab["burner-lab"].inputs, "sct-science-pack-0")
+		sctm.lab_input_add("burner-lab", "sct-science-pack-0")
 		data.raw.item["burner-lab"].order = "a[labs]-a[lab0]"
 		data.raw.item["burner-lab"].subgroup = "sct-labs"
 		data.raw.recipe["burner-lab"].order = "a[labs]-a[lab0]"
 		data.raw.recipe["burner-lab"].subgroup = "sct-labs"
-		table.insert(data.raw.technology["sct-research-t1"].unit.ingredients, {"sct-science-pack-0", 1})
+		sctm.tech_pack_add("sct-research-t1", {"sct-science-pack-0", 1})
 		data.raw.technology["sct-research-t1"].unit.time = 10
-		table.insert(data.raw.technology["sct-lab-t1"].unit.ingredients, {"sct-science-pack-0", 1})
+		sctm.tech_pack_add("sct-lab-t1", {"sct-science-pack-0", 1})
 		data.raw.technology["sct-lab-t1"].unit.time = 20
-		table.insert(data.raw.lab["lab"].inputs, "sct-science-pack-0")
+		sctm.lab_input_add("lab", "sct-science-pack-0")
 		data.raw.item["burner-lab"].icon_size = 32
 		data.raw.item["burner-lab"].icons = 
 		{
@@ -57,8 +57,8 @@ if mods["aai-industry"] then
 		data.raw.technology["electric-lab"].enabled = false
 	end
 
-	sctm.recipe_replace_ingredient("sct-t0-crate", "stone", "stone-crushed")
-	sctm.recipe_replace_ingredient("sct-t0-solvent", "iron-ore", "crushed-omnite")
-	sctm.recipe_replace_ingredient("sct-t0-solvent", "iron-ore", "angels-ore1-crushed")
-	sctm.recipe_replace_ingredient("sct-t0-solvent", "wood", "omniwood")
+	sctm.recipe_ingredient_replace("sct-t0-crate", "stone", {type="item",name="stone-crushed",amount=0})
+	sctm.recipe_ingredient_replace("sct-t0-solvent", "iron-ore", {type="item",name="crushed-omnite",amount=0})
+	sctm.recipe_ingredient_replace("sct-t0-solvent", "iron-ore", {type="item",name="angels-ore1-crushed",amount=0})
+	sctm.recipe_ingredient_replace("sct-t0-solvent", "wood", {type="item",name="omniwood",amount=0})
 end
