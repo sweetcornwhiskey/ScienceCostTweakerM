@@ -4,8 +4,10 @@ if mods["angelsbioprocessing"] then
 		for _i, lab in pairs(data.raw["lab"]) do
 			sctm.lab_input_remove(_i, "token-bio")
 		end
-		data.raw.tool["token-bio"].order = "d_a[bio]-e[token-bio]"
-		data.raw.tool["token-bio"].subgroup = "sct-science-pack-bio"
+		if data.raw.tool["token-bio"] then
+			data.raw.tool["token-bio"].order = "d_a[bio]-e[token-bio]"
+			data.raw.tool["token-bio"].subgroup = "sct-science-pack-bio"
+		end
 		if data.raw.recipe["token-bio"] then
 			data.raw.recipe["token-bio"].order = "d_a[bio]-e[token-bio]"
 			data.raw.recipe["token-bio"].subgroup = "sct-science-pack-bio"

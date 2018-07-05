@@ -4,11 +4,11 @@ if mods["bobplates"] then
 	-- =============================
 
 	if data.raw.item["tin-plate"] then
-		bobmods.lib.recipe.replace_ingredient("sct-t2-instruments", "iron-plate", "tin-plate")
+		sctm.recipe_ingredient_replace("sct-t2-instruments", "iron-plate", "tin-plate")
 	end
 
 	if data.raw.item["lead-plate"] then
-		bobmods.lib.recipe.replace_ingredient("sct-t2-micro-wafer", "iron-plate", "lead-plate")
+		sctm.recipe_ingredient_replace("sct-t2-micro-wafer", "iron-plate", "lead-plate")
 	end
 
 	
@@ -16,7 +16,7 @@ if mods["bobplates"] then
 	-- =============================
 
 	if data.raw.fluid["nitrogen"] then
-		bobmods.lib.recipe.replace_ingredient("sct-t3-femto-lasers", "water", "nitrogen")
+		sctm.recipe_ingredient_replace("sct-t3-femto-lasers", "water", "nitrogen")
 	end
 	
 	if data.raw.item["glass"] and data.raw.item["gold-plate"] then
@@ -149,10 +149,9 @@ if mods["bobplates"] then
 	-- =============================
 	
 	if data.raw.item["lithium-ion-battery"] and data.raw.item["silicon-nitride"] and data.raw.item["steel-gear-wheel"] then
-		bobmods.lib.recipe.replace_ingredient("sct-htech-capbank", "iron-plate", "steel-gear-wheel")
-		bobmods.lib.recipe.replace_ingredient("sct-htech-capbank", "battery", "lithium-ion-battery")
-		table.insert(data.raw.recipe["sct-htech-capbank"].normal.ingredients, { type="item", name="silicon-nitride", amount=10})
-		table.insert(data.raw.recipe["sct-htech-capbank"].expensive.ingredients, { type="item", name="silicon-nitride", amount=25})
+		sctm.recipe_ingredient_replace("sct-htech-capbank", "iron-plate", "steel-gear-wheel")
+		sctm.recipe_ingredient_replace("sct-htech-capbank", "battery", "lithium-ion-battery")
+		sctm.recipe_ingredient_add("sct-htech-capbank", { type="item", name="silicon-nitride", amount=10},{ type="item", name="silicon-nitride", amount=25})
 	end
 	
 	if data.raw.item["copper-tungsten-alloy"] and data.raw.item["tungsten-carbide"] and data.raw.item["ruby-5"] then
@@ -200,39 +199,38 @@ if mods["bobplates"] then
 	end
 	
 	if data.raw.item["titanium-gear-wheel"] and data.raw.item["nitinol-gear-wheel"] then
-		bobmods.lib.recipe.replace_ingredient("sct-htech-random", "iron-gear-wheel", "titanium-gear-wheel")
-		table.insert(data.raw.recipe["sct-htech-random"].normal.ingredients, { type="item", name="nitinol-gear-wheel", amount=20})
-		table.insert(data.raw.recipe["sct-htech-random"].expensive.ingredients, { type="item", name="nitinol-gear-wheel", amount=50})
+		sctm.recipe_ingredient_replace("sct-htech-random", "iron-gear-wheel", "titanium-gear-wheel")
+		sctm.recipe_ingredient_add("sct-htech-random", { type="item", name="nitinol-gear-wheel", amount=20}, { type="item", name="nitinol-gear-wheel", amount=50})
 	end
 	
 	-- lab intermediates
 	if data.raw.item["steel-gear-wheel"] then
-		bobmods.lib.recipe.replace_ingredient("sct-lab2-construction", "iron-gear-wheel", "steel-gear-wheel")
+		sctm.recipe_ingredient_replace("sct-lab2-construction", "iron-gear-wheel", "steel-gear-wheel")
 	end
 	
 	if data.raw.item["cobalt-steel-alloy"] then
-		bobmods.lib.recipe.replace_ingredient("sct-lab3-construction", "steel-plate", "cobalt-steel-alloy")
+		sctm.recipe_ingredient_replace("sct-lab3-construction", "steel-plate", "cobalt-steel-alloy")
 	end
 
 	if data.raw.item["tungsten-plate"] then
-		bobmods.lib.recipe.replace_ingredient("sct-lab4-construction", "steel-plate", "tungsten-plate")
+		sctm.recipe_ingredient_replace("sct-lab4-construction", "steel-plate", "tungsten-plate")
 	end
 end
 
 if mods["bobelectronics"] then
 	sctm.tech_dependency_add("sct-lab-t2", "electronics")
 	if settings.startup["sct-military"].value == "tier2" then
-		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit3", "advanced-circuit", "electronic-circuit")
+		sctm.recipe_ingredient_replace("sct-mil-circuit3", "advanced-circuit", "electronic-circuit")
 	end
 	if data.raw.item["basic-circuit-board"] then
-		bobmods.lib.recipe.replace_ingredient("sct-t2-instruments", "electronic-circuit", "basic-circuit-board")
-		bobmods.lib.recipe.replace_ingredient("sct-lab1-mechanization", "electronic-circuit", "basic-circuit-board")
-		bobmods.lib.recipe.replace_ingredient("sct-mil-circuit1", "electronic-circuit", "basic-circuit-board")
-		bobmods.lib.recipe.replace_ingredient("sct-lab2-automatization", "electronic-circuit", "basic-circuit-board")
+		sctm.recipe_ingredient_replace("sct-t2-instruments", "electronic-circuit", "basic-circuit-board")
+		sctm.recipe_ingredient_replace("sct-lab1-mechanization", "electronic-circuit", "basic-circuit-board")
+		sctm.recipe_ingredient_replace("sct-mil-circuit1", "electronic-circuit", "basic-circuit-board")
+		sctm.recipe_ingredient_replace("sct-lab2-automatization", "electronic-circuit", "basic-circuit-board")
 	end
 	if data.raw.item["insulated-cable"] then
-		bobmods.lib.recipe.replace_ingredient("sct-htech-capbank", "copper-cable", "insulated-cable")
-		bobmods.lib.recipe.replace_ingredient("sct-htech-injector", "copper-cable", "insulated-cable")
+		sctm.recipe_ingredient_replace("sct-htech-capbank", "copper-cable", "insulated-cable")
+		sctm.recipe_ingredient_replace("sct-htech-injector", "copper-cable", "insulated-cable")
 	end
 
 	if data.raw["recipe-category"]["electronics"] then
@@ -250,7 +248,7 @@ end
 
 if mods["bobpower"] then
 	if data.raw.item["solar-panel-large"] then
-		bobmods.lib.recipe.replace_ingredient("sct-lab3-construction", "solar-panel", "solar-panel-large")
+		sctm.recipe_ingredient_replace("sct-lab3-construction", "solar-panel", "solar-panel-large")
 	end
 end
 
@@ -276,7 +274,7 @@ if mods["bobtech"] then
 		}		
 		data.raw.recipe["lab-2"].subgroup = "sct-labs"
 		data.raw.recipe["lab-2"].order = "b[labs]-e[lab5]"
-		bobmods.lib.recipe.replace_ingredient("lab-2", "lab", "sct-lab-t4")
+		sctm.recipe_ingredient_replace("lab-2", "lab", "sct-lab-t4")
 		sctm.lab_input_remove("sct-lab-t4","space-science-pack")
 		if settings.startup["sct-lab-scaling"].value == true then
 			data.raw.lab["lab-2"].researching_speed = 2
@@ -309,7 +307,7 @@ if mods["bobtech"] then
 		}
 		data.raw.recipe["lab-alien"].subgroup = "sct-labs"
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
-		bobmods.lib.recipe.replace_ingredient("lab-alien", "lab", "sct-lab-t3")
+		sctm.recipe_ingredient_replace("lab-alien", "lab", "sct-lab-t3")
 		sctm.tech_unlock_remove("alien-research", "lab-alien")
 		sctm.tech_dependency_add("alien-research", "sct-research-alien")
 		sctm.tech_dependency_remove("alien-research", "advanced-research")
@@ -396,7 +394,7 @@ if mods["bobtech"] then
 	end
 
 	if data.raw.item["brass-chest"] then
-		bobmods.lib.recipe.replace_ingredient("sct-logistic-automated-storage", "steel-chest", "brass-chest")
+		sctm.recipe_ingredient_replace("sct-logistic-automated-storage", "steel-chest", "brass-chest")
 		sctm.tech_dependency_add("sct-research-logistic", "zinc-processing")
 	end
 end
@@ -427,7 +425,7 @@ if mods["bobmodules"] then
 		}
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
 		data.raw.recipe["lab-module"].order = "b[labs]-g[lab7]"
-		bobmods.lib.recipe.replace_ingredient("lab-module", "lab", "sct-lab-t2")
+		sctm.recipe_ingredient_replace("lab-module", "lab", "sct-lab-t2")
 		sctm.tech_dependency_add("effect-transmission", "sct-research-t3")
 		sctm.tech_dependency_add("effect-transmission-2", "sct-research-prod")
 		sctm.tech_dependency_add("effect-transmission-3", "sct-research-ht")
