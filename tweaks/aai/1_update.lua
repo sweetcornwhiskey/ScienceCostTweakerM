@@ -57,8 +57,8 @@ if mods["aai-industry"] then
 		data.raw.technology["electric-lab"].enabled = false
 	end
 
-	sctm.recipe_ingredient_replace("sct-t0-crate", "stone", {type="item",name="stone-crushed",amount=0})
-	sctm.recipe_ingredient_replace("sct-t0-solvent", "iron-ore", {type="item",name="crushed-omnite",amount=0})
-	sctm.recipe_ingredient_replace("sct-t0-solvent", "iron-ore", {type="item",name="angels-ore1-crushed",amount=0})
-	sctm.recipe_ingredient_replace("sct-t0-solvent", "wood", {type="item",name="omniwood",amount=0})
+	sctm.recipe_ingredient_replace("sct-t0-crate", "stone", "stone-crushed")
+	sctm.recipe_ingredient_replace("sct-t0-solvent", "iron-ore", "crushed-omnite")
+	sctm.recipe_ingredient_replace("sct-t0-solvent", "iron-ore", "angels-ore1-crushed")
+	sctm.recipe_ingredient_replace("sct-t0-solvent", "wood", "omniwood")
 end
