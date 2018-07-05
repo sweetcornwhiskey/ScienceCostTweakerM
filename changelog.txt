@@ -3,8 +3,10 @@ Version: 0.16.43
   Changes:
     - lib functions
     - some normalization on tech and recipes
+    - py intermediates integration in science packs (t1,t2,t3,production)
   Bugfixes:
     - fixed compatibility with mods that use difficulty with tech
+    - fixed t3 lab/py hightech dependency cycle
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.42
   Bugfixes:
