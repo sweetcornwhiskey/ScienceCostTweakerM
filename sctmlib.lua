@@ -87,12 +87,12 @@ function sctm.tech_dependency_remove(techname, depname)
 		end
 		if tech.expensive then
 			if tech.expensive.prerequisites then
-				removed = removeprereq(tech.expensive.prerequisites, depname)
+				removed = removeprereq(tech.expensive.prerequisites, depname) or removed
 				hasdiff = true
 			end
 		end
 		if not hasdiff and tech.prerequisites then
-			removed = removed or removeprereq(tech.prerequisites, depname)
+			removed = removeprereq(tech.prerequisites, depname) or removed
 		end
 	end
 	if not data.raw.technology[techname] then
@@ -134,7 +134,7 @@ function sctm.tech_dependency_add(techname, depname)
 			if not tech.expensive.prerequisites then
 				tech.expensive.prerequisites = {}
 			end
-			added = added or addprereq(tech.expensive.prerequisites, depname)
+			added = addprereq(tech.expensive.prerequisites, depname) or added
 			hasdiff = true
 		end
 		if not hasdiff then
@@ -181,7 +181,7 @@ function sctm.tech_pack_remove(techname, packname)
 		end
 		if tech.expensive then
 			if tech.expensive.unit and tech.expensive.unit.ingredients then
-				removed = removed or rempack(tech.expensive.unit.ingredients, packname)
+				removed = rempack(tech.expensive.unit.ingredients, packname) or removed
 			end
 			hasdiff = true
 		end
@@ -239,7 +239,7 @@ function sctm.tech_pack_add(techname, packnormal, packexpensive)
 				if not tech.expensive.unit.ingredients then
 					tech.expensive.unit.ingredients = {}
 				end
-				added = added or addpack(tech.expensive.unit.ingredients, expensive)
+				added = addpack(tech.expensive.unit.ingredients, expensive) or added
 			end
 			hasdiff = true
 		end
@@ -292,7 +292,7 @@ function sctm.tech_pack_replace(techname, oldpackname, newpackname)
 		end
 		if tech.expensive then
 			if tech.expensive.unit and tech.expensive.unit.ingredients then
-				replaced = replaced or replacepack(tech.expensive.unit.ingredients, oldpackname, newpackname)
+				replaced = replacepack(tech.expensive.unit.ingredients, oldpackname, newpackname) or replaced
 			end
 			hasdiff = true
 		end
@@ -385,7 +385,7 @@ function sctm.tech_unlock_remove(techname, recipename)
 		end
 		if tech.expensive then
 			if tech.expensive.effects then
-				removed = removed or removeunlock(tech.expensive.effects, recipename)
+				removed = removeunlock(tech.expensive.effects, recipename) or removed
 			end
 			hasdiff = true
 		end
@@ -427,7 +427,7 @@ function sctm.recipe_ingredient_remove(recipename, ingredientname)
 		end
 		if recipe.expensive then
 			if recipe.expensive.ingredients then
-				removed = removed or removeingredient(recipe.expensive.ingredients, ingredientname)
+				removed = removeingredient(recipe.expensive.ingredients, ingredientname) or removed
 			end
 			hasdiff = true
 		end
@@ -483,7 +483,7 @@ function sctm.recipe_ingredient_add(recipename, ingredientnormal, ingredientexpe
 			if not recipe.expensive.ingredients then
 				recipe.expensive.ingredients = {}
 			end
-			added = added or addingredient(recipe.expensive.ingredients, expensive)
+			added = addingredient(recipe.expensive.ingredients, expensive) or added
 			hasdiff = true
 		end
 		if not hasdiff then
@@ -561,7 +561,7 @@ function sctm.recipe_ingredient_replace(recipename, oldingredientnormal, newingr
 		end
 		if recipe.expensive then
 			if recipe.expensive.ingredients then
-				replaced = replaced or replaceingredient(recipe.expensive.ingredients, oldexpensive, expensive)
+				replaced = replaceingredient(recipe.expensive.ingredients, oldexpensive, expensive) or replaced
 			end
 			hasdiff = true
 		end
@@ -579,6 +579,84 @@ function sctm.recipe_ingredient_replace(recipename, oldingredientnormal, newingr
 	end
 	if not data.raw.item[expensive.name] and not data.raw.fluid[expensive.name] then
 		sctm.debug("attempting to insert nonexistent ingredient " .. expensive.name)
+	end
+	return replaced
+end
+
+local function replaceresult(resultstable, oldresult, newresult)
+	local added = false
+	for _i, result in pairs(resultstable) do
+		if result[1] == oldresult then
+			local insertresult = newresult
+			if (newresult.amount == 0) then
+				newresult.amount = result[2]
+			end
+			table.remove(resultstable, _i)
+			table.insert(resultstable, newresult)
+			added = true
+			break
+		elseif (result.name and result.name == oldresult) then			
+			if (newresult.amount == 0) then
+				newresult.amount = result.amount
+			end
+			table.remove(resultstable, _i)
+			table.insert(resultstable, newresult)
+			added = true
+			break
+		end
+	end
+	return added
+end
+
+function sctm.recipe_result_replace(recipename, oldresultnormal, newresultnormal, oldresultexpensive, newresultexpensive)
+	local replaced = false
+	local normal = newresultnormal and table.deepcopy(newresultnormal) or table.deepcopy(newresultexpensive)
+	local expensive = newresultexpensive and table.deepcopy(newresultexpensive) or table.deepcopy(newresultnormal)
+	local oldnormal = oldresultnormal and table.deepcopy(oldresultnormal) or table.deepcopy(oldresultexpensive)
+	local oldexpensive = oldresultexpensive and table.deepcopy(oldresultexpensive) or table.deepcopy(oldresultnormal)
+	if not normal.name then
+		local newnorm = {}
+		newnorm.name = normal
+		newnorm.type = data.raw.fluid[newnorm.name] and "fluid" or "item"
+		newnorm.amount = 0
+		normal = newnorm
+	end
+	if not expensive.name then
+		local newexp = {}
+		newexp.name = expensive
+		newexp.type = data.raw.fluid[newexp.name] and "fluid" or "item"
+		newexp.amount = 0
+		expensive = newexp
+	end
+	if data.raw.recipe[recipename] and (data.raw.item[normal.name] or data.raw.fluid[normal.name]) and (data.raw.item[expensive.name] or data.raw.fluid[expensive.name]) then
+		local recipe = data.raw.recipe[recipename]
+		local hasdiff = false
+		if recipe.normal then
+			if recipe.normal.results then
+				replaced = replaceresult(recipe.normal.results, oldnormal, normal)
+			end
+			hasdiff = true
+		end
+		if recipe.expensive then
+			if recipe.expensive.results then
+				replaced = replaceresult(recipe.expensive.results, oldexpensive, expensive) or replaced
+			end
+			hasdiff = true
+		end
+		if not hasdiff then
+			if recipe.results then
+				replaced = replaceresult(recipe.results, oldnormal, normal)
+			end
+		end		
+	end
+	if not data.raw.recipe[recipename] then
+		sctm.debug("attempting to update nonexistent recipe " .. recipename)
+	end
+	if not data.raw.item[normal.name] and not data.raw.fluid[normal.name] then
+		sctm.debug("attempting to insert nonexistent result " .. normal.name)
+	end
+	if not data.raw.item[expensive.name] and not data.raw.fluid[expensive.name] then
+		sctm.debug("attempting to insert nonexistent result " .. expensive.name)
 	end
 	return replaced
 end
