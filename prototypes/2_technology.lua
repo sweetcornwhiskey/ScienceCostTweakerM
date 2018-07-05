@@ -40,7 +40,7 @@ local function checkpacks(tech, checkpacklist, deptech, packmap)
 	local packlist = checkpacklist
 	local checktech = data.raw.technology[tech]
 	if checktech then
-		if checktech.unit and checktech.unit.ingredients and #checktech.unit.ingredients > 0 then
+		if checktech.unit and checktech.unit.ingredients and  table_size(checktech.unit.ingredients) > 0 then
 			local deepcheck = 0
 			for tpack, _known in pairs(packlist) do
 				if _known == 0 then
@@ -82,13 +82,13 @@ function connect_sciencepack(sciencepackmap)
 	
 	for tech, _obj in pairs(data.raw.technology) do
 		if _obj.unit then	
-			if _obj.unit.ingredients and #_obj.unit.ingredients > 0 then
+			if _obj.unit.ingredients and table_size(_obj.unit.ingredients) > 0 then
 				local packlist = {} 
 				for _packid, _packobj in pairs(_obj.unit.ingredients) do
 					local packname = _packobj[1];
 					packlist[packname] = 0
 				end
-				if _obj.prerequisites and #_obj.prerequisites > 0 then
+				if _obj.prerequisites and  table_size(_obj.prerequisites) > 0 then
 					for _i, reqtech in pairs(_obj.prerequisites) do
 						local newpacklist = checkpacks(reqtech, packlist, tech, techmap)
 						packlist = newpacklist
@@ -104,7 +104,7 @@ function connect_sciencepack(sciencepackmap)
 					end
 					if known == 0 and deptech and data.raw.technology[deptech] then					
 						local prereqfound = false
-						if _obj.prerequisites and #_obj.prerequisites > 0 then
+						if _obj.prerequisites and table_size(_obj.prerequisites) > 0 then
 							for _j, prereq in pairs(_obj.prerequisites) do
 								if prereq == deptech then
 									prereqfound = true
@@ -129,49 +129,29 @@ end
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
 	connect_sciencepack(nil)
-	sctm.log("science connect finished - processed " .. tostring(#data.raw.technology) .. " technologies")
+	sctm.log("science connect finished - processed " .. tostring(table_size(data.raw.technology)) .. " technologies")
 end
 
 -- remove known science pack unlocks from other technologies
-local omnipackfound = false
+local knownpackmatchlist = {
+	{ partial = false, name = "science-pack-1" },
+	{ partial = false, name = "science-pack-2" },
+	{ partial = false, name = "science-pack-3" },
+	{ partial = false, name = "production-science-pack" },
+	{ partial = false, name = "military-science-pack" },
+	{ partial = false, name = "high-tech-science-pack" },
+--	{ partial = false, name = "space-science-pack" }, -- not done yet
+	{ partial = false, name = "logistic-science-pack" }, -- bobs
+	{ partial = false, name = "science-pack-gold" }, -- bobs
+	{ partial = false, name = "alien-science-pack" }, -- bobs
+--	{ partial = true, name = "alien-science-pack-" },	-- bobs - leaving them under alien research
+	{ partial = false, name = "sct-science-pack-bio" }, -- angels
+	{ partial = false, name = "omni-pack" }, -- omnimatter
+--	{ partial = false, name = "science-pack-t0" }, -- aai - should not have unlock at all
+}
+
 for _i, _tech in pairs(data.raw.technology) do
 	if (_i:len() < 13 or _i:find("sct-research",1,true) == nil) then
-		if _tech.effects then
-			for _j = #_tech.effects, 1, -1 do
-				local _eff = _tech.effects[_j]
-				if _eff.type == "unlock-recipe" then
-					local name = _eff.recipe
-					if (
-						name == "science-pack-2" or
-						name == "science-pack-3" or
-						name == "military-science-pack" or
-						name == "production-science-pack" or
-						name == "high-tech-science-pack" or
-						name == "sct-science-pack-bio" or
-						name == "omni-pack" or 
---						(name:find("alien-science-pack",1,true) ~= nil) or
-						name == "alien-science-pack" or
-						name == "science-pack-gold" or
-						name == "logistic-science-pack"
-					) then
-						table.remove(_tech.effects, _j)
-						sctm.debug("Moved science pack '" .. name .. "', unlocked by '" .. _i .. "' to research tree.")
-					elseif (
-						name:len() > 12 and
-						name:find("science-pack",1,true) ~= nil and 
-						name:find("alien",1,true) == nil
-					) then
-						sctm.debug("Found unknown science pack '" .. name .. "', unlocked by '" .. _i .. "'")
-					end
-					if name == "omni-pack" then
-						omnipackfound = true
-					end
-				end
-			end
-		end
+		sctm.tech_remove_known_packs(_i, knownpackmatchlist)
 	end
-end
-
-if omnipackfound == false and mods["omnimatter_science"] then
-	sctm.debug("zelos still have not fixed omnipack research")
 end

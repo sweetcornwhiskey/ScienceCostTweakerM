@@ -19,7 +19,7 @@ function sctm.lab_input_remove(labname, packname)
 	if data.raw.lab[labname] and data.raw.lab[labname].inputs then
 		local labinputs = data.raw.lab[labname].inputs
 		for _i, inputpack in pairs(labinputs) do
-			if inputpack == packname then
+			if inputpack and inputpack == packname then
 				table.remove(labinputs, _i)
 				removed = true
 				break
@@ -41,7 +41,7 @@ function sctm.lab_input_add(labname, packname)
 		local labinputs = data.raw.lab[labname].inputs
 		local hasinput = false
 		for _i, inputpack in pairs(labinputs) do
-			if inputpack == packname then
+			if inputpack and inputpack == packname then
 				hasinput = true
 				added = true
 				break
@@ -65,7 +65,7 @@ end
 local function removeprereq(prereqtable, depname)
 	local removed = false
 	for _i, dep in pairs(prereqtable) do
-		if dep == depname then
+		if dep and dep == depname then
 			table.remove(prereqtable, _i)
 			removed = true
 			break
@@ -105,7 +105,7 @@ local function addprereq(prereqtable, depname)
 	local hasdep = false
 	local added = false
 	for _i, dep in pairs(prereqtable) do
-		if dep == depname then
+		if dep and dep == depname then
 			hasdep = true
 			added = true
 			break
@@ -317,7 +317,7 @@ end
 local function addunlock(effectstable, recipename)
 	local hasunlock = false
 	for _i, effect in pairs(effectstable) do
-		if effect.type == "unlock-recipe" and effect.recipe == recipename then
+		if effect and effect.type == "unlock-recipe" and effect.recipe == recipename then
 			hasunlock = true
 			break
 		end
@@ -363,7 +363,7 @@ end
 local function removeunlock(effectstable, recipename)
 	local removed = false
 	for _i, effect in pairs(effectstable) do
-		if effect.type == "unlock-recipe" and effect.recipe == recipename then
+		if effect and effect.type == "unlock-recipe" and effect.recipe == recipename then
 			table.remove(effectstable, _i)
 			removed = true
 			break
@@ -401,11 +401,59 @@ function sctm.tech_unlock_remove(techname, recipename)
 	return removed
 end
 
+local function removeknownpacks(effectstable, packtable, techname)
+	local ts = table_size(effectstable)
+	local removed = false
+	for _j = ts, 1, -1 do
+		local effect = effectstable[_j]
+		if effect and effect.type == "unlock-recipe" then
+			local name = effect.recipe
+			for _p, pack in pairs(packtable) do
+				if (pack.partial and name.find(pack.name, 1, true) ~= nil) or (not pack.partial and name == pack.name) then
+					sctm.debug("Moved science pack '" .. name .. "', unlocked by '" .. techname .. "' to research tree.")
+					table.remove(effectstable, _j)
+					removed = true
+				elseif name:find("science-pack",1,true) ~= nil and name:find("alien",1,true) == nil then
+					sctm.log("Found unknown science pack '" .. name .. "', unlocked by '" .. techname .. "'")
+				end
+			end
+		end
+	end
+	return removed
+end
+
+function sctm.tech_remove_known_packs(techname, packlist)
+	local removed = false
+	if data.raw.technology[techname] then
+		local hasdif = false
+		local tech = data.raw.technology[techname]
+		if tech.expensive then
+			hasdif = true
+			if tech.expensive.effects and table_size(tech.expensive.effects) then
+				removed = removeknownpacks(tech.expensive.effects, packlist, techname)
+			end
+		end
+		if tech.normal then
+			hasdif = true
+			if tech.normal.effects and table_size(tech.normal.effects) then
+				removed = removeknownpacks(tech.normal.effects, packlist, techname) and removed
+			end
+		end
+		if not hasdif and tech.effects and table_size(tech.effects) then
+			removed = removeknownpacks(tech.effects, packlist, techname)
+		end
+	end
+	if not data.raw.technology[techname] then
+		sctm.debug("attempting to update nonexistent technology" .. techname)
+	end
+	return removed
+end
+
 -- recipe functions
 local function removeingredient(ingredientstable, ingredientname)
 	local removed = false
 	for _i, ingredient in pairs(ingredientstable) do
-		if ingredient[1] == ingredientname or (ingredient.name and ingredient.name == ingredientname) then
+		if ingredient and (ingredient[1] == ingredientname or (ingredient.name and ingredient.name == ingredientname)) then
 			table.remove(ingredientstable, _i)
 			removed = true
 			break
@@ -446,12 +494,12 @@ end
 local function addingredient(ingredientstable, newingredient)
 	local added = false
 	for _i, ingredient in pairs(ingredientstable) do
-		if ingredient[1] == newingredient.name then
+		if ingredient and ingredient[1] == newingredient.name then
 			table.remove(ingredientstable, _i)
 			table.insert(ingredientstable, newingredient)
 			added = true
 			break
-		elseif (ingredient.name and ingredient.name == newingredient.name) then			
+		elseif ingredient and ingredient.name and ingredient.name == newingredient.name then
 			ingredient.amount = newingredient.amount
 			added = true
 			break
@@ -508,7 +556,7 @@ end
 local function replaceingredient(ingredientstable, oldingredient, newingredient)
 	local added = false
 	for _i, ingredient in pairs(ingredientstable) do
-		if ingredient[1] == oldingredient then
+		if ingredient and ingredient[1] == oldingredient then
 			local insertingredient = newingredient
 			if (newingredient.amount == 0) then
 				newingredient.amount = ingredient[2]
@@ -517,7 +565,7 @@ local function replaceingredient(ingredientstable, oldingredient, newingredient)
 			table.insert(ingredientstable, newingredient)
 			added = true
 			break
-		elseif (ingredient.name and ingredient.name == oldingredient) then			
+		elseif ingredient and ingredient.name and ingredient.name == oldingredient then			
 			if (newingredient.amount == 0) then
 				newingredient.amount = ingredient.amount
 			end
@@ -586,7 +634,7 @@ end
 local function replaceresult(resultstable, oldresult, newresult)
 	local added = false
 	for _i, result in pairs(resultstable) do
-		if result[1] == oldresult then
+		if result and result[1] == oldresult then
 			local insertresult = newresult
 			if (newresult.amount == 0) then
 				newresult.amount = result[2]
@@ -595,7 +643,7 @@ local function replaceresult(resultstable, oldresult, newresult)
 			table.insert(resultstable, newresult)
 			added = true
 			break
-		elseif (result.name and result.name == oldresult) then			
+		elseif result and result.name and result.name == oldresult then
 			if (newresult.amount == 0) then
 				newresult.amount = result.amount
 			end
