@@ -58,6 +58,6 @@ require("pycontainer")
 end
 
 if mods["pyhightech"] then
-	sctm.tech_dependency_remove("sct-research-t3","advanced-electronics")
-	sctm.tech_dependency_add("sct-research-t3","basic-electronics")
+	sctm.tech_dependency_remove("sct-lab-t3","advanced-electronics")
+	sctm.tech_dependency_add("sct-lab-t3","basic-electronics")
 end
