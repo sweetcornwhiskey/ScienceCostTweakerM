@@ -12,6 +12,7 @@ data:extend(
 			order = "d[t1]-a[science-pack-1]",
 			expensive = {
 				enabled = false,
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-t1-ironcore", 3},
 					{"sct-t1-magnet-coils", 5}
@@ -23,6 +24,7 @@ data:extend(
 			},
 			normal = {
 				enabled = false,
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-t1-ironcore", 1},
 					{"sct-t1-magnet-coils", 2}
@@ -46,6 +48,7 @@ data:extend(
 			order = "e[t2]-a[science-pack-2]",
 			expensive = {
 				enabled = false,
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-t2-instruments", 3},
 					{"sct-t2-reaction-nodes", 2}
@@ -58,6 +61,7 @@ data:extend(
 			},
 			normal = {
 				enabled = false,
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-t2-instruments", 1},
 					{"sct-t2-reaction-nodes", 1}
@@ -87,7 +91,7 @@ data:extend(
 	Note: Circuit = 1x Iron + 1.5x Copper
 	Note: Adv Circuit = 2x Iron + 5x Copper + 2x Plastic
 	Note: Engine = 1x Steel, 4x Iron
-]]
+]]--
 data:extend(
 	{
 		{
@@ -97,6 +101,7 @@ data:extend(
 			order = "f[t3]-a[science-pack-3]",
 			expensive = {
 				enabled = false,
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-t3-femto-lasers", 3},
 					{"sct-t3-atomic-sensors", 2}
@@ -109,6 +114,7 @@ data:extend(
 			},
 			normal = {
 				enabled = false,
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-t3-femto-lasers", 1},
 					{"sct-t3-atomic-sensors", 1}
@@ -135,7 +141,7 @@ data:extend(
 			=> 39x Iron, 28x Copper, 1x Steel, 5x Coal
 		Refunds: 14x Iron, 20x Copper = 14x Mixed + 3x Copper
 		
-]]
+]]--
 data:extend(
 	{
 		{
@@ -143,6 +149,7 @@ data:extend(
 			name = "sct-science-pack-mil",
 			expensive = {
 				enabled = false,
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-mil-circuit3", 2},
 					{"sct-mil-plating", 3}
@@ -155,6 +162,7 @@ data:extend(
 			},
 			normal = {
 				enabled = false,
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-mil-circuit3", 1},
 					{"sct-mil-plating", 1}
@@ -183,13 +191,14 @@ data:extend(
 			=> 50x Iron, 43x Copper, 15x Steel, 20x Stone, 10x Plastic, 20x Petroleum, 120x Water, 1x Electric Engine
 		Refunds: 5x Iron, 11x Copper = 5x Mixed + 3x Copper
 		
-]]
+]]--
 data:extend(
 	{
 		{
 			type = "recipe",
 			name = "sct-science-pack-prod",
 			expensive = {
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-prod-bioprocessor", 3},
 					{"sct-prod-overclocker", 2}
@@ -201,6 +210,7 @@ data:extend(
 				enabled = false
 			},
 			normal = {
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-prod-bioprocessor", 1},
 					{"sct-prod-overclocker", 1}
@@ -229,13 +239,14 @@ data:extend(
 			=> 
 		Refunds: 15x Iron, 17x Copper = 15x Mixed + 1x Copper
 		
-]]
+]]--
 data:extend(
 	{
 		{
 			type = "recipe",
 			name = "sct-science-pack-ht",
 			expensive = {
+				always_show_made_in = true,
 				ingredients = {
 					{"sct-htech-capbank", 3},
 					{"sct-htech-injector", 2},
@@ -248,6 +259,7 @@ data:extend(
 				enabled = false
 			},
 			normal = {
+				always_show_made_in = true,
 				enabled = false,
 				ingredients = {
 					{"sct-htech-capbank", 1},
@@ -258,7 +270,6 @@ data:extend(
 					{type = "item", amount = 2, name = "high-tech-science-pack"}
 				},
 				energy_required = 14,
-				enabled = false
 			},
 			subgroup = "sct-sciencepack-hightech",
 			order = "i[ht]-a[ht-science-pack]"
