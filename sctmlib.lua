@@ -536,6 +536,20 @@ function sctm.recipe_ingredient_replace(recipename, oldingredientnormal, newingr
 	local expensive = newingredientexpensive and table.deepcopy(newingredientexpensive) or table.deepcopy(newingredientnormal)
 	local oldnormal = oldingredientnormal and table.deepcopy(oldingredientnormal) or table.deepcopy(oldingredientexpensive)
 	local oldexpensive = oldingredientexpensive and table.deepcopy(oldingredientexpensive) or table.deepcopy(oldingredientnormal)
+	if not normal.name then
+		local newnorm = {}
+		newnorm.name = normal
+		newnorm.type = data.raw.fluid[newnorm.name] and "fluid" or "item"
+		newnorm.amount = 0
+		normal = newnorm
+	end
+	if not expensive.name then
+		local newexp = {}
+		newexp.name = expensive
+		newexp.type = data.raw.fluid[newexp.name] and "fluid" or "item"
+		newexp.amount = 0
+		expensive = newexp
+	end
 	if data.raw.recipe[recipename] and (data.raw.item[normal.name] or data.raw.fluid[normal.name]) and (data.raw.item[expensive.name] or data.raw.fluid[expensive.name]) then
 		local recipe = data.raw.recipe[recipename]
 		local hasdiff = false
