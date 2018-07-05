@@ -1,12 +1,13 @@
 local sct = {}
 
 sct.unlockstart = function(playerforce)
+	log(serpent.block(playerforce.technologies["sct-lab-t1"]))
 	if
+		playerforce.technologies["sct-lab-t1"] and
 		playerforce.technologies["sct-lab-t1"].valid and 
 		playerforce.technologies["sct-lab-t1"].enabled and (
 			playerforce.technologies["sct-lab-t1"].researched == false and (
-				playerforce.technologies["sct-lab-t1"].prerequisites == nil or 
-				playerforce.technologies["sct-lab-t1"].prerequisites == false or 
+				not playerforce.technologies["sct-lab-t1"].prerequisites or 
 				table_size(playerforce.technologies["sct-lab-t1"].prerequisites) == 0
 			)
 		)
@@ -14,7 +15,9 @@ sct.unlockstart = function(playerforce)
 		playerforce.technologies["sct-lab-t1"].researched = true
 	end
 
+	log(serpent.block(playerforce.technologies["sct-research-t1"]))
 	if 
+		playerforce.technologies["sct-research-t1"] and
 		playerforce.technologies["sct-research-t1"].valid and 
 		playerforce.technologies["sct-research-t1"].enabled and (
 			playerforce.technologies["sct-research-t1"].researched == false and (
@@ -33,5 +36,9 @@ sct.unlockstart = function(playerforce)
 end
 
 script.on_event(defines.events.on_player_joined_game, function(e)
+	sct.unlockstart(game.players[e.player_index].force)
+end)
+
+script.on_event(defines.events.on_player_created, function(e)
 	sct.unlockstart(game.players[e.player_index].force)
 end)
