@@ -1,5 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.43
+Date: 5. 7. 2018
   Changes:
     - lib functions
     - some normalization on tech and recipes
@@ -9,18 +10,22 @@ Version: 0.16.43
     - fixed t3 lab/py hightech dependency cycle
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.42
+Date: 24. 6. 2018
   Bugfixes:
     - migration fix
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.41
+Date: 20. 6. 2018
   Bugfixes:
     - fixed omnipack presence in labs
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.40
+Date: 17. 6. 2018
   Bugfixes:
     - fixed t3 lab dependency for pyhightech
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.39
+Date: 16. 6. 2018
   Changes:
     - changed production times on intermediates (mainly military, production and hightech)
     - replaced coal with carbon when present in all intermediates
@@ -30,48 +35,59 @@ Version: 0.16.39
     - fixed biopack dependencies
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.38
+Date: 13. 6. 2018
   Changes:
     - tin and lead present in green pack with omnimatter when bobplates/ores are installed
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.37
+Date: 11. 6. 2018
   Bugfixes:
     - yet another migration fix
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.36
+Date: 11. 6. 2018
   Bugfixes:
     - fixed migrations for pre SCTM 0.16.10 saves
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.35
+Date: 11. 6. 2018
   Changes:
     - replaced stone with crushed stone and iron with crushed omnite (omnimatter)/crushed saphirite(angels), wood with omnifused wood(omniwood) when combined with respective mods
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.34
+Date: 10. 6. 2018
   Bugfixes:
     - better autounlock fix (more sanity checks)
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.33
+Date: 10. 6. 2018
   Changes:
     - aai compatibility
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.32
+Date: 10. 6. 2018
   Bugfixes:
     - fixed bob lab2 requirement, when it's enabled (sct disables it)
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.31
+Date: 10. 6. 2018
   Bugfixes:
     - migration fix
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.30
+Date: 10. 6. 2018
   Changes:
     - normalized lab recipe/item/technology names to be same
   Bugfixes:
     - fixed t1 lab prerequisity check
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.29
+Date: 8. 6. 2018
   Bugfixes:
     - fixed check for omni-pack requirement
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.28
+Date: 8. 6. 2018
   Changes:
     - research tree branch for science
     - default multiplier set to noadjustment
@@ -80,37 +96,45 @@ Version: 0.16.28
     - science 1 and lab 1 is autounlocked research, when untouched, other mods can alter sct-lab-t1 and sct-research-t1 technology to insert t0 (add prerequisites and ingredients)
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.27
+Date: 8. 6. 2018
   Changes:
     - mod specific localizations moved to localization file from code
   Bugfixes:
     - typo fixes
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.26
+Date: 16. 5. 2018
   Changes:
     - science pack for angels bio
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.25
+Date: 16. 5. 2018
   Bugfixes:
     - migration script fix
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.24
+Date: 16. 5. 2018
   Changes:
     - bob logistic pack overhaul
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.23
+Date: 14. 5. 2018
   Bugfixes:
     - fixed deadend in research with bob inserter overhaul on
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.22
+Date: 12. 5. 2018
   Changes:
     - module slots
     - disabled lingering sct-lab-1 recipe
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.21
+Date: 11. 5. 2018
   Bugfixes:
     - fixed dead end on green tech, when bobs + omni is installed together
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.20
+Date: 10. 5. 2018
   Changes:
     - added new lab recipes, that are made from subcomponents
     - rebalanced some intermediates
@@ -122,82 +146,99 @@ Version: 0.16.20
     - additional fixes for pyfusion and omniscience
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.19
+Date: 7. 5. 2018
   Bugfixes:
     - fixed bobselectronic detection for science pack 1 recipe
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.18
+Date: 7. 5. 2018
   Changes:
     - normalized science pack crafting times (green, military, production - all 6 sec)
   Bugfixes:
     - fixed science pack crafting times
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.17
+Date: 5. 5. 2018
   Changes:
     - increased marathon science pack cost
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.16
+Date: 4. 5. 2018
   Changes:
     - split technology unlock loading to corresponding phases with recipes
   Bugfixes:
     - another fix for omni + bobs + angels
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.15
+Date: 4. 5. 2018
   Bugfixes:
     - omnipack research fix
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.14
+Date: 4. 5. 2018
   Changes:
     - omnifluid compatibility
     - expensive recipes for science packs
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.13
+Date: 3. 5. 2018
   Changes:
     - added main product
     - locked t2 lab behind automation 2 research
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.12
+Date: 2. 5. 2018
   Changes:
     - moved recipe load to 0 phase, to fix issues with material overrides from other mods
     - added "show made in" flag to items, that are not made in assemblers
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.11
+Date: 1. 5. 2018
   Changes:
     - item reorder, recipe reorder (should fix chaos in signals and inventory, also in assembler and chemical lab recipes)
     - changed bob alien lab and module lab to require higher tier lab as ingredient (t2 and t3 respective to research)
     - moved generic science-pack group and angels bio-token under SCT science (bilka)
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.10
+Date: 19. 4. 2018
   Changes:
     - changed load order to prevent science pack recipe override
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.9
+Date: 19. 4. 2018
   Changes:
     - force removed upgrade flag from all unlock technologies (upgrade technologies are not searchable in tech tree, and neither items they unlock)
     - moved quantum lab unlock into bobs advanced research (when bobtech is present), intermediates not changed
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.8
+Date: 13. 4. 2018
   Changes:
     - switched from electrum to copper-tungsten when electrum plate is not present (removed from bobs)
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.7
+Date: 9. 4. 2018
   Changes:
     - moved science waste recipes behind respective technology unlock, that produce it
   Bugfixes:
     - fix for pycoal processing t3 science override
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.6
+Date: 19. 3. 2018
   Changes:
     - detects presence of bob inserters overhaul and updates tier 3 lab recipe to use red filter inserter if overhaul is on
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.5
+Date: 19. 3. 2018
   Changes:
     - speed of labs scaling changed to be optional setting (default off, to preserve difficulty)
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.4
+Date: 19. 3. 2018
   Changes:
     - speed of labs changed to scale - 1, 1.1., 1.3., 1.5
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.3
+Date: 16. 3. 2018
   Changes:
     - disabled bob mk2 lab
     - moved all bob labs and bob science packs to science tab
@@ -205,17 +246,19 @@ Version: 0.16.3
     - angels bio token can be now enabled in T1 lab trough mod settings page
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.2
+Date: 15. 3. 2018
   Changes:
     - military can be now enabled in T2 lab trough mod settings page
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.1
+Date: 18. 2. 2018
   Changes:
     - added angels bio token to all labs
     - added bobs logistic pack to T3 and T4 lab
     - remove science override option (bobs,vanilla), there minimal differences
 ---------------------------------------------------------------------------------------------------
 Version: 0.16.0
+Date: 16. 2. 2018
   Features:
     - initial revision
     - 0.16 compatibility
----------------------------------------------------------------------------------------------------
