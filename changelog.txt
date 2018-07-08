@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.44
+Date: 8. 77. 2018
+  Changes:
+    - increased t2 (120k->150k). t3(300k->500k) lab power consumption
+  Bugfixes:
+    - omnimatter_water with aai+py (imposible t1 research due lack of water)
+---------------------------------------------------------------------------------------------------
 Version: 0.16.43
 Date: 5. 7. 2018
   Changes:
