@@ -151,7 +151,7 @@ data:extend({
 			type = "electric",
 			usage_priority = "secondary-input"
 		},
-		energy_usage = "120kW",
+		energy_usage = "150kW",
 		inputs =
 		{
 			"science-pack-1",
@@ -240,7 +240,7 @@ data:extend({
 			type = "electric",
 			usage_priority = "secondary-input"
 		},
-		energy_usage = "300kW",
+		energy_usage = "500kW",
 		inputs =
 		{
 			"science-pack-1",
