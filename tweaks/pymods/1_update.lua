@@ -5,6 +5,13 @@ if mods["pycoalprocessing"] then
 	pybotle.name = "sct-t1-pybotle"
 	pybotle.subgroup = "sct-sciencepack-1"
 	pybotle.order = "d[t1]-d[pybotle]"
+	pybotle.enabled = false
+	if pybotle.expensive then
+		pybotle.expensive.enabled = false
+	end
+	if pybotle.normal then
+		pybotle.expensive.normal = false
+	end
 	data.raw.recipe["sct-t1-pybotle"] = pybotle
 	data.raw.item["sct-t1-pybotle"].icon = table.deepcopy(data.raw.recipe["sct-t1-pybotle"].icon)
 	data.raw.item["sct-t1-pybotle"].icon_size = data.raw.recipe["sct-t1-pybotle"].icon_size
