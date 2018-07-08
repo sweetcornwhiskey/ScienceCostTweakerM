@@ -9,6 +9,9 @@ if mods["aai-industry"] then
 		"electric-mining",
 		"electric-lab",
 	}
+	if mods["omnimatter_water"] then
+		table.insert(aaitech0, "omniwaste")
+	end
 	
 	for _i, tech in pairs(aaitech0) do
 		sctm.tech_pack_replace(tech, "science-pack-1", "sct-science-pack-0")
