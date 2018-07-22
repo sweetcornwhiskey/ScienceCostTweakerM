@@ -1,7 +1,7 @@
 -- sctm helper functions
 if not sctm then sctm = {} end
 -- uncomment this to enable debug output
-sctm.enabledebug = true
+--sctm.enabledebug = true
 
 function sctm.debug(logtext)
 	if (sctm.enabledebug) then
@@ -408,15 +408,18 @@ local function removeknownpacks(effectstable, packtable, techname)
 		local effect = effectstable[_j]
 		if effect and effect.type == "unlock-recipe" then
 			local name = effect.recipe
+			local removedone = false
 			for _p, pack in pairs(packtable) do
 				if (pack.partial and name.find(pack.name, 1, true) ~= nil) or (not pack.partial and name == pack.name) then
 					sctm.debug("Moved science pack '" .. name .. "', unlocked by '" .. techname .. "' to research tree.")
 					table.remove(effectstable, _j)
-					removed = true
-				elseif name:find("science-pack",1,true) ~= nil and name:find("alien",1,true) == nil then
-					sctm.log("Found unknown science pack '" .. name .. "', unlocked by '" .. techname .. "'")
+					removedone = true
 				end
 			end
+			if not removedone and name:find("science-pack",1,true) ~= nil and name:find("alien",1,true) == nil then
+				sctm.log("Found unknown science pack '" .. name .. "', unlocked by '" .. techname .. "'")
+			end
+			removed = removed or removedone
 		end
 	end
 	return removed
@@ -708,3 +711,56 @@ function sctm.recipe_result_replace(recipename, oldresultnormal, newresultnormal
 	end
 	return replaced
 end
+
+--[[
+local function find_recipe_unlock(ingredient, sciencelist)
+end
+
+function sctm.recipe_find_techs(recipe, science_packs)
+	local science_list = {}
+	local hasdif = false
+	science_list.expensive = {}
+	science_list.normal = {}
+	if (recipe.expensive) then
+		if recipe.expensive.ingredients then
+			for _, ingredient in pairs(recipe.expensive.ingredients) do
+				local tech = find_recipe_unlock(ingredient, sicence_packs)
+				if tech then
+					table.insert(science_list.expensive, tech)
+				end
+			end
+		end
+		hasdif = true
+		if not recipe.normal then
+			science_list.normal = table.deepcopy(science_list.expensive)
+		end
+	end
+	if (recipe.normal) then
+		if recipe.normal.ingredients then
+			for _, ingredient in pairs(recipe.normal.ingredients) do
+				local tech = find_recipe_unlock(ingredient, sicence_packs)
+				if tech then
+					table.insert(science_list.normal, tech)
+				end
+			end
+		end
+		hasdif = true
+		if not recipe.expensive then
+			science_list.expensive = table.deepcopy(science_list.normal)
+		end
+	end
+	if not hasdif then
+		if recipe.ingredients then
+			for _, ingredient in pairs(recipe.ingredients) do
+				local tech = find_recipe_unlock(ingredient, sicence_packs)
+				if tech then
+					table.insert(science_list.normal, tech)
+				end
+			end
+		end
+		science_list.expensive = table.deepcopy(science_list.normal)
+	end
+
+	return science_list;
+end
+]]--
