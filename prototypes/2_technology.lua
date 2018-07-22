@@ -73,7 +73,7 @@ local function checkpacks(tech, checkpacklist, deptech, packmap)
 	return packlist
 end
 
-function connect_sciencepack(sciencepackmap)
+function connect_sciencepack(sciencepackmap, first_science)
 	local techmap = sciencepackmap
 
 	if (techmap == nil) then
@@ -96,7 +96,7 @@ function connect_sciencepack(sciencepackmap)
 				end
 				for packname, known in pairs(packlist) do
 					local deptech = techmap[packname]
-					if (deptech == nil) then
+					if deptech == nil and not packname == first_science then
 						log("unhandled SP " .. packname .. " in tech " .. tech)
 					end
 					if deptech ~= nil and data.raw.technology[deptech] == nil then
@@ -128,7 +128,11 @@ end
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
-	connect_sciencepack(nil)
+	local first_scient = "science-pack-1"
+	if data.raw.tool["science-pack-0"] then 
+		first_science = "science-pack-0"
+	end
+	connect_sciencepack(nil, first_science)
 	sctm.log("science connect finished - processed " .. tostring(table_size(data.raw.technology)) .. " technologies")
 end
 
