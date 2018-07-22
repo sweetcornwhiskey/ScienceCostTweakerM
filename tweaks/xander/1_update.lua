@@ -3,9 +3,9 @@ if mods["xander-mod"] then
         sctm.tech_dependency_remove("sct-lab-t4", "nuclear-power")
         sctm.tech_dependency_add("sct-lab-t4", "centrifuge")
     end
-    if data.raw.technology["optics_3"] then
-        sctm.tech_pack_remove("optics_3", "high-tech-science-pack")
-    end
+    -- weird dependence pushing centrifuge after HT even if it's mostly T3 or T3 or production, cetrifuge is required for t4 lab, which produces HT
+    sctm.tech_dependency_remove("centrifuge", "machines_3")
+
     sctm.tech_dependency_remove("sct-research-t2", "automation-2")
     sctm.recipe_ingredient_replace("sct-lab1-mechanization", "electronic-circuit", "coil-1")
     sctm.recipe_ingredient_replace("sct-lab1-mechanization", "transport-belt", "slow-transport-belt")
