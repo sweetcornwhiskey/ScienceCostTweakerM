@@ -41,10 +41,10 @@ data:extend({
 		expensive =
 		{
 			enabled = true,
-			energy_required = 2.5,
+			energy_required = 2,
 			ingredients = 
 			{
-				{type="item", name="stone", amount=5},
+				{type="item", name="stone", amount=4},
 			},
 			results = 
 			{
@@ -77,8 +77,8 @@ data:extend({
 			energy_required = 2.5,
 			ingredients = 
 			{
-				{type="item", name="iron-ore", amount=5},
-				{type="item", name="wood", amount=5},
+				{type="item", name="iron-ore", amount=3},
+				{type="item", name="wood", amount=4},
 			},
 			results = 
 			{
@@ -124,6 +124,7 @@ data:extend({
 		name = "sct-science-pack-0",
 		subgroup = "sct-science-pack-0",
 		order = "d[t0]-a[pack]",	
+		--[[
 		expensive =
 		{
 			enabled = true,
@@ -138,6 +139,8 @@ data:extend({
 				{type="item", name="sct-science-pack-0", amount=4},
 			},
 		},
+		]]--
+		expensive = false,
 		normal =
 		{
 			enabled = true,
