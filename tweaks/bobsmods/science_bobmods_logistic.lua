@@ -55,6 +55,47 @@ data:extend ({
 	},	
 })
 
+-- logistic science pack
+data:extend({
+	{
+		type = "recipe",
+		name = "sct-science-pack-logistic",
+		subgroup = "sct-science-pack-logistic",
+		order = "h_a[logistic]",
+		--[[
+		expensive = 
+		{
+			enabled = false,
+			energy_required = 20,
+			ingredients = 
+			{
+				{ type="item", name="sct-logistic-cargo-unit", amount=3 },
+				{ type="item", name="sct-logistic-memory-unit", amount=2 },
+			},
+			results =
+			{
+				{ type="item", name="logistic-science-pack", amount=2 },
+			},
+		},
+		]]--
+		expensive = false,
+		normal = 
+		{
+			enabled = false,
+			energy_required = 8,
+			ingredients = 
+			{
+				{ type="item", name="sct-logistic-cargo-unit", amount=1 },
+				{ type="item", name="sct-logistic-memory-unit", amount=1 },
+			},
+			results =
+			{
+				{ type="item", name="logistic-science-pack", amount=2 },
+			},
+		}
+	}
+})
+
 -- logistic intermediate recipes
 data:extend ({
 	{
@@ -62,6 +103,7 @@ data:extend ({
 		name = "sct-logistic-cargo-unit",
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-b[cargo]",
+		--[[
 		expensive =
 		{
 			enabled = false,
@@ -76,6 +118,8 @@ data:extend ({
 				{type="item", name="sct-logistic-cargo-unit", amount=1},
 			},
 		},
+		]]--
+		expensive = false,
 		normal =
 		{
 			enabled = false,
@@ -100,11 +144,11 @@ data:extend ({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 5,
+			energy_required = 4,
 			ingredients =
 			{
-				{"flying-robot-frame", 2},
-				{"express-transport-belt", 5},
+				{"flying-robot-frame", 1},
+				{"express-transport-belt", 2},
 			},
 			results = 
 			{
@@ -135,11 +179,11 @@ data:extend ({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 5,
+			energy_required = 4,
 			ingredients =
 			{
-				{"filter-inserter", 2},
-				{"steel-chest", 5},
+				{"filter-inserter", 1},
+				{"steel-chest", 3},
 			},
 			results = 
 			{
@@ -170,11 +214,11 @@ data:extend ({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 5,
+			energy_required = 4,
 			ingredients =
 			{
 				{"arithmetic-combinator", 2},
-				{"constant-combinator", 5},
+				{"constant-combinator", 3},
 			},
 			results = 
 			{

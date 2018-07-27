@@ -28,9 +28,9 @@ if mods["bobplates"] then
 		}
 		data.raw.recipe["sct-t3-laser-foci"].expensive.ingredients =
 		{
-			{type="item", name="copper-plate", amount=13},
-			{type="item", name="glass", amount=20},
-			{type="item", name="gold-plate", amount=13}
+			{type="item", name="copper-plate", amount=10},
+			{type="item", name="glass", amount=15},
+			{type="item", name="gold-plate", amount=10}
 		}
 	end
 	
@@ -49,10 +49,10 @@ if mods["bobplates"] then
 		}
 		data.raw.recipe["sct-t3-laser-emitter"].expensive.ingredients =
 		{
-			{type="item", name="electronic-circuit", amount=15},
-			{type="item", name="copper-plate", amount=20},
-			{type="item", name="glass", amount=10},
-			{type="item", name="aluminium-plate", amount=13}
+			{type="item", name="electronic-circuit", amount=10},
+			{type="item", name="copper-plate", amount=15},
+			{type="item", name="glass", amount=6},
+			{type="item", name="aluminium-plate", amount=10}
 		}
 		data.raw.recipe["sct-t3-laser-emitter"].expensive.results = 
 		{
@@ -77,11 +77,11 @@ if mods["bobplates"] then
 		}
 		data.raw.recipe["sct-t3-atomic-sensors"].expensive.ingredients =
 		{
-			{type="item", name="advanced-circuit", amount=2},
-			{type="item", name="aluminium-plate", amount=13},
-			{type="item", name="gold-plate", amount=13},
-			{type="item", name="copper-plate", amount=30},
-			{type="fluid", name="nitrogen", amount=40}
+			{type="item", name="advanced-circuit", amount=1},
+			{type="item", name="aluminium-plate", amount=10},
+			{type="item", name="gold-plate", amount=10},
+			{type="item", name="copper-plate", amount=20},
+			{type="fluid", name="nitrogen", amount=30}
 		}
 		data.raw.recipe["sct-t3-atomic-sensors"].expensive.results = 
 		{
@@ -132,11 +132,11 @@ if mods["bobplates"] then
 		}
 		data.raw.recipe["sct-prod-overclocker"].expensive.ingredients = 
 		{
-			{type="item", name="tin-plate", amount=25},
-			{type="item", name="lead-plate", amount=25},
-			{type="item", name="silver-plate", amount=25},
-			{type="item", name="sct-prod-chipcase", amount=2},
-			{type="fluid", name="sulfur-dioxide", amount=300},
+			{type="item", name="tin-plate", amount=20},
+			{type="item", name="lead-plate", amount=20},
+			{type="item", name="silver-plate", amount=20},
+			{type="item", name="sct-prod-chipcase", amount=1},
+			{type="fluid", name="sulfur-dioxide", amount=200},
 		}
 		data.raw.recipe["sct-prod-overclocker"].expensive.results = 
 		{
@@ -165,11 +165,11 @@ if mods["bobplates"] then
 		}
 		data.raw.recipe["sct-htech-injector"].expensive.ingredients =
 		{
-			{type="item", name="copper-cable", amount=50},
-			{type="item", name="processing-unit", amount=25},
-			{type="item", name="copper-tungsten-alloy", amount=50},
-			{type="item", name="tungsten-carbide", amount=50},
-			{type="item", name="ruby-5", amount=3}
+			{type="item", name="copper-cable", amount=30},
+			{type="item", name="processing-unit", amount=15},
+			{type="item", name="copper-tungsten-alloy", amount=40},
+			{type="item", name="tungsten-carbide", amount=40},
+			{type="item", name="ruby-5", amount=1}
 		}
 	end
 	if data.raw.item["electrum-alloy"] and data.raw.item["cobalt-steel-alloy"] then
@@ -180,8 +180,8 @@ if mods["bobplates"] then
 		}
 		data.raw.recipe["sct-htech-thermalstore"].expensive.ingredients =
 		{
-			{type="item", name="electrum-alloy", amount=50},
-			{type="item", name="cobalt-steel-alloy", amount=50}
+			{type="item", name="electrum-alloy", amount=40},
+			{type="item", name="cobalt-steel-alloy", amount=40}
 		}
 	else
 		if data.raw.item["copper-tungsten-alloy"] and data.raw.item["cobalt-steel-alloy"] then
@@ -192,15 +192,15 @@ if mods["bobplates"] then
 			}
 			data.raw.recipe["sct-htech-thermalstore"].expensive.ingredients =
 			{
-				{type="item", name="copper-tungsten-alloy", amount=50},
-				{type="item", name="cobalt-steel-alloy", amount=50}
+				{type="item", name="copper-tungsten-alloy", amount=40},
+				{type="item", name="cobalt-steel-alloy", amount=40}
 			}
 		end
 	end
 	
 	if data.raw.item["titanium-gear-wheel"] and data.raw.item["nitinol-gear-wheel"] then
 		sctm.recipe_ingredient_replace("sct-htech-random", "iron-gear-wheel", "titanium-gear-wheel")
-		sctm.recipe_ingredient_add("sct-htech-random", { type="item", name="nitinol-gear-wheel", amount=20}, { type="item", name="nitinol-gear-wheel", amount=50})
+		sctm.recipe_ingredient_add("sct-htech-random", { type="item", name="nitinol-gear-wheel", amount=20}, { type="item", name="nitinol-gear-wheel", amount=30})
 	end
 	
 	-- lab intermediates
@@ -330,38 +330,9 @@ if mods["bobtech"] then
 			data.raw.tool["logistic-science-pack"].icon_size = 32
 			data.raw.tool["logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack.png"
 		end
-		data.raw.recipe["logistic-science-pack"].subgroup = "sct-science-pack-logistic"
-		data.raw.recipe["logistic-science-pack"].order = "h_a[logistic]"
-		data.raw.recipe["logistic-science-pack"].ingredients = nil
-		data.raw.recipe["logistic-science-pack"].results = nil
-		data.raw.recipe["logistic-science-pack"].expensive = 
-		{
-			enabled = false,
-			energy_required = 20,
-			ingredients = 
-			{
-				{ type="item", name="sct-logistic-cargo-unit", amount=3 },
-				{ type="item", name="sct-logistic-memory-unit", amount=2 },
-			},
-			results =
-			{
-				{ type="item", name="logistic-science-pack", amount=2 },
-			},
-		}
-		data.raw.recipe["logistic-science-pack"].normal = 
-		{
-			enabled = false,
-			energy_required = 8,
-			ingredients = 
-			{
-				{ type="item", name="sct-logistic-cargo-unit", amount=1 },
-				{ type="item", name="sct-logistic-memory-unit", amount=1 },
-			},
-			results =
-			{
-				{ type="item", name="logistic-science-pack", amount=2 },
-			},
-		}
+		local logisticrecipe = table.deepcopy(data.raw.recipe["sct-science-pack-logistic"])
+		logisticrecipe.name = "logistic-science-pack"
+		data.raw.recipe["logistic-science-pack"] = logisticrecipe
 	end
 	if data.raw.tool["science-pack-gold"] then
 		data.raw.tool["science-pack-gold"].subgroup = "sct-science-pack-alien"
