@@ -18,10 +18,14 @@ if mods["pycoalprocessing"] then
 	sctm.recipe_result_replace("sct-t1-pybotle","science-pack-1","sct-t1-pybotle")
 	local sp1 = table.deepcopy(data.raw.recipe["sct-science-pack-t1"])
 	sp1.name = "science-pack-1"
-	sp1.expensive.results[1].amount = 2
-	sp1.normal.results[1].amount = 2
+	if sp1.expensive then
+		sp1.expensive.results[1].amount = 2
+	end
+	if sp1.normal then
+		sp1.normal.results[1].amount = 2
+	end
 	data.raw.recipe["science-pack-1"] = sp1
-	sctm.recipe_ingredient_add("science-pack-1", { type="item",name="sct-t1-pybotle",amount=2}, { type="item",name="sct-t1-pybotle",amount=5})
+	sctm.recipe_ingredient_add("science-pack-1", { type="item",name="sct-t1-pybotle",amount=2}, { type="item",name="sct-t1-pybotle",amount=2})
 	sctm.tech_unlock_add("sct-research-t1", "sct-t1-pybotle")
 
 	local pychip = table.deepcopy(data.raw.recipe["science-pack-2"])
@@ -34,10 +38,14 @@ if mods["pycoalprocessing"] then
 	sctm.recipe_result_replace("sct-t2-pychip","science-pack-2","sct-t2-pychip")
 	local sp2 = table.deepcopy(data.raw.recipe["sct-science-pack-t2"])
 	sp2.name = "science-pack-2"
-	sp2.expensive.results[1].amount = 2
-	sp2.normal.results[1].amount = 2
+	if sp2.expensive then
+		sp2.expensive.results[1].amount = 2
+	end
+	if sp2.normal then
+		sp2.normal.results[1].amount = 2
+	end
 	data.raw.recipe["science-pack-2"] = sp2
-	sctm.recipe_ingredient_add("science-pack-2", { type="item",name="sct-t2-pychip",amount=2}, { type="item",name="sct-t2-pychip",amount=5})
+	sctm.recipe_ingredient_add("science-pack-2", { type="item",name="sct-t2-pychip",amount=2}, { type="item",name="sct-t2-pychip",amount=2})
 	sctm.tech_unlock_add("sct-research-t2", "sct-t2-pychip")
 
 	-- copy py recipe onto new one, and make it ingredient
@@ -51,10 +59,14 @@ if mods["pycoalprocessing"] then
 	sctm.recipe_result_replace("sct-t3-pybatery","science-pack-3","sct-t3-pybatery")
 	local sp3 = table.deepcopy(data.raw.recipe["sct-science-pack-t3"])
 	sp3.name = "science-pack-3"
-	sp3.expensive.results[1].amount = 2
-	sp3.normal.results[1].amount = 2
+	if sp3.expensive then
+		sp3.expensive.results[1].amount = 2
+	end
+	if sp3.normal then
+		sp3.normal.results[1].amount = 2
+	end
 	data.raw.recipe["science-pack-3"] = sp3
-	sctm.recipe_ingredient_add("science-pack-3", { type="item",name="sct-t3-pybatery",amount=2}, { type="item",name="sct-t3-pybatery",amount=5})
+	sctm.recipe_ingredient_add("science-pack-3", { type="item",name="sct-t3-pybatery",amount=2}, { type="item",name="sct-t3-pybatery",amount=2})
 	sctm.tech_unlock_add("sct-research-t3", "sct-t3-pybatery")
 
 	if mods["pyfusionenergy"] then
@@ -71,10 +83,14 @@ if mods["pycoalprocessing"] then
 	
 		local spp = table.deepcopy(data.raw.recipe["sct-science-pack-prod"])
 		spp.name = "production-science-pack"
-		spp.expensive.results[1].amount = 4
-		spp.normal.results[1].amount = 4
+		if spp.expensive then
+			spp.expensive.results[1].amount = 4
+		end
+		if spp.normal then
+			spp.normal.results[1].amount = 4
+		end
 		data.raw.recipe["production-science-pack"] = spp
-		sctm.recipe_ingredient_add("production-science-pack", { type="item",name="sct-prod-pycontainer",amount=2}, { type="item",name="sct-prod-pycontainer",amount=5})
+		sctm.recipe_ingredient_add("production-science-pack", { type="item",name="sct-prod-pycontainer",amount=2}, { type="item",name="sct-prod-pycontainer",amount=2})
 
 		sctm.tech_unlock_add("sct-research-prod", "sct-prod-pycontainer")
 		if not sctm.tech_dependency_add("sct-research-prod", "diamond-mining") then
