@@ -66,6 +66,7 @@ data:extend (
 		name = "sct-science-pack-bio",
 		subgroup = "sct-science-pack-bio",
 		order = "d_a[bio]",
+		--[[
 		expensive =
 		{
 			enabled = false,
@@ -80,6 +81,8 @@ data:extend (
 				{type="item", name="sct-science-pack-bio", amount=1},
 			},
 		},
+		]]--
+		expensive = false,
 		normal =
 		{
 			enabled = false,
@@ -104,11 +107,11 @@ data:extend (
 		expensive =
 		{
 			enabled = false,
-			energy_required = 12.5,
+			energy_required = 10,
 			ingredients =
 			{
-				{"sct-bio-sample-scaffold", 3},
-				{"sct-bio-sample-filling", 2},
+				{"sct-bio-sample-scaffold", 2},
+				{"sct-bio-sample-filling", 1},
 			},
 			results = 
 			{
@@ -139,11 +142,11 @@ data:extend (
 		expensive =
 		{
 			enabled = false,
-			energy_required = 5,
+			energy_required = 4,
 			ingredients =
 			{
-				{"wood", 3},
-				{"solid-paper", 5},
+				{"wood", 2},
+				{"solid-paper", 4},
 			},
 			results = 
 			{
@@ -175,12 +178,12 @@ data:extend (
 		expensive =
 		{
 			enabled = false,
-			energy_required = 5,
+			energy_required = 4,
 			ingredients =
 			{
 				{"solid-soil", 2},
-				{"solid-compost", 5},
-				{type="fluid", name="water", amount=250},
+				{"solid-compost", 4},
+				{type="fluid", name="water", amount=200},
 			},
 			results = 
 			{
