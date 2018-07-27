@@ -10,6 +10,7 @@ data:extend(
 			name = "sct-science-pack-t1",
 			subgroup = "sct-sciencepack-1",
 			order = "d[t1]-a[science-pack-1]",
+--[[
 			expensive = {
 				enabled = false,
 				always_show_made_in = true,
@@ -22,6 +23,8 @@ data:extend(
 				},
 				energy_required = 12
 			},
+]]--
+			expensive = false,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -46,6 +49,7 @@ data:extend(
 			name = "sct-science-pack-t2",
 			subgroup = "sct-sciencepack-2",
 			order = "e[t2]-a[science-pack-2]",
+--[[		
 			expensive = {
 				enabled = false,
 				always_show_made_in = true,
@@ -59,6 +63,8 @@ data:extend(
 				energy_required = 15,
 				enabled = false
 			},
+]]--
+			expensive = false,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -99,6 +105,7 @@ data:extend(
 			name = "sct-science-pack-t3",
 			subgroup = "sct-sciencepack-3",
 			order = "f[t3]-a[science-pack-3]",
+--[[
 			expensive = {
 				enabled = false,
 				always_show_made_in = true,
@@ -112,6 +119,8 @@ data:extend(
 				energy_required = 30,
 				enabled = false
 			},
+]]--
+			expensive = false,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -147,6 +156,7 @@ data:extend(
 		{
 			type = "recipe",
 			name = "sct-science-pack-mil",
+--[[
 			expensive = {
 				enabled = false,
 				always_show_made_in = true,
@@ -160,6 +170,8 @@ data:extend(
 				energy_required = 15,
 				enabled = false
 			},
+]]--
+			expensive = false,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -197,6 +209,7 @@ data:extend(
 		{
 			type = "recipe",
 			name = "sct-science-pack-prod",
+--[[
 			expensive = {
 				always_show_made_in = true,
 				ingredients = {
@@ -209,6 +222,8 @@ data:extend(
 				energy_required = 25,
 				enabled = false
 			},
+]]--
+			expensive = false,
 			normal = {
 				always_show_made_in = true,
 				ingredients = {
@@ -245,6 +260,7 @@ data:extend(
 		{
 			type = "recipe",
 			name = "sct-science-pack-ht",
+--[[
 			expensive = {
 				always_show_made_in = true,
 				ingredients = {
@@ -258,6 +274,8 @@ data:extend(
 				energy_required = 35,
 				enabled = false
 			},
+]]--
+			expensive = false,
 			normal = {
 				always_show_made_in = true,
 				enabled = false,

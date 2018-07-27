@@ -1,3 +1,4 @@
+-- lab recipes
 data:extend({
 -- sct-lab-1
 	{
