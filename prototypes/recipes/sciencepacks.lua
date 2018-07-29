@@ -24,7 +24,6 @@ data:extend(
 				energy_required = 12
 			},
 ]]--
-			expensive = nil,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -64,7 +63,6 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = nil,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -120,7 +118,6 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = nil,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -171,7 +168,6 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = nil,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -223,7 +219,6 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = nil,
 			normal = {
 				always_show_made_in = true,
 				ingredients = {
@@ -275,7 +270,6 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = nil,
 			normal = {
 				always_show_made_in = true,
 				enabled = false,
@@ -294,6 +288,19 @@ data:extend(
 		}
 	}
 )
+
+local sctpacks = { 
+	"sct-science-pack-t1",
+	"sct-science-pack-t2",
+	"sct-science-pack-t3",
+	"sct-science-pack-mil",
+	"sct-science-pack-prod",
+	"sct-science-pack-ht",
+}
+
+for _, stp in pairs(sctpacks) do
+	data.raw.recipe[stp].expensive = table.deepcopy(data.raw.recipe[stp].normal)
+end
 
 local sciencepack1 = table.deepcopy(data.raw.recipe["sct-science-pack-t1"])
 sciencepack1.name = "science-pack-1"
@@ -318,3 +325,4 @@ data.raw.recipe["production-science-pack"] = sciencepackp
 local sciencepackh = table.deepcopy(data.raw.recipe["sct-science-pack-ht"])
 sciencepackh.name = "high-tech-science-pack"
 data.raw.recipe["high-tech-science-pack"] = sciencepackh
+

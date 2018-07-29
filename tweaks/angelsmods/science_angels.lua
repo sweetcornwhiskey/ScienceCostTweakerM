@@ -82,7 +82,20 @@ data:extend (
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive =
+		{
+			enabled = false,
+			energy_required = 5,
+			ingredients =
+			{
+				{"sct-bio-ground-sample", 1},
+				{"token-bio", 1},
+			},
+			results = 
+			{
+				{type="item", name="sct-science-pack-bio", amount=1},
+			},
+		},
 		normal =
 		{
 			enabled = false,

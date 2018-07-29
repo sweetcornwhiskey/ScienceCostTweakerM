@@ -140,7 +140,20 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive = 
+		{
+			enabled = true,
+			energy_required = 3,
+			ingredients = 
+			{
+				{type="item", name="sct-t0-crate", amount=2},
+				{type="item", name="sct-t0-solvent", amount=2},
+			},
+			results = 
+			{
+				{type="item", name="sct-science-pack-0", amount=4},
+			},
+		},
 		normal =
 		{
 			enabled = true,

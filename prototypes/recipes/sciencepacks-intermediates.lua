@@ -27,7 +27,19 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive =
+		{
+			enabled = false,
+			energy_required = 1,
+			ingredients = 
+			{
+				{"sct-waste-copperonly", 2},
+			},
+			results = 
+			{
+				{ type="item", name="copper-ore", amount=2 },
+			},
+		},
 		normal =
 		{
 			enabled = false,
@@ -69,7 +81,20 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive = 
+		{
+			enabled = false,
+			energy_required = 1,
+			ingredients = 
+			{
+				{"sct-waste-ironcopper", 2},
+			},
+			results = 
+			{
+				{ type="item", name="copper-ore", amount=1 },
+				{ type="item", name="iron-ore", amount=1 },
+			},
+		},
 		normal =
 		{
 			enabled = false,
@@ -193,7 +218,21 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive = 
+		{
+			enabled = false,
+			energy_required = 3,
+			ingredients =
+			{
+				{"sct-t2-microcircuits", 10},
+				{"electronic-circuit", 1},
+				{"iron-plate", 1},
+			},
+			results = 
+			{
+				{type="item", name="sct-t2-instruments", amount=1},
+			},
+		},
 		normal =
 		{
 			enabled = false,
@@ -375,7 +414,22 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive = 
+		{
+			enabled = false,
+			energy_required = 6,
+			ingredients =
+			{
+				{type="item", name="sct-t3-laser-emitter", amount=1},
+				{type="item", name="sct-t3-laser-foci", amount=1},
+				{type="item", name="sct-t3-flash-fuel", amount=1},
+				{type="fluid", name="water", amount=10}
+			},
+			results = 
+			{
+				{type="item", name="sct-t3-femto-lasers", amount=1},
+			},
+		},
 		normal = 
 		{
 			enabled = false,
@@ -585,7 +639,24 @@ data:extend({
 			main_product = "sct-mil-plating",
 		},
 		]]--
-		expensive = nil,
+		expensive = 
+		{
+			enabled = false,
+			energy_required = 15,
+			ingredients =
+			{
+				{type="item", name="steel-plate", amount=1},
+				{type="item", name="iron-plate", amount=6},
+				{type="item", name="sct-mil-subplating", amount=7},
+				{type="item", name="copper-plate", amount=2}
+			},
+			results = 
+			{
+				{type="item", name="sct-mil-plating", amount=1},
+				{type="item", name="sct-waste-ironcopper", amount=1}
+			},
+			main_product = "sct-mil-plating",
+		},
 		normal =
 		{
 			enabled = false,
@@ -670,7 +741,23 @@ data:extend({
 			main_product = "sct-mil-circuit3",
 		},
 		]]--
-		expensive = nil,
+		expensive = 
+		{
+			enabled = false,
+			energy_required = 5,
+			ingredients =
+			{
+				{type="item", name="sct-mil-circuit2", amount=1},
+				{type="item", name="advanced-circuit", amount=2},
+			},
+			results = 
+			{
+				{type="item", name="sct-mil-circuit3", amount=1},
+				{type="item", name="sct-waste-ironcopper", amount=7},
+				{type="item", name="sct-waste-copperonly", amount=2}
+			},
+			main_product = "sct-mil-circuit3",
+		},
 		normal =
 		{
 			enabled = false,
@@ -698,7 +785,7 @@ data:extend({
 		expensive =
 		{
 			enabled = false,
-			energy_required = 2,
+			energy_required = 3,
 			ingredients =
 			{
 				{type="item", name="sct-mil-circuit1", amount=2},
@@ -836,7 +923,19 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive = 
+		{
+			energy_required = 8,
+			enabled = false,
+			ingredients = 
+			{
+				{"sct-prod-biosilicate", 1}
+			},
+			results = 
+			{
+				{ type="item", name="sct-prod-baked-biopaste", amount=1},
+			},
+		},
 		normal =
 		{
 			energy_required = 5,
@@ -1134,7 +1233,20 @@ data:extend({
 			always_show_made_in = true,
 		},
 		]]--
-		expensive = nil,
+		expensive =
+		{
+			energy_required = 16,
+			enabled = false,
+			ingredients = 
+			{
+				{"sct-htech-thermalstore", 1}
+			},
+			results = 
+			{
+				{type="item", name="sct-htech-thermalstore-heated", amount=1},
+			},
+			always_show_made_in = true,
+		},
 		normal =
 		{
 			energy_required = 10.5,

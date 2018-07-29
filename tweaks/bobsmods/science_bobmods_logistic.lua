@@ -78,7 +78,20 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive = 
+		{
+			enabled = false,
+			energy_required = 8,
+			ingredients = 
+			{
+				{ type="item", name="sct-logistic-cargo-unit", amount=1 },
+				{ type="item", name="sct-logistic-memory-unit", amount=1 },
+			},
+			results =
+			{
+				{ type="item", name="logistic-science-pack", amount=2 },
+			},
+		},
 		normal = 
 		{
 			enabled = false,
@@ -92,7 +105,7 @@ data:extend({
 			{
 				{ type="item", name="logistic-science-pack", amount=2 },
 			},
-		}
+		},
 	}
 })
 
@@ -119,7 +132,20 @@ data:extend ({
 			},
 		},
 		]]--
-		expensive = nil,
+		expensive =
+		{
+			enabled = false,
+			energy_required = 3,
+			ingredients =
+			{
+				{"sct-logistic-unimover", 1},
+				{"sct-logistic-automated-storage", 1},
+			},
+			results = 
+			{
+				{type="item", name="sct-logistic-cargo-unit", amount=1},
+			},
+		},
 		normal =
 		{
 			enabled = false,
