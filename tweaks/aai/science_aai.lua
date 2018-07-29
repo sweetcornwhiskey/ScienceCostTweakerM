@@ -140,7 +140,7 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			enabled = true,

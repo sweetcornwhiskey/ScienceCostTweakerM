@@ -27,7 +27,7 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			enabled = false,
@@ -69,7 +69,7 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			enabled = false,
@@ -193,7 +193,7 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			enabled = false,
@@ -375,7 +375,7 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal = 
 		{
 			enabled = false,
@@ -585,7 +585,7 @@ data:extend({
 			main_product = "sct-mil-plating",
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			enabled = false,
@@ -670,7 +670,7 @@ data:extend({
 			main_product = "sct-mil-circuit3",
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			enabled = false,
@@ -836,7 +836,7 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			energy_required = 5,
@@ -1134,7 +1134,7 @@ data:extend({
 			always_show_made_in = true,
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			energy_required = 10.5,

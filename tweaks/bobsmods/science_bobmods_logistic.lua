@@ -78,7 +78,7 @@ data:extend({
 			},
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal = 
 		{
 			enabled = false,
@@ -119,7 +119,7 @@ data:extend ({
 			},
 		},
 		]]--
-		expensive = false,
+		expensive = nil,
 		normal =
 		{
 			enabled = false,

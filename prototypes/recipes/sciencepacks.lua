@@ -24,7 +24,7 @@ data:extend(
 				energy_required = 12
 			},
 ]]--
-			expensive = false,
+			expensive = nil,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -64,7 +64,7 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = false,
+			expensive = nil,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -120,7 +120,7 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = false,
+			expensive = nil,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -171,7 +171,7 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = false,
+			expensive = nil,
 			normal = {
 				enabled = false,
 				always_show_made_in = true,
@@ -223,7 +223,7 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = false,
+			expensive = nil,
 			normal = {
 				always_show_made_in = true,
 				ingredients = {
@@ -275,7 +275,7 @@ data:extend(
 				enabled = false
 			},
 ]]--
-			expensive = false,
+			expensive = nil,
 			normal = {
 				always_show_made_in = true,
 				enabled = false,
