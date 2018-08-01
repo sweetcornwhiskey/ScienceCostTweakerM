@@ -54,7 +54,10 @@ if mods["aai-industry"] then
 		}			
 	end
 	sctm.tech_dependency_add("sct-lab-t1", "electricity")
-	sctm.tech_dependency_add("sct-lab-t1", "basic-logistics")
+
+	if not mods["boblogistics"] or not settings.startup["bobmods-logistics-beltoverhaul"] or not settings.startup["bobmods-logistics-beltoverhaul"].value then
+		sctm.tech_dependency_add("sct-lab-t1", "basic-logistics")
+	end
 	
 	if data.raw.technology["electric-lab"] then
 		data.raw.technology["electric-lab"].enabled = false

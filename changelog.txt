@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.47
+Date: 1. 8. 2018
+  Changes:
+    - Removed unneccesary AAI basic logistic tech dependency, when bobs belt overhaul is present
+---------------------------------------------------------------------------------------------------
 Version: 0.16.46
 Date: 28. 7. 2018
   Changes:
