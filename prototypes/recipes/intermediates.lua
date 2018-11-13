@@ -478,7 +478,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-t3-laser-emitter", amount=1},
-				{type="item", name="sct-waste-copperonly", amount=2}
+				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-t3-laser-emitter",
 		},
@@ -495,7 +495,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-t3-laser-emitter", amount=1},
-				{type="item", name="sct-waste-copperonly", amount=2}
+				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-t3-laser-emitter",
 		},
@@ -521,7 +521,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-t3-atomic-sensors", amount=1},
-				{type="item", name="sct-waste-copperonly", amount=7}
+				{type="item", name="sct-waste-copperonly", amount=2}
 			},
 			main_product = "sct-t3-atomic-sensors",
 		},
@@ -539,7 +539,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-t3-atomic-sensors", amount=1},
-				{type="item", name="sct-waste-copperonly", amount=7}
+				{type="item", name="sct-waste-copperonly", amount=2}
 			},
 			main_product = "sct-t3-atomic-sensors",
 		},
@@ -648,8 +648,8 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-mil-circuit3", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=7},
-				{type="item", name="sct-waste-copperonly", amount=2}
+				{type="item", name="sct-waste-ironcopper", amount=2},
+				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-mil-circuit3",
 		},
@@ -665,8 +665,8 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-mil-circuit3", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=7},
-				{type="item", name="sct-waste-copperonly", amount=2}
+				{type="item", name="sct-waste-ironcopper", amount=2},
+				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-mil-circuit3",
 		},
@@ -689,7 +689,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-mil-circuit2", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=5},
+				{type="item", name="sct-waste-ironcopper", amount=2},
 				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-mil-circuit2",
@@ -706,7 +706,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-mil-circuit2", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=5},
+				{type="item", name="sct-waste-ironcopper", amount=2},
 				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-mil-circuit2",
@@ -773,7 +773,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-prod-bioprocessor", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=4},
+				{type="item", name="sct-waste-ironcopper", amount=2},
 			},
 			main_product = "sct-prod-bioprocessor",
 		},
@@ -790,7 +790,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-prod-bioprocessor", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=4},
+				{type="item", name="sct-waste-ironcopper", amount=2},
 			},
 			main_product = "sct-prod-bioprocessor",
 		},
@@ -895,8 +895,8 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-prod-overclocker", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=5},
-				{type="item", name="sct-waste-copperonly", amount=3}
+				{type="item", name="sct-waste-ironcopper", amount=2},
+				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-prod-overclocker",
 		},
@@ -915,8 +915,8 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-prod-overclocker", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=5},
-				{type="item", name="sct-waste-copperonly", amount=3}
+				{type="item", name="sct-waste-ironcopper", amount=2},
+				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-prod-overclocker",
 		},
@@ -942,7 +942,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-prod-chipcase", amount=1},
-				{type="item", name="sct-waste-copperonly", amount=3}
+				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-prod-chipcase",
 		},
@@ -960,7 +960,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-prod-chipcase", amount=1},
-				{type="item", name="sct-waste-copperonly", amount=3}
+				{type="item", name="sct-waste-copperonly", amount=1}
 			},
 			main_product = "sct-prod-chipcase",
 		},
@@ -988,7 +988,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-htech-capbank", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=5}
+				{type="item", name="sct-waste-ironcopper", amount=2}
 			},
 			main_product = "sct-htech-capbank",
 		},
@@ -1005,7 +1005,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-htech-capbank", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=5}
+				{type="item", name="sct-waste-ironcopper", amount=2}
 			},
 			main_product = "sct-htech-capbank",
 		},
@@ -1031,7 +1031,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-htech-injector", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=10}
+				{type="item", name="sct-waste-ironcopper", amount=3}
 			},
 			main_product = "sct-htech-injector",
 		},
@@ -1049,7 +1049,7 @@ data:extend({
 			results = 
 			{
 				{type="item", name="sct-htech-injector", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=10}
+				{type="item", name="sct-waste-ironcopper", amount=3}
 			},
 			main_product = "sct-htech-injector",
 		},

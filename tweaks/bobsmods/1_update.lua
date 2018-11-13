@@ -45,7 +45,7 @@ if mods["bobplates"] then
 		data.raw.recipe["sct-t3-laser-emitter"].normal.results = 
 		{
 			{type="item", name="sct-t3-laser-emitter", amount=1},
-			{type="item", name="sct-waste-copperonly", amount=3}
+			{type="item", name="sct-waste-copperonly", amount=1}
 		}
 		data.raw.recipe["sct-t3-laser-emitter"].expensive.ingredients =
 		{
@@ -57,7 +57,7 @@ if mods["bobplates"] then
 		data.raw.recipe["sct-t3-laser-emitter"].expensive.results = 
 		{
 			{type="item", name="sct-t3-laser-emitter", amount=1},
-			{type="item", name="sct-waste-copperonly", amount=3}
+			{type="item", name="sct-waste-copperonly", amount=1}
 		}
 	end
 	
@@ -73,7 +73,7 @@ if mods["bobplates"] then
 		data.raw.recipe["sct-t3-atomic-sensors"].normal.results = 
 		{
 			{type="item", name="sct-t3-atomic-sensors", amount=1},
-			{type="item", name="sct-waste-copperonly", amount=5}
+			{type="item", name="sct-waste-copperonly", amount=1}
 		}
 		data.raw.recipe["sct-t3-atomic-sensors"].expensive.ingredients =
 		{
@@ -86,7 +86,7 @@ if mods["bobplates"] then
 		data.raw.recipe["sct-t3-atomic-sensors"].expensive.results = 
 		{
 			{type="item", name="sct-t3-atomic-sensors", amount=1},
-			{type="item", name="sct-waste-copperonly", amount=5}
+			{type="item", name="sct-waste-copperonly", amount=1}
 		}
 	end
 	
