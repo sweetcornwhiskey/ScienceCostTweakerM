@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.16.48
+Date: 13. 11. 2018
+  Changes:
+    - Added japanese locale (by shelaf)
+    - fixed bobs alien lab technology enable condition
+    - reduced ammount of waste byproduct to prevent overproduction of raw materials (producing more raw that was input)
+    - fixed alien lab technology localization
+---------------------------------------------------------------------------------------------------
 Version: 0.16.47
 Date: 1. 8. 2018
   Changes:
