@@ -311,28 +311,28 @@ if mods["bobtech"] then
 		sctm.tech_unlock_remove("alien-research", "lab-alien")
 		sctm.tech_dependency_add("alien-research", "sct-research-alien")
 		sctm.tech_dependency_remove("alien-research", "advanced-research")
-		sctm.tech_pack_replace("alien-research", "science-pack-1", "science-pack-gold")
-		sctm.tech_pack_replace("alien-research", "science-pack-2", "alien-science-pack")
-		sctm.tech_pack_remove("alien-research", "science-pack-3")
+		sctm.tech_pack_replace("alien-research", "automation-science-pack", "science-pack-gold")
+		sctm.tech_pack_replace("alien-research", "logistic-science-pack", "alien-science-pack")
+		sctm.tech_pack_remove("alien-research", "chemical-science-pack")
 	end
-	if data.raw.tool["logistic-science-pack"] and  data.raw.recipe["logistic-science-pack"] then
+	if data.raw.tool["advanced-logistic-science-pack"] and  data.raw.recipe["advanced-logistic-science-pack"] then
 		-- remove logistic pack from tier 1 lab
-		sctm.lab_input_remove("lab", "logistic-science-pack")
-		sctm.lab_input_add("sct-lab-t3", "logistic-science-pack")
-		sctm.lab_input_add("sct-lab-t4", "logistic-science-pack")
+		sctm.lab_input_remove("lab", "advanced-logistic-science-pack")
+		sctm.lab_input_add("sct-lab-t3", "advanced-logistic-science-pack")
+		sctm.lab_input_add("sct-lab-t4", "advanced-logistic-science-pack")
 
-		data.raw.tool["logistic-science-pack"].subgroup = "sct-science-pack-logistic"
-		data.raw.tool["logistic-science-pack"].order = "h_a[logistic]"
+		data.raw.tool["advanced-logistic-science-pack"].subgroup = "sct-science-pack-logistic"
+		data.raw.tool["advanced-logistic-science-pack"].order = "h_a[logistic]"
 		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
-			data.raw.tool["logistic-science-pack"].icon_size = 64
-			data.raw.tool["logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-64.png"
+			data.raw.tool["advanced-logistic-science-pack"].icon_size = 64
+			data.raw.tool["advanced-logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-64.png"
 		else
-			data.raw.tool["logistic-science-pack"].icon_size = 32
-			data.raw.tool["logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack.png"
+			data.raw.tool["advanced-logistic-science-pack"].icon_size = 32
+			data.raw.tool["advanced-logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack.png"
 		end
 		local logisticrecipe = table.deepcopy(data.raw.recipe["sct-science-pack-logistic"])
-		logisticrecipe.name = "logistic-science-pack"
-		data.raw.recipe["logistic-science-pack"] = logisticrecipe
+		logisticrecipe.name = "advanced-logistic-science-pack"
+		data.raw.recipe["advanced-logistic-science-pack"] = logisticrecipe
 	end
 	if data.raw.tool["science-pack-gold"] then
 		data.raw.tool["science-pack-gold"].subgroup = "sct-science-pack-alien"

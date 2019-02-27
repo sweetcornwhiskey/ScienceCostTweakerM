@@ -13,7 +13,7 @@ data:extend({
 		name = "sct-military",
 		order = "sct-b[military]",
 		setting_type = "startup",
-		default_value = "tier3",
+		default_value = "tier2",
 		allowed_values =  {"tier3", "tier2"}
 	},
 
@@ -66,6 +66,15 @@ data:extend({
 		order = "sct-h[connect]",
 		setting_type = "startup",
 		default_value = true,
+	},
+
+
+	{
+		type = "bool-setting",
+		name = "sct-othermod-tweaks",
+		order = "sct-i[othermod]",
+		setting_type = "startup",
+		default_value = false,
 	},
 })
 

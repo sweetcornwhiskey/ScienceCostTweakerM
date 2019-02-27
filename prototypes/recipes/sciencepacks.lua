@@ -9,7 +9,7 @@ data:extend(
 			type = "recipe",
 			name = "sct-science-pack-t1",
 			subgroup = "sct-sciencepack-1",
-			order = "d[t1]-a[science-pack-1]",
+			order = "d[t1]-a[automation-science-pack]",
 --[[
 			expensive = {
 				enabled = false,
@@ -19,7 +19,7 @@ data:extend(
 					{"sct-t1-magnet-coils", 5}
 				},
 				results = {
-					{type = "item", amount = 1, name = "science-pack-1"}
+					{type = "item", amount = 1, name = "automation-science-pack"}
 				},
 				energy_required = 12
 			},
@@ -32,7 +32,7 @@ data:extend(
 					{"sct-t1-magnet-coils", 2}
 				},
 				results = {
-					{type = "item", amount = 1, name = "science-pack-1"}
+					{type = "item", amount = 1, name = "automation-science-pack"}
 				},
 				energy_required = 5
 			}
@@ -47,7 +47,7 @@ data:extend(
 			type = "recipe",
 			name = "sct-science-pack-t2",
 			subgroup = "sct-sciencepack-2",
-			order = "e[t2]-a[science-pack-2]",
+			order = "e[t2]-a[logistic-science-pack]",
 --[[		
 			expensive = {
 				enabled = false,
@@ -57,7 +57,7 @@ data:extend(
 					{"sct-t2-reaction-nodes", 2}
 				},
 				results = {
-					{type = "item", amount = 1, name = "science-pack-2"}
+					{type = "item", amount = 1, name = "logistic-science-pack"}
 				},
 				energy_required = 15,
 				enabled = false
@@ -71,7 +71,7 @@ data:extend(
 					{"sct-t2-reaction-nodes", 1}
 				},
 				results = {
-					{type = "item", amount = 1, name = "science-pack-2"}
+					{type = "item", amount = 1, name = "logistic-science-pack"}
 				},
 				energy_required = 6,
 				enabled = false
@@ -102,7 +102,7 @@ data:extend(
 			type = "recipe",
 			name = "sct-science-pack-t3",
 			subgroup = "sct-sciencepack-3",
-			order = "f[t3]-a[science-pack-3]",
+			order = "f[t3]-a[chemical-science-pack]",
 --[[
 			expensive = {
 				enabled = false,
@@ -112,7 +112,7 @@ data:extend(
 					{"sct-t3-atomic-sensors", 2}
 				},
 				results = {
-					{type = "item", amount = 1, name = "science-pack-3"}
+					{type = "item", amount = 1, name = "chemical-science-pack"}
 				},
 				energy_required = 30,
 				enabled = false
@@ -126,7 +126,7 @@ data:extend(
 					{"sct-t3-atomic-sensors", 1}
 				},
 				results = {
-					{type = "item", amount = 1, name = "science-pack-3"}
+					{type = "item", amount = 1, name = "chemical-science-pack"}
 				},
 				energy_required = 12,
 				enabled = false
@@ -264,7 +264,7 @@ data:extend(
 					{"sct-htech-random", 3}
 				},
 				results = {
-					{type = "item", amount = 2, name = "high-tech-science-pack"}
+					{type = "item", amount = 2, name = "utility-science-pack"}
 				},
 				energy_required = 35,
 				enabled = false
@@ -279,7 +279,7 @@ data:extend(
 					{"sct-htech-random", 1}
 				},
 				results = {
-					{type = "item", amount = 2, name = "high-tech-science-pack"}
+					{type = "item", amount = 2, name = "utility-science-pack"}
 				},
 				energy_required = 14,
 			},
@@ -303,16 +303,16 @@ for _, stp in pairs(sctpacks) do
 end
 
 local sciencepack1 = table.deepcopy(data.raw.recipe["sct-science-pack-t1"])
-sciencepack1.name = "science-pack-1"
-data.raw.recipe["science-pack-1"] = sciencepack1
+sciencepack1.name = "automation-science-pack"
+data.raw.recipe["automation-science-pack"] = sciencepack1
 
 local sciencepack2 = table.deepcopy(data.raw.recipe["sct-science-pack-t2"])
-sciencepack2.name = "science-pack-2"
-data.raw.recipe["science-pack-2"] = sciencepack2
+sciencepack2.name = "logistic-science-pack"
+data.raw.recipe["logistic-science-pack"] = sciencepack2
 
 local sciencepack3 = table.deepcopy(data.raw.recipe["sct-science-pack-t3"])
-sciencepack3.name = "science-pack-3"
-data.raw.recipe["science-pack-3"] = sciencepack3
+sciencepack3.name = "chemical-science-pack"
+data.raw.recipe["chemical-science-pack"] = sciencepack3
 
 local sciencepackm = table.deepcopy(data.raw.recipe["sct-science-pack-mil"])
 sciencepackm.name = "military-science-pack"
@@ -323,6 +323,6 @@ sciencepackp.name = "production-science-pack"
 data.raw.recipe["production-science-pack"] = sciencepackp
 
 local sciencepackh = table.deepcopy(data.raw.recipe["sct-science-pack-ht"])
-sciencepackh.name = "high-tech-science-pack"
-data.raw.recipe["high-tech-science-pack"] = sciencepackh
+sciencepackh.name = "utility-science-pack"
+data.raw.recipe["utility-science-pack"] = sciencepackh
 

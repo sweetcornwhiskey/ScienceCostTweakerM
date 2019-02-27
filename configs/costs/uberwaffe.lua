@@ -24,6 +24,6 @@ sct_cost.uberwaffe.costs.darkmatter = SCT_newDarkMatter(1.0, 2500.0, 1.0, 1.0, 1
 
 -- Personal Tweaking (UberTweaks Mod) of Bob's Module research replaces Module Case and Module Circuit with Science Pack 3 and Alien Science Packs.
 -- So add them into the table of ingredient cost multipliers.
-sct_cost.uberwaffe.costs.bobmodules.cost["science-pack-3"] = 1.0
-sct_cost.uberwaffe.costs.bobmodules.cost["high-tech-science-pack"] = 1.0
+sct_cost.uberwaffe.costs.bobmodules.cost["chemical-science-pack"] = 1.0
+sct_cost.uberwaffe.costs.bobmodules.cost["utility-science-pack"] = 1.0
 sct_cost.uberwaffe.costs.bobmodules.cost["space-science-pack"] = 1.0

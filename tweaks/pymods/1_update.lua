@@ -1,7 +1,7 @@
 if mods["pycoalprocessing"] then
 	require("pyscience")
 
-	local pybotle = table.deepcopy(data.raw.recipe["science-pack-1"])
+	local pybotle = table.deepcopy(data.raw.recipe["automation-science-pack"])
 	pybotle.name = "sct-t1-pybotle"
 	pybotle.subgroup = "sct-sciencepack-1"
 	pybotle.order = "d[t1]-d[pybotle]"
@@ -15,58 +15,58 @@ if mods["pycoalprocessing"] then
 	data.raw.recipe["sct-t1-pybotle"] = pybotle
 	data.raw.item["sct-t1-pybotle"].icon = table.deepcopy(data.raw.recipe["sct-t1-pybotle"].icon)
 	data.raw.item["sct-t1-pybotle"].icon_size = data.raw.recipe["sct-t1-pybotle"].icon_size
-	sctm.recipe_result_replace("sct-t1-pybotle","science-pack-1","sct-t1-pybotle")
+	sctm.recipe_result_replace("sct-t1-pybotle","automation-science-pack","sct-t1-pybotle")
 	local sp1 = table.deepcopy(data.raw.recipe["sct-science-pack-t1"])
-	sp1.name = "science-pack-1"
+	sp1.name = "automation-science-pack"
 	if sp1.expensive then
 		sp1.expensive.results[1].amount = 2
 	end
 	if sp1.normal then
 		sp1.normal.results[1].amount = 2
 	end
-	data.raw.recipe["science-pack-1"] = sp1
-	sctm.recipe_ingredient_add("science-pack-1", { type="item",name="sct-t1-pybotle",amount=2}, { type="item",name="sct-t1-pybotle",amount=2})
+	data.raw.recipe["automation-science-pack"] = sp1
+	sctm.recipe_ingredient_add("automation-science-pack", { type="item",name="sct-t1-pybotle",amount=2}, { type="item",name="sct-t1-pybotle",amount=2})
 	sctm.tech_unlock_add("sct-research-t1", "sct-t1-pybotle")
 
-	local pychip = table.deepcopy(data.raw.recipe["science-pack-2"])
+	local pychip = table.deepcopy(data.raw.recipe["logistic-science-pack"])
 	pychip.name = "sct-t2-pychip"
 	pychip.subgroup = "sct-sciencepack-2"
 	pychip.order = "e[t2]-g[pychip]"
 	data.raw.recipe["sct-t2-pychip"] = pychip
 	data.raw.item["sct-t2-pychip"].icon = table.deepcopy(data.raw.recipe["sct-t2-pychip"].icon)
 	data.raw.item["sct-t2-pychip"].icon_size = data.raw.recipe["sct-t2-pychip"].icon_size
-	sctm.recipe_result_replace("sct-t2-pychip","science-pack-2","sct-t2-pychip")
+	sctm.recipe_result_replace("sct-t2-pychip","logistic-science-pack","sct-t2-pychip")
 	local sp2 = table.deepcopy(data.raw.recipe["sct-science-pack-t2"])
-	sp2.name = "science-pack-2"
+	sp2.name = "logistic-science-pack"
 	if sp2.expensive then
 		sp2.expensive.results[1].amount = 2
 	end
 	if sp2.normal then
 		sp2.normal.results[1].amount = 2
 	end
-	data.raw.recipe["science-pack-2"] = sp2
-	sctm.recipe_ingredient_add("science-pack-2", { type="item",name="sct-t2-pychip",amount=2}, { type="item",name="sct-t2-pychip",amount=2})
+	data.raw.recipe["logistic-science-pack"] = sp2
+	sctm.recipe_ingredient_add("logistic-science-pack", { type="item",name="sct-t2-pychip",amount=2}, { type="item",name="sct-t2-pychip",amount=2})
 	sctm.tech_unlock_add("sct-research-t2", "sct-t2-pychip")
 
 	-- copy py recipe onto new one, and make it ingredient
-	local pybatery = table.deepcopy(data.raw.recipe["science-pack-3"])
+	local pybatery = table.deepcopy(data.raw.recipe["chemical-science-pack"])
 	pybatery.name = "sct-t3-pybatery"
 	pybatery.subgroup = "sct-sciencepack-3"
 	pybatery.order = "f[t3]-h[pybatery]"
 	data.raw.recipe["sct-t3-pybatery"] = pybatery
 	data.raw.item["sct-t3-pybatery"].icon = table.deepcopy(data.raw.recipe["sct-t3-pybatery"].icon)
 	data.raw.item["sct-t3-pybatery"].icon_size = data.raw.recipe["sct-t3-pybatery"].icon_size
-	sctm.recipe_result_replace("sct-t3-pybatery","science-pack-3","sct-t3-pybatery")
+	sctm.recipe_result_replace("sct-t3-pybatery","chemical-science-pack","sct-t3-pybatery")
 	local sp3 = table.deepcopy(data.raw.recipe["sct-science-pack-t3"])
-	sp3.name = "science-pack-3"
+	sp3.name = "chemical-science-pack"
 	if sp3.expensive then
 		sp3.expensive.results[1].amount = 2
 	end
 	if sp3.normal then
 		sp3.normal.results[1].amount = 2
 	end
-	data.raw.recipe["science-pack-3"] = sp3
-	sctm.recipe_ingredient_add("science-pack-3", { type="item",name="sct-t3-pybatery",amount=2}, { type="item",name="sct-t3-pybatery",amount=2})
+	data.raw.recipe["chemical-science-pack"] = sp3
+	sctm.recipe_ingredient_add("chemical-science-pack", { type="item",name="sct-t3-pybatery",amount=2}, { type="item",name="sct-t3-pybatery",amount=2})
 	sctm.tech_unlock_add("sct-research-t3", "sct-t3-pybatery")
 
 	if mods["pyfusionenergy"] then

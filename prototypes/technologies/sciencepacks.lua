@@ -11,7 +11,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "science-pack-1",
+				recipe = "automation-science-pack",
 			},
 			{
 				type = "unlock-recipe",
@@ -49,7 +49,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "science-pack-2",
+				recipe = "logistic-science-pack",
 			},
 			{
 				type = "unlock-recipe",
@@ -74,7 +74,6 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"automation-2",
 			"sct-lab-t2",
 		},
 		unit =
@@ -82,7 +81,7 @@ data:extend({
 			count = 60,
 			ingredients =
 			{
-				{"science-pack-1", 1},
+				{"automation-science-pack", 1},
 			},
 			time = 2,
 		},
@@ -100,7 +99,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "science-pack-3",
+				recipe = "chemical-science-pack",
 			},
 			{
 				type = "unlock-recipe",
@@ -116,8 +115,8 @@ data:extend({
 			count = 90,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
 			},
 			time = 3,
 		},
@@ -174,8 +173,8 @@ data:extend({
 			count = 60,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
 			},
 			time = 2,
 		},
@@ -229,9 +228,9 @@ data:extend({
 			count = 90,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 			},
 			time = 3,
 		},
@@ -249,7 +248,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "high-tech-science-pack",
+				recipe = "utility-science-pack",
 			},
 			{
 				type = "unlock-recipe",
@@ -287,9 +286,9 @@ data:extend({
 			count = 120,
 			ingredients =
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 			},
 			time = 4,
 		},
@@ -302,7 +301,7 @@ if settings.startup["sct-military"].value == "tier2" then
 	sctm.tech_dependency_add("sct-research-mil", "sct-research-t2")
 else
 	sctm.tech_dependency_add("sct-research-mil", "sct-research-t3")
-	sctm.tech_pack_add("sct-research-mil", {"science-pack-3",1})
+	sctm.tech_pack_add("sct-research-mil", {"chemical-science-pack",1})
 	data.raw.technology["sct-research-mil"].unit.time = 3
 	data.raw.technology["sct-research-mil"].unit.count = 90
 end

@@ -14,7 +14,7 @@ if mods["aai-industry"] then
 	end
 	
 	for _i, tech in pairs(aaitech0) do
-		sctm.tech_pack_replace(tech, "science-pack-1", "sct-science-pack-0")
+		sctm.tech_pack_replace(tech, "automation-science-pack", "sct-science-pack-0")
 	end
 
 --	if data.raw.technology["electric-lab"] then

@@ -14,7 +14,6 @@ data:extend({
 		name = "sct-t0-crate",
 		icon = "__ScienceCostTweakerM__/graphics/aai/sct-t0-crate.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-science-pack-0",
 		order = "d[t0]-b[crate]",
 		stack_size = 200
@@ -25,7 +24,6 @@ data:extend({
 		name = "sct-t0-solvent",
 		icon = "__ScienceCostTweakerM__/graphics/aai/sct-t0-solvent.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-science-pack-0",
 		order = "d[t0]-c[solvent]",
 		stack_size = 200
@@ -108,7 +106,6 @@ data:extend({
 		name = "sct-science-pack-0",
 		icon = "__ScienceCostTweakerM__/graphics/aai/sct-science-pack-0.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-science-pack-0",
 		order = "d[t0]-a[pack]",
 		stack_size = 200,
@@ -232,8 +229,8 @@ data:extend({
             count = 40,
             ingredients = 
             {
-                {"science-pack-1", 1},
-                {"science-pack-2", 1},
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
             },
             time = 20
         },
@@ -257,11 +254,11 @@ data:extend({
             count = 100,
             ingredients = 
             {
-                {"science-pack-1", 1},
-                {"science-pack-2", 1},
-                {"science-pack-3", 1},
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
                 {"production-science-pack", 1},
-                {"high-tech-science-pack", 1},
+                {"utility-science-pack", 1},
             },
             time = 40
         },
@@ -285,12 +282,12 @@ data:extend({
             count = 100,
             ingredients = 
             {
-                {"science-pack-1", 1},
-                {"science-pack-2", 1},
-                {"science-pack-3", 1},
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
                 {"military-science-pack", 1},
                 {"production-science-pack", 1},
-                {"high-tech-science-pack", 1},
+                {"utility-science-pack", 1},
             },
             time = 40
         },

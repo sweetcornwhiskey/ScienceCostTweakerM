@@ -1,13 +1,13 @@
 if mods["boblibrary"] then
 	local science_packs_and_intermediates = 
 	{
-  		"science-pack-1",
-  		"science-pack-2",
-		"science-pack-3",
+  		"automation-science-pack",
+  		"logistic-science-pack",
+		"chemical-science-pack",
   		"military-science-pack",
   		"production-science-pack",
-  		"high-tech-science-pack",
-  		"logistic-science-pack",
+  		"utility-science-pack",
+  		"advanced-logistic-science-pack",
   		"alien-science-pack",
   		"science-pack-gold",
   		"omni-pack",

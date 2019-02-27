@@ -9,7 +9,12 @@ for index, force in pairs(game.forces) do
 			force.recipes["sct-lab-t2"].enabled = true
 		end
 
-		force.recipes["science-pack-2"].enabled = true
+		if(force.recipes["science-pack-2"]) then
+			force.recipes["science-pack-2"].enabled = true
+		end
+		if(force.recipes["logistic-science-pack"]) then
+			force.recipes["logistic-science-pack"].enabled = true
+		end
 		force.recipes["sct-t2-instruments"].enabled = true
 		force.recipes["sct-t2-microcircuits"].enabled = true
 		force.recipes["sct-t2-micro-wafer"].enabled = true

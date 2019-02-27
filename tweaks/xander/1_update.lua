@@ -9,7 +9,7 @@ if mods["xander-mod"] then
     sctm.tech_dependency_remove("sct-research-t2", "automation-2")
     sctm.recipe_ingredient_replace("sct-lab1-mechanization", "electronic-circuit", "coil-1")
     sctm.recipe_ingredient_replace("sct-lab1-mechanization", "transport-belt", "slow-transport-belt")
-    sctm.recipe_ingredient_add("science-pack-1", { type="item", name="coil-1", amount=1}, { type="item", name="coil-1", amount=2})
+    sctm.recipe_ingredient_add("automation-science-pack", { type="item", name="coil-1", amount=1}, { type="item", name="coil-1", amount=2})
     if data.raw.tool["science-pack-0"] then
 		data.raw.tool["science-pack-0"].icon_size = 32
 		data.raw.tool["science-pack-0"].icons = 
@@ -60,7 +60,7 @@ if mods["xander-mod"] then
 				icon = "__ScienceCostTweakerM__/graphics/overlays/flame.png",
 			},
         }
-        sctm.lab_input_remove("lab-1", "science-pack-2")
+        sctm.lab_input_remove("lab-1", "logistic-science-pack")
     end
     if data.raw.technology["lab_2"] then
         data.raw.technology["lab_2"].enabled = false

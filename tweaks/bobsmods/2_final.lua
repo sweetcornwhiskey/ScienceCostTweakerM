@@ -16,9 +16,9 @@ if mods["boblogistics"] then
 end
 
 if mods["bobplates"] then
-	sctm.recipe_ingredient_remove("science-pack-3", "bronze-alloy")
-	sctm.recipe_ingredient_remove("high-tech-science-pack", "lithium-ion-battery")
-	sctm.recipe_ingredient_remove("high-tech-science-pack", "silicon-nitride")
+	sctm.recipe_ingredient_remove("chemical-science-pack", "bronze-alloy")
+	sctm.recipe_ingredient_remove("utility-science-pack", "lithium-ion-battery")
+	sctm.recipe_ingredient_remove("utility-science-pack", "silicon-nitride")
 end
 	
 if mods["bobmodules"] then

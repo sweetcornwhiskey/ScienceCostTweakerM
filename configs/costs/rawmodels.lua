@@ -11,12 +11,12 @@ function SCT_newTier(timeMult, stepCountMult, redMult, greenMult, blueMult, mili
 		cost = {}
 	}
 	
-	costAdjuster.cost["science-pack-1"] = redMult -- Multiplier to Red Science Packs
-	costAdjuster.cost["science-pack-2"] = greenMult -- Multiplier to Green Science Packs
-	costAdjuster.cost["science-pack-3"] = blueMult -- Multiplier to Blue Science Packs
+	costAdjuster.cost["automation-science-pack"] = redMult -- Multiplier to Red Science Packs
+	costAdjuster.cost["logistic-science-pack"] = greenMult -- Multiplier to Green Science Packs
+	costAdjuster.cost["chemical-science-pack"] = blueMult -- Multiplier to Blue Science Packs
 	costAdjuster.cost["military-science-pack"] = militaryMult -- Multiplier to Military Science Packs
 	costAdjuster.cost["production-science-pack"] = productionMult -- Multiplier to Production Science Packs
-	costAdjuster.cost["high-tech-science-pack"] = hightechMult -- Multiplier to High Tech Science Packs
+	costAdjuster.cost["utility-science-pack"] = hightechMult -- Multiplier to High Tech Science Packs
 	
 	return costAdjuster;
 end

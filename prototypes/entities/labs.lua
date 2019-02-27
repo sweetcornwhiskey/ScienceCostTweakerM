@@ -6,7 +6,6 @@ data:extend({
 		name = "sct-lab-t1",
 		icon_size = 32,
 		icon = "__ScienceCostTweakerM__/graphics/sct-lab-1/icon.png",
-		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
 		order = "a[labs]-a[sct-lab-t1]",
 		place_result = "sct-lab-t1",
@@ -63,7 +62,7 @@ data:extend({
 		energy_usage = "60kW",
 		inputs =
 		{
-			"science-pack-1"
+			"automation-science-pack"
 		},
 		module_specification =
 		{
@@ -91,7 +90,6 @@ data:extend({
 				icon = "__ScienceCostTweakerM__/graphics/overlays/2.png",
 			},
 		},		
-		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
 		order = "a[labs]-b[sct-lab-t2]",
 		place_result = "sct-lab-t2",
@@ -154,8 +152,8 @@ data:extend({
 		energy_usage = "150kW",
 		inputs =
 		{
-			"science-pack-1",
-			"science-pack-2"
+			"automation-science-pack",
+			"logistic-science-pack"
 		},
 		module_specification =
 		{
@@ -180,7 +178,6 @@ data:extend({
 				icon = "__ScienceCostTweakerM__/graphics/overlays/3.png",
 			},
 		},		
-		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
 		order = "a[labs]-c[sct-lab-t3]",
 		place_result = "sct-lab-t3",
@@ -243,9 +240,9 @@ data:extend({
 		energy_usage = "500kW",
 		inputs =
 		{
-			"science-pack-1",
-			"science-pack-2",
-			"science-pack-3",
+			"automation-science-pack",
+			"logistic-science-pack",
+			"chemical-science-pack",
 			"military-science-pack",
 			"production-science-pack"
 		},
@@ -273,7 +270,6 @@ data:extend({
 				icon = "__ScienceCostTweakerM__/graphics/overlays/4.png",
 			},
 		},		
-		flags = {"goes-to-quickbar"},
 		subgroup = "sct-labs",
 		order = "a[labs]-d[sct-lab-t4]",
 		place_result = "sct-lab-t4",
@@ -336,12 +332,12 @@ data:extend({
 		energy_usage = "2MW",
 		inputs =
 		{
-			"science-pack-1",
-			"science-pack-2",
-			"science-pack-3",
+			"automation-science-pack",
+			"logistic-science-pack",
+			"chemical-science-pack",
 			"military-science-pack",
 			"production-science-pack",
-			"high-tech-science-pack",
+			"utility-science-pack",
 			"space-science-pack"
 		},
 		module_specification =
@@ -403,7 +399,7 @@ data.raw["lab"]["lab"].off_animation =
 data.raw["lab"]["lab"].energy_usage = "60kW"
 data.raw["lab"]["lab"].inputs =
 	{
-		"science-pack-1"
+		"automation-science-pack"
 	}
 data.raw["lab"]["lab"].module_specification =
 	{

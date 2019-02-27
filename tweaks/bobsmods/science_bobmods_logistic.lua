@@ -15,7 +15,6 @@ data:extend ({
 		name = "sct-logistic-cargo-unit",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-cargo-unit.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-b[cargo]",
 		stack_size = 200,
@@ -26,7 +25,6 @@ data:extend ({
 		name = "sct-logistic-unimover",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-unimover.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-c[unimover]",
 		stack_size = 200,
@@ -37,7 +35,6 @@ data:extend ({
 		name = "sct-logistic-automated-storage",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-automated-storage.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-d[storage]",
 		stack_size = 200,
@@ -48,7 +45,6 @@ data:extend ({
 		name = "sct-logistic-memory-unit",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-memory-unit.png",
 		icon_size = 32,
-		flags = {"goes-to-main-inventory"},
 		subgroup = "sct-science-pack-logistic",
 		order = "h_a[logistic]-e[memory-unit]",
 		stack_size = 200,
@@ -74,7 +70,7 @@ data:extend({
 			},
 			results =
 			{
-				{ type="item", name="logistic-science-pack", amount=2 },
+				{ type="item", name="advanced-logistic-science-pack", amount=2 },
 			},
 		},
 		]]--
@@ -89,7 +85,7 @@ data:extend({
 			},
 			results =
 			{
-				{ type="item", name="logistic-science-pack", amount=2 },
+				{ type="item", name="advanced-logistic-science-pack", amount=2 },
 			},
 		},
 		normal = 
@@ -103,7 +99,7 @@ data:extend({
 			},
 			results =
 			{
-				{ type="item", name="logistic-science-pack", amount=2 },
+				{ type="item", name="advanced-logistic-science-pack", amount=2 },
 			},
 		},
 	}
@@ -279,7 +275,7 @@ data:extend({
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "logistic-science-pack",
+				recipe = "advanced-logistic-science-pack",
 			},
 			{
 				type = "unlock-recipe",
@@ -309,9 +305,9 @@ data:extend({
 			count = 90,
 			ingredients = 
 			{
-				{"science-pack-1", 1},
-				{"science-pack-2", 1},
-				{"science-pack-3", 1},
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
 			},
 			time = 3,
 		},

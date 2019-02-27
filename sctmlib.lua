@@ -154,7 +154,7 @@ function sctm.tech_dependency_add(techname, depname)
 	return added
 end
 
--- ingredients = { ["science-pack-1"] = 1 }
+-- ingredients = { ["automation-science-pack"] = 1 }
 local function rempack(ingredientstable, packname)
 	local removed = false
 	for _i, pack in pairs(ingredientstable) do
@@ -197,7 +197,7 @@ function sctm.tech_pack_remove(techname, packname)
 	return removed
 end
 
--- ingredients = { ["science-pack-1"] = 1 }
+-- ingredients = { ["automation-science-pack"] = 1 }
 local function addpack(ingredientstable, newpack)
 	local added = false
 	local found = false

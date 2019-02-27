@@ -3,19 +3,19 @@
 scttechmap = 
 {
 -- vanilla
-	["science-pack-1"] = "sct-research-t1",
-	["science-pack-2"] = "sct-research-t2",
-	["science-pack-3"] = "sct-research-t3",
+	["automation-science-pack"] = "sct-research-t1",
+	["logistic-science-pack"] = "sct-research-t2",
+	["chemical-science-pack"] = "sct-research-t3",
 	["military-science-pack"] = "sct-research-mil",
 	["production-science-pack"] = "sct-research-prod",
-	["high-tech-science-pack"] = "sct-research-ht",
+	["utility-science-pack"] = "sct-research-ht",
 	["space-science-pack"] = "sct-research-space",
 -- omni	
 	["omni-pack"] = "sct-research-omni",
 -- angels	
 	["sct-science-pack-bio"] = "sct-research-bio",
 -- bobs	
-	["logistic-science-pack"] = "sct-research-logistic",
+	["advanced-logistic-science-pack"] = "sct-research-logistic",
 	["science-pack-gold"] = "sct-research-gold",
 	["effectivity-processor"] = "modules",
 	["module-case"] = "modules",
@@ -128,7 +128,7 @@ end
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
-	local first_scient = "science-pack-1"
+	local first_scient = "automation-science-pack"
 	if data.raw.tool["science-pack-0"] then 
 		first_science = "science-pack-0"
 	end
@@ -138,14 +138,14 @@ end
 
 -- remove known science pack unlocks from other technologies
 local knownpackmatchlist = {
-	{ partial = false, name = "science-pack-1" },
-	{ partial = false, name = "science-pack-2" },
-	{ partial = false, name = "science-pack-3" },
+	{ partial = false, name = "automation-science-pack" },
+	{ partial = false, name = "logistic-science-pack" },
+	{ partial = false, name = "chemical-science-pack" },
 	{ partial = false, name = "production-science-pack" },
 	{ partial = false, name = "military-science-pack" },
-	{ partial = false, name = "high-tech-science-pack" },
+	{ partial = false, name = "utility-science-pack" },
 --	{ partial = false, name = "space-science-pack" }, -- not done yet
-	{ partial = false, name = "logistic-science-pack" }, -- bobs
+	{ partial = false, name = "advanced-logistic-science-pack" }, -- bobs
 	{ partial = false, name = "science-pack-gold" }, -- bobs
 	{ partial = false, name = "alien-science-pack" }, -- bobs
 --	{ partial = true, name = "alien-science-pack-" },	-- bobs - leaving them under alien research

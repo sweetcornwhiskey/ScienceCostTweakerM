@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.0
+Date: 28. 2. 2018
+  Changes:
+    - Initial version, only ensures loading with vanilla
+    - Default settings for millitary is now tier2 due increased bitter difficulty
+---------------------------------------------------------------------------------------------------
 Version: 0.16.49
 Date: 18. 11. 2018
   Changes:

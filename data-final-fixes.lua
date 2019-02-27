@@ -7,11 +7,13 @@ require("configs.costs.extended")
 -- Recipes
 require("prototypes.2_recipe")
 -- Recipes requires
+if (settings.startup["sct-othermod-tweaks"].value) then
 require("tweaks.angelsmods.2_final")
 require("tweaks.bobsmods.2_final")
 require("tweaks.omnimatter.2_final")
 require("tweaks.pymods.2_final")
 require("tweaks.aai.2_final")
+end
 -- Technolgoy map fix
 require("prototypes.2_technology")
 
@@ -28,7 +30,7 @@ if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 		tier = 1
 		multiplier = sciencecosttweaker.costs.tier1;
 		for Index, Value in pairs( tech.unit.ingredients ) do
-			if (tier < 2 and tech.unit.ingredients[Index][1] == "science-pack-2") then
+			if (tier < 2 and tech.unit.ingredients[Index][1] == "logistic-science-pack") then
 				tier = 2
 				multiplier = sciencecosttweaker.costs.tier2;
 			end
@@ -40,11 +42,11 @@ if (settings.startup["sct-difficulty-cost"].value ~= "noadjustment") then
 				tier = 4
 				multiplier = sciencecosttweaker.costs.production;
 			end
-			if (tier < 5 and tech.unit.ingredients[Index][1] == "science-pack-3") then
+			if (tier < 5 and tech.unit.ingredients[Index][1] == "chemical-science-pack") then
 				tier = 5
 				multiplier = sciencecosttweaker.costs.tier3;
 			end
-			if (tier < 6 and tech.unit.ingredients[Index][1] == "high-tech-science-pack") then
+			if (tier < 6 and tech.unit.ingredients[Index][1] == "utility-science-pack") then
 				tier = 6
 				multiplier = sciencecosttweaker.costs.hightech;
 			end
