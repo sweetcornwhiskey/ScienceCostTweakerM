@@ -15,23 +15,23 @@ sct.unlockstart = function(playerforce)
 		playerforce.technologies["sct-lab-t1"].researched = true
 	end
 
-	log(serpent.block(playerforce.technologies["sct-research-t1"]))
+	log(serpent.block(playerforce.technologies["sct-automation-science-pack"]))
 	if 
-		playerforce.technologies["sct-research-t1"] and
-		playerforce.technologies["sct-research-t1"].valid and 
-		playerforce.technologies["sct-research-t1"].enabled and (
-			playerforce.technologies["sct-research-t1"].researched == false and (
-				playerforce.technologies["sct-research-t1"].prerequisites == nil or 
-				playerforce.technologies["sct-research-t1"].prerequisites == false or
-				table_size(playerforce.technologies["sct-research-t1"].prerequisites) == 0 or (
-					table_size(playerforce.technologies["sct-research-t1"].prerequisites) == 1 and
-					playerforce.technologies["sct-research-t1"].prerequisites["sct-lab-t1"] and
+		playerforce.technologies["sct-automation-science-pack"] and
+		playerforce.technologies["sct-automation-science-pack"].valid and 
+		playerforce.technologies["sct-automation-science-pack"].enabled and (
+			playerforce.technologies["sct-automation-science-pack"].researched == false and (
+				playerforce.technologies["sct-automation-science-pack"].prerequisites == nil or 
+				playerforce.technologies["sct-automation-science-pack"].prerequisites == false or
+				table_size(playerforce.technologies["sct-automation-science-pack"].prerequisites) == 0 or (
+					table_size(playerforce.technologies["sct-automation-science-pack"].prerequisites) == 1 and
+					playerforce.technologies["sct-automation-science-pack"].prerequisites["sct-lab-t1"] and
 					playerforce.technologies["sct-lab-t1"].researched
 				)
 			)
 		)
 	then
-		playerforce.technologies["sct-research-t1"].researched = true
+		playerforce.technologies["sct-automation-science-pack"].researched = true
 	end	
 end
 

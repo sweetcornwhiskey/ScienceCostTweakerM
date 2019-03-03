@@ -244,7 +244,8 @@ data:extend({
 			"logistic-science-pack",
 			"chemical-science-pack",
 			"military-science-pack",
-			"production-science-pack"
+			"production-science-pack",
+			"utility-science-pack",
 		},
 		module_specification =
 		{

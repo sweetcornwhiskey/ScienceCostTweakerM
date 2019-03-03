@@ -77,8 +77,10 @@ data:extend({
 		},
 		prerequisites =
 		{
+			"fast-inserter",
 			"steel-processing",
 			"logistics",
+			"sct-automation-science-pack",
 		},
 		unit =
 		{
@@ -144,7 +146,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-t2",
+			"logistic-science-pack",
 			"oil-processing",
 			"advanced-electronics",
 			"solar-energy",			
@@ -198,9 +200,12 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-t3",
+			"chemical-science-pack",
+--			"utility-sciencepack",
 			"advanced-electronics-2",
-			"nuclear-power",
+			"uranium-processing",
+			"stack-inserter",
+--			"rocket-silo"
 		},
 		unit =
 		{

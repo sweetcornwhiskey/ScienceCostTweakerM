@@ -4,7 +4,7 @@ data:extend({
 	-- tier 1 pack
 	{
 		type = "technology",
-		name = "sct-research-t1",
+		name = "sct-automation-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-1-128.png",
 		icon_size = 128,
 		effects = 
@@ -42,7 +42,7 @@ data:extend({
 	-- tier 2 pack
 	{
 		type = "technology",
-		name = "sct-research-t2",
+		name = "sct-logistic-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-2-128.png",
 		icon_size = 128,
 		effects = 
@@ -92,7 +92,7 @@ data:extend({
 	-- tier 3 pack
 	{
 		type = "technology",
-		name = "sct-research-t3",
+		name = "sct-chemical-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-3-128.png",
 		icon_size = 128,
 		effects = 
@@ -126,7 +126,7 @@ data:extend({
 	-- military // unlocked by t2/t3 depends on settings
 	{
 		type = "technology",
-		name = "sct-research-mil",
+		name = "sct-military-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/military-science-pack-128.png",
 		icon_size = 128,
 		effects = 
@@ -181,10 +181,11 @@ data:extend({
 		order = "sct-pack-d[mil]",
 	},
 	
-	-- production - tier 3
+	-- TIER 4
+	-- production - tier 4
 	{
 		type = "technology",
-		name = "sct-research-prod",
+		name = "sct-production-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/production-science-pack-128.png",
 		icon_size = 128,
 		effects = 
@@ -220,8 +221,9 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-t3",
+--			"chemical-science-pack",
 			"circuit-network",
+			"sct-lab-t4",
 		},
 		unit =
 		{
@@ -237,11 +239,10 @@ data:extend({
 		order = "sct-pack-e[prod]",
 	},
 	
-	-- TIER 4
-	-- hightech - tier 4
+	-- utility - tier 4
 	{
 		type = "technology",
-		name = "sct-research-ht",
+		name = "sct-utility-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/high-tech-science-pack-128.png",
 		icon_size = 128,
 		effects = 
@@ -290,7 +291,42 @@ data:extend({
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
 			},
-			time = 4,
+			time = 40,
+		},
+		order = "sct-pack-f[ht]",
+	},
+	-- TIER S
+	-- space - tier s
+	{
+		type = "technology",
+		name = "sct-space-science-pack",
+		icon = "__ScienceCostTweakerM__/graphics/icons/space-science-pack-128.png",
+		icon_size = 128,
+		effects = 
+		{
+			{
+				type = "unlock-recipe",
+				recipe = "satellite",
+			},
+		},
+		prerequisites =
+		{
+--			"sct-lab-s",
+			"sct-lab-t4"			
+		},
+		unit =
+		{
+			count = 500,
+			ingredients =
+			{
+				{"automation-science-pack", 5},
+				{"logistic-science-pack", 5},
+				{"military-science-pack",5},
+				{"chemical-science-pack", 5},
+				{"production-science-pack",5},
+				{"utility-science-pack",5},				
+			},
+			time = 60,
 		},
 		order = "sct-pack-f[ht]",
 	},
@@ -298,9 +334,9 @@ data:extend({
 
 -- military tech dependencies, based on settings
 if settings.startup["sct-military"].value == "tier2" then
-	sctm.tech_dependency_add("sct-research-mil", "sct-research-t2")
+	sctm.tech_dependency_add("sct-research-mil", "automation-science-pack")
 else
-	sctm.tech_dependency_add("sct-research-mil", "sct-research-t3")
+	sctm.tech_dependency_add("sct-research-mil", "chemical-science-pack")
 	sctm.tech_pack_add("sct-research-mil", {"chemical-science-pack",1})
 	data.raw.technology["sct-research-mil"].unit.time = 3
 	data.raw.technology["sct-research-mil"].unit.count = 90

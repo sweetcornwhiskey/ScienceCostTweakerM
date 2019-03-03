@@ -1,7 +1,7 @@
 -- sctm helper functions
 if not sctm then sctm = {} end
 -- uncomment this to enable debug output
---sctm.enabledebug = true
+sctm.enabledebug = true
 
 function sctm.debug(logtext)
 	if (sctm.enabledebug) then
@@ -764,3 +764,12 @@ function sctm.recipe_find_techs(recipe, science_packs)
 	return science_list;
 end
 ]]--
+
+function sctm.find_in_table(table, what)
+	for _, value in pairs(table) do
+		if _ == what or value == what or (value.name and value.name == what) then
+			return true
+		end
+	end
+	return false
+end

@@ -3,13 +3,13 @@
 scttechmap = 
 {
 -- vanilla
-	["automation-science-pack"] = "sct-research-t1",
-	["logistic-science-pack"] = "sct-research-t2",
-	["chemical-science-pack"] = "sct-research-t3",
-	["military-science-pack"] = "sct-research-mil",
-	["production-science-pack"] = "sct-research-prod",
-	["utility-science-pack"] = "sct-research-ht",
-	["space-science-pack"] = "sct-research-space",
+	["automation-science-pack"] = "sct-automation-science-pack",
+	["logistic-science-pack"] = "logistic-science-pack",
+	["chemical-science-pack"] = "chemical-science-pack",
+	["military-science-pack"] = "military-science-pack",
+	["production-science-pack"] = "production-science-pack",
+	["utility-science-pack"] = "utility-science-pack",
+	["space-science-pack"] = "space-science-pack",
 -- omni	
 	["omni-pack"] = "sct-research-omni",
 -- angels	
@@ -126,9 +126,42 @@ function connect_sciencepack(sciencepackmap, first_science)
 	end
 end
 
+local function replacesciencepack(packname, packtocopy, labname)
+	if (data.raw.technology[packname] and data.raw.technology[packtocopy]) then
+		if (data.raw.technology[packname].prerequisites) then
+			if (labname and data.raw.technology[labname]) then
+				for _, prereq in pairs(data.raw.technology[packname].prerequisites) do
+					if (not sctm.find_in_table(data.raw.technology[labname].prerequisites, prereq)) then
+						data.raw.technology[labname].prerequisites[#data.raw.technology[labname].prerequisites + 1] = prereq
+					end
+				end
+			else
+				for _, prereq in pairs(data.raw.technology[packname].prerequisites) do
+					if (not sctm.find_in_table(data.raw.technology[packtocopy].prerequisites, prereq)) then
+						data.raw.technology[packtocopy].prerequisites[#data.raw.technology[packtocopy].prerequisites + 1] = prereq
+					end
+				end
+			end
+		end
+		local newpack = table.deepcopy(data.raw.technology[packtocopy])
+		newpack.name = packname
+		data.raw.technology[packtocopy].enabled = false
+		data.raw.technology[packname] = newpack
+	end
+end
+
+replacesciencepack("logistic-science-pack", "sct-logistic-science-pack", "sct-lab-t2")
+replacesciencepack("chemical-science-pack", "sct-chemical-science-pack", "sct-lab-t3")
+replacesciencepack("military-science-pack", "sct-military-science-pack", nil)
+replacesciencepack("production-science-pack", "sct-production-science-pack", "sct-lab-t4")
+replacesciencepack("utility-science-pack", "sct-utility-science-pack", "sct-lab-t4")
+
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
 	local first_scient = "automation-science-pack"
+	if data.raw.tool["sct-science-pack-0"] then 
+		first_science = "sct-science-pack-0"
+	end
 	if data.raw.tool["science-pack-0"] then 
 		first_science = "science-pack-0"
 	end
@@ -155,7 +188,7 @@ local knownpackmatchlist = {
 }
 
 for _i, _tech in pairs(data.raw.technology) do
-	if (_i:len() < 13 or _i:find("sct-research",1,true) == nil) then
+	if (not name == _i and (_i:len() < 13 or _i:find("sct-research",1,true) == nil)) then
 		sctm.tech_remove_known_packs(_i, knownpackmatchlist)
 	end
 end
