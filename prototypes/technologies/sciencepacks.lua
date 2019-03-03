@@ -83,7 +83,7 @@ data:extend({
 			{
 				{"automation-science-pack", 1},
 			},
-			time = 2,
+			time = 5,
 		},
 		order = "sct-pack-b[t2]",
 	},
@@ -118,7 +118,7 @@ data:extend({
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 			},
-			time = 3,
+			time = 10,
 		},
 		order = "sct-pack-c[t3]",
 	},
@@ -176,7 +176,7 @@ data:extend({
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 			},
-			time = 2,
+			time = 10,
 		},
 		order = "sct-pack-d[mil]",
 	},
@@ -227,14 +227,14 @@ data:extend({
 		},
 		unit =
 		{
-			count = 90,
+			count = 120,
 			ingredients =
 			{
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 				{"chemical-science-pack", 1},
 			},
-			time = 3,
+			time = 40,
 		},
 		order = "sct-pack-e[prod]",
 	},
@@ -338,6 +338,6 @@ if settings.startup["sct-military"].value == "tier2" then
 else
 	sctm.tech_dependency_add("sct-research-mil", "chemical-science-pack")
 	sctm.tech_pack_add("sct-research-mil", {"chemical-science-pack",1})
-	data.raw.technology["sct-research-mil"].unit.time = 3
+	data.raw.technology["sct-research-mil"].unit.time = 4
 	data.raw.technology["sct-research-mil"].unit.count = 90
 end

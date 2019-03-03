@@ -150,11 +150,11 @@ local function replacesciencepack(packname, packtocopy, labname)
 	end
 end
 
-replacesciencepack("logistic-science-pack", "sct-logistic-science-pack", "sct-lab-t2")
-replacesciencepack("chemical-science-pack", "sct-chemical-science-pack", "sct-lab-t3")
+replacesciencepack("logistic-science-pack", "sct-logistic-science-pack", nil)
+replacesciencepack("chemical-science-pack", "sct-chemical-science-pack", nil)
 replacesciencepack("military-science-pack", "sct-military-science-pack", nil)
-replacesciencepack("production-science-pack", "sct-production-science-pack", "sct-lab-t4")
-replacesciencepack("utility-science-pack", "sct-utility-science-pack", "sct-lab-t4")
+replacesciencepack("production-science-pack", "sct-production-science-pack", nil)
+replacesciencepack("utility-science-pack", "sct-utility-science-pack", nil)
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
