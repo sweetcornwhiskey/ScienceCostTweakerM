@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.1
+Date: 5. 3. 2018
+  Changes:
+    - added descriptions from science packs also to technologies
+    - slightly tweaked military research (faster on tier2, slower on tier3)
+  Bugfixes:
+    - fixed migration scripts
+    - fixed game loading, when military is set to tier 3
+---------------------------------------------------------------------------------------------------
 Version: 0.17.0
 Date: 3. 3. 2018
   Changes:
