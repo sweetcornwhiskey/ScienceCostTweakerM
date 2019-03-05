@@ -38,13 +38,14 @@ for index, force in pairs(game.forces) do
 		end	  	
 	end
 	
-	if force.technologies["sct-research-t1"] and force.technologies["sct-research-t1"].researched and force.recipes["sct-t1-pybotle"] then
+	
+	if force.technologies["sct-automation-science-pack"] and force.technologies["sct-automation-science-pack"].researched and force.recipes["sct-t1-pybotle"] then
 		force.recipes["sct-t1-pybotle"].enabled = true
 	end
-	if force.technologies["sct-research-t2"] and force.technologies["sct-research-t2"].researched and force.recipes["sct-t2-pychip"] then
+	if force.technologies["logistic-science-pack"] and force.technologies["logistic-science-pack"].researched and force.recipes["sct-t2-pychip"] then
 		force.recipes["sct-t2-pychip"].enabled = true
 	end
-	if force.technologies["sct-research-t3"] and force.technologies["sct-research-t3"].researched and force.recipes["sct-t3-pybatery"] then
+	if force.technologies["chemical-science-pack"] and force.technologies["chemical-science-pack"].researched and force.recipes["sct-t3-pybatery"] then
 		force.recipes["sct-t3-pybatery"].enabled = true
 	end
 end

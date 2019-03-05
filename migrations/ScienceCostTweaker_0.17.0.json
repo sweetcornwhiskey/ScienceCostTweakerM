@@ -1,0 +1,11 @@
+{
+  "technology":
+  [
+    ["sct-research-t1", "sct-automation-science-pack"],
+    ["sct-research-t2", "logistic-science-pack"],
+    ["sct-research-t3", "chemical-science-pack"],
+    ["sct-research-mil", "military-science-pack"],
+    ["sct-research-prod", "production-science-pack"],
+    ["sct-research-ht", "utility-science-pack"]
+  ]
+}
