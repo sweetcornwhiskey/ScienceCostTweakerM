@@ -7,7 +7,7 @@ data:extend({
 		name = "sct-automation-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/science-pack-1-128.png",
 		icon_size = 128,
-		effects = 
+		effects =
 		{
 			{
 				type = "unlock-recipe",
@@ -323,7 +323,7 @@ data:extend({
 				{"military-science-pack",5},
 				{"chemical-science-pack", 5},
 				{"production-science-pack",5},
-				{"utility-science-pack",5},				
+				{"utility-science-pack",5},
 			},
 			time = 60,
 		},
