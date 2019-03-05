@@ -176,7 +176,7 @@ data:extend({
 				{"automation-science-pack", 1},
 				{"logistic-science-pack", 1},
 			},
-			time = 10,
+			time = 5,
 		},
 		order = "sct-pack-d[mil]",
 	},
@@ -312,7 +312,6 @@ data:extend({
 		prerequisites =
 		{
 --			"sct-lab-s",
-			"sct-lab-t4"			
 		},
 		unit =
 		{
@@ -334,10 +333,11 @@ data:extend({
 
 -- military tech dependencies, based on settings
 if settings.startup["sct-military"].value == "tier2" then
-	sctm.tech_dependency_add("sct-research-mil", "automation-science-pack")
+	sctm.tech_dependency_add("sct-military-science-pack", "automation-science-pack")
 else
-	sctm.tech_dependency_add("sct-research-mil", "chemical-science-pack")
-	sctm.tech_pack_add("sct-research-mil", {"chemical-science-pack",1})
-	data.raw.technology["sct-research-mil"].unit.time = 4
-	data.raw.technology["sct-research-mil"].unit.count = 90
+-- tier 3.5 -- after blue, but does not require t4 lab
+	sctm.tech_dependency_add("sct-military-science-pack", "chemical-science-pack")
+	sctm.tech_pack_add("sct-military-science-pack", {"chemical-science-pack",1})
+	data.raw.technology["sct-military-science-pack"].unit.time = 10
+	data.raw.technology["sct-military-science-pack"].unit.count = 90
 end

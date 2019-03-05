@@ -155,6 +155,7 @@ replacesciencepack("chemical-science-pack", "sct-chemical-science-pack", nil)
 replacesciencepack("military-science-pack", "sct-military-science-pack", nil)
 replacesciencepack("production-science-pack", "sct-production-science-pack", nil)
 replacesciencepack("utility-science-pack", "sct-utility-science-pack", nil)
+replacesciencepack("space-science-pack", "sct-space-science-pack", nil)
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
@@ -177,7 +178,7 @@ local knownpackmatchlist = {
 	{ partial = false, name = "production-science-pack" },
 	{ partial = false, name = "military-science-pack" },
 	{ partial = false, name = "utility-science-pack" },
---	{ partial = false, name = "space-science-pack" }, -- not done yet
+	{ partial = false, name = "space-science-pack" },
 	{ partial = false, name = "advanced-logistic-science-pack" }, -- bobs
 	{ partial = false, name = "science-pack-gold" }, -- bobs
 	{ partial = false, name = "alien-science-pack" }, -- bobs
