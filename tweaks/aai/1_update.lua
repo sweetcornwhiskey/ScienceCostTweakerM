@@ -27,8 +27,8 @@ if mods["aai-industry"] then
 		data.raw.item["burner-lab"].subgroup = "sct-labs"
 		data.raw.recipe["burner-lab"].order = "a[labs]-a[lab0]"
 		data.raw.recipe["burner-lab"].subgroup = "sct-labs"
-		sctm.tech_pack_add("sct-research-t1", {"sct-science-pack-0", 1})
-		data.raw.technology["sct-research-t1"].unit.time = 10
+		sctm.tech_pack_add("sct-automation-science-pack", {"sct-science-pack-0", 1})
+		data.raw.technology["sct-automation-science-pack"].unit.time = 10
 		sctm.tech_pack_add("sct-lab-t1", {"sct-science-pack-0", 1})
 		data.raw.technology["sct-lab-t1"].unit.time = 20
 		sctm.lab_input_add("lab", "sct-science-pack-0")

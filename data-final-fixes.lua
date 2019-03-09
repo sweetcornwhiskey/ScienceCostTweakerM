@@ -7,12 +7,13 @@ require("configs.costs.extended")
 -- Recipes
 require("prototypes.2_recipe")
 -- Recipes requires
+
+require("tweaks.aai.2_final")
 if (settings.startup["sct-othermod-tweaks"].value) then
 require("tweaks.angelsmods.2_final")
 require("tweaks.bobsmods.2_final")
 require("tweaks.omnimatter.2_final")
 require("tweaks.pymods.2_final")
-require("tweaks.aai.2_final")
 end
 -- Technolgoy map fix
 require("prototypes.2_technology")
