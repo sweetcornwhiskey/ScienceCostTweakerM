@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.2
+Date: 9. 3. 2018
+  Changes:
+    - changed aai fuel processing to match new technology tiers in 0.17 (respective fuel unlocks)
+    - enabled aai industry mod specific tweaks
+    - enabled angels mods specific tweaks (will update for bio later, when it's released)
+    - enabled bobs mods specific tweaks (might change balancing later), minimal balance change were done with respect to changes in science tiers
+---------------------------------------------------------------------------------------------------
 Version: 0.17.1
 Date: 5. 3. 2018
   Changes:
