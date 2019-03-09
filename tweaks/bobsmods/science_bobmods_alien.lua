@@ -33,8 +33,8 @@ data:extend({
 		prerequisites =
 		{
 			"advanced-research",
-			"sct-research-t3",
-			"sct-research-mil",
+			"chemical-science-pack",
+			"military-science-pack",
 		},
 		unit =
 		{
@@ -68,8 +68,8 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-t3",
-			"sct-research-mil",
+			"chemical-science-pack",
+			"military-science-pack",
 		},
 		unit =
 		{

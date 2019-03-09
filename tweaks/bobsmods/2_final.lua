@@ -1,3 +1,7 @@
+if mods["bobtech"] then
+	sctm.tech_pack_add("sct-space-science-pack", {"advanced-logistic-science-pack",5})
+end
+
 if mods["boblogistics"] then
 	if settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value then
 		if mods["omnimatter"] then
@@ -9,6 +13,7 @@ if mods["boblogistics"] then
 				sctm.recipe_ingredient_replace("sct-lab2-automatization", "fast-inserter", "inserter")
 			end
 		end
+		sctm.tech_dependency_add("sct-lab-t4","stack-inserter-2")
 	end
 	if settings.startup["bobmods-logistics-beltoverhaul"] and settings.startup["bobmods-logistics-beltoverhaul"].value then
 		 sctm.recipe_ingredient_replace("sct-lab1-mechanization", "transport-belt", "basic-transport-belt")

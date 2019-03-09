@@ -23,8 +23,9 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-ht",
-			"sct-research-prod",
+			"utility-science-pack",
+			"production-science-pack",
+			"advanced-logistic-science-pack",
 		},
 		unit =
 		{
@@ -36,9 +37,13 @@ data:extend({
 				{"chemical-science-pack", 1},
 				{"production-science-pack", 1},
 				{"utility-science-pack", 1},
+				{"advanced-logistic-science-pack",1}
 			},
 			time = 4,
 		},
 		order = "sct-lab-d[lab2]",
 	},
 })
+
+sctm.tech_dependency_add("space-science-pack","sct-lab-lab2")
+

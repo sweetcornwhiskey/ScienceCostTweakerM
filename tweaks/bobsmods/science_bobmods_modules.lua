@@ -39,7 +39,7 @@ data:extend({
 		prerequisites =
 		{
 			"advanced-electronics",
-			"sct-research-t2",
+			"logistic-science-pack",
 		},
 		unit =
 		{

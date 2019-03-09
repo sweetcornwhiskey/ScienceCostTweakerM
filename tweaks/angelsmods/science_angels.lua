@@ -54,7 +54,7 @@ data:extend ({
 	},
 })
 
--- logistic intermediate recipes
+-- bio pack & intermediate recipes
 data:extend (
 {
 	{

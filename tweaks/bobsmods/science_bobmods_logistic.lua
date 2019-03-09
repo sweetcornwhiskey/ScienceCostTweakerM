@@ -297,7 +297,7 @@ data:extend({
 		prerequisites =
 		{
 			"robotics",
-			"sct-research-t3",
+			"chemical-science-pack",
 			"circuit-network",
 		},
 		unit =

@@ -11,12 +11,16 @@ if mods["bobplates"] then
 		sctm.recipe_ingredient_replace("sct-t2-micro-wafer", "iron-plate", "lead-plate")
 	end
 
+	if data.raw.item["tinned-copper-cable"] then
+		sctm.recipe_ingredient_replace("sct-t2-reaction-nodes", "sct-t1-magnet-coils", "tinned-copper-cable")
+	end
 	
 	-- Blue Science Pack:
 	-- =============================
 
 	if data.raw.fluid["nitrogen"] then
 		sctm.recipe_ingredient_replace("sct-t3-femto-lasers", "water", "nitrogen")
+		sctm.tech_dependency_add("sct-lab-t3", "nitrogen-processing")
 	end
 	
 	if data.raw.item["glass"] and data.raw.item["gold-plate"] then
@@ -113,7 +117,7 @@ if mods["bobplates"] then
 	-- Production Science Pack:
 	-- =============================
 	if data.raw.item["silicon"] then
-		sctm.recipe_ingredient_replace("sct-prod-biosilicate", "stone", {type="item", name="silicon", amount = 0})
+		sctm.recipe_ingredient_replace("sct-prod-biosilicate", "stone", {type="item", name="silicon", amount = 2})
 	end
 	
 	if data.raw.item["tin-plate"] and data.raw.item["lead-plate"] and data.raw.item["silver-plate"] and data.raw.fluid["sulfur-dioxide"] then
@@ -154,53 +158,51 @@ if mods["bobplates"] then
 		sctm.recipe_ingredient_add("sct-htech-capbank", { type="item", name="silicon-nitride", amount=10},{ type="item", name="silicon-nitride", amount=25})
 	end
 	
-	if data.raw.item["copper-tungsten-alloy"] and data.raw.item["tungsten-carbide"] and data.raw.item["ruby-5"] then
+	if data.raw.item["titanium-plate"] and data.raw.item["powdered-tungsten"] and data.raw.item["ruby-5"] then
 		data.raw.recipe["sct-htech-injector"].normal.ingredients =
 		{
 			{type="item", name="copper-cable", amount=20},
 			{type="item", name="processing-unit", amount=10},
-			{type="item", name="copper-tungsten-alloy", amount=20},
-			{type="item", name="tungsten-carbide", amount=20},
+			{type="item", name="titanium-plate", amount=20},
+			{type="item", name="powdered-tungsten", amount=20},
 			{type="item", name="ruby-5", amount=1}
 		}
 		data.raw.recipe["sct-htech-injector"].expensive.ingredients =
 		{
 			{type="item", name="copper-cable", amount=30},
 			{type="item", name="processing-unit", amount=15},
-			{type="item", name="copper-tungsten-alloy", amount=40},
-			{type="item", name="tungsten-carbide", amount=40},
+			{type="item", name="titanium-plate", amount=40},
+			{type="item", name="powdered-tungsten", amount=40},
 			{type="item", name="ruby-5", amount=1}
 		}
+		sctm.tech_dependency_add("sct-lab-t4", "gem-processing-2")
+		sctm.tech_dependency_add("sct-lab-t4", "titanium-processing")
+		sctm.tech_dependency_add("sct-lab-t4", "tungsten-processing")
 	end
-	if data.raw.item["electrum-alloy"] and data.raw.item["cobalt-steel-alloy"] then
+
+	if data.raw.item["tinned-copper-cable"] then
+		sctm.recipe_ingredient_replace("sct-htech-injector", "copper-cable", "tinned-copper-cable")
+	end
+
+	if data.raw.item["tungsten-plate"] and data.raw.item["cobalt-steel-alloy"] then
 		data.raw.recipe["sct-htech-thermalstore"].normal.ingredients =
 		{
-			{type="item", name="electrum-alloy", amount=20},
+			{type="item", name="tungsten-plate", amount=20},
 			{type="item", name="cobalt-steel-alloy", amount=20}
 		}
 		data.raw.recipe["sct-htech-thermalstore"].expensive.ingredients =
 		{
-			{type="item", name="electrum-alloy", amount=40},
+			{type="item", name="tungsten-plate", amount=40},
 			{type="item", name="cobalt-steel-alloy", amount=40}
 		}
-	else
-		if data.raw.item["copper-tungsten-alloy"] and data.raw.item["cobalt-steel-alloy"] then
-			data.raw.recipe["sct-htech-thermalstore"].normal.ingredients =
-			{
-				{type="item", name="copper-tungsten-alloy", amount=20},
-				{type="item", name="cobalt-steel-alloy", amount=20}
-			}
-			data.raw.recipe["sct-htech-thermalstore"].expensive.ingredients =
-			{
-				{type="item", name="copper-tungsten-alloy", amount=40},
-				{type="item", name="cobalt-steel-alloy", amount=40}
-			}
-		end
+		sctm.tech_dependency_add("sct-lab-t4", "tungsten-processing")
+		sctm.tech_dependency_add("sct-lab-t4", "cobalt-processing")		
 	end
 	
-	if data.raw.item["titanium-gear-wheel"] and data.raw.item["nitinol-gear-wheel"] then
-		sctm.recipe_ingredient_replace("sct-htech-random", "iron-gear-wheel", "titanium-gear-wheel")
-		sctm.recipe_ingredient_add("sct-htech-random", { type="item", name="nitinol-gear-wheel", amount=20}, { type="item", name="nitinol-gear-wheel", amount=30})
+	if data.raw.item["titanium-gear-wheel"] and data.raw.item["tungsten-gear-wheel"] then
+		sctm.recipe_ingredient_replace("sct-htech-random", "iron-gear-wheel", "tungsten-gear-wheel")
+		sctm.recipe_ingredient_add("sct-htech-random", { type="item", name="titanium-gear-wheel", amount=5}, { type="item", name="titanium-gear-wheel", amount=10})
+		sctm.recipe_ingredient_add("sct-htech-random", { type="item", name="titanium-bearing", amount=10}, { type="item", name="titanium-bearing", amount=15})
 	end
 	
 	-- lab intermediates
@@ -249,6 +251,10 @@ end
 if mods["bobpower"] then
 	if data.raw.item["solar-panel-large"] then
 		sctm.recipe_ingredient_replace("sct-lab3-construction", "solar-panel", "solar-panel-large")
+		if data.raw.technology["bob-solar-energy-2"] then
+			sctm.tech_dependency_remove("sct-lab-t3", "solar-energy")
+			sctm.tech_dependency_add("sct-lab-t3", "bob-solar-energy-2")
+		end
 	end
 end
 
@@ -397,8 +403,8 @@ if mods["bobmodules"] then
 		data.raw.recipe["lab-module"].subgroup = "sct-labs"
 		data.raw.recipe["lab-module"].order = "b[labs]-g[lab7]"
 		sctm.recipe_ingredient_replace("lab-module", "lab", "sct-lab-t2")
-		sctm.tech_dependency_add("effect-transmission", "sct-research-t3")
-		sctm.tech_dependency_add("effect-transmission-2", "sct-research-prod")
-		sctm.tech_dependency_add("effect-transmission-3", "sct-research-ht")
+--		sctm.tech_dependency_add("effect-transmission", "chemical-science-pack")
+--		sctm.tech_dependency_add("effect-transmission-2", "production-science-pack")
+--		sctm.tech_dependency_add("effect-transmission-3", "utility-science-pack")
 	end
 end

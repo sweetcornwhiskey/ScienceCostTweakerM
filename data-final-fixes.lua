@@ -1,17 +1,17 @@
 require("config")
--- Cost requires
+-- Cost updates
 require("configs.costs.lolwhat")
 require("configs.costs.uberwaffe")
 require("configs.costs.normal")
 require("configs.costs.extended")
--- Recipes
+-- Recipe fixes
 require("prototypes.2_recipe")
--- Recipes requires
-
+-- tweaks for other mods
 require("tweaks.aai.2_final")
-if (settings.startup["sct-othermod-tweaks"].value) then
 require("tweaks.angelsmods.2_final")
 require("tweaks.bobsmods.2_final")
+
+if (settings.startup["sct-othermod-tweaks"].value) then
 require("tweaks.omnimatter.2_final")
 require("tweaks.pymods.2_final")
 end
