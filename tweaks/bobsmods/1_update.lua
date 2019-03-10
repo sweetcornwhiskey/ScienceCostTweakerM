@@ -28,13 +28,13 @@ if mods["bobplates"] then
 		{
 			{type="item", name="copper-plate", amount=5},
 			{type="item", name="glass", amount=8},
-			{type="item", name="gold-plate", amount=5}
+			{type="item", name="gold-plate", amount=2}
 		}
 		data.raw.recipe["sct-t3-laser-foci"].expensive.ingredients =
 		{
 			{type="item", name="copper-plate", amount=10},
 			{type="item", name="glass", amount=15},
-			{type="item", name="gold-plate", amount=10}
+			{type="item", name="gold-plate", amount=5}
 		}
 	end
 	
@@ -70,7 +70,7 @@ if mods["bobplates"] then
 		{
 			{type="item", name="advanced-circuit", amount=1},
 			{type="item", name="aluminium-plate", amount=5},
-			{type="item", name="gold-plate", amount=5},
+			{type="item", name="gold-plate", amount=2},
 			{type="item", name="copper-plate", amount=12},
 			{type="fluid", name="nitrogen", amount=15}
 		}
@@ -83,7 +83,7 @@ if mods["bobplates"] then
 		{
 			{type="item", name="advanced-circuit", amount=1},
 			{type="item", name="aluminium-plate", amount=10},
-			{type="item", name="gold-plate", amount=10},
+			{type="item", name="gold-plate", amount=5},
 			{type="item", name="copper-plate", amount=20},
 			{type="fluid", name="nitrogen", amount=30}
 		}
@@ -162,7 +162,7 @@ if mods["bobplates"] then
 		data.raw.recipe["sct-htech-injector"].normal.ingredients =
 		{
 			{type="item", name="copper-cable", amount=20},
-			{type="item", name="processing-unit", amount=10},
+			{type="item", name="processing-unit", amount=5},
 			{type="item", name="titanium-plate", amount=20},
 			{type="item", name="powdered-tungsten", amount=20},
 			{type="item", name="ruby-5", amount=1}
@@ -170,7 +170,7 @@ if mods["bobplates"] then
 		data.raw.recipe["sct-htech-injector"].expensive.ingredients =
 		{
 			{type="item", name="copper-cable", amount=30},
-			{type="item", name="processing-unit", amount=15},
+			{type="item", name="processing-unit", amount=10},
 			{type="item", name="titanium-plate", amount=40},
 			{type="item", name="powdered-tungsten", amount=40},
 			{type="item", name="ruby-5", amount=1}
@@ -195,8 +195,6 @@ if mods["bobplates"] then
 			{type="item", name="tungsten-plate", amount=40},
 			{type="item", name="cobalt-steel-alloy", amount=40}
 		}
-		sctm.tech_dependency_add("sct-lab-t4", "tungsten-processing")
-		sctm.tech_dependency_add("sct-lab-t4", "cobalt-processing")		
 	end
 	
 	if data.raw.item["titanium-gear-wheel"] and data.raw.item["tungsten-gear-wheel"] then
@@ -212,6 +210,7 @@ if mods["bobplates"] then
 	
 	if data.raw.item["cobalt-steel-alloy"] then
 		sctm.recipe_ingredient_replace("sct-lab3-construction", "steel-plate", "cobalt-steel-alloy")
+		sctm.tech_dependency_add("sct-lab-t4", "cobalt-processing")
 	end
 
 	if data.raw.item["tungsten-plate"] then
@@ -244,7 +243,9 @@ if mods["bobelectronics"] then
 		data.raw.recipe["sct-mil-circuit3"].category = "electronics"
 		data.raw.recipe["sct-mil-circuit2"].category = "electronics"
 		data.raw.recipe["sct-mil-circuit1"].category = "electronics"
-		data.raw.recipe["sct-logistic-memory-unit"].category = "electronics"
+		if data.raw.recipe["sct-logistic-memory-unit"] then
+			data.raw.recipe["sct-logistic-memory-unit"].category = "electronics"
+		end
 	end
 end
 

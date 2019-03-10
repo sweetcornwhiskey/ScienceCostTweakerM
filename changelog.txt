@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.3
+Date: 10. 3. 2018
+  Bugfixes:
+    - fixed loading issue, when bob modules are loaded, but not bobtech
+    - fixed cyclic dependency in t4 lab, when bob inserter overhaul is enabled
+---------------------------------------------------------------------------------------------------
 Version: 0.17.2
 Date: 9. 3. 2018
   Changes:
