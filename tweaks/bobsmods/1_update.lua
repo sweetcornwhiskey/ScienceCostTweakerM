@@ -325,7 +325,7 @@ if mods["bobtech"] then
 	if data.raw.tool["advanced-logistic-science-pack"] and  data.raw.recipe["advanced-logistic-science-pack"] then
 		-- remove logistic pack from tier 1 lab
 		sctm.lab_input_remove("lab", "advanced-logistic-science-pack")
-		sctm.lab_input_add("sct-lab-t3", "advanced-logistic-science-pack")
+		-- sctm.lab_input_add("sct-lab-t3", "advanced-logistic-science-pack")
 		sctm.lab_input_add("sct-lab-t4", "advanced-logistic-science-pack")
 
 		data.raw.tool["advanced-logistic-science-pack"].subgroup = "sct-science-pack-logistic"

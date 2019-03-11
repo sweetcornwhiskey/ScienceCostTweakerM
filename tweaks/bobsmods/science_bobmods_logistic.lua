@@ -299,6 +299,7 @@ data:extend({
 			"robotics",
 			"chemical-science-pack",
 			"circuit-network",
+			"sct-lab-t4",
 		},
 		unit =
 		{

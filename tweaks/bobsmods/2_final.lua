@@ -11,6 +11,7 @@ if mods["boblogistics"] then
 		else
 			if data.raw.recipe["yellow-filter-inserter"] then
 				sctm.recipe_ingredient_replace("sct-lab2-automatization", "fast-inserter", "yellow-filter-inserter")
+				sctm.tech_dependency_remove("sct-lab-t2", "fast-inserter")
 			else
 				sctm.recipe_ingredient_replace("sct-lab2-automatization", "fast-inserter", "inserter")
 			end
