@@ -1,5 +1,11 @@
 if mods["bobtech"] then
 	sctm.tech_pack_add("sct-space-science-pack", {"advanced-logistic-science-pack",5})
+	sctm.recipe_ingredient_remove("chemical-science-pack", "sodium-hydroxide")
+	sctm.recipe_ingredient_remove("production-science-pack", "chemical-plant")
+	sctm.recipe_ingredient_remove("production-science-pack", "assembling-machine-2")
+	sctm.recipe_ingredient_remove("utility-science-pack", "silver-zinc-battery")
+	sctm.recipe_ingredient_remove("utility-science-pack", "processing-unit")
+	sctm.recipe_ingredient_remove("utility-science-pack", "titanium-bearing")
 end
 
 if mods["boblogistics"] then

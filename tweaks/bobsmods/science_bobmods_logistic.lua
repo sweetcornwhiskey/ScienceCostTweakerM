@@ -77,7 +77,7 @@ data:extend({
 		expensive = 
 		{
 			enabled = false,
-			energy_required = 8,
+			energy_required = 14,
 			ingredients = 
 			{
 				{ type="item", name="sct-logistic-cargo-unit", amount=1 },
@@ -91,7 +91,7 @@ data:extend({
 		normal = 
 		{
 			enabled = false,
-			energy_required = 8,
+			energy_required = 14,
 			ingredients = 
 			{
 				{ type="item", name="sct-logistic-cargo-unit", amount=1 },
