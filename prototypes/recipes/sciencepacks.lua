@@ -128,7 +128,7 @@ data:extend(
 				results = {
 					{type = "item", amount = 1, name = "chemical-science-pack"}
 				},
-				energy_required = 12,
+				energy_required = 10,
 				enabled = false
 			}
 		}
@@ -178,7 +178,7 @@ data:extend(
 				results = {
 					{type = "item", amount = 2, name = "military-science-pack"}
 				},
-				energy_required = 6,
+				energy_required = 10,
 				enabled = false
 			},
 			subgroup = "sct-sciencepack-mil",
@@ -228,7 +228,7 @@ data:extend(
 				results = {
 					{type = "item", amount = 2, name = "production-science-pack"}
 				},
-				energy_required = 10,
+				energy_required = 14,
 				enabled = false
 			},
 			subgroup = "sct-sciencepack-prod",
@@ -326,3 +326,7 @@ local sciencepackh = table.deepcopy(data.raw.recipe["sct-science-pack-ht"])
 sciencepackh.name = "utility-science-pack"
 data.raw.recipe["utility-science-pack"] = sciencepackh
 
+if settings.startup["sct-military"].value == "tier3" then
+	data.raw.recipe["military-science-pack"].normal.energy_required = 14
+	data.raw.recipe["military-science-pack"].expensive.energy_required = 14
+end
