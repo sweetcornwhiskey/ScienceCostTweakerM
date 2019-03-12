@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.5
+Date: 12. 3. 2018
+  Changes:
+    - increased military science craft time 10 in t2 lab (same time as chemical), 14 in t3 lab (same as utility/production), military still gives 2 packs from single craft
+    - reduced chemical craft time to 10
+    - increased production craft time to 14 (same as utility, they are equal tier now)
+    - increased advanced logistic craft time to 14 (to match utility and production)
+  Bugifxes:
+    - fixed ninja components from bobs
+---------------------------------------------------------------------------------------------------
 Version: 0.17.4
 Date: 11. 3. 2018
   Changes:
