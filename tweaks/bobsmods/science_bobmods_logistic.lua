@@ -2,7 +2,7 @@
 data:extend ({
 	{
 		type = "item-subgroup",
-		name = "sct-science-pack-logistic",
+		name = "sct-advanced-logistic-science-pack",
 		group = "sct-science",
 		order = "h_a[logistic]",
 	},
@@ -15,7 +15,7 @@ data:extend ({
 		name = "sct-logistic-cargo-unit",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-cargo-unit.png",
 		icon_size = 32,
-		subgroup = "sct-science-pack-logistic",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]-b[cargo]",
 		stack_size = 200,
 	},
@@ -25,7 +25,7 @@ data:extend ({
 		name = "sct-logistic-unimover",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-unimover.png",
 		icon_size = 32,
-		subgroup = "sct-science-pack-logistic",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]-c[unimover]",
 		stack_size = 200,
 	},
@@ -35,7 +35,7 @@ data:extend ({
 		name = "sct-logistic-automated-storage",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-automated-storage.png",
 		icon_size = 32,
-		subgroup = "sct-science-pack-logistic",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]-d[storage]",
 		stack_size = 200,
 	},
@@ -45,7 +45,7 @@ data:extend ({
 		name = "sct-logistic-memory-unit",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/sct-logistic-memory-unit.png",
 		icon_size = 32,
-		subgroup = "sct-science-pack-logistic",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]-e[memory-unit]",
 		stack_size = 200,
 	},	
@@ -55,8 +55,8 @@ data:extend ({
 data:extend({
 	{
 		type = "recipe",
-		name = "sct-science-pack-logistic",
-		subgroup = "sct-science-pack-logistic",
+		name = "sct-advanced-logistic-science-pack",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]",
 		--[[
 		expensive = 
@@ -110,7 +110,7 @@ data:extend ({
 	{
 		type = "recipe",
 		name = "sct-logistic-cargo-unit",
-		subgroup = "sct-science-pack-logistic",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]-b[cargo]",
 		--[[
 		expensive =
@@ -161,7 +161,7 @@ data:extend ({
 	{
 		type = "recipe",
 		name = "sct-logistic-unimover",
-		subgroup = "sct-science-pack-logistic",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]-c[unimover]",
 		expensive =
 		{
@@ -196,7 +196,7 @@ data:extend ({
 	{
 		type = "recipe",
 		name = "sct-logistic-automated-storage",
-		subgroup = "sct-science-pack-logistic",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]-d[storage]",
 		expensive =
 		{
@@ -231,7 +231,7 @@ data:extend ({
 	{
 		type = "recipe",
 		name = "sct-logistic-memory-unit",
-		subgroup = "sct-science-pack-logistic",
+		subgroup = "sct-advanced-logistic-science-pack",
 		order = "h_a[logistic]-e[memory-unit]",
 		expensive =
 		{
@@ -268,7 +268,7 @@ data:extend ({
 data:extend({
 	{
 		type = "technology",
-		name = "sct-research-logistic",
+		name = "sct-advanced-logistic-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-128.png",
 		icon_size = 128,
 		effects =

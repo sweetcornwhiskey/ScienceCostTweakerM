@@ -2,7 +2,7 @@
 data:extend ({
 	{
 		type = "item-subgroup",
-		name = "sct-science-pack-alien",
+		name = "sct-alien-science-pack",
 		group = "sct-science",
 		order = "k[alien]",
 	},
@@ -56,7 +56,7 @@ data:extend({
 data:extend({
 	{
 		type = "technology",
-		name = "sct-research-gold",
+		name = "sct-science-pack-gold",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/gold-science-pack-128.png",
 		icon_size = 128,
 		effects =
@@ -88,7 +88,7 @@ data:extend({
 
 	{
 		type = "technology",
-		name = "sct-research-alien",
+		name = "sct-alien-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-science-pack-128.png",
 		icon_size = 128,
 		effects =
@@ -126,7 +126,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"sct-research-gold",
+			"sct-science-pack-gold",
 			"sct-lab-alien",
 		},
 		unit =

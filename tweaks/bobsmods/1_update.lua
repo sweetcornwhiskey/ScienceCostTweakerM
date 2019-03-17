@@ -316,7 +316,7 @@ if mods["bobtech"] then
 		data.raw.recipe["lab-alien"].order = "b[labs]-f[lab6]"
 		sctm.recipe_ingredient_replace("lab-alien", "lab", "sct-lab-t3")
 		sctm.tech_unlock_remove("alien-research", "lab-alien")
-		sctm.tech_dependency_add("alien-research", "sct-research-alien")
+		sctm.tech_dependency_add("alien-research", "sct-alien-science-pack")
 		sctm.tech_dependency_remove("alien-research", "advanced-research")
 		sctm.tech_pack_replace("alien-research", "automation-science-pack", "science-pack-gold")
 		sctm.tech_pack_replace("alien-research", "logistic-science-pack", "alien-science-pack")
@@ -328,7 +328,7 @@ if mods["bobtech"] then
 		-- sctm.lab_input_add("sct-lab-t3", "advanced-logistic-science-pack")
 		sctm.lab_input_add("sct-lab-t4", "advanced-logistic-science-pack")
 
-		data.raw.tool["advanced-logistic-science-pack"].subgroup = "sct-science-pack-logistic"
+		data.raw.tool["advanced-logistic-science-pack"].subgroup = "sct-advanced-logistic-science-pack"
 		data.raw.tool["advanced-logistic-science-pack"].order = "h_a[logistic]"
 		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
 			data.raw.tool["advanced-logistic-science-pack"].icon_size = 64
@@ -337,12 +337,12 @@ if mods["bobtech"] then
 			data.raw.tool["advanced-logistic-science-pack"].icon_size = 32
 			data.raw.tool["advanced-logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack.png"
 		end
-		local logisticrecipe = table.deepcopy(data.raw.recipe["sct-science-pack-logistic"])
+		local logisticrecipe = table.deepcopy(data.raw.recipe["sct-advanced-logistic-science-pack"])
 		logisticrecipe.name = "advanced-logistic-science-pack"
 		data.raw.recipe["advanced-logistic-science-pack"] = logisticrecipe
 	end
 	if data.raw.tool["science-pack-gold"] then
-		data.raw.tool["science-pack-gold"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["science-pack-gold"].subgroup = "sct-alien-science-pack"
 		data.raw.tool["science-pack-gold"].order = "0-gold-science-pack"
 		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
 			data.raw.tool["science-pack-gold"].icon_size = 64
@@ -351,11 +351,11 @@ if mods["bobtech"] then
 			data.raw.tool["science-pack-gold"].icon_size = 32
 			data.raw.tool["science-pack-gold"].icon = "__ScienceCostTweakerM__/graphics/bobmods/gold-science-pack.png"
 		end
-		data.raw.recipe["science-pack-gold"].subgroup = "sct-science-pack-alien"
+		data.raw.recipe["science-pack-gold"].subgroup = "sct-alien-science-pack"
 		data.raw.recipe["science-pack-gold"].order = "0-gold-science-pack"
 	end
 	if data.raw.tool["alien-science-pack"] then
-		data.raw.tool["alien-science-pack"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["alien-science-pack"].subgroup = "sct-alien-science-pack"
 		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
 			data.raw.tool["alien-science-pack"].icon_size = 64
 			data.raw.tool["alien-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-science-pack-64.png"
@@ -363,17 +363,17 @@ if mods["bobtech"] then
 			data.raw.tool["alien-science-pack"].icon_size = 32
 			data.raw.tool["alien-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/alien-science-pack.png"
 		end
-		data.raw.tool["alien-science-pack-blue"].subgroup = "sct-science-pack-alien"
-		data.raw.tool["alien-science-pack-orange"].subgroup = "sct-science-pack-alien"
-		data.raw.tool["alien-science-pack-purple"].subgroup = "sct-science-pack-alien"
-		data.raw.tool["alien-science-pack-yellow"].subgroup = "sct-science-pack-alien"
-		data.raw.tool["alien-science-pack-green"].subgroup = "sct-science-pack-alien"
-		data.raw.tool["alien-science-pack-red"].subgroup = "sct-science-pack-alien"
+		data.raw.tool["alien-science-pack-blue"].subgroup = "sct-alien-science-pack"
+		data.raw.tool["alien-science-pack-orange"].subgroup = "sct-alien-science-pack"
+		data.raw.tool["alien-science-pack-purple"].subgroup = "sct-alien-science-pack"
+		data.raw.tool["alien-science-pack-yellow"].subgroup = "sct-alien-science-pack"
+		data.raw.tool["alien-science-pack-green"].subgroup = "sct-alien-science-pack"
+		data.raw.tool["alien-science-pack-red"].subgroup = "sct-alien-science-pack"
 	end
 
 	if data.raw.item["brass-chest"] then
 		sctm.recipe_ingredient_replace("sct-logistic-automated-storage", "steel-chest", "brass-chest")
-		sctm.tech_dependency_add("sct-research-logistic", "zinc-processing")
+		sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "zinc-processing")
 	end
 end
 
