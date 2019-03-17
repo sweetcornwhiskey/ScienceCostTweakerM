@@ -8,8 +8,8 @@
 	sctm.debug(serpent.block(data.raw.recipe["chemical-science-pack"]))
 	sctm.debug(serpent.block(data.raw.recipe["sct-prod-pycontainer"]))
 	sctm.debug(serpent.block(data.raw.recipe["production-science-pack"]))
-	sctm.debug(serpent.block(data.raw.technology["sct-research-t1"]))
-	sctm.debug(serpent.block(data.raw.technology["sct-research-t2"]))
-	sctm.debug(serpent.block(data.raw.technology["sct-research-t3"]))
-	sctm.debug(serpent.block(data.raw.technology["sct-research-prod"]))
+	sctm.debug(serpent.block(data.raw.technology["automation-science-pack"]))
+	sctm.debug(serpent.block(data.raw.technology["logistic-science-pack"]))
+	sctm.debug(serpent.block(data.raw.technology["chemical-science-pack"]))
+	sctm.debug(serpent.block(data.raw.technology["production-science-pack"]))
 	

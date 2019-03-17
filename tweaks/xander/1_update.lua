@@ -6,7 +6,7 @@ if mods["xander-mod"] then
     -- weird dependence pushing centrifuge after HT even if it's mostly T3 or T3 or production, cetrifuge is required for t4 lab, which produces HT
     sctm.tech_dependency_remove("centrifuge", "machines_3")
 
-    sctm.tech_dependency_remove("sct-research-t2", "automation-2")
+    sctm.tech_dependency_remove("logistic-science-pack", "automation-2")
     sctm.recipe_ingredient_replace("sct-lab1-mechanization", "electronic-circuit", "coil-1")
     sctm.recipe_ingredient_replace("sct-lab1-mechanization", "transport-belt", "slow-transport-belt")
     sctm.recipe_ingredient_add("automation-science-pack", { type="item", name="coil-1", amount=1}, { type="item", name="coil-1", amount=2})
@@ -35,8 +35,8 @@ if mods["xander-mod"] then
 		data.raw.item["lab-1"].subgroup = "sct-labs"
 		data.raw.recipe["lab-1"].order = "a[labs]-a[lab0]"
 		data.raw.recipe["lab-1"].subgroup = "sct-labs"
-		sctm.tech_pack_add("sct-research-t1", {"sct-science-pack-0", 1})
-		data.raw.technology["sct-research-t1"].unit.time = 10
+		sctm.tech_pack_add("automation-science-pack", {"sct-science-pack-0", 1})
+		data.raw.technology["automation-science-pack"].unit.time = 10
 		sctm.tech_pack_add("sct-lab-t1", {"sct-science-pack-0", 1})
 		data.raw.technology["sct-lab-t1"].unit.time = 20
 		sctm.lab_input_add("lab", "science-pack-0")

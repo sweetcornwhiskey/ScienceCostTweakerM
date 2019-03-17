@@ -35,9 +35,9 @@ if mods["omnimatter_science"] and (mods["omnimatter_crystal"]  or mods["omnimatt
 		end
 		-- fix missing omnipack in bobs alien lab
 		-- add crystalonics deps
-		sctm.tech_dependency_add("sct-research-t3", "crystallonics-1")
-		sctm.tech_dependency_add("sct-research-prod", "crystallonics-2")
-		sctm.tech_dependency_add("sct-research-logistic", "crystallonics-2")
+		sctm.tech_dependency_add("chemical-science-pack", "crystallonics-1")
+		sctm.tech_dependency_add("production-science-pack", "crystallonics-2")
+		sctm.tech_dependency_add("advanced-logistic-science-pack", "crystallonics-2")
 	else
 		-- disable omni pack research if not present
 		data.raw.technology["sct-research-omni"].enabled = false

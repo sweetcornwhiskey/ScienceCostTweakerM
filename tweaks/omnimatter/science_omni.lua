@@ -15,7 +15,7 @@ data:extend({
 		prerequisites =
 		{
 			"crystallology-1", 
-			"sct-research-t2",
+			"logistic-science-pack",
 			"logistics-2",
 		},
 		unit =
