@@ -13,10 +13,10 @@ scttechmap =
 -- omni	
 	["omni-pack"] = "sct-research-omni",
 -- angels	
-	["sct-science-pack-bio"] = "sct-research-bio",
+	["sct-bio-science-pack"] = "sct-bio-science-pack",
 -- bobs	
-	["advanced-logistic-science-pack"] = "sct-research-logistic",
-	["science-pack-gold"] = "sct-research-gold",
+	["advanced-logistic-science-pack"] = "advanced-logistic-science-pack",
+	["science-pack-gold"] = "sct-science-pack-gold",
 	["effectivity-processor"] = "modules",
 	["module-case"] = "modules",
 	["module-circuit-board"] = "modules",
@@ -24,7 +24,7 @@ scttechmap =
 	["pollution-create-processor"] = "modules",
 	["productivity-processor"] = "modules",
 	["speed-processor"] = "modules",
-	["alien-science-pack"] = "sct-research-alien",
+	["alien-science-pack"] = "sct-alien-science-pack",
 	["alien-science-pack-blue"] = "alien-reseach",
 	["alien-science-pack-green"] = "alien-reseach",
 	["alien-science-pack-orange"] = "alien-reseach",
@@ -158,7 +158,7 @@ replacesciencepack("production-science-pack", "sct-production-science-pack", nil
 replacesciencepack("utility-science-pack", "sct-utility-science-pack", nil)
 replacesciencepack("space-science-pack", "sct-space-science-pack", nil)
 --bob mods
-replacesciencepack("advanced-logistic-science-pack", "sct-research-logistic", nil)
+replacesciencepack("advanced-logistic-science-pack", "sct-advanced-logistic-science-pack", nil)
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
@@ -186,13 +186,14 @@ local knownpackmatchlist = {
 	{ partial = false, name = "science-pack-gold" }, -- bobs
 	{ partial = false, name = "alien-science-pack" }, -- bobs
 --	{ partial = true, name = "alien-science-pack-" },	-- bobs - leaving them under alien research
-	{ partial = false, name = "sct-science-pack-bio" }, -- angels
+	{ partial = false, name = "sct-bio-science-pack" }, -- angels
 	{ partial = false, name = "omni-pack" }, -- omnimatter
 --	{ partial = false, name = "science-pack-t0" }, -- aai - should not have unlock at all
 }
 
 for _i, _tech in pairs(data.raw.technology) do
-	if (not name == _i and (_i:len() < 13 or _i:find("sct-research",1,true) == nil)) then
+--	if (not name == _i and (_i:len() < 13 or _i:find("sct-research",1,true) == nil)) then
+	if (not name == _i and not name == ("sct-" .. _i)) then
 		sctm.tech_remove_known_packs(_i, knownpackmatchlist)
 	end
 end

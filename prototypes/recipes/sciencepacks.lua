@@ -7,7 +7,7 @@ data:extend(
 	{
 		{
 			type = "recipe",
-			name = "sct-science-pack-t1",
+			name = "sct-automation-science-pack",
 			subgroup = "sct-sciencepack-1",
 			order = "d[t1]-a[automation-science-pack]",
 --[[
@@ -45,7 +45,7 @@ data:extend(
 	{
 		{
 			type = "recipe",
-			name = "sct-science-pack-t2",
+			name = "sct-logistic-science-pack",
 			subgroup = "sct-sciencepack-2",
 			order = "e[t2]-a[logistic-science-pack]",
 --[[		
@@ -100,7 +100,7 @@ data:extend(
 	{
 		{
 			type = "recipe",
-			name = "sct-science-pack-t3",
+			name = "sct-chemical-science-pack",
 			subgroup = "sct-sciencepack-3",
 			order = "f[t3]-a[chemical-science-pack]",
 --[[
@@ -152,7 +152,7 @@ data:extend(
 	{
 		{
 			type = "recipe",
-			name = "sct-science-pack-mil",
+			name = "sct-military-science-pack",
 --[[
 			expensive = {
 				enabled = false,
@@ -204,7 +204,7 @@ data:extend(
 	{
 		{
 			type = "recipe",
-			name = "sct-science-pack-prod",
+			name = "sct-production-science-pack",
 --[[
 			expensive = {
 				always_show_made_in = true,
@@ -254,7 +254,7 @@ data:extend(
 	{
 		{
 			type = "recipe",
-			name = "sct-science-pack-ht",
+			name = "sct-utility-science-pack",
 --[[
 			expensive = {
 				always_show_made_in = true,
@@ -290,39 +290,40 @@ data:extend(
 )
 
 local sctpacks = { 
-	"sct-science-pack-t1",
-	"sct-science-pack-t2",
-	"sct-science-pack-t3",
-	"sct-science-pack-mil",
-	"sct-science-pack-prod",
-	"sct-science-pack-ht",
+	"sct-automation-science-pack",
+	"sct-logistic-science-pack",
+	"sct-chemical-science-pack",
+	"sct-military-science-pack",
+	"sct-production-science-pack",
+	"sct-utility-science-pack",
+--    "sct-space-science-pack",
 }
 
 for _, stp in pairs(sctpacks) do
 	data.raw.recipe[stp].expensive = table.deepcopy(data.raw.recipe[stp].normal)
 end
 
-local sciencepack1 = table.deepcopy(data.raw.recipe["sct-science-pack-t1"])
+local sciencepack1 = table.deepcopy(data.raw.recipe["sct-automation-science-pack"])
 sciencepack1.name = "automation-science-pack"
 data.raw.recipe["automation-science-pack"] = sciencepack1
 
-local sciencepack2 = table.deepcopy(data.raw.recipe["sct-science-pack-t2"])
+local sciencepack2 = table.deepcopy(data.raw.recipe["sct-logistic-science-pack"])
 sciencepack2.name = "logistic-science-pack"
 data.raw.recipe["logistic-science-pack"] = sciencepack2
 
-local sciencepack3 = table.deepcopy(data.raw.recipe["sct-science-pack-t3"])
+local sciencepack3 = table.deepcopy(data.raw.recipe["sct-chemical-science-pack"])
 sciencepack3.name = "chemical-science-pack"
 data.raw.recipe["chemical-science-pack"] = sciencepack3
 
-local sciencepackm = table.deepcopy(data.raw.recipe["sct-science-pack-mil"])
+local sciencepackm = table.deepcopy(data.raw.recipe["sct-military-science-pack"])
 sciencepackm.name = "military-science-pack"
 data.raw.recipe["military-science-pack"] = sciencepackm
 
-local sciencepackp = table.deepcopy(data.raw.recipe["sct-science-pack-prod"])
+local sciencepackp = table.deepcopy(data.raw.recipe["sct-production-science-pack"])
 sciencepackp.name = "production-science-pack"
 data.raw.recipe["production-science-pack"] = sciencepackp
 
-local sciencepackh = table.deepcopy(data.raw.recipe["sct-science-pack-ht"])
+local sciencepackh = table.deepcopy(data.raw.recipe["sct-utility-science-pack"])
 sciencepackh.name = "utility-science-pack"
 data.raw.recipe["utility-science-pack"] = sciencepackh
 

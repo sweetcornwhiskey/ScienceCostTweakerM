@@ -1,10 +1,10 @@
 {
   "item":
   [
-    ["sct-sciencepack-bio", "sct-science-pack-bio"]
+    ["sct-sciencepack-bio", "sct-bio-science-pack"]
   ],
   "recipe":
   [
-    ["sct-sciencepack-bio", "sct-science-pack-bio"]
+    ["sct-sciencepack-bio", "sct-bio-science-pack"]
   ]
 }

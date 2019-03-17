@@ -1,0 +1,17 @@
+{
+  "technology":
+  [
+    ["sct-research-logistic", "advanced-logistic-science-pack"],
+    ["sct-research-bio", "sct-bio-science-pack"],
+    ["sct-research-gold", "sct-science-pack-gold"],
+    ["sct-research-alien", "sct-alien-science-pack"]
+  ],
+  "item":
+  [
+    ["sct-science-pack-bio", "sct-bio-science-pack"]
+  ],
+  "recipe":
+  [
+    ["sct-science-pack-bio", "sct-bio-science-pack"]
+  ]
+}

@@ -16,13 +16,13 @@ for index, force in pairs(game.forces) do
 		"utility-science-pack",
 		"space-science-pack",
 		-- angels
-		"sct-research-bio",
+		"sct-bio-science-pack",
 		-- bobs
 		"sct-lab-modules",
-		"sct-research-logistic",
+		"advanced-logistic-science-pack",
 		"sct-lab-alien",
-		"sct-research-gold",
-		"sct-research-alien",
+		"sct-science-pack-gold",
+		"sct-alien-science-pack",
 	}
 	
 	for _i, techtocheck in pairs(techchecklist) do
