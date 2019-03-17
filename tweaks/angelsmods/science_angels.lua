@@ -2,7 +2,7 @@
 data:extend ({
 	{
 		type = "item-subgroup",
-		name = "sct-science-pack-bio",
+		name = "sct-bio-science-pack",
 		group = "sct-science",
 		order = "d_a[bio]",
 	},
@@ -12,10 +12,10 @@ data:extend ({
 data:extend ({
 	{
 		type = "tool",
-		name = "sct-science-pack-bio",
-		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-science-pack-bio.png",
+		name = "sct-bio-science-pack",
+		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-science-pack.png",
 		icon_size = 32,
-		subgroup = "sct-science-pack-bio",
+		subgroup = "sct-bio-science-pack",
 		order = "d_a[bio]",
 		stack_size = 200,
 		durability = 1,
@@ -28,7 +28,7 @@ data:extend ({
 		name = "sct-bio-ground-sample",
 		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-ground-sample.png",
 		icon_size = 32,
-		subgroup = "sct-science-pack-bio",
+		subgroup = "sct-bio-science-pack",
 		order = "d_a[bio]-b[groundsample]",
 		stack_size = 200,
 	},
@@ -38,7 +38,7 @@ data:extend ({
 		name = "sct-bio-sample-scaffold",
 		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-sample-scaffold.png",
 		icon_size = 32,
-		subgroup = "sct-science-pack-bio",
+		subgroup = "sct-bio-science-pack",
 		order = "d_a[bio]-c[scaffold]",
 		stack_size = 200,
 	},
@@ -48,7 +48,7 @@ data:extend ({
 		name = "sct-bio-sample-filling",
 		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-sample-filling.png",
 		icon_size = 32,
-		subgroup = "sct-science-pack-bio",
+		subgroup = "sct-bio-science-pack",
 		order = "d_a[bio]-d[filling]",
 		stack_size = 200,
 	},
@@ -59,8 +59,8 @@ data:extend (
 {
 	{
 		type = "recipe",
-		name = "sct-science-pack-bio",
-		subgroup = "sct-science-pack-bio",
+		name = "sct-bio-science-pack",
+		subgroup = "sct-bio-science-pack",
 		order = "d_a[bio]",
 		--[[
 		expensive =
@@ -74,7 +74,7 @@ data:extend (
 			},
 			results = 
 			{
-				{type="item", name="sct-science-pack-bio", amount=1},
+				{type="item", name="sct-bio-science-pack", amount=1},
 			},
 		},
 		]]--
@@ -89,7 +89,7 @@ data:extend (
 			},
 			results = 
 			{
-				{type="item", name="sct-science-pack-bio", amount=1},
+				{type="item", name="sct-bio-science-pack", amount=1},
 			},
 		},
 		normal =
@@ -103,7 +103,7 @@ data:extend (
 			},
 			results = 
 			{
-				{type="item", name="sct-science-pack-bio", amount=1},
+				{type="item", name="sct-bio-science-pack", amount=1},
 			},
 		},
 	},
@@ -111,7 +111,7 @@ data:extend (
 	{
 		type = "recipe",
 		name = "sct-bio-ground-sample",
-		subgroup = "sct-science-pack-bio",
+		subgroup = "sct-bio-science-pack",
 		order = "d_a[bio]-b[groundsample]",
 		expensive =
 		{
@@ -146,7 +146,7 @@ data:extend (
 	{
 		type = "recipe",
 		name = "sct-bio-sample-scaffold",
-		subgroup = "sct-science-pack-bio",
+		subgroup = "sct-bio-science-pack",
 		order = "d_a[bio]-c[scaffold]",
 		expensive =
 		{
@@ -181,7 +181,7 @@ data:extend (
 	{
 		type = "recipe",
 		name = "sct-bio-sample-filling",
-		subgroup = "sct-science-pack-bio",
+		subgroup = "sct-bio-science-pack",
 		order = "d_a[bio]-d[filling]",
 		category = "crafting-with-fluid",
 		expensive =
@@ -221,14 +221,14 @@ data:extend (
 data:extend({
 	{
 		type = "technology",
-		name = "sct-research-bio",
-		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-science-pack-bio-128.png",
+		name = "sct-bio-science-pack",
+		icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-science-pack-128.png",
 		icon_size = 128,
 		effects =
 		{
 			{
 				type = "unlock-recipe",
-				recipe = "sct-science-pack-bio",
+				recipe = "sct-bio-science-pack",
 			},
 			{
 				type = "unlock-recipe",
@@ -264,6 +264,6 @@ data:extend({
 
 -- hd icon for biopack
 if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
-	data.raw.tool["sct-science-pack-bio"].icon_size = 64
-	data.raw.tool["sct-science-pack-bio"].icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-science-pack-bio-64.png"
+	data.raw.tool["sct-bio-science-pack"].icon_size = 64
+	data.raw.tool["sct-bio-science-pack"].icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-science-pack-64.png"
 end

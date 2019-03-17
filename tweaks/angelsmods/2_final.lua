@@ -6,15 +6,15 @@ if mods["angelsbioprocessing"] then
 		end
 		if data.raw.tool["token-bio"] then
 			data.raw.tool["token-bio"].order = "d_a[bio]-e[token-bio]"
-			data.raw.tool["token-bio"].subgroup = "sct-science-pack-bio"
+			data.raw.tool["token-bio"].subgroup = "sct-bio-science-pack"
 		end
 		if data.raw.recipe["token-bio"] then
 			data.raw.recipe["token-bio"].order = "d_a[bio]-e[token-bio]"
-			data.raw.recipe["token-bio"].subgroup = "sct-science-pack-bio"
+			data.raw.recipe["token-bio"].subgroup = "sct-bio-science-pack"
 		end
 		-- replace token-bio with bio science pack
 		for i, tech in pairs(data.raw.technology) do
-			sctm.tech_pack_replace(tech.name, "token-bio", "sct-science-pack-bio")
+			sctm.tech_pack_replace(tech.name, "token-bio", "sct-bio-science-pack")
 		end
 	end
 end
