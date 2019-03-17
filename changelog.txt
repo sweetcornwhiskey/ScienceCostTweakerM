@@ -1,6 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.6
+Date: 17. 3. 2019
+  Changes:
+    - normalization of names/techologies (internal change to find stuff easier)
+    - angels bioindustries support
+  Bugifxes:
+    - fixed not connecting (hidden) researches dependant on bobs logistic science
+---------------------------------------------------------------------------------------------------
 Version: 0.17.5
-Date: 12. 3. 2018
+Date: 12. 3. 2019
   Changes:
     - increased military science craft time 10 in t2 lab (same time as chemical), 14 in t3 lab (same as utility/production), military still gives 2 packs from single craft
     - reduced chemical craft time to 10
@@ -10,19 +18,19 @@ Date: 12. 3. 2018
     - fixed ninja components from bobs
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.4
-Date: 11. 3. 2018
+Date: 11. 3. 2019
   Changes:
     - moved bobs advanced logistic to t4 lab
     - update japanese locale (by shelaf)
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.3
-Date: 10. 3. 2018
+Date: 10. 3. 2019
   Bugfixes:
     - fixed loading issue, when bob modules are loaded, but not bobtech
     - fixed cyclic dependency in t4 lab, when bob inserter overhaul is enabled
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.2
-Date: 9. 3. 2018
+Date: 9. 3. 2019
   Changes:
     - changed aai fuel processing to match new technology tiers in 0.17 (respective fuel unlocks)
     - enabled aai industry mod specific tweaks
@@ -30,7 +38,7 @@ Date: 9. 3. 2018
     - enabled bobs mods specific tweaks (might change balancing later), minimal balance change were done with respect to changes in science tiers
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.1
-Date: 5. 3. 2018
+Date: 5. 3. 2019
   Changes:
     - added descriptions from science packs also to technologies
     - slightly tweaked military research (faster on tier2, slower on tier3)
@@ -39,8 +47,8 @@ Date: 5. 3. 2018
     - fixed game loading, when military is set to tier 3
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.0
-Date: 3. 3. 2018
-  Changes:
+Date: 3. 3. 2019
+  Changes
     - Initial version, only ensures loading with vanilla
     - Default settings for millitary is now tier2 due increased bitter difficulty
     - Slight rebalance of research values (time and pack consumption), materials costs have not changed from 0.16
