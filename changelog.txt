@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.7
+Date: 17. 3. 2019
+  Changes:
+    - changed bob logistic science pack intermediates to not use complete items, but intermediates
+  Bugifxes:
+    - additional test on loading for presence of other bob mods in logistic science
+---------------------------------------------------------------------------------------------------
 Version: 0.17.6
 Date: 17. 3. 2019
   Changes:
