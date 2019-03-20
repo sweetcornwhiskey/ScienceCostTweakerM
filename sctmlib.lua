@@ -1,7 +1,7 @@
 -- sctm helper functions
 if not sctm then sctm = {} end
 -- uncomment this to enable debug output
--- sctm.enabledebug = true
+--sctm.enabledebug = true
 
 function sctm.debug(logtext)
 	if (sctm.enabledebug) then
@@ -48,7 +48,7 @@ function sctm.lab_input_add(labname, packname)
 			end
 		end
 		if not hasinput then
-			table.insert(labinputs, packname)
+			labinputs[#labinputs + 1] = packname
 			added = true
 		end
 	end	
@@ -112,7 +112,7 @@ local function addprereq(prereqtable, depname)
 		end
 	end
 	if not hasdep then
-		table.insert(prereqtable, depname)
+		prereqtable[#prereqtable + 1] = depname
 		added = true
 	end	
 end
@@ -208,7 +208,7 @@ local function addpack(ingredientstable, newpack)
 		end
 	end
 	if not found then
-		table.insert(ingredientstable, newpack)
+		ingredientstable[#ingredientstable + 1] = newpack
 		added = true
 	end
 	return addedd
@@ -323,7 +323,7 @@ local function addunlock(effectstable, recipename)
 		end
 	end
 	if not hasunlock then
-		table.insert(effectstable, { type="unlock-recipe", recipe = recipename })
+		effectstable[#effectstable + 1] = { type="unlock-recipe", recipe = recipename }
 	end
 end
 
@@ -498,8 +498,7 @@ local function addingredient(ingredientstable, newingredient)
 	local added = false
 	for _i, ingredient in pairs(ingredientstable) do
 		if ingredient and ingredient[1] == newingredient.name then
-			table.remove(ingredientstable, _i)
-			table.insert(ingredientstable, newingredient)
+			table[_i] = newingredient
 			added = true
 			break
 		elseif ingredient and ingredient.name and ingredient.name == newingredient.name then
@@ -509,7 +508,7 @@ local function addingredient(ingredientstable, newingredient)
 		end
 	end
 	if not added then
-		table.insert(ingredientstable, newingredient)
+		table[#table + 1] = newingredient
 		added = true
 	end
 	return added
@@ -564,16 +563,14 @@ local function replaceingredient(ingredientstable, oldingredient, newingredient)
 			if (newingredient.amount == 0) then
 				newingredient.amount = ingredient[2]
 			end
-			table.remove(ingredientstable, _i)
-			table.insert(ingredientstable, newingredient)
+			ingredientstable[_i] = newingredient
 			added = true
 			break
 		elseif ingredient and ingredient.name and ingredient.name == oldingredient then			
 			if (newingredient.amount == 0) then
 				newingredient.amount = ingredient.amount
 			end
-			table.remove(ingredientstable, _i)
-			table.insert(ingredientstable, newingredient)
+			ingredientstable[_i] = newingredient
 			added = true
 			break
 		end
@@ -642,16 +639,14 @@ local function replaceresult(resultstable, oldresult, newresult)
 			if (newresult.amount == 0) then
 				newresult.amount = result[2]
 			end
-			table.remove(resultstable, _i)
-			table.insert(resultstable, newresult)
+			resultstable[_i] = newresult
 			added = true
 			break
 		elseif result and result.name and result.name == oldresult then
 			if (newresult.amount == 0) then
 				newresult.amount = result.amount
 			end
-			table.remove(resultstable, _i)
-			table.insert(resultstable, newresult)
+			resultstable[_i] = newresult
 			added = true
 			break
 		end
