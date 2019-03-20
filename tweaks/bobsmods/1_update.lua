@@ -409,3 +409,7 @@ if mods["bobmodules"] then
 --		sctm.tech_dependency_add("effect-transmission-3", "utility-science-pack")
 	end
 end
+
+if mods["bobplates"] and mods["bobelectronics"] and mods["bobtech"] then
+	sctm.recipe_ingredient_add("sct-logistic-memory-unit2", {type="item", name="silicon-wafer", amount=2}, {type="item", name="silicon-wafer", amount=4})
+end
