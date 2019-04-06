@@ -1,9 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.8
+Date: 6. 4. 2019
+  Changes:
+    - omnipack is now component based like other packs (uses original recipe, just split in 2 components)
+  Bugfixes:
+    - fixed compatibility with omnimatter pack
+---------------------------------------------------------------------------------------------------
 Version: 0.17.7
-Date: 17. 3. 2019
+Date: 21. 3. 2019
   Changes:
     - changed bob logistic science pack intermediates to not use complete items, but intermediates
-  Bugifxes:
+  Bugfixes:
     - additional test on loading for presence of other bob mods in logistic science
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.6
@@ -11,7 +18,7 @@ Date: 17. 3. 2019
   Changes:
     - normalization of names/techologies (internal change to find stuff easier)
     - angels bioindustries support
-  Bugifxes:
+  Bugfixes:
     - fixed not connecting (hidden) researches dependant on bobs logistic science
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.5
@@ -21,7 +28,7 @@ Date: 12. 3. 2019
     - reduced chemical craft time to 10
     - increased production craft time to 14 (same as utility, they are equal tier now)
     - increased advanced logistic craft time to 14 (to match utility and production)
-  Bugifxes:
+  Bugfixes:
     - fixed ninja components from bobs
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.4
@@ -55,7 +62,7 @@ Date: 5. 3. 2019
 ---------------------------------------------------------------------------------------------------
 Version: 0.17.0
 Date: 3. 3. 2019
-  Changes
+  Changes:
     - Initial version, only ensures loading with vanilla
     - Default settings for millitary is now tier2 due increased bitter difficulty
     - Slight rebalance of research values (time and pack consumption), materials costs have not changed from 0.16
