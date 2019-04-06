@@ -1,6 +1,6 @@
-if mods["omnimatter_science"] and (mods["omnimatter_crystal"]  or mods["omnimatter-crystal"]) then
-	sctm.debug(serpent.block(data.raw.tool["omni-pack"]))
-	sctm.debug(serpent.block(data.raw.recipe["omni-pack"]))
+if mods["omnimatter_science"] and mods["omnimatter_crystal"] then
+--	sctm.debug(serpent.block(data.raw.tool["omni-pack"]))
+--	sctm.debug(serpent.block(data.raw.recipe["omni-pack"]))
 	if data.raw.tool["omni-pack"] and data.raw.recipe["omni-pack"] then
 		-- remove omnipack from basic lab
 		sctm.lab_input_remove("lab", "omni-pack")
@@ -14,7 +14,7 @@ if mods["omnimatter_science"] and (mods["omnimatter_crystal"]  or mods["omnimatt
 		sctm.lab_input_add("lab-2", "omni-pack")
 		sctm.lab_input_add("lab-alien", "omni-pack")
 		-- add t3 lab dep on omnipack research (because it reuqires it)
-		sctm.tech_dependency_add("sct-lab-t3", "sct-research-omni")
+		sctm.tech_dependency_add("sct-lab-t3", "omnipack-technology")
 		-- omnipack icons
 		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
 			data.raw.tool["omni-pack"].icons =
@@ -33,13 +33,20 @@ if mods["omnimatter_science"] and (mods["omnimatter_crystal"]  or mods["omnimatt
 				},
 			}
 		end
-		-- fix missing omnipack in bobs alien lab
+		data.raw.tool["omni-pack"].subgroup = "sct-omni-science-pack"
+		data.raw.recipe["omni-pack"].subgroup = "sct-omni-science-pack"
+
 		-- add crystalonics deps
 		sctm.tech_dependency_add("chemical-science-pack", "crystallonics-1")
 		sctm.tech_dependency_add("production-science-pack", "crystallonics-2")
 		sctm.tech_dependency_add("advanced-logistic-science-pack", "crystallonics-2")
 	else
 		-- disable omni pack research if not present
-		data.raw.technology["sct-research-omni"].enabled = false
+--		data.raw.technology["sct-research-omni"].enabled = false
+	end
+	sctm.tech_unlock_add("omnipack-technology","sct-omni-pack-minerals")
+	sctm.tech_unlock_add("omnipack-technology","sct-omni-pack-tools")
+	if mods["boblogistics"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
+		sctm.recipe_ingredient_replace("sct-omni-pack-tools","fast-inserter","long-handed-inserter")
 	end
 end

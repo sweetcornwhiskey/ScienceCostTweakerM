@@ -11,7 +11,7 @@ scttechmap =
 	["utility-science-pack"] = "utility-science-pack",
 	["space-science-pack"] = "space-science-pack",
 -- omni	
-	["omni-pack"] = "sct-research-omni",
+	["omni-pack"] = "omnipack-technology",
 -- angels	
 	["sct-bio-science-pack"] = "sct-bio-science-pack",
 -- bobs	
@@ -187,7 +187,7 @@ local knownpackmatchlist = {
 	{ partial = false, name = "alien-science-pack" }, -- bobs
 --	{ partial = true, name = "alien-science-pack-" },	-- bobs - leaving them under alien research
 	{ partial = false, name = "sct-bio-science-pack" }, -- angels
-	{ partial = false, name = "omni-pack" }, -- omnimatter
+--	{ partial = false, name = "omni-pack" }, -- omnimatter - leaving under omnipack-technology
 --	{ partial = false, name = "science-pack-t0" }, -- aai - should not have unlock at all
 }
 
