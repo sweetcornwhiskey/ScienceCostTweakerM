@@ -413,3 +413,20 @@ end
 if mods["bobplates"] and mods["bobelectronics"] and mods["bobtech"] then
 	sctm.recipe_ingredient_add("sct-logistic-memory-unit2", {type="item", name="silicon-wafer", amount=2}, {type="item", name="silicon-wafer", amount=4})
 end
+
+if mods["boblogistics"] then
+	if settings.startup["bobmods-logistics-inserteroverhaul"] and settings.startup["bobmods-logistics-inserteroverhaul"].value then
+		if data.raw.recipe["yellow-filter-inserter"] then
+			sctm.recipe_ingredient_replace("sct-lab2-automatization", "fast-inserter", "yellow-filter-inserter")
+		else
+			sctm.recipe_ingredient_replace("sct-lab2-automatization", "fast-inserter", "inserter")
+		end
+--		sctm.tech_pack_add("stack-inserter-2", {"production-science-pack",1})
+--		sctm.log(serpent.block(data.raw.recipe["sct-lab4-manipulators"]))
+--		sctm.recipe_ingredient_replace("sct-lab4-manipulators", "stack-filter-inserter", "red-stack-filter-inserter")
+		sctm.tech_dependency_add("sct-lab-t4", "stack-inserter-2")
+	end
+	if settings.startup["bobmods-logistics-beltoverhaul"] and settings.startup["bobmods-logistics-beltoverhaul"].value then
+		 sctm.recipe_ingredient_replace("sct-lab1-mechanization", "transport-belt", "basic-transport-belt")
+	end
+end
