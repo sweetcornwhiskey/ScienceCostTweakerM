@@ -68,7 +68,7 @@ data:extend({
 		default_value = true,
 	},
 
-
+--[[
 	{
 		type = "bool-setting",
 		name = "sct-othermod-tweaks",
@@ -76,6 +76,6 @@ data:extend({
 		setting_type = "startup",
 		default_value = false,
 	},
+	]]--
+
 })
-
-

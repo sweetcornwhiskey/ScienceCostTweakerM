@@ -8,7 +8,5 @@ require("tweaks.angelsmods.1_update")
 require("tweaks.bobsmods.1_update")
 require("tweaks.omnimatter.1_update")
 
-if (settings.startup["sct-othermod-tweaks"].value) then
-require("tweaks.pymods.1_update")
-require("tweaks.xander.1_update")
-end
+--require("tweaks.pymods.1_update")
+--require("tweaks.xander.1_update")

@@ -12,9 +12,8 @@ require("tweaks.angelsmods.2_final")
 require("tweaks.bobsmods.2_final")
 require("tweaks.omnimatter.2_final")
 
-if (settings.startup["sct-othermod-tweaks"].value) then
-require("tweaks.pymods.2_final")
-end
+--require("tweaks.pymods.2_final")
+
 -- Technolgoy map fix
 require("prototypes.2_technology")
 
