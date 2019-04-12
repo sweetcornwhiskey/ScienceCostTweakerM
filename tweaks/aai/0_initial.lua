@@ -1,3 +1,1 @@
-if mods["aai-industry"] then
-	require("science_aai")
-end
+require("science_aai")

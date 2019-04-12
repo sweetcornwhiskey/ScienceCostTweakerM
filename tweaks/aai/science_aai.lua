@@ -1,3 +1,4 @@
+if mods["aai-industry"] then
 -- sicence group
 data:extend ({
 	{
@@ -293,3 +294,4 @@ data:extend({
         },
     },
 })
+end

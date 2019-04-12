@@ -1,6 +1,5 @@
+require("science_angels")
 if mods["angelsbioprocessing"] then
-	require("science_angels")
-	
 	if settings.startup["sct-bio"].value == "tier1" then
         sctm.lab_input_add("lab", "sct-bio-science-pack")
 	else

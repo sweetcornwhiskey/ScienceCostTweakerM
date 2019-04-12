@@ -1,6 +1,7 @@
-if mods["pycoalprocessing"] then
-	require("pyscience")
+require("pyscience")
+require("pycontainer")
 
+if mods["pycoalprocessing"] then
 	local pybotle = table.deepcopy(data.raw.recipe["automation-science-pack"])
 	pybotle.name = "sct-t1-pybotle"
 	pybotle.subgroup = "sct-sciencepack-1"
@@ -70,7 +71,6 @@ if mods["pycoalprocessing"] then
 	sctm.tech_unlock_add("chemical-science-pack", "sct-t3-pybatery")
 
 	if mods["pyfusionenergy"] then
-		require("pycontainer")
 		-- copy py recipe onto new one, and make it ingredient
 		local pycontainer = table.deepcopy(data.raw.recipe["production-science-pack"])
 		pycontainer.name = "sct-prod-pycontainer"

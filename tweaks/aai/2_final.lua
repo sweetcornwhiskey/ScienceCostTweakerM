@@ -23,5 +23,5 @@ if mods["aai-industry"] then
 		end
 	end
 
-	require("fuel_aai")	
 end
+require("fuel_aai")	
