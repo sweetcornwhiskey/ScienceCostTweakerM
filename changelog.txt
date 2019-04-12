@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.9
+Date: 12. 4. 2019
+  Changes:
+    - removed orphaned modules technology dependence on disabled electric-lab (AAI)
+  Bugfixes:
+    - fixed conditional requires, that might cause issues with server mod crc
+---------------------------------------------------------------------------------------------------
 Version: 0.17.8
 Date: 6. 4. 2019
   Changes:
