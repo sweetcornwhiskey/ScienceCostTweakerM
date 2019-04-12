@@ -10,17 +10,13 @@ if mods["aai-industry"] then
 		"electric-lab",
 	}
 	if mods["omnimatter_water"] then
-		table.insert(aaitech0, "omniwaste")
+		aaitech0[#aaitech0+1] = "omniwaste"
 	end
 	
 	for _i, tech in pairs(aaitech0) do
 		sctm.tech_pack_replace(tech, "automation-science-pack", "sct-science-pack-0")
 	end
 
---	if data.raw.technology["electric-lab"] then
---		data.raw.technology["electric-lab"].enabled = false
---	end
-	
 	if data.raw.lab["burner-lab"] then
 		sctm.lab_input_add("burner-lab", "sct-science-pack-0")
 		data.raw.item["burner-lab"].order = "a[labs]-a[lab0]"
@@ -61,6 +57,7 @@ if mods["aai-industry"] then
 	
 	if data.raw.technology["electric-lab"] then
 		data.raw.technology["electric-lab"].enabled = false
+		sctm.tech_dependency_remove("modules", "electric-lab")
 	end
 
 	sctm.recipe_ingredient_replace("sct-t0-crate", "stone", "stone-crushed")
