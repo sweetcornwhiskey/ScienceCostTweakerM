@@ -452,6 +452,51 @@ function sctm.tech_remove_known_packs(techname, packlist)
 	return removed
 end
 
+function sctm.tech_replace(oldtech, newtech)
+	local replaced = false
+	if (data.raw.technology[oldtech] and data.raw.technology[newtech]) then
+		if (data.raw.technology[oldtech].prerequisites) then
+			for _, prereq in pairs(data.raw.technology[oldtech].prerequisites) do
+				if (not sctm.find_in_table(data.raw.technology[newtech].prerequisites, prereq)) then
+					data.raw.technology[newtech].prerequisites[#data.raw.technology[newtech].prerequisites + 1] = prereq
+				end
+			end
+		end
+		if (data.raw.technology[oldtech].effects) then
+			for _, eff in pairs(data.raw.technology[oldtech].effects) do
+				if (not sctm.find_in_table(data.raw.technology[newtech].effects, eff)) then
+					data.raw.technology[newtech].effects[#data.raw.technology[newtech].effects + 1] = eff
+				end
+			end
+		end
+		local newpack = table.deepcopy(data.raw.technology[newtech])
+		newpack.name = oldtech
+		data.raw.technology[newtech].enabled = false
+		data.raw.technology[oldtech] = newpack
+		replaced = true;
+	end
+	return replaced
+end
+
+function sctm.tech_disable(techname)
+	local disabled = false
+	if data.raw.technology[techname] then
+		local removed
+		for _i, tech in pairs(data.raw.technology) do
+			removed = sctm.tech_dependency_remove(_i, techname)
+			if removed then
+				sctm.log("removed " .. techname .. " dependency from " .. _i)
+			end
+		end
+		data.raw.technology[techname].enabled = false
+		disabled = true
+	end
+	if not data.raw.technology[techname] then
+		sctm.debug("attempting to update nonexistent technology " .. techname)
+	end
+	return disabled
+end
+
 -- recipe functions
 local function removeingredient(ingredientstable, ingredientname)
 	local removed = false
@@ -498,7 +543,7 @@ local function addingredient(ingredientstable, newingredient)
 	local added = false
 	for _i, ingredient in pairs(ingredientstable) do
 		if ingredient and ingredient[1] == newingredient.name then
-			table[_i] = newingredient
+			ingredientstable[_i] = newingredient
 			added = true
 			break
 		elseif ingredient and ingredient.name and ingredient.name == newingredient.name then
@@ -508,7 +553,7 @@ local function addingredient(ingredientstable, newingredient)
 		end
 	end
 	if not added then
-		table[#table + 1] = newingredient
+		ingredientstable[#ingredientstable + 1] = newingredient
 		added = true
 	end
 	return added
