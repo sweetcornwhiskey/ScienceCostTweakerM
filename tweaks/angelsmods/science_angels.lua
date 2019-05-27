@@ -14,8 +14,8 @@ if mods["angelsbioprocessing"] then
 		{
 			type = "tool",
 			name = "sct-bio-science-pack",
-			icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-science-pack.png",
-			icon_size = 32,
+			icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-science-pack-64.png",
+			icon_size = 64,
 			subgroup = "sct-bio-science-pack",
 			order = "d_a[bio]",
 			stack_size = 200,
@@ -262,10 +262,4 @@ if mods["angelsbioprocessing"] then
 			order = "sct-pack-b[bio]",
 		},
 	})
-
-	-- hd icon for biopack
-	if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
-		data.raw.tool["sct-bio-science-pack"].icon_size = 64
-		data.raw.tool["sct-bio-science-pack"].icon = "__ScienceCostTweakerM__/graphics/angelsmods/sct-bio-science-pack-64.png"
-	end
 end

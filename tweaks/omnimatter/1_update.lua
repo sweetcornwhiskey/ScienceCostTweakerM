@@ -16,23 +16,13 @@ if mods["omnimatter_science"] and mods["omnimatter_crystal"] then
 		-- add t3 lab dep on omnipack research (because it reuqires it)
 		sctm.tech_dependency_add("sct-lab-t3", "omnipack-technology")
 		-- omnipack icons
-		if settings.startup["sct-hd-icons"] and settings.startup["sct-hd-icons"].value == true then
-			data.raw.tool["omni-pack"].icons =
+		data.raw.tool["omni-pack"].icons =
+		{
 			{
-				{
-					icon_size = 64,
-					icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack-64.png",
-				},
-			}
-		else
-			data.raw.tool["omni-pack"].icons =
-			{
-				{
-					icon_size = 32,
-					icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack.png",
-				},
-			}
-		end
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack-64.png",
+			},
+		}
 		data.raw.tool["omni-pack"].subgroup = "sct-omni-science-pack"
 		data.raw.recipe["omni-pack"].subgroup = "sct-omni-science-pack"
 
@@ -46,6 +36,15 @@ if mods["omnimatter_science"] and mods["omnimatter_crystal"] then
 	end
 	sctm.tech_unlock_add("omnipack-technology","sct-omni-pack-minerals")
 	sctm.tech_unlock_add("omnipack-technology","sct-omni-pack-tools")
+	if (data.raw.technology["omnipack-technology"]) then
+		data.raw.technology["omnipack-technology"].icons =
+		{
+			{
+				icon_size = 128,
+				icon = "__ScienceCostTweakerM__/graphics/omni/omni-pack-128.png",
+			},
+		}
+	end
 	if mods["boblogistics"] and settings.startup["bobmods-logistics-inserteroverhaul"].value == true then
 		sctm.recipe_ingredient_replace("sct-omni-pack-tools","fast-inserter","long-handed-inserter")
 	end

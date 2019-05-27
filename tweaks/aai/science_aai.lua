@@ -105,8 +105,13 @@ data:extend({
 	{
 		type = "tool",
 		name = "sct-science-pack-0",
-		icon = "__ScienceCostTweakerM__/graphics/aai/sct-science-pack-0.png",
-		icon_size = 32,
+		icons = 
+		{
+			{
+		    	icon = "__ScienceCostTweakerM__/graphics/aai/sct-science-pack-0-64.png",
+				icon_size = 64,
+			},
+		},
 		subgroup = "sct-science-pack-0",
 		order = "d[t0]-a[pack]",
 		stack_size = 200,

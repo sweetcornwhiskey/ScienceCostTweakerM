@@ -126,39 +126,18 @@ function connect_sciencepack(sciencepackmap, first_science)
 	end
 end
 
-local function replacesciencepack(packname, packtocopy, labname)
-	if (data.raw.technology[packname] and data.raw.technology[packtocopy]) then
-		if (data.raw.technology[packname].prerequisites) then
-			if (labname and data.raw.technology[labname]) then
-				for _, prereq in pairs(data.raw.technology[packname].prerequisites) do
-					if (not sctm.find_in_table(data.raw.technology[labname].prerequisites, prereq)) then
-						data.raw.technology[labname].prerequisites[#data.raw.technology[labname].prerequisites + 1] = prereq
-					end
-				end
-			else
-				for _, prereq in pairs(data.raw.technology[packname].prerequisites) do
-					if (not sctm.find_in_table(data.raw.technology[packtocopy].prerequisites, prereq)) then
-						data.raw.technology[packtocopy].prerequisites[#data.raw.technology[packtocopy].prerequisites + 1] = prereq
-					end
-				end
-			end
-		end
-		local newpack = table.deepcopy(data.raw.technology[packtocopy])
-		newpack.name = packname
-		data.raw.technology[packtocopy].enabled = false
-		data.raw.technology[packname] = newpack
-	end
-end
-
 --vanilla
-replacesciencepack("logistic-science-pack", "sct-logistic-science-pack", nil)
-replacesciencepack("chemical-science-pack", "sct-chemical-science-pack", nil)
-replacesciencepack("military-science-pack", "sct-military-science-pack", nil)
-replacesciencepack("production-science-pack", "sct-production-science-pack", nil)
-replacesciencepack("utility-science-pack", "sct-utility-science-pack", nil)
-replacesciencepack("space-science-pack", "sct-space-science-pack", nil)
+sctm.tech_replace("logistic-science-pack", "sct-logistic-science-pack")
+sctm.tech_replace("chemical-science-pack", "sct-chemical-science-pack")
+sctm.tech_replace("military-science-pack", "sct-military-science-pack")
+sctm.tech_replace("production-science-pack", "sct-production-science-pack")
+sctm.tech_replace("utility-science-pack", "sct-utility-science-pack")
+sctm.tech_replace("space-science-pack", "sct-space-science-pack")
 --bob mods
-replacesciencepack("advanced-logistic-science-pack", "sct-advanced-logistic-science-pack", nil)
+sctm.tech_replace("advanced-logistic-science-pack", "sct-advanced-logistic-science-pack")
+
+sctm.tech_dependency_remove("chemical-science-pack","automation-2")
+sctm.tech_dependency_remove("chemical-science-pack","advanced-material-processing-2")
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")

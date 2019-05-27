@@ -303,31 +303,7 @@ for _, stp in pairs(sctpacks) do
 	data.raw.recipe[stp].expensive = table.deepcopy(data.raw.recipe[stp].normal)
 end
 
-local sciencepack1 = table.deepcopy(data.raw.recipe["sct-automation-science-pack"])
-sciencepack1.name = "automation-science-pack"
-data.raw.recipe["automation-science-pack"] = sciencepack1
-
-local sciencepack2 = table.deepcopy(data.raw.recipe["sct-logistic-science-pack"])
-sciencepack2.name = "logistic-science-pack"
-data.raw.recipe["logistic-science-pack"] = sciencepack2
-
-local sciencepack3 = table.deepcopy(data.raw.recipe["sct-chemical-science-pack"])
-sciencepack3.name = "chemical-science-pack"
-data.raw.recipe["chemical-science-pack"] = sciencepack3
-
-local sciencepackm = table.deepcopy(data.raw.recipe["sct-military-science-pack"])
-sciencepackm.name = "military-science-pack"
-data.raw.recipe["military-science-pack"] = sciencepackm
-
-local sciencepackp = table.deepcopy(data.raw.recipe["sct-production-science-pack"])
-sciencepackp.name = "production-science-pack"
-data.raw.recipe["production-science-pack"] = sciencepackp
-
-local sciencepackh = table.deepcopy(data.raw.recipe["sct-utility-science-pack"])
-sciencepackh.name = "utility-science-pack"
-data.raw.recipe["utility-science-pack"] = sciencepackh
-
 if settings.startup["sct-military"].value == "tier3" then
-	data.raw.recipe["military-science-pack"].normal.energy_required = 14
-	data.raw.recipe["military-science-pack"].expensive.energy_required = 14
+	data.raw.recipe["sct-military-science-pack"].normal.energy_required = 14
+	data.raw.recipe["sct-military-science-pack"].expensive.energy_required = 14
 end

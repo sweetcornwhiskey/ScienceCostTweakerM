@@ -54,14 +54,6 @@ data:extend({
 	
 	{
 		type = "bool-setting",
-		name = "sct-hd-icons",
-		order = "sct-g[icons]",
-		setting_type = "startup",
-		default_value = false,
-	},
-
-	{
-		type = "bool-setting",
 		name = "sct-connect-science",
 		order = "sct-h[connect]",
 		setting_type = "startup",

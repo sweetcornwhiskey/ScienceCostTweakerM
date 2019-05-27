@@ -408,10 +408,12 @@ if mods["bobtech"] then
 			icon_size = 128,
 			effects =
 			{
+--[[			
 				{
 					type = "unlock-recipe",
 					recipe = "advanced-logistic-science-pack",
 				},
+]]--				
 				{
 					type = "unlock-recipe",
 					recipe = "sct-logistic-cargo-unit",

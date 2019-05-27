@@ -47,10 +47,12 @@ data:extend({
 		icon_size = 128,
 		effects = 
 		{
+--[[			
 			{
 				type = "unlock-recipe",
 				recipe = "logistic-science-pack",
 			},
+]]--
 			{
 				type = "unlock-recipe",
 				recipe = "sct-t2-instruments",
@@ -97,10 +99,12 @@ data:extend({
 		icon_size = 128,
 		effects = 
 		{
+--[[			
 			{
 				type = "unlock-recipe",
 				recipe = "chemical-science-pack",
 			},
+]]--
 			{
 				type = "unlock-recipe",
 				recipe = "sct-t3-atomic-sensors",
@@ -131,10 +135,12 @@ data:extend({
 		icon_size = 128,
 		effects = 
 		{
+--[[			
 			{
 				type = "unlock-recipe",
 				recipe = "military-science-pack",
 			},
+]]--			
 			{
 				type = "unlock-recipe",
 				recipe = "sct-mil-subplating",
@@ -187,13 +193,15 @@ data:extend({
 		type = "technology",
 		name = "sct-production-science-pack",
 		icon = "__ScienceCostTweakerM__/graphics/icons/production-science-pack-128.png",
-		icon_size = 128,
+		icon_size = 128,		
 		effects = 
 		{
+--[[			
 			{
 				type = "unlock-recipe",
 				recipe = "production-science-pack",
 			},
+]]--			
 			{
 				type = "unlock-recipe",
 				recipe = "sct-prod-biosilicate",
@@ -247,10 +255,12 @@ data:extend({
 		icon_size = 128,
 		effects = 
 		{
+--[[			
 			{
 				type = "unlock-recipe",
 				recipe = "utility-science-pack",
 			},
+]]--			
 			{
 				type = "unlock-recipe",
 				recipe = "sct-htech-thermalstore",
@@ -304,10 +314,12 @@ data:extend({
 		icon_size = 128,
 		effects = 
 		{
+--[[			
 			{
 				type = "unlock-recipe",
 				recipe = "satellite",
 			},
+]]--			
 		},
 		prerequisites =
 		{
@@ -333,7 +345,7 @@ data:extend({
 
 -- military tech dependencies, based on settings
 if settings.startup["sct-military"].value == "tier2" then
-	sctm.tech_dependency_add("sct-military-science-pack", "automation-science-pack")
+	sctm.tech_dependency_add("sct-military-science-pack", "sct-automation-science-pack")
 else
 -- tier 3.5 -- after blue, but does not require t4 lab
 	sctm.tech_dependency_add("sct-military-science-pack", "chemical-science-pack")

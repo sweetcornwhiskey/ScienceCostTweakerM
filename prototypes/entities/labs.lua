@@ -80,14 +80,15 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-t2",
-		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon-64.png",
 			},
 			{
-				icon = "__ScienceCostTweakerM__/graphics/overlays/2.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/overlays/2-64.png",
 			},
 		},		
 		subgroup = "sct-labs",
@@ -98,14 +99,15 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-t2",
-		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t2/icon-64.png",
 			},
 			{
-				icon = "__ScienceCostTweakerM__/graphics/overlays/2.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/overlays/2-64.png",
 			},
 		},		
 		flags = {"placeable-player", "player-creation"},
@@ -168,14 +170,15 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-t3",
-		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon-64.png",
 			},
 			{
-				icon = "__ScienceCostTweakerM__/graphics/overlays/3.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/overlays/3-64.png",
 			},
 		},		
 		subgroup = "sct-labs",
@@ -186,14 +189,15 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-t3",
-		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t3/icon-64.png",
 			},
 			{
-				icon = "__ScienceCostTweakerM__/graphics/overlays/3.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/overlays/3-64.png",
 			},
 		},		
 		flags = {"placeable-player", "player-creation"},
@@ -261,14 +265,15 @@ data:extend({
 	{
 		type = "item",
 		name = "sct-lab-t4",
-		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon-64.png",
 			},
 			{
-				icon = "__ScienceCostTweakerM__/graphics/overlays/4.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/overlays/4-64.png",
 			},
 		},		
 		subgroup = "sct-labs",
@@ -279,14 +284,15 @@ data:extend({
 	{
 		type = "lab",
 		name = "sct-lab-t4",
-		icon_size = 32,
 		icons =
 		{
 			{
-				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/sct-lab-t4/icon-64.png",
 			},
 			{
-				icon = "__ScienceCostTweakerM__/graphics/overlays/4.png",
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/overlays/4-64.png",
 			},
 		},		
 		flags = {"placeable-player", "player-creation"},
@@ -356,25 +362,27 @@ data:extend({
 -- Rework vanilla science lab into a Tier 1 science lab.
 data.raw["item"]["lab"].subgroup = "sct-labs"
 data.raw["item"]["lab"].order = "a[labs]-a[lab1]"
-data.raw["item"]["lab"].icon_size = 32
 data.raw["item"]["lab"].icons = 
 {
 	{
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon.png",
+		icon_size = 64,
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon-64.png",
 	},
 	{
-		icon = "__ScienceCostTweakerM__/graphics/overlays/1.png",
+		icon_size = 64,
+		icon = "__ScienceCostTweakerM__/graphics/overlays/1-64.png",
 	},
 }
 
-data.raw["lab"]["lab"].icon_size = 32
 data.raw["lab"]["lab"].icons = 
 {
 	{
-		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon.png",
+		icon_size = 64,
+		icon = "__ScienceCostTweakerM__/graphics/sct-lab-t1/icon-64.png",
 	},
 	{
-		icon = "__ScienceCostTweakerM__/graphics/overlays/1.png",
+		icon_size = 64,
+		icon = "__ScienceCostTweakerM__/graphics/overlays/1-64.png",
 	},
 }
 data.raw["lab"]["lab"].collision_box = {{-1.2, -1.2}, {1.2, 1.2}}
