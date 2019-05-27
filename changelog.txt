@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.17.10
+Date: 27. 5. 2019
+  Changes:
+    - changed sciencepack and labs icons to 64px (items and recipes)
+    - removed hd icons setting
+    - fixed crushed stone replacement when Bio Industry mod is present with AAI
+  Bugfixes:
+    - fixed compatibility with pycoal, pyfusion and pyhightech
+    - fixed science packs showing twice in technology unlock
+---------------------------------------------------------------------------------------------------
 Version: 0.17.9
 Date: 12. 4. 2019
   Changes:
