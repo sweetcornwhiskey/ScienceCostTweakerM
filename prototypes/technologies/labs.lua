@@ -121,6 +121,10 @@ data:extend({
 			},
 			{
 				type = "unlock-recipe",
+				recipe = "sct-t3-flash-fuel2",
+			},
+			{
+				type = "unlock-recipe",
 				recipe = "sct-t3-laser-foci",
 			},
 			{

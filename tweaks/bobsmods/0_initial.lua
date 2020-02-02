@@ -10,3 +10,12 @@ if mods["boblogistics"] then
 		sctm.tech_dependency_add("sct-lab-t2", "electronics")
 	end
 end
+
+-- bobtech renames logistic science to transport science.
+-- Undo this so we use the "Single use ATMOS" localization string
+data.raw.tool["logistic-science-pack"].localised_name = nil
+data.raw.technology["logistic-science-pack"].localised_name = nil
+
+if data.raw.tool["advanced-logistic-science-pack"] then
+  data.raw.tool["advanced-logistic-science-pack"].localised_name = nil
+end

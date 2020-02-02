@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.0
+Date: 2. 2. 2020
+  Changes:
+    - Factorio 0.18 update
+    - Add second flash fuel cell recipe to fix issues with recent base game oil changes
+  Bugfixes:
+    - Add bobtech dependency to fix lab accepting A.I. science pack
+    - Reset some overridden localization strings fixes ATMOS science pack name
+---------------------------------------------------------------------------------------------------
 Version: 0.17.10
 Date: 27. 5. 2019
   Changes:
