@@ -85,7 +85,12 @@ function connect_sciencepack(sciencepackmap, first_science)
 			if _obj.unit.ingredients and table_size(_obj.unit.ingredients) > 0 then
 				local packlist = {} 
 				for _packid, _packobj in pairs(_obj.unit.ingredients) do
-					local packname = _packobj[1];
+					local packname 
+						if _packobj.name == nil then
+							packname = _packobj[1]
+						else
+							packname = _packobj.name
+						end
 					packlist[packname] = 0
 				end
 				if _obj.prerequisites and  table_size(_obj.prerequisites) > 0 then
