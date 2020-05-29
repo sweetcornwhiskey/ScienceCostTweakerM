@@ -248,7 +248,7 @@ if mods["angelsbioprocessing"] then
 			{
 				"gardens",
 				"bio-paper-1",
-				"bio-farm",
+				"bio-farm-1",
 			},
 			unit =
 			{
