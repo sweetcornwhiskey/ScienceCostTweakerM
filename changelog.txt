@@ -1,8 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.18.1
+Date: 24. 5. 2020
+  Changes:
+    - maintenance release
+  Bugfixes:
+    - fix for loading with angels mod (@kingarthur)
+    - base dependencies (@lovelysanta)
+---------------------------------------------------------------------------------------------------
 Version: 0.18.0
 Date: 2. 2. 2020
   Changes:
-    - Factorio 0.18 update
+    - Factorio 0.18 update (@trainwreck)
     - Add second flash fuel cell recipe to fix issues with recent base game oil changes
   Bugfixes:
     - Add bobtech dependency to fix lab accepting A.I. science pack
