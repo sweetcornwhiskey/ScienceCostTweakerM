@@ -1,9 +1,9 @@
 {
   "name": "ScienceCostTweakerM",
-  "version": "0.18.3",
+  "version": "1.1.0",
   "factorio_version":"1.1",
   "title": "ScienceCostTweaker Mod (mexmer)",
-  "author": "mexmer",
+  "author": "mexmer, kingarthur",
   "dependencies": ["base >= 1.1.0", "? omnimatter_science >= 3.0.3", "? pycoalprocessing >= 1.2.0", "? bobtech" ],
   "contact": "mexmer@github.com",
   "homepage": "https://github.com/mexmer/ScienceCostTweakerM",
