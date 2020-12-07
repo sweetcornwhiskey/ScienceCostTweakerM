@@ -1,5 +1,5 @@
 if mods["boblibrary"] then
-	local science_packs_and_intermediates =
+	local science_packs_and_intermediates = 
 	{
   		"automation-science-pack",
   		"logistic-science-pack",
@@ -22,11 +22,5 @@ if mods["boblibrary"] then
 			table.insert(finallist, recipeName)
 		end
 	end
-	if mods["angelsrefining"] then
-		for _, recipe_name in pairs(finallist) do
-			angelsmods.functions.allow_productivity(recipe_name)
-		end
-	else
-		bobmods.lib.module.add_productivity_limitations(finallist)
-	end
+	bobmods.lib.module.add_productivity_limitations(finallist)
 end
