@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 9. 12. 2020
+  Changes:
+    - maintenance release
+  Bugfixes:
+    - fix for handling removals from tables with nonnumeric index (@honktown)
+---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 7. 12. 2020
   Changes:
