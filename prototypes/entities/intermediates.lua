@@ -454,6 +454,26 @@ data:extend({
 		order = "b[labparts]-c[lab3]-c[construction]",
 		stack_size = 10,
 	},
+
+	-- Spectrum lab sulfur light emiter
+	{
+		type = "item",
+		name = "sct-lab3-sulfur-lightsource",
+		icons =
+		{
+			{
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab-t3-sulfur-lightsource-64.png",
+			},
+			{
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/overlays/3-64.png",
+			},
+		},			subgroup = "sct-labparts",
+		order = "b[labparts]-c[lab3]-c[sle]",
+		stack_size = 10,
+	},
+
 	-- Spectrum lab optics
 	{
 		type = "item",

@@ -147,13 +147,18 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "sct-lab3-optics",
 			},
+			{
+				type = "unlock-recipe",
+				recipe = "sct-lab3-sulfur-lightsource",
+			},
 		},
 		prerequisites =
 		{
 			"logistic-science-pack",
 			"oil-processing",
-			"advanced-electronics",
-			"solar-energy",			
+			"solar-energy",
+			"plastics",
+			"sulfur-processing",
 		},
 		unit =
 		{
