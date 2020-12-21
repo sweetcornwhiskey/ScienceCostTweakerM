@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.2
+Date: 21. 12. 2020
+  Changes:
+    - t2 lab recipe change
+    - t3 lab recipe and science pack change (new intermerdiate)
+  Bugfixes:
+    - fixed removal of duplicate electric lab technology from aai-industry
+    - fixed ingame upgrade planner (eg. added next_upgrade)
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 9. 12. 2020
   Changes:
