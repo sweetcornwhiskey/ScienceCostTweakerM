@@ -23,5 +23,9 @@ if mods["aai-industry"] then
 		end
 	end
 
+	if data.raw.technology["electric-lab"] then
+--		sctm.tech_dependency_remove("modules", "electric-lab")
+		sctm.tech_disable("electric-lab")
+	end
 end
 require("fuel_aai")	

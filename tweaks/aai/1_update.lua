@@ -58,17 +58,15 @@ if mods["aai-industry"] then
 		sctm.tech_dependency_add("sct-lab-t1", "basic-logistics")
 	end
 	
-	if data.raw.technology["electric-lab"] then
-		sctm.tech_disable("electric-lab")
-	end
-
 	if mods["angelsrefining"] then
 		sctm.recipe_ingredient_replace("sct-t0-crate", "stone", "stone-crushed")
 		sctm.recipe_ingredient_replace("sct-t0-solvent", "iron-ore", "angels-ore1-crushed")
 	end
+
 	if mods["omnimatter"] then
 		sctm.recipe_ingredient_replace("sct-t0-solvent", "iron-ore", "crushed-omnite")
 	end
+	
 	if mods["omnimatter_wood"] then
 		sctm.recipe_ingredient_replace("sct-t0-solvent", "wood", "omniwood")
 	end
