@@ -39,6 +39,14 @@ if mods["bobplates"] then
 		sctm.tech_dependency_add("sct-lab-t3", "gold-processing")
 	end
 	
+	if data.raw.item["glass"] then
+		sctm.recipe_ingredient_replace("sct-t3-sulfur-lightsource", "plastic-bar", "glass")
+	end
+
+	if data.raw.fluid["sulfur-dioxide"] then
+		sctm.recipe_ingredient_replace("sct-t3-sulfur-lightsource", "sulfur", {type="fluid", name="sulfur-dioxide", amount=20}, "sulfur", {type="fluid", name="sulfur-dioxide", amount=50})
+	end
+
 	if data.raw.item["glass"] and data.raw.item["aluminium-plate"] then
 		data.raw.recipe["sct-t3-laser-emitter"].normal.ingredients =
 		{
@@ -290,6 +298,8 @@ if mods["bobtech"] then
 		else
 			data.raw.lab["lab-2"].researching_speed = 1
 		end
+		data.raw.lab["sct-lab-t4"].next_upgrade = "lab-2"
+		data.raw.lab["lab"].next_upgrade = "sct-lab-t2"
 	end
 	if data.raw.item["lab-alien"] then
 		data.raw.item["lab-alien"].subgroup = "sct-labs"
