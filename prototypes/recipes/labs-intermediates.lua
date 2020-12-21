@@ -141,35 +141,6 @@ data:extend({
 
 	{
 		type = "recipe",
-		name = "sct-lab3-sulfur-lightsource",
-		expensive = 
-		{
-			energy_required = 5,
-			enabled = false,
-			ingredients = {
-				{ "sulfur", 5 },
-				{ "plastic-bar", 5 },
-				{ "sct-t2-reaction-nodes", 3},
-				{ "sct-t2-microcircuits", 3},
-			},
-			result = "sct-lab3-sulfur-lightsource",
-		},
-		normal = 
-		{
-			energy_required = 5,
-			enabled = false,
-			ingredients = {
-				{ "sulfur", 2 },
-				{ "plastic-bar", 2 },
-				{ "sct-t2-reaction-nodes", 2},
-				{ "sct-t2-microcircuits", 2},
-			},
-			result = "sct-lab3-sulfur-lightsource",
-		},
-	},
-
-	{
-		type = "recipe",
 		name = "sct-lab3-optics",
 		expensive =
 		{
@@ -177,7 +148,7 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"sct-lab3-sulfur-lightsource", 25},
+				{"sct-t3-sulfur-lightsource", 10},
 				{"sct-t3-femto-lasers", 2}
 			},
 			result = "sct-lab3-optics",
@@ -188,7 +159,7 @@ data:extend({
 			enabled = false,
 			ingredients = 
 			{
-				{"sct-lab3-sulfur-lightsource", 10},
+				{"sct-t3-sulfur-lightsource", 3},
 				{"sct-t3-femto-lasers", 1}
 			},
 			result = "sct-lab3-optics",

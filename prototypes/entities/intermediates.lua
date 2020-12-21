@@ -96,7 +96,7 @@ data:extend({
 	},
 
 
-	-- Tier 3 Intermediary products.
+	-- Tier 3 (optics) Intermediary products.
 	-- =============================
 	{
 		type = "item",
@@ -146,6 +146,24 @@ data:extend({
 		subgroup = "sct-sciencepack-3",
 		order = "f[t3]-f[atomicsensors]",
 		stack_size = 200
+	},
+
+	{
+		type = "item",
+		name = "sct-t3-sulfur-lightsource",
+		icons =
+		{
+			{
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/icons/sct-t3-sulfur-lightsource-64.png",
+			},
+			{
+				icon_size = 64,
+				icon = "__ScienceCostTweakerM__/graphics/overlays/3-64.png",
+			},
+		},			subgroup = "sct-labparts",
+		order = "b[labparts]-c[lab3]-c[sle]",
+		stack_size = 10,
 	},
 
 	-- Military Intermediary products.
@@ -452,25 +470,6 @@ data:extend({
 		icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab3-construction.png",
 		subgroup = "sct-labparts",
 		order = "b[labparts]-c[lab3]-c[construction]",
-		stack_size = 10,
-	},
-
-	-- Spectrum lab sulfur light emiter
-	{
-		type = "item",
-		name = "sct-lab3-sulfur-lightsource",
-		icons =
-		{
-			{
-				icon_size = 64,
-				icon = "__ScienceCostTweakerM__/graphics/icons/sct-lab-t3-sulfur-lightsource-64.png",
-			},
-			{
-				icon_size = 64,
-				icon = "__ScienceCostTweakerM__/graphics/overlays/3-64.png",
-			},
-		},			subgroup = "sct-labparts",
-		order = "b[labparts]-c[lab3]-c[sle]",
 		stack_size = 10,
 	},
 

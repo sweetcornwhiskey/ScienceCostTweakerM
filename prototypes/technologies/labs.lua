@@ -149,7 +149,7 @@ data:extend({
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "sct-lab3-sulfur-lightsource",
+				recipe = "sct-t3-sulfur-lightsource",
 			},
 		},
 		prerequisites =

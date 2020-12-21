@@ -165,6 +165,7 @@ data:extend({
 			module_info_icon_shift = {0, 0.9},
 		},
 		fast_replaceable_group = "lab",
+		next_upgrade = "sct-lab-t3",
 	},
 	-- == Tier 3 ==
 	{
@@ -259,6 +260,7 @@ data:extend({
 			module_info_icon_shift = {0, 0.9}
 		},
 		fast_replaceable_group = "lab",
+		next_upgrade = "sct-lab-t4"
 	},
 
 	-- == Tier 4 ==
@@ -418,6 +420,7 @@ data.raw["lab"]["lab"].module_specification =
 		module_info_icon_shift = {0, 0.9}
 	}
 data.raw["lab"]["lab"].fast_replaceable_group = "lab"
+data.raw["lab"]["lab"].next_upgrade = "sct-lab-t2"
 
 if settings.startup["sct-lab-modules"].value == "tier3" then
 	data.raw["lab"]["sct-lab-t3"].module_specification.module_slots = 1

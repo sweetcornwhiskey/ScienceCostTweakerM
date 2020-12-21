@@ -656,6 +656,38 @@ data:extend({
 		},
 	},
 	
+	{
+		type = "recipe",
+		name = "sct-t3-sulfur-lightsource",
+		category = "chemistry",
+		subgroup = "sct-sciencepack-3",
+		order = "f[t3]-g[sulfur-lightsource]",
+		expensive = 
+		{
+			energy_required = 5,
+			enabled = false,
+			ingredients = {
+				{ "sulfur", 5 },
+				{ "plastic-bar", 5 },
+				{ "sct-t2-reaction-nodes", 3},
+				{ "sct-t2-microcircuits", 3},
+			},
+			result = "sct-t3-sulfur-lightsource",
+		},
+		normal = 
+		{
+			energy_required = 5,
+			enabled = false,
+			ingredients = {
+				{ "sulfur", 2 },
+				{ "plastic-bar", 2 },
+				{ "sct-t2-reaction-nodes", 2},
+				{ "sct-t2-microcircuits", 2},
+			},
+			result = "sct-t3-sulfur-lightsource",
+		},
+	},
+
 	-- Military Intermediary products.
 	-- =============================
 	{

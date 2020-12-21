@@ -122,6 +122,7 @@ data:extend(
 				enabled = false,
 				always_show_made_in = true,
 				ingredients = {
+					{"sct-t3-sulfur-lightsource", 1},
 					{"sct-t3-femto-lasers", 1},
 					{"sct-t3-atomic-sensors", 1}
 				},
