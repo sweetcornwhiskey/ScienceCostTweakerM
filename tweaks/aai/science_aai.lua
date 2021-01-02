@@ -1,13 +1,15 @@
 if mods["aai-industry"] then
--- sicence group
-data:extend ({
-	{
-		type = "item-subgroup",
-		name = "sct-science-pack-0",
-		group = "sct-science",
-		order = "d[t0]",
-	},
-})
+-- science group
+if not data.raw["item-subgroup"]["sct-science-pack-0"] then
+	data:extend ({
+		{
+			type = "item-subgroup",
+			name = "sct-science-pack-0",
+			group = "sct-science",
+			order = "d[t0]",
+		},
+	})
+end
 -- intermediates
 data:extend({
 	{

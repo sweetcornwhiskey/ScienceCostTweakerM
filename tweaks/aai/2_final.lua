@@ -12,15 +12,7 @@ if mods["aai-industry"] then
 	end
 	
 	if data.raw.lab["burner-lab"] then
-		local packfound = false
-		for _i, pack in pairs(data.raw.lab["burner-lab"].inputs) do
-			if pack == "sct-science-pack-0" then
-				packfound = true
-			end
-		end
-		if packfound == false then
-			sctm.lab_pack_add("burner-lab", "sct-science-pack-0")
-		end
+		sctm.lab_input_add("burner-lab", "sct-science-pack-0")
 	end
 
 	if data.raw.technology["electric-lab"] then
