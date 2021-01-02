@@ -15,6 +15,7 @@ scttechmap =
 -- angels	
 	["sct-bio-science-pack"] = "sct-bio-science-pack",
 -- bobs	
+	["steam-science-pack"] = "sct-research-steam", -- technology placeholder, doesn't exists
 	["advanced-logistic-science-pack"] = "advanced-logistic-science-pack",
 	["science-pack-gold"] = "sct-science-pack-gold",
 	["effectivity-processor"] = "modules",
@@ -32,7 +33,7 @@ scttechmap =
 	["alien-science-pack-red"] = "alien-reseach",
 	["alien-science-pack-yellow"] = "alien-reseach",
 -- aai
-	["sct-science-pack-0"] = "sct-research-t0",
+	["sct-science-pack-0"] = "sct-research-t0", -- technology placeholder, doesn't exists
 }
 
 local function checkpacks(tech, checkpacklist, deptech, packmap)
@@ -102,7 +103,7 @@ function connect_sciencepack(sciencepackmap, first_science)
 				for packname, known in pairs(packlist) do
 					local deptech = techmap[packname]
 					if deptech == nil and not packname == first_science then
-						log("unhandled SP " .. packname .. " in tech " .. tech)
+						sctm.log("unhandled SP " .. packname .. " in tech " .. tech)
 					end
 					if deptech ~= nil and data.raw.technology[deptech] == nil then
 --							log("tech " .. deptech .. " for " .. packname .. " unavailable")
@@ -147,6 +148,9 @@ sctm.tech_dependency_remove("chemical-science-pack","advanced-material-processin
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
 	local first_scient = "automation-science-pack"
+	if data.raw.tool["steam-science-pack"] then 
+		first_science = "steam-science-pack"
+	end
 	if data.raw.tool["sct-science-pack-0"] then 
 		first_science = "sct-science-pack-0"
 	end

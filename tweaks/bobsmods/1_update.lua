@@ -431,3 +431,49 @@ if mods["boblogistics"] then
 		 sctm.recipe_ingredient_replace("sct-lab1-mechanization", "transport-belt", "basic-transport-belt")
 	end
 end
+
+if mods["bobtech"] and settings.startup["bobmods-burnerphase"] then
+	if (data.raw.recipe["steam-science-pack"]) then
+		data.raw.recipe["steam-science-pack"].subgroup = "sct-science-pack-0"		
+	end
+	if (data.raw.tool["steam-science-pack"]) then
+		data.raw.tool["steam-science-pack"].subgroup = "sct-science-pack-0"		
+	end
+	sctm.tech_disable("lab")
+	if (data.raw.technology["lab"]) then
+		local deps = sctm.tech_dependency_get("lab")
+		if (deps and #deps) then
+--			sctm.log(serpent.block(deps))
+			for _i, prereq in pairs(deps) do
+				sctm.tech_dependency_add("sct-lab-t1", prereq)
+			end
+		end
+	end
+	sctm.tech_disable("automation-science-pack")
+	if (data.raw.technology["automation-science-pack"]) then
+		local deps = sctm.tech_dependency_get("automation-science-pack")
+--		sctm.log(serpent.block(deps))
+		if (deps and #deps) then
+			for _i, prereq in pairs(deps) do
+				sctm.tech_dependency_add("sct-automation-science-pack", prereq)
+			end
+		end
+	end
+	if (data.raw.tool["steam-science-pack"] and not data.raw.tool["sct-science-pack-0"]) then
+		data.raw.technology["sct-automation-science-pack"].unit.time = 20
+		sctm.tech_pack_add("sct-automation-science-pack", {"steam-science-pack", 1})
+		data.raw.technology["sct-lab-t1"].unit.time = 20
+		sctm.tech_pack_add("sct-lab-t1", {"steam-science-pack", 10})		
+	end
+	if (data.raw.recipe["burner-lab"]) then
+		data.raw.recipe["burner-lab"].subgroup = "sct-science-pack-0"
+	end
+	if (data.raw.lab["burner-lab"]) then
+		data.raw.lab["burner-lab"].subgroup = "sct-science-pack-0"
+	end
+
+	if (data.raw.technology["steam-automation"]) then
+		sctm.tech_dependency_remove("automation","basic-automation")
+		sctm.tech_dependency_add("automation","steam-automation")
+	end
+end

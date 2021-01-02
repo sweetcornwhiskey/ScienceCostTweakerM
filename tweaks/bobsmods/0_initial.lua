@@ -1,6 +1,7 @@
 require("science_bobmods_logistic")
 require("science_bobmods_tech")
 require("science_bobmods_alien")
+require("science_bobmods_burner")
 
 require("science_bobmods_modules")
 
@@ -19,3 +20,4 @@ data.raw.technology["logistic-science-pack"].localised_name = nil
 if data.raw.tool["advanced-logistic-science-pack"] then
   data.raw.tool["advanced-logistic-science-pack"].localised_name = nil
 end
+
