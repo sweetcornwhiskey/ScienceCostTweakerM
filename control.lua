@@ -1,7 +1,7 @@
 local sct = {}
 
 sct.unlockstart = function(playerforce)
-	log(serpent.block(playerforce.technologies["sct-lab-t1"]))
+--	log(serpent.block(playerforce.technologies["sct-lab-t1"]))
 	if
 		playerforce.technologies["sct-lab-t1"] and
 		playerforce.technologies["sct-lab-t1"].valid and 
@@ -15,7 +15,7 @@ sct.unlockstart = function(playerforce)
 		playerforce.technologies["sct-lab-t1"].researched = true
 	end
 
-	log(serpent.block(playerforce.technologies["sct-automation-science-pack"]))
+--	log(serpent.block(playerforce.technologies["sct-automation-science-pack"]))
 	if 
 		playerforce.technologies["sct-automation-science-pack"] and
 		playerforce.technologies["sct-automation-science-pack"].valid and 

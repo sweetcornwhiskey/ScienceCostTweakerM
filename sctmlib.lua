@@ -53,7 +53,8 @@ function sctm.lab_input_add(labname, packname)
 			end
 		end
 		if not hasinput then
-			labinputs[#labinputs + 1] = packname
+			local inputsize = table_size(labinputs)
+			labinputs[inputsize + 1] = packname
 			added = true
 		end
 	end	
@@ -118,7 +119,8 @@ local function addprereq(prereqtable, depname)
 		end
 	end
 	if not hasdep then
-		prereqtable[#prereqtable + 1] = depname
+		local prereqsize = table_size(prereqtable)
+		prereqtable[prereqsize + 1] = depname
 		added = true
 	end	
 end
@@ -158,6 +160,30 @@ function sctm.tech_dependency_add(techname, depname)
 		sctm.debug("attempting to insert nonexistent technology " .. depname)
 	end
 	return added
+end
+
+function sctm.tech_dependency_get(techname)
+	local deps = {}
+	sctm.debug("retrieving dps for " .. techname)
+	if data.raw.technology[techname] then
+		local tech = data.raw.technology[techname]
+		if tech.normal and tech.normal.prerequisites then
+			for _i, prereq in pairs(tech.normal.prerequisites) do
+				table.insert(deps, prereq)
+			end
+		end
+		if tech.expensive and tech.expensive.prerequisites then
+			for _i, prereq in pairs(tech.expensive.prerequisites) do
+				table.insert(deps, prereq)
+			end
+		end
+		if tech.prerequisites then
+			for _i, prereq in pairs(tech.prerequisites) do
+				table.insert(deps, prereq)
+			end
+		end
+	end
+	return deps
 end
 
 -- ingredients = { ["automation-science-pack"] = 1 }
@@ -215,7 +241,8 @@ local function addpack(ingredientstable, newpack)
 		end
 	end
 	if not found then
-		ingredientstable[#ingredientstable + 1] = newpack
+		local ingredientsize = table_size(ingredientstable)
+		ingredientstable[ingredientsize + 1] = newpack
 		added = true
 	end
 	return addedd
@@ -330,7 +357,8 @@ local function addunlock(effectstable, recipename)
 		end
 	end
 	if not hasunlock then
-		effectstable[#effectstable + 1] = { type="unlock-recipe", recipe = recipename }
+		local effectsize = table_size(effectstable)
+		effectstable[effectsize + 1] = { type="unlock-recipe", recipe = recipename }
 	end
 end
 
@@ -467,14 +495,16 @@ function sctm.tech_replace(oldtech, newtech)
 		if (data.raw.technology[oldtech].prerequisites) then
 			for _, prereq in pairs(data.raw.technology[oldtech].prerequisites) do
 				if (not sctm.find_in_table(data.raw.technology[newtech].prerequisites, prereq)) then
-					data.raw.technology[newtech].prerequisites[#data.raw.technology[newtech].prerequisites + 1] = prereq
+					local prereqsize = table_size(data.raw.technology[newtech].prerequisites)
+					data.raw.technology[newtech].prerequisites[prereqsize + 1] = prereq
 				end
 			end
 		end
 		if (data.raw.technology[oldtech].effects) then
 			for _, eff in pairs(data.raw.technology[oldtech].effects) do
 				if (not sctm.find_in_table(data.raw.technology[newtech].effects, eff)) then
-					data.raw.technology[newtech].effects[#data.raw.technology[newtech].effects + 1] = eff
+					local effectsize = table_size(data.raw.technology[newtech].effects)
+					data.raw.technology[newtech].effects[effectsize + 1] = eff
 				end
 			end
 		end
@@ -563,7 +593,8 @@ local function addingredient(ingredientstable, newingredient)
 		end
 	end
 	if not added then
-		ingredientstable[#ingredientstable + 1] = newingredient
+		local ingredientsize = table_size(ingredientstable)
+		ingredientstable[ingredientsize + 1] = newingredient
 		added = true
 	end
 	return added
