@@ -20,9 +20,8 @@ sct.unlockstart = function(playerforce)
 		playerforce.technologies["sct-automation-science-pack"] and
 		playerforce.technologies["sct-automation-science-pack"].valid and 
 		playerforce.technologies["sct-automation-science-pack"].enabled and (
-			playerforce.technologies["sct-automation-science-pack"].researched == false and (
-				playerforce.technologies["sct-automation-science-pack"].prerequisites == nil or 
-				playerforce.technologies["sct-automation-science-pack"].prerequisites == false or
+			not playerforce.technologies["sct-automation-science-pack"].researched and (
+				not playerforce.technologies["sct-automation-science-pack"].prerequisites or
 				table_size(playerforce.technologies["sct-automation-science-pack"].prerequisites) == 0 or (
 					table_size(playerforce.technologies["sct-automation-science-pack"].prerequisites) == 1 and
 					playerforce.technologies["sct-automation-science-pack"].prerequisites["sct-lab-t1"] and
