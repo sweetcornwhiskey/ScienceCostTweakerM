@@ -19,15 +19,19 @@ function sctm.lab_input_remove(labname, packname)
 	sctm.debug("removing " .. packname .. " from " .. labname)
 	if data.raw.lab[labname] and data.raw.lab[labname].inputs then
 		local labinputs = data.raw.lab[labname].inputs
+		local newinputs = {}
 		for _i, inputpack in pairs(labinputs) do
 			if inputpack and inputpack == packname then
 --				table.remove(labinputs, _i)
-				labinputs[_i] = nil
+--				labinputs[_i] = nil
 				removed = true
 				break
+			else
+				table.insert(newinputs, inputpack)
 			end
 		end
 		if removed then
+			data.raw.lab[labname].inputs = newinputs
 			sctm.debug("removed " .. packname .. " from " .. labname)
 		end
 	end
@@ -72,8 +76,8 @@ local function removeprereq(prereqtable, depname)
 	local removed = false
 	for _i, dep in pairs(prereqtable) do
 		if dep and dep == depname then
---			table.remove(prereqtable, _i)
-			prereqtable[_i] = nil
+			table.remove(prereqtable, _i)
+--			prereqtable[_i] = nil
 			removed = true
 			break
 		end
@@ -191,8 +195,8 @@ local function rempack(ingredientstable, packname)
 	local removed = false
 	for _i, pack in pairs(ingredientstable) do
 		if pack and (pack[1] == packname or (pack.name and pack.name == packname))then
---			table.remove(ingredientstable)
-			ingredientstable[_i] = nil
+			table.remove(ingredientstable,_i)
+--			ingredientstable[_i] = nil
 			removed = true
 			break
 		end
@@ -399,8 +403,8 @@ local function removeunlock(effectstable, recipename)
 	local removed = false
 	for _i, effect in pairs(effectstable) do
 		if effect and effect.type == "unlock-recipe" and effect.recipe == recipename then
---			table.remove(effectstable, _i)
-			effectstable[_i] = nil
+			table.remove(effectstable, _i)
+--			effectstable[_i] = nil
 			removed = true
 			break
 		end
@@ -448,8 +452,8 @@ local function removeknownpacks(effectstable, packtable, techname)
 			for _p, pack in pairs(packtable) do
 				if (pack.partial and name.find(pack.name, 1, true) ~= nil) or (not pack.partial and name == pack.name) then
 					sctm.debug("Moved science pack '" .. name .. "', unlocked by '" .. techname .. "' to research tree.")
---					table.remove(effectstable, _j)
-					effectstable[_j] = nil
+					table.remove(effectstable, _j)
+--					effectstable[_j] = nil
 					removedone = true
 				end
 			end
@@ -541,8 +545,8 @@ local function removeingredient(ingredientstable, ingredientname)
 	local removed = false
 	for _i, ingredient in pairs(ingredientstable) do
 		if ingredient and (ingredient[1] == ingredientname or (ingredient.name and ingredient.name == ingredientname)) then
---			table.remove(ingredientstable, _i)
-			ingredientstable[_i] = nil
+			table.remove(ingredientstable, _i)
+--			ingredientstable[_i] = nil
 			removed = true
 			break
 		end
