@@ -25,7 +25,7 @@ function sctm.lab_input_remove(labname, packname)
 --				table.remove(labinputs, _i)
 --				labinputs[_i] = nil
 				removed = true
-				break
+--				break
 			else
 				table.insert(newinputs, inputpack)
 			end
