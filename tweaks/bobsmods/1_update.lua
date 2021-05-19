@@ -347,7 +347,7 @@ if mods["bobtech"] then
 		data.raw.tool["advanced-logistic-science-pack"].icon_size = 64
 		data.raw.tool["advanced-logistic-science-pack"].icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-64.png"
 		local logisticrecipe = table.deepcopy(data.raw.recipe["sct-advanced-logistic-science-pack"])
-    sctm.hide_recipe("sct-advanced-logistic-science-pack")
+		sctm.hide_recipe("sct-advanced-logistic-science-pack")
 		logisticrecipe.name = "advanced-logistic-science-pack"
 		data.raw.recipe["advanced-logistic-science-pack"] = logisticrecipe
 	end
