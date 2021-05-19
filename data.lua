@@ -21,15 +21,6 @@ require("tweaks.pymods.0_initial")
 
 
 if (settings.startup["sct-tier1-lab"].value == "lab") then
---[[
-	data.raw.recipe["sct-lab-1"].enabled = false
-	data.raw.recipe["sct-lab-1"].normal.enabled = false
-	data.raw.recipe["sct-lab-1"].expensive.enabled = false
-	data.raw.recipe["sct-lab-1"].hidden = true
-	data.raw.recipe["sct-lab-1"].normal.hidden = true
-	data.raw.recipe["sct-lab-1"].expensive.hidden = true
-	data.raw.lab["sct-lab-1"].enabled = false
-]]---
 	data.raw.recipe["sct-lab1-construction"].enabled = false
 	data.raw.recipe["sct-lab1-construction"].normal.enabled = false
 	data.raw.recipe["sct-lab1-construction"].expensive.enabled = false
