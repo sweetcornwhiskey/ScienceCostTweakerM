@@ -858,3 +858,19 @@ function sctm.find_in_table(table, what)
 	end
 	return false
 end
+
+function sctm.hide_recipe(recipe_name)
+  r = data.raw.recipe[recipe_name]
+  if r then
+    if not r.normal and not r.expensive then
+      r.hidden = true
+    else
+      if r.normal then
+        r.normal.hidden = true
+      end
+      if r.expensive then
+        r.expensive.hidden = true
+      end
+    end
+  end
+end

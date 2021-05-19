@@ -150,6 +150,7 @@ data:extend({
 
 if (settings.startup["sct-tier1-lab"].value == "sct-lab-1") then
 	local sctlab = table.deepcopy(data.raw.recipe["sct-lab-t1"])
+  sctm.hide_recipe("sct-lab-t1")
 	sctlab.name = "lab"
 	data.raw.recipe["lab"] = sctlab
 end
