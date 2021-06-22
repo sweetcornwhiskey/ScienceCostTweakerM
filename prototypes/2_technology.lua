@@ -133,6 +133,7 @@ function connect_sciencepack(sciencepackmap, first_science)
 end
 
 --vanilla
+--sctm.tech_replace("automation-science-pack", "sct-automation-science-pack")
 sctm.tech_replace("logistic-science-pack", "sct-logistic-science-pack")
 sctm.tech_replace("chemical-science-pack", "sct-chemical-science-pack")
 sctm.tech_replace("military-science-pack", "sct-military-science-pack")
@@ -147,7 +148,7 @@ sctm.tech_dependency_remove("chemical-science-pack","advanced-material-processin
 
 if settings.startup["sct-connect-science"] and settings.startup["sct-connect-science"].value == true then
 	sctm.log("science connect started")
-	local first_scient = "automation-science-pack"
+	local first_science = "sct-automation-science-pack"
 	if data.raw.tool["steam-science-pack"] then 
 		first_science = "steam-science-pack"
 	end
