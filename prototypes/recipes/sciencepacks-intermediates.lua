@@ -950,12 +950,12 @@ data:extend({
 			{
 				{type="item", name="sct-prod-baked-biopaste", amount=1},
 				{type="item", name="red-wire", amount=10},
-				{type="item", name="advanced-circuit", amount=6}
+				{type="item", name="processing-unit", amount=1}
 			},
 			results = 
 			{
 				{type="item", name="sct-prod-bioprocessor", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=2},
+				{type="item", name="sct-waste-ironcopper", amount=4},
 			},
 			main_product = "sct-prod-bioprocessor",
 		},
@@ -967,12 +967,12 @@ data:extend({
 			{
 				{type="item", name="sct-prod-baked-biopaste", amount=1},
 				{type="item", name="red-wire", amount=6},
-				{type="item", name="advanced-circuit", amount=4}
+				{type="item", name="processing-unit", amount=1}
 			},
 			results = 
 			{
 				{type="item", name="sct-prod-bioprocessor", amount=1},
-				{type="item", name="sct-waste-ironcopper", amount=2},
+				{type="item", name="sct-waste-ironcopper", amount=4},
 			},
 			main_product = "sct-prod-bioprocessor",
 		},

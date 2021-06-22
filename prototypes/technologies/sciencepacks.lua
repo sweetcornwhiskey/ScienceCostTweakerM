@@ -202,7 +202,7 @@ data:extend({
 				recipe = "production-science-pack",
 			},
 ]]--			
-			{
+--[[			{
 				type = "unlock-recipe",
 				recipe = "sct-prod-biosilicate",
 			},
@@ -210,6 +210,7 @@ data:extend({
 				type = "unlock-recipe",
 				recipe = "sct-prod-baked-biopaste",
 			},
+]]--			
 			{
 				type = "unlock-recipe",
 				recipe = "sct-prod-bioprocessor",
@@ -231,7 +232,9 @@ data:extend({
 		{
 --			"chemical-science-pack",
 			"circuit-network",
-			"sct-lab-t4",
+			"advanced-material-processing-2",
+			"advanced-electronics-2"
+--			"sct-lab-t4",
 		},
 		unit =
 		{
@@ -246,8 +249,9 @@ data:extend({
 		},
 		order = "sct-pack-e[prod]",
 	},
-	
-	-- utility - tier 4
+
+	-- TIER 5
+	-- utility - tier 5
 	{
 		type = "technology",
 		name = "sct-utility-science-pack",
@@ -290,7 +294,6 @@ data:extend({
 		{
 			"sct-lab-t4",
 			"battery",
-			"advanced-material-processing",
 		},
 		unit =
 		{
@@ -305,8 +308,8 @@ data:extend({
 		},
 		order = "sct-pack-f[ht]",
 	},
-	-- TIER S
-	-- space - tier s
+	-- TIER 6
+	-- space - tier 6
 	{
 		type = "technology",
 		name = "sct-space-science-pack",
@@ -353,3 +356,6 @@ else
 	data.raw.technology["sct-military-science-pack"].unit.time = 10
 	data.raw.technology["sct-military-science-pack"].unit.count = 90
 end
+
+sctm.tech_unlock_add("advanced-material-processing-2", "sct-prod-baked-biopaste")
+sctm.tech_unlock_add("advanced-material-processing-2", "sct-prod-biosilicate")
