@@ -1,10 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.8
+Date: 22.6.2021
+  Changes:
+    - swapped gold and silver plate in recipes to match availability with bobs/angels (@kiwihawk)
+    - T3.5 packs (production and boblogistics) now not require T4 lab
+    - production pack now requires processing unit instead of advanced circuit (to compensate for 
+      lab removal)
+  Bugfixes:
+    - Removed some unnecessary (potentialy wrong) prerequisites, and added more mod checks
+    - Removed some duplicate recipe unlocks
+---------------------------------------------------------------------------------------------------
 Version: 1.1.7
 Date: 19.5.2021
   Changes:
     - bugfix release
   Bugfixes:
-    - Hid duplicate lab and science pack recipes (@kiwihawk)
+    - Hide duplicate lab and science pack recipes (@kiwihawk)
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.6
 Date: 27. 1. 2021
