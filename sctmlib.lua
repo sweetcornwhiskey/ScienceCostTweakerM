@@ -129,10 +129,12 @@ local function addprereq(prereqtable, depname)
 	end	
 end
 
-function sctm.tech_dependency_add(techname, depname)
+function sctm.tech_dependency_add(techname, depname, hidden)
 	local added = false
+	local addhidden = hidden or false
 	sctm.debug("insert dep " .. depname .. " into " .. techname)
-	if data.raw.technology[techname] and data.raw.technology[depname] then
+	if data.raw.technology[techname] and (data.raw.technology[techname].enabled or true) and not (data.raw.technology[techname].hidden or false) and 
+		data.raw.technology[depname] and (data.raw.technology[depname].enabled or true) and (not (data.raw.technology[depname].hidden or false) or addhidden) then
 		local tech = data.raw.technology[techname]
 		local hasdiff = false
 		if tech.normal then
@@ -157,11 +159,11 @@ function sctm.tech_dependency_add(techname, depname)
 		end
 	end
 	--sctm.debug(techname .. ":" .. serpent.block(data.raw.technology[techname]))	
-	if not data.raw.technology[techname] then
-		sctm.debug("attempting to update nonexistent technology " .. techname)
+	if not data.raw.technology[techname] or not (data.raw.technology[techname].enabled or true) or (data.raw.technology[techname].hidden or false) then
+		sctm.debug("attempting to update nonexistent or disabled technology " .. techname)
 	end
-	if not data.raw.technology[depname] then
-		sctm.debug("attempting to insert nonexistent technology " .. depname)
+	if not data.raw.technology[depname] or not (data.raw.technology[depname].enabled or true) or not (not (data.raw.technology[depname].hidden or false) or addhidden) then
+		sctm.debug("attempting to insert nonexistent or disabled technology " .. depname)
 	end
 	return added
 end
@@ -493,29 +495,31 @@ function sctm.tech_remove_known_packs(techname, packlist)
 	return removed
 end
 
-function sctm.tech_replace(oldtech, newtech)
+function sctm.tech_replace(oldtechname, newtechname)
 	local replaced = false
-	if (data.raw.technology[oldtech] and data.raw.technology[newtech]) then
-		if (data.raw.technology[oldtech].prerequisites) then
-			for _, prereq in pairs(data.raw.technology[oldtech].prerequisites) do
-				if (not sctm.find_in_table(data.raw.technology[newtech].prerequisites, prereq)) then
-					local prereqsize = table_size(data.raw.technology[newtech].prerequisites)
-					data.raw.technology[newtech].prerequisites[prereqsize + 1] = prereq
+	if (data.raw.technology[oldtechname] and data.raw.technology[newtechname]) then
+		local oldtech = data.raw.technology[oldtechname]
+		local newtech = table.deepcopy(data.raw.technology[newtechname])
+		if (oldtech.prerequisites) then
+			for _, prereq in pairs(oldtech.prerequisites) do
+				if (not sctm.find_in_table(newtech.prerequisites, prereq)) then
+					local prereqsize = table_size(newtech.prerequisites)
+					newtech.prerequisites[prereqsize + 1] = prereq
 				end
 			end
 		end
-		if (data.raw.technology[oldtech].effects) then
-			for _, eff in pairs(data.raw.technology[oldtech].effects) do
-				if (not sctm.find_in_table(data.raw.technology[newtech].effects, eff)) then
-					local effectsize = table_size(data.raw.technology[newtech].effects)
-					data.raw.technology[newtech].effects[effectsize + 1] = eff
+		if (oldtech.effects) then
+			for _, eff in pairs(oldtech.effects) do
+				if (not sctm.find_in_table(newtech.effects, eff)) then
+					local effectsize = table_size(newtech.effects)
+					newtech.effects[effectsize + 1] = eff
 				end
 			end
 		end
-		local newpack = table.deepcopy(data.raw.technology[newtech])
-		newpack.name = oldtech
-		data.raw.technology[newtech].enabled = false
-		data.raw.technology[oldtech] = newpack
+		newtech.name = oldtech.name
+		data.raw.technology[newtechname].enabled = false
+		data.raw.technology[newtechname].hidden = true
+		data.raw.technology[oldtechname] = newtech
 		replaced = true;
 	end
 	return replaced
