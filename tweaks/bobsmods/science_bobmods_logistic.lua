@@ -9,6 +9,61 @@ if mods["bobtech"] then
 		},
 	})
 
+	-- technology
+	data:extend({
+		{
+			type = "technology",
+			name = "sct-advanced-logistic-science-pack",
+			icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-128.png",
+			icon_size = 128,
+			effects =
+			{
+--[[			
+				{
+					type = "unlock-recipe",
+					recipe = "advanced-logistic-science-pack",
+				},
+]]--				
+				{
+					type = "unlock-recipe",
+					recipe = "sct-logistic-cargo-unit",
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "sct-logistic-memory-unit",
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "sct-logistic-unimover",
+				},
+				{
+					type = "unlock-recipe",
+					recipe = "sct-logistic-automated-storage",
+				},
+			},
+			prerequisites =
+			{
+				"robotics",
+--				"chemical-science-pack",
+				"circuit-network",
+				"advanced-electronics-2"
+--				"sct-lab-t4",
+			},
+			unit =
+			{
+				count = 90,
+				ingredients = 
+				{
+					{"automation-science-pack", 1},
+					{"logistic-science-pack", 1},
+					{"chemical-science-pack", 1},
+				},
+				time = 3,
+			},
+			order = "sct-pack-d[logistic]",
+		},
+	})
+
 	-- logistic pack items
 	data:extend ({
 		{
@@ -245,6 +300,8 @@ if mods["bobtech"] then
 			},
 		},
 	})
+	sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "cobalt-processing")
+	sctm.tech_dependency_add("sct-advanced-logistic-science-pack", "titanium-processing")
 	else
 	data:extend({
 		{
@@ -398,58 +455,4 @@ if mods["bobtech"] then
 		},
 	})
 	end
-
-	-- technology
-	data:extend({
-		{
-			type = "technology",
-			name = "sct-advanced-logistic-science-pack",
-			icon = "__ScienceCostTweakerM__/graphics/bobmods/logistic-science-pack-128.png",
-			icon_size = 128,
-			effects =
-			{
---[[			
-				{
-					type = "unlock-recipe",
-					recipe = "advanced-logistic-science-pack",
-				},
-]]--				
-				{
-					type = "unlock-recipe",
-					recipe = "sct-logistic-cargo-unit",
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "sct-logistic-memory-unit",
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "sct-logistic-unimover",
-				},
-				{
-					type = "unlock-recipe",
-					recipe = "sct-logistic-automated-storage",
-				},
-			},
-			prerequisites =
-			{
-				"robotics",
-				"chemical-science-pack",
-				"circuit-network",
-				"sct-lab-t4",
-			},
-			unit =
-			{
-				count = 90,
-				ingredients = 
-				{
-					{"automation-science-pack", 1},
-					{"logistic-science-pack", 1},
-					{"chemical-science-pack", 1},
-				},
-				time = 3,
-			},
-			order = "sct-pack-d[logistic]",
-		},
-	})
 end

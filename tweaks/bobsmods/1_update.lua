@@ -23,20 +23,19 @@ if mods["bobplates"] then
 		sctm.tech_dependency_add("sct-lab-t3", "nitrogen-processing")
 	end
 	
-	if data.raw.item["glass"] and data.raw.item["gold-plate"] then
+	if data.raw.item["glass"] and data.raw.item["silver-plate"] then
 		data.raw.recipe["sct-t3-laser-foci"].normal.ingredients =
 		{
 			{type="item", name="copper-plate", amount=5},
 			{type="item", name="glass", amount=8},
-			{type="item", name="gold-plate", amount=2}
+			{type="item", name="silver-plate", amount=2}
 		}
 		data.raw.recipe["sct-t3-laser-foci"].expensive.ingredients =
 		{
 			{type="item", name="copper-plate", amount=10},
 			{type="item", name="glass", amount=15},
-			{type="item", name="gold-plate", amount=5}
+			{type="item", name="silver-plate", amount=5}
 		}
-		sctm.tech_dependency_add("sct-lab-t3", "gold-processing")
 	end
 	
 	if data.raw.item["glass"] then
@@ -74,12 +73,12 @@ if mods["bobplates"] then
 		}
 	end
 	
-	if data.raw.item["gold-plate"] and data.raw.item["aluminium-plate"] and data.raw.fluid["nitrogen"] then
+	if data.raw.item["silver-plate"] and data.raw.item["aluminium-plate"] and data.raw.fluid["nitrogen"] then
 		data.raw.recipe["sct-t3-atomic-sensors"].normal.ingredients =
 		{
 			{type="item", name="advanced-circuit", amount=1},
 			{type="item", name="aluminium-plate", amount=5},
-			{type="item", name="gold-plate", amount=2},
+			{type="item", name="silver-plate", amount=2},
 			{type="item", name="copper-plate", amount=12},
 			{type="fluid", name="nitrogen", amount=15}
 		}
@@ -92,7 +91,7 @@ if mods["bobplates"] then
 		{
 			{type="item", name="advanced-circuit", amount=1},
 			{type="item", name="aluminium-plate", amount=10},
-			{type="item", name="gold-plate", amount=5},
+			{type="item", name="silver-plate", amount=5},
 			{type="item", name="copper-plate", amount=20},
 			{type="fluid", name="nitrogen", amount=30}
 		}
@@ -130,12 +129,12 @@ if mods["bobplates"] then
 		sctm.recipe_ingredient_replace("sct-prod-biosilicate", "stone", {type="item", name="silicon", amount = 2})
 	end
 	
-	if data.raw.item["tin-plate"] and data.raw.item["lead-plate"] and data.raw.item["silver-plate"] and data.raw.fluid["sulfur-dioxide"] then
+	if data.raw.item["tin-plate"] and data.raw.item["lead-plate"] and data.raw.item["gold-plate"] and data.raw.fluid["sulfur-dioxide"] then
 		data.raw.recipe["sct-prod-overclocker"].normal.ingredients = 
 		{
 			{type="item", name="tin-plate", amount=10},
 			{type="item", name="lead-plate", amount=10},
-			{type="item", name="silver-plate", amount=10},
+			{type="item", name="gold-plate", amount=10},
 			{type="item", name="sct-prod-chipcase", amount=1},
 			{type="fluid", name="sulfur-dioxide", amount=120},
 		}
@@ -148,7 +147,7 @@ if mods["bobplates"] then
 		{
 			{type="item", name="tin-plate", amount=20},
 			{type="item", name="lead-plate", amount=20},
-			{type="item", name="silver-plate", amount=20},
+			{type="item", name="gold-plate", amount=20},
 			{type="item", name="sct-prod-chipcase", amount=1},
 			{type="fluid", name="sulfur-dioxide", amount=200},
 		}
@@ -157,6 +156,7 @@ if mods["bobplates"] then
 			{type="item", name="sct-prod-overclocker", amount=1},
 			{type="item", name="sulfur", amount=4}
 		}
+		sctm.tech_dependency_add("production-science-pack", "gold-processing")
 	end
 
 	-- High-Tech Science Pack:
@@ -220,7 +220,7 @@ if mods["bobplates"] then
 	
 	if data.raw.item["cobalt-steel-alloy"] then
 		sctm.recipe_ingredient_replace("sct-lab3-construction", "steel-plate", "cobalt-steel-alloy")
-		sctm.tech_dependency_add("sct-lab-t4", "cobalt-processing")
+		sctm.tech_dependency_add("sct-lab-t3", "cobalt-processing")
 	end
 
 	if data.raw.item["tungsten-plate"] then
@@ -271,6 +271,7 @@ end
 
 -- add bob logistic pack if found - for now, might replace with qol later
 if mods["bobtech"] then
+	sctm.tech_dependency_add("sct-lab-alien", "advanced-research")	
 	-- hide bob lab mk2	
 	if data.raw.lab["lab-2"] then
 		--table.insert(data.raw.item["lab-2"].flags, "hidden")
@@ -339,7 +340,7 @@ if mods["bobtech"] then
 	if data.raw.tool["advanced-logistic-science-pack"] and  data.raw.recipe["advanced-logistic-science-pack"] then
 		-- remove logistic pack from tier 1 lab
 		sctm.lab_input_remove("lab", "advanced-logistic-science-pack")
-		-- sctm.lab_input_add("sct-lab-t3", "advanced-logistic-science-pack")
+		sctm.lab_input_add("sct-lab-t3", "advanced-logistic-science-pack")
 		sctm.lab_input_add("sct-lab-t4", "advanced-logistic-science-pack")
 
 		data.raw.tool["advanced-logistic-science-pack"].subgroup = "sct-advanced-logistic-science-pack"

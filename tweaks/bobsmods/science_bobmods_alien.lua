@@ -33,7 +33,6 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"advanced-research",
 			"chemical-science-pack",
 			"military-science-pack",
 		},
@@ -142,4 +141,5 @@ data:extend({
 		order = "sct-pack-e[alien]",
 	},
 })
+sctm.tech_unlock_remove("alien-research","science-pack-gold")
 end
