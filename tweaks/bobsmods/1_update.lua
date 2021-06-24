@@ -100,7 +100,7 @@ if mods["bobplates"] then
 			{type="item", name="sct-t3-atomic-sensors", amount=1},
 			{type="item", name="sct-waste-copperonly", amount=1}
 		}
---		sctm.tech_dependency_remove("chemical-science-pack", "alloy-processing-1")
+		sctm.tech_dependency_remove("chemical-science-pack", "alloy-processing-1")
 	end
 	
 	-- Military Science Pack:
@@ -218,7 +218,7 @@ if mods["bobplates"] then
 		sctm.recipe_ingredient_replace("sct-lab2-construction", "iron-gear-wheel", "steel-gear-wheel")
 	end
 	
-	if data.raw.item["cobalt-steel-alloy"] then
+	if data.raw.item["cobalt-steel-alloy"] and not mods["angelssmelting"] then
 		sctm.recipe_ingredient_replace("sct-lab3-construction", "steel-plate", "cobalt-steel-alloy")
 		sctm.tech_dependency_add("sct-lab-t3", "cobalt-processing")
 	end
