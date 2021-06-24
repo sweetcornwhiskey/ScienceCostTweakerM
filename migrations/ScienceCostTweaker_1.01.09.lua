@@ -1,5 +1,5 @@
 for _, force in pairs(game.forces) do
-  if force.technolgies['advanced-material-processing-2'].researched then
+  if force.technologies['advanced-material-processing-2'].researched then
 	if force.recipes['sct-prod-biosilicate'] then	
 	    force.recipes['sct-prod-biosilicate'].enabled = true
 	end
