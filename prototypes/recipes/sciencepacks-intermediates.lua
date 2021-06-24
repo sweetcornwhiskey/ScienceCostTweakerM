@@ -463,6 +463,7 @@ data:extend({
 		always_show_made_in = true,
 		subgroup = "sct-sciencepack-3",
 		order = "f[t3]-c[flashfuel]",
+		hidden = true,
 		expensive =
 		{
 			enabled = false,
@@ -502,6 +503,7 @@ data:extend({
 		always_show_made_in = true,
 		subgroup = "sct-sciencepack-3",
 		order = "f[t3]-c[flashfuel2]",
+		hidden = true,
 		expensive =
 		{
 			enabled = false,

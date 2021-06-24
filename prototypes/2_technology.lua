@@ -39,15 +39,18 @@ scttechmap =
 local function checkpacks(tech, checkpacklist, deptech, packmap)
 	local techmap = packmap
 	local packlist = checkpacklist
+	sctm.debug("checking packs for " .. tech)
+	sctm.debug(serpent.block(packlist))
 	local checktech = data.raw.technology[tech]
 	if checktech then
 		if checktech.unit and checktech.unit.ingredients and  table_size(checktech.unit.ingredients) > 0 then
 			local deepcheck = 0
-			for tpack, _known in pairs(packlist) do
-				if _known == 0 then
+			for tpack, known in pairs(packlist) do
+				if known == 0 then
 					deepcheck = deepcheck + 1
-					for _i, pack in pairs(checktech.unit.ingredients) do			
-						if (pack[1] == tpack) or (techmap[pack[1]] and techmap[tpack] and (techmap[pack[1]] == techmap[tpack])) then
+					for _i, pack in pairs(checktech.unit.ingredients) do
+						local dpack = pack.name or pack[1]
+						if (dpack == tpack) or (techmap[dpack] and techmap[tpack] and (techmap[dpack] == techmap[tpack])) then
 --						if (pack[1] == tpack) then
 							packlist[tpack] = 1
 							deepcheck = deepcheck - 1
@@ -71,6 +74,7 @@ local function checkpacks(tech, checkpacklist, deptech, packmap)
 	else
 		sctm.debug("unknown technology " .. tech .. " in dependencies for " .. deptech);
 	end
+	sctm.debug(serpent.block(packlist))
 	return packlist
 end
 
@@ -82,8 +86,9 @@ function connect_sciencepack(sciencepackmap, first_science)
 	end
 	
 	for tech, _obj in pairs(data.raw.technology) do
-		if _obj.unit then	
+		if _obj.unit then
 			if _obj.unit.ingredients and table_size(_obj.unit.ingredients) > 0 then
+				sctm.debug("connect packs for " .. tech)
 				local packlist = {} 
 				for _packid, _packobj in pairs(_obj.unit.ingredients) do
 					local packname 
@@ -94,12 +99,15 @@ function connect_sciencepack(sciencepackmap, first_science)
 						end
 					packlist[packname] = 0
 				end
+				sctm.debug(serpent.block(packlist))
+				sctm.debug("checking deps for " .. tech)
 				if _obj.prerequisites and  table_size(_obj.prerequisites) > 0 then
 					for _i, reqtech in pairs(_obj.prerequisites) do
 						local newpacklist = checkpacks(reqtech, packlist, tech, techmap)
 						packlist = newpacklist
 					end
 				end
+				sctm.debug(serpent.block(packlist))
 				for packname, known in pairs(packlist) do
 					local deptech = techmap[packname]
 					if deptech == nil and not packname == first_science then

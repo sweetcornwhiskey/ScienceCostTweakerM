@@ -80,7 +80,7 @@ data:extend({
 			"fast-inserter",
 			"steel-processing",
 			"logistics",
-			"sct-automation-science-pack",
+--			"sct-automation-science-pack",
 		},
 		unit =
 		{
@@ -117,14 +117,6 @@ data:extend({
 			},
 			{
 				type = "unlock-recipe",
-				recipe = "sct-t3-flash-fuel",
-			},
-			{
-				type = "unlock-recipe",
-				recipe = "sct-t3-flash-fuel2",
-			},
-			{
-				type = "unlock-recipe",
 				recipe = "sct-t3-laser-foci",
 			},
 			{
@@ -154,7 +146,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"logistic-science-pack",
+--			"logistic-science-pack",
 			"oil-processing",
 			"solar-energy",
 			"plastics",
@@ -209,7 +201,7 @@ data:extend({
 		},
 		prerequisites =
 		{
-			"chemical-science-pack",
+--			"chemical-science-pack",
 --			"utility-sciencepack",
 			"advanced-electronics-2",
 			"uranium-processing",
