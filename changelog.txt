@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.10
+Date: 25.6.2021
+  Changes:
+    - replaced cobalt with brass in t3 lab when angel smelting loaded (upcoming angels change)
+    - removed legacy sp dependency from labs
+  Bugfixes:
+    - fixed science pack connection algorithm (should now do only meaningfull connection)
+    - fixed missing dependency check for bobtech in alienlab tech
+    - fixed flash fuel recipe hiding (petroleum variant only when not heavy oil)
+---------------------------------------------------------------------------------------------------
 Version: 1.1.9
 Date: 23.6.2021
   Bugfixes:
