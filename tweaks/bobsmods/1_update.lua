@@ -262,10 +262,6 @@ end
 if mods["bobpower"] then
 	if data.raw.item["solar-panel-large"] then
 		sctm.recipe_ingredient_replace("sct-lab3-construction", "solar-panel", "solar-panel-large")
-		if data.raw.technology["bob-solar-energy-2"] then
-			sctm.tech_dependency_remove("sct-lab-t3", "solar-energy")
-			sctm.tech_dependency_add("sct-lab-t3", "bob-solar-energy-2")
-		end
 	end
 end
 
