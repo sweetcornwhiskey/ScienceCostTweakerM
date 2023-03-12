@@ -536,6 +536,7 @@ function sctm.tech_disable(techname)
 			end
 		end
 		data.raw.technology[techname].enabled = false
+		data.raw.technology[techname].hidden = true
 		disabled = true
 	end
 	if not data.raw.technology[techname] then
