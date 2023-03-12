@@ -49,7 +49,9 @@ if mods["aai-industry"] then
 				icon_size = 64,
 				icon = "__ScienceCostTweakerM__/graphics/overlays/flame-64.png",
 			},
-		}			
+		}
+		
+		sctm.recipe_ingredient_add("sct-lab-t1", {name = "burner-lab", amount = 1}, {name = "burner-lab", amount = 1})
 	end
 	sctm.tech_dependency_add("sct-lab-t1", "electricity")
 	sctm.recipe_ingredient_replace("sct-lab1-mechanization", "electronic-circuit", "electric-motor")
