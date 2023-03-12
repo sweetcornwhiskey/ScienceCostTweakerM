@@ -148,13 +148,14 @@ data:extend({
 	},
 })
 
-if (settings.startup["sct-tier1-lab"].value == "lab") then
+if (settings.startup["sct-tier1-lab"].value == "sct-lab-1") then
 	local sctlab = table.deepcopy(data.raw.recipe["sct-lab-t1"])
+	sctm.hide_recipe("lab")
+	data.raw.recipe["lab"].enabled = false
+else
 	sctm.hide_recipe("sct-lab-t1")
-	sctlab.name = "lab"
-	data.raw.recipe["lab"] = sctlab
+	data.raw.recipe["lab"].order = "a[labs]-a[lab]"
+	data.raw.recipe["lab"].subgroup = "sct-labs"
+	data.raw.recipe["lab"].enabled = true
 end
 
-data.raw.recipe["lab"].order = "a[labs]-a[lab]"
-data.raw.recipe["lab"].subgroup = "sct-labs"
-data.raw.recipe["lab"].enabled = false
