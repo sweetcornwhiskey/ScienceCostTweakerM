@@ -13,6 +13,7 @@ if mods["aai-industry"] then
 	
 	if data.raw.lab["burner-lab"] then
 		sctm.lab_input_add("burner-lab", "sct-science-pack-0")
+		data.raw.recipe["burner-lab"].subgroup = "sct-labs"
 	end
 
 	if data.raw.technology["electric-lab"] then
